@@ -1,0 +1,174 @@
+{
+  "scope": "Single-shot IoU tracks, IDs scoped to this run. Sampled center transitions only; no continuous-presence proof, identity recognition, detection-quality or safety qualification.",
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 1000
+  },
+  "events": [
+    {
+      "id": "E1",
+      "kind": "zone-enter",
+      "ruleId": "loading-zone",
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "startPts": 800,
+      "endPts": 1200,
+      "startSeconds": 0.8,
+      "endSeconds": 1.2,
+      "observedDurationSeconds": 0,
+      "samplingIntervalSeconds": 0.4,
+      "direction": "",
+      "evidenceFrames": [
+        2,
+        3
+      ],
+      "reviewStatus": "NeedsReview"
+    },
+    {
+      "id": "E2",
+      "kind": "dwell",
+      "ruleId": "loading-zone",
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "startPts": 1200,
+      "endPts": 2350,
+      "startSeconds": 1.2,
+      "endSeconds": 2.35,
+      "observedDurationSeconds": 1.15,
+      "samplingIntervalSeconds": 0.6,
+      "direction": "",
+      "evidenceFrames": [
+        3,
+        5
+      ],
+      "reviewStatus": "NeedsReview"
+    },
+    {
+      "id": "E3",
+      "kind": "line-cross",
+      "ruleId": "gate",
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "startPts": 1200,
+      "endPts": 2350,
+      "startSeconds": 1.2,
+      "endSeconds": 2.35,
+      "observedDurationSeconds": 0,
+      "samplingIntervalSeconds": 1.15,
+      "direction": "positive-to-negative",
+      "evidenceFrames": [
+        3,
+        5
+      ],
+      "reviewStatus": "NeedsReview"
+    }
+  ],
+  "observations": [
+    {
+      "frameIndex": 0,
+      "pts": 0,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.15,
+        "y1": 0.3125,
+        "x2": 0.4,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 1,
+      "pts": 350,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.2,
+        "y1": 0.3125,
+        "x2": 0.45,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 2,
+      "pts": 800,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.25,
+        "y1": 0.3125,
+        "x2": 0.5,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 3,
+      "pts": 1200,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.3,
+        "y1": 0.3125,
+        "x2": 0.55,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 4,
+      "pts": 1800,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.35,
+        "y1": 0.3125,
+        "x2": 0.6,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 5,
+      "pts": 2350,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.4,
+        "y1": 0.3125,
+        "x2": 0.65,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 6,
+      "pts": 2900,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.45,
+        "y1": 0.3125,
+        "x2": 0.7,
+        "y2": 0.625
+      }
+    },
+    {
+      "frameIndex": 7,
+      "pts": 3500,
+      "trackId": "0a026d229335471dafb8e6e6e23a828c:T1",
+      "class": "authored-object",
+      "confidence": 1,
+      "box": {
+        "x1": 0.5,
+        "y1": 0.3125,
+        "x2": 0.75,
+        "y2": 0.625
+      }
+    }
+  ],
+  "resultSha256": "7779d787f901ab19c873722efaf6497363206afc568cce8d681940e3a276d54c",
+  "note": "Historical authored demo frames; not current trained-model event accuracy"
+}

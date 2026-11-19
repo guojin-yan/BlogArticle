@@ -1,255 +1,532 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</title><style>
 :root{--ink:#18243b;--muted:#65738b;--line:#e2e8f2;--violet:#6754d8}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:#f2f5fa;color:var(--ink);font-family:Segoe UI,Microsoft YaHei,sans-serif;line-height:1.95}.masthead{background:#090e24;color:#aebbdc;padding:16px max(28px,calc((100vw - 1200px)/2));font-size:13px;letter-spacing:1px}.masthead b{color:white}.hero{max-width:1200px;margin:46px auto 32px;padding:0 30px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--violet);font-weight:700}.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.35;letter-spacing:-1px;margin:14px 0}.meta{font-size:13px;color:var(--muted)}.layout{max-width:1200px;padding:0 30px 70px;margin:auto;display:grid;grid-template-columns:minmax(0,900px) 210px;gap:34px;align-items:start}article{min-width:0;background:white;border:1px solid var(--line);border-radius:18px;padding:38px 44px;box-shadow:0 8px 30px #29376006}article>p:first-child{font-size:19px;line-height:1.8;margin-top:0}p{margin:17px 0}h2{margin:58px 0 20px;font-size:26px;line-height:1.5;border-top:1px solid var(--line);padding-top:34px}h3{font-size:21px;line-height:1.5;margin:34px 0 14px}strong{font-weight:650;color:#202b48}img{display:block;width:100%;height:auto;border-radius:12px;margin:24px auto}p:has(>em:only-child){font-size:13px;line-height:1.7;color:var(--muted);text-align:center;margin-top:-10px}blockquote{margin:24px 0;border-left:4px solid #8977ed;padding:14px 20px;background:#f5f3ff;border-radius:0 9px 9px 0;color:#4d4d71}blockquote p{margin:0}code{font-family:Cascadia Code,Consolas,monospace;font-size:.87em;background:#f0f3f9;color:#545094;border-radius:5px;padding:2px 5px;overflow-wrap:anywhere}pre{overflow:auto;background:#10182c;border-radius:12px;color:#dce9ff;padding:23px 22px;line-height:1.75;font-size:13px}pre code{background:transparent;padding:0;color:inherit;white-space:pre;overflow-wrap:normal}.table-scroll{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:11px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.7}th{background:#edf1f8;color:#40506d;text-align:left;font-weight:650;white-space:nowrap}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:none}td{min-width:130px}td:last-child{overflow-wrap:anywhere}td code{font-size:12px}aside{position:sticky;top:24px;font-size:12px;color:var(--muted);padding-top:12px}aside h4{margin:0 0 12px;color:#3b4661}.toc ul{list-style:none;padding:0;margin:0}.toc li{line-height:1.6;margin:12px 0}.toc a{color:var(--muted);text-decoration:none;display:block;border-left:2px solid transparent;padding-left:12px}.toc a:hover{color:var(--violet);border-color:var(--violet)}.review-tip{border-top:1px solid var(--line);margin-top:24px;padding-top:18px;font-size:12px;line-height:1.75}footer{text-align:center;padding:0 20px 40px;font-size:12px;color:var(--muted)}@media(max-width:1000px){.layout{grid-template-columns:minmax(0,1fr)}aside{display:none}}@media(max-width:600px){.hero{padding:0 18px;margin-top:28px}.hero h1{font-size:29px}.layout{padding:0 10px 30px}article{padding:22px 18px;border-radius:12px}h2{font-size:23px;margin-top:44px}h3{font-size:19px}pre{font-size:11px;padding:20px 13px}td,th{padding:10px}img{border-radius:9px}.masthead{padding:12px 18px}}@media print{.masthead,aside{display:none}.hero,.layout{padding:0;max-width:none;margin:0;display:block}article{border:none;box-shadow:none;padding:0}h2{break-after:avoid}img,pre,table{break-inside:avoid}}
-</style></head><body><div class="masthead"><b>椒颜皮皮虾</b> / ROCm × C# / ARTICLE 001</div><header class="hero"><div class="eyebrow">OPEN SOURCE · RELEASE 1.0</div><h1>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</h1><div class="meta">Guojin Yan · 2026-11-18 · 初稿 v2，供作者审阅</div></header><main class="layout"><article>
-<p><strong>自己写 GPU 计算，或者把 ONNX 模型接进 .NET，现在都可以从这里开始。</strong></p>
+article a{color:#5145af;text-underline-offset:3px;overflow-wrap:anywhere}article a:hover{color:#352878}a code{color:inherit}</style></head><body><div class="masthead"><b>椒颜皮皮虾</b> / ROCm × C# / ARTICLE 001</div><header class="hero"><div class="eyebrow">OPEN SOURCE · RELEASE 1.0</div><h1>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</h1><div class="meta">Guojin Yan · 2026-11-19 · v4，Issue #1 完整结构修订</div></header><main class="layout"><article>
+<p><strong>用熟悉的 C#/.NET，调用 AMD GPU 做自定义计算、ONNX 推理和模型前后处理。</strong></p>
 <p><img alt="C# 连接 HIP 自定义计算与 MIGraphX ONNX 推理，共同使用 AMD GPU" src="assets/01-cover-v2.png" /></p>
-<p>之前和大家分享过 OpenVINO、TensorRT 的 C# 接口，这次轮到 AMD GPU 了。经过这段时间的整理，<strong>HIP CSharp API 和 MIGraphX CSharp API 的 1.0 正式版都已经发布</strong>，配套的 Windows、Ubuntu 24.04 Runtime 包与 HIP 适配包也已经上架 NuGet。</p>
-<p>我想做的事情很直接：让 C# 开发者既能自己组织 GPU 计算，也能把现成的 ONNX 模型放进熟悉的 .NET 工程。设备、显存、Kernel、模型、输入输出，都有对应的 C# 入口；需要进一步组合时，还可以把前处理、推理和后处理接起来。</p>
-<p>这篇就带大家看看这两个项目能做什么、正式版有哪些值得关注的内容，以及我基于它们继续做的几个应用。先把源码地址放在这里，感兴趣的朋友可以先收藏：</p>
-<pre><code class="language-text">HIP CSharp API
-https://github.com/guojin-yan/HIP-CSharp-API
-
-MIGraphX CSharp API
-https://github.com/guojin-yan/MIGraphX-CSharp-API
-</code></pre>
-<h2 id="gpu-c">一、GPU 计算与模型推理，C# 都安排上</h2>
-<p>虽然这次一起发布，但两个项目各有分工：<strong>HIP 负责自己写的 GPU 计算，MIGraphX 负责已有模型的编译与推理。</strong></p>
-<p><strong>先说 HIP CSharp API。</strong> 如果你有自己的图像处理、数值计算或者并行算法，可以通过它管理设备和显存、复制数据、编译并启动 Kernel，再用 Stream 和 Event 组织执行顺序。自定义 Kernel 使用 HIP C/C++ 编写，C# 负责调用与资源管理。</p>
-<p>我在接口层保留了两种用法：常见任务可以直接使用托管对象，需要深入原生能力时，也有低层 API 可以继续往下走。<code>IDisposable</code>、显式资源所有权、运行时加载与诊断这些工程细节，也一并放进了库里。这次正式版进一步整理了 HIPRTC 查找、发布部署和互操作路径，让计算代码更方便接进实际工程。</p>
-<p><strong>已经有 ONNX 模型的朋友，可以直接看 MIGraphX CSharp API。</strong> 模型解析、计算图编译、输入张量准备、执行和结果读取，都可以在 C# 中完成。动态输入、程序保存与加载、模型缓存、多输入多输出，也有对应的接口。</p>
-<p>这次 MIGraphX 正式版接入了 <strong>MIGraphX 2.18 引擎</strong>，提供 Windows 与 Ubuntu 24.04 的独立 Runtime 包，并将 HIP 适配器更新到 1.0.0 依赖组合。模型示例也一起整理好了：</p>
+<p>之前和大家分享过 OpenVINO、TensorRT 的 C# 接口，这次轮到 AMD GPU 了。<strong>HIP CSharp API 和 MIGraphX CSharp API 的 1.0 正式版已经发布</strong>，配套平台 Runtime 和 HIP 适配包也已上架 NuGet。</p>
+<p>如果你正在用 C#/.NET 开发工业视觉、桌面 AI 或数据处理应用，想自己写 GPU Kernel，或者把 ONNX 模型接进现有工程，这篇就带大家从选包、检查环境开始，完成第一次运行和数值验证，再看看怎样组合成应用。</p>
+<h2 id="c-amd-gpu">一、让你的 C# 项目用上 AMD GPU</h2>
+<p>接入这两个项目后，C# 应用可以用 AMD GPU 完成三类工作。</p>
+<p><strong>把批量计算交给 GPU。</strong> 图像像素、信号采样和数组中经常有大量相同的计算。通过 HIP，可以编写自己的并行算法，再由 C# 上传数据、调用 GPU 计算并取回结果，把这部分能力接进现有业务代码。</p>
+<p><strong>把 AI 模型接进 C# 应用。</strong> 已有 ONNX 模型，可以通过 MIGraphX 在 C# 中完成加载、编译和推理，再把输出交给自己的界面或业务流程。项目里的目标检测、文字识别、图文匹配等示例，也提供了可以继续修改的工程起点。</p>
+<p><strong>把模型前后处理一起串起来。</strong> HIP 负责数据布局和数值处理，MIGraphX 负责模型推理，推理结果再交给 HIP 继续处理。这样可以把前处理、推理和后处理组织成一条 GPU 流程，中间数据继续留在设备上处理，由 C# 统一管理调用和资源。</p>
+<p>从一个计算步骤开始，到接入一个模型，再到组织完整处理流程，都可以继续放在熟悉的 .NET 工程里完成。</p>
+<h2 id="hip-migraphx">二、为什么选择 HIP + MIGraphX？</h2>
+<p>两个项目各有分工：<strong>HIP 组织自己写的 GPU 计算，MIGraphX 编译和运行已有模型，HIP.Interop 负责需要时把两者接起来。</strong></p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th>示例</th>
-<th>可以体验的内容</th>
+<th>你现在的需求</th>
+<th>先选哪个</th>
+<th>可以从哪里开始</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>YOLO26</td>
-<td>目标检测、分类、实例分割、姿态估计、旋转框检测</td>
+<td>图像处理、数值计算或自定义并行算法</td>
+<td>HIP CSharp API</td>
+<td>设备、显存、HIPRTC、Module、Kernel、Stream/Event</td>
 </tr>
 <tr>
-<td>PaddleOCR v4 / v5 / v6</td>
-<td>文本检测、文字识别、裁剪与批量处理</td>
+<td>已有 ONNX，想在 .NET 中做推理</td>
+<td>MIGraphX CSharp API</td>
+<td>模型解析、计算图编译、张量输入输出、程序复用</td>
 </tr>
 <tr>
-<td>CLIP</td>
-<td>图片与英文描述匹配、图片和文本双向检索</td>
-</tr>
-<tr>
-<td>PP-Structure</td>
-<td>文档方向、版面、OCR 与表格处理</td>
+<td>前处理、模型、后处理一起组织</td>
+<td>两个 Core + HIP.Interop</td>
+<td>同一 Stream、具名设备输入、设备输出与资源生命周期</td>
 </tr>
 </tbody>
 </table></div>
-<p>这样一来，想研究 GPU 编程，可以从 HIP 的设备、内存、HIPRTC 和综合案例入手；想部署模型，可以直接顺着 MIGraphX 的完整示例往下看。两个托管库覆盖 .NET Framework 4.6–4.8.1、.NET Core 3.1 和 .NET 5–10，并提供中英文 XML 文档，方便在不同 .NET 工程中使用。</p>
-<p>而这两个项目放到一起，还有一个我比较看重的用法：<strong>把模型前后的数值处理也接入 GPU。</strong></p>
-<p><img alt="C#、两个独立 Core、可选 HIP 适配器与 AMD GPU 的关系" src="assets/02-api-architecture-v3.png" /></p>
-<p><em>两个 Core 可以独立使用，需要连接 HIP Stream 和设备缓冲区时，再加入 HIP.Interop。</em></p>
-<p>比如一条视觉处理流程，可以先用 HIP 做缩放、归一化和张量排列，再交给 MIGraphX 推理，之后继续用 HIP 做结果解码、筛选或者掩码计算，最后把业务需要的结果交回 C#。<code>HIP.Interop</code> 提供对应的输入提交、Stream 互操作与设备输出接口，让这些步骤能够在同一个应用里组织起来。</p>
-<p>从自己写计算，到调用已有模型，再到把两者组合，这就是这次联合发布希望带给 .NET 开发者的使用空间。下面把安装入口也放全，方便大家直接开始。</p>
-<h2 id="nuget">二、七个正式版 NuGet 包，一次整理好</h2>
-<p>这次发布的包分为 <strong>Core、HIP 适配器和平台 Runtime</strong>。Core 是日常引用的 C# 接口；Runtime 提供对应平台的原生运行库；需要两个库协同时，再选择 <code>HIP.Interop</code>。</p>
+<p>HIP Kernel 使用 HIP C/C++ 编写，C# 负责调用和资源管理。我保留了托管对象和低层 API 两条入口：常见任务可以用 <code>IDisposable</code> 管理设备资源，需要深入原生能力时，再往下使用对应接口。HIPRTC 用于在运行时把 Kernel 源码编译成设备代码。</p>
+<p>MIGraphX 提供 ONNX 解析、编译、执行，以及动态形状、程序保存/加载和模型缓存等接口。仓库还有 YOLO26、PaddleOCR v4/v5/v6、CLIP、PP-Structure 示例，可以继续看检测、OCR、图文匹配和版面处理。</p>
+<pre><code class="language-text">YOLO26、PaddleOCR v4/v5/v6、CLIP、PP-Structure 示例
+https://github.com/guojin-yan/MIGraphX-CSharp-API/tree/v1.0.0/samples
+</code></pre>
+<p>两个 Core 可以独立使用。只有需要连接 HIP Stream 和设备缓冲区时，才加入适配器；刚开始不必把全部包都装上。</p>
+<h2 id="10">三、1.0 正式发布了什么？</h2>
+<p>这次 HIP 正式版整理了 HIPRTC 查找、net48/RID 部署和异步资源处理。MIGraphX 正式版接入 2.18 引擎，更新 HIP 1.0 适配组合，修复动态形状、保存加载与缓存行为，并整理了模型示例。具体变化可以看 HIP 正式版说明和 MIGraphX v1.0.0 Release Notes。</p>
+<pre><code class="language-text">HIP 正式版说明
+https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/releases/1.0.0.md
+
+MIGraphX v1.0.0 Release Notes
+https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/release-notes/1.0.0.md
+</code></pre>
+<p>七个正式包放在下面，复制地址即可打开对应版本：</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
 <th>NuGet 包</th>
-<th>正式版本</th>
-<th>地址</th>
+<th>版本</th>
+<th>职责</th>
+<th>地址（可复制）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>JYPPX.ROCm.HIP.CSharp.API</code></td>
-<td><code>1.0.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API/1.0.0</td>
+<td>1.0.0</td>
+<td>HIP 托管接口，Core 不包含显卡驱动</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API/1.0.0</code></td>
 </tr>
 <tr>
 <td><code>JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64</code></td>
-<td><code>10.1.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64/10.1.0</td>
+<td>10.1.0</td>
+<td>Windows HIP/HIPRTC 用户态运行库</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64/10.1.0</code></td>
 </tr>
 <tr>
 <td><code>JYPPX.ROCm.HIP.CSharp.API.Runtime.ubuntu.24.04-x64</code></td>
-<td><code>10.1.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API.Runtime.ubuntu.24.04-x64/10.1.0</td>
+<td>10.1.0</td>
+<td>Ubuntu 24.04 HIP/HIPRTC 用户态运行库</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API.Runtime.ubuntu.24.04-x64/10.1.0</code></td>
 </tr>
 <tr>
 <td><code>JYPPX.ROCm.MIGraphX.CSharp.API</code></td>
-<td><code>1.0.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0</td>
+<td>1.0.0</td>
+<td>ONNX 与 MIGraphX 托管接口</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0</code></td>
 </tr>
 <tr>
 <td><code>JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop</code></td>
-<td><code>1.0.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop/1.0.0</td>
+<td>1.0.0</td>
+<td>HIP Stream 和设备输入输出适配</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop/1.0.0</code></td>
 </tr>
 <tr>
 <td><code>JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64</code></td>
-<td><code>1.0.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64/1.0.0</td>
+<td>1.0.0</td>
+<td>Windows MIGraphX 2.18.0 引擎</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64/1.0.0</code></td>
 </tr>
 <tr>
 <td><code>JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.ubuntu.24.04-x64</code></td>
-<td><code>1.0.0</code></td>
-<td>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.ubuntu.24.04-x64/1.0.0</td>
+<td>1.0.0</td>
+<td>Ubuntu MIGraphX 2.18.0 引擎</td>
+<td><code>https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.ubuntu.24.04-x64/1.0.0</code></td>
 </tr>
 </tbody>
 </table></div>
-<p>HIP Core、MIGraphX Core 与适配器使用 <code>1.0.0</code>；HIP Runtime 包版本为 <code>10.1.0</code>，MIGraphX Runtime <code>1.0.0</code> 内包含 MIGraphX <code>2.18.0</code> 引擎。按自己的用途和平台选择即可。</p>
-<p>运行前，按项目部署指南准备 AMD 驱动与对应的 ROCm 环境；本文模型示例使用 ROCm 10.1 配套依赖。安装步骤和依赖配置在仓库中都有说明：</p>
-<pre><code class="language-text">HIP Runtime 部署指南
-https://github.com/guojin-yan/HIP-CSharp-API/blob/main/docs/guides/runtime-distribution-10.1.0.md
-
-MIGraphX Runtime 部署指南
+<p>注意区分三个版本：C# Core/适配器是 <code>1.0.0</code>，HIP Runtime 包是 <code>10.1.0</code>，MIGraphX Runtime 包是 <code>1.0.0</code>、内部引擎是 <code>2.18.0</code>。升级联合工程时，两个 Core 和适配器一起核对，避免输出目录残留旧原生库。</p>
+<p><strong>Windows MIGraphX 引擎是我基于 AMD 源码、加入 Windows 适配补丁构建的版本</strong>，随项目 Runtime 分发，设备代码针对 gfx1100。Ubuntu 引擎采用 AMD 二进制并调整 ELF 加载路径。包内 <code>native-manifest.json</code> 保留源码身份、版本、文件哈希和主机依赖，<code>licenses/</code> 保留第三方许可。</p>
+<p>MIGraphX 引擎包需要配合 <strong>ROCm 10.1 的 HIP/HIPRTC、COMGR、MIOpen、rocBLAS、hipBLASLt、GPU 设备数据和 bitcode</strong>；显卡驱动另装，Windows 还需要 VC++ x64 运行库。NuGet 不安装完整 ROCm，也不替换驱动。同一进程内保持同一套原生库家族。</p>
+<p>安装前先看 MIGraphX 部署指南和 HIP Runtime 来源与分发说明。AMD 维护上游 HIP/MIGraphX，我维护 C# 封装和本项目分发工作；本项目的发布与测试不能理解为 AMD 官方认证。</p>
+<pre><code class="language-text">MIGraphX 部署指南
 https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/guides/runtime-deployment.md
-</code></pre>
-<p>包和环境准备好之后，就可以回到 C# 了。下面用两段小代码，先把设备和模型各跑一次。</p>
-<h2 id="gpu-onnx">三、从发现 GPU，到运行第一个 ONNX</h2>
-<p><strong>先让程序找到 AMD GPU。</strong> 以 Windows x64、.NET 10 为例，创建控制台工程，安装 HIP Core 与 Windows Runtime：</p>
-<pre><code class="language-powershell">dotnet new console -n HipHello -f net10.0
-cd HipHello
-dotnet add package JYPPX.ROCm.HIP.CSharp.API --version 1.0.0
-dotnet add package JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64 --version 10.1.0
-</code></pre>
-<p>把 <code>Program.cs</code> 改成下面的代码，初始化运行时，再枚举设备：</p>
-<pre><code class="language-csharp">using JYPPX.ROCm.HipSharp;
 
-using var runtime = new HipRuntime();
-runtime.Initialize();
-
-var versions = runtime.GetVersionInfo();
-Console.WriteLine($&quot;HIP Runtime: {versions.RuntimeVersion}&quot;);
-Console.WriteLine($&quot;HIP Driver:  {versions.DriverVersion}&quot;);
-
-foreach (var device in runtime.GetDevices())
-{
-    Console.WriteLine(device);
-}
+HIP Runtime 来源与分发说明
+https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/guides/runtime-distribution-10.1.0.md
 </code></pre>
-<p>执行 <code>dotnet run -c Release</code>，我本机的输出如下：</p>
-<pre><code class="language-text">HIP Runtime: 7.16.26385
-HIP Driver:  7.16.26385
-0: AMD Radeon PRO W7900
+<h2 id="_1">四、从零运行，再验证计算结果</h2>
+<p>本次核验日期为 <strong>2026-11-19</strong>，本文命令的实际 GPU 基线是 <strong>Radeon PRO W7900 / gfx1100、Windows 11、ROCm 10.1、MIGraphX 2.18</strong>。项目的 Ubuntu 24.04 / WSL2 发布验证列在第六节。</p>
+<h3 id="_2">先检查环境，按用途安装</h3>
+<p>本文工程目标为 .NET 10。安装好系统依赖后，先确认 SDK 和设备：</p>
+<pre><code class="language-powershell">dotnet --list-sdks
+Get-CimInstance Win32_VideoController | Select-Object Name, DriverVersion
 </code></pre>
-<p>看到设备之后，就可以继续运行 HIP 仓库里的 HIPRTC VectorAdd，体验编译 Kernel、传递参数和执行计算。这里打印的是原生运行时报告的版本，和 NuGet 包版本分别标识不同内容。</p>
-<p><strong>接下来，让 GPU 跑一个 ONNX 模型。</strong> 另建一个工程，安装 MIGraphX Core 和 Windows Runtime：</p>
-<pre><code class="language-powershell">dotnet new console -n MigraphxHello -f net10.0
-cd MigraphxHello
-dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API --version 1.0.0
-dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64 --version 1.0.0
-</code></pre>
-<p>仓库里有一个可生成的 Identity 模型，输入为 <code>float32[1,4]</code>，输出与输入一致，适合先看清整个调用过程。安装 Git 与 PowerShell 7 后，在当前工程目录执行：</p>
-<pre><code class="language-powershell">git clone --depth 1 --branch v1.0.0 https://github.com/guojin-yan/MIGraphX-CSharp-API.git ../MIGraphX-CSharp-API-v1.0.0
-pwsh -File ../MIGraphX-CSharp-API-v1.0.0/tests/fixtures/generate-onnx-identity.ps1 -OutputPath &quot;$PWD/identity.onnx&quot;
-</code></pre>
-<p>然后把 <code>Program.cs</code> 改为下面的代码。解析、编译、准备输入和执行，都在这里：</p>
-<pre><code class="language-csharp">using JYPPX.ROCm.MIGraphXSharp;
-
-var environment = MIGraphXEnvironment.ProbeSystem();
-if (!environment.ObjectsExecuted)
-    throw new InvalidOperationException(string.Join(&quot;; &quot;,
-        environment.Diagnostics.Select(d =&gt; d.Message)));
-string native = environment.LoadedPath!;
-
-using var options = new MIGraphXOnnxOptions(native);
-using var program = MIGraphXProgram.ParseOnnxBuffer(
-    File.ReadAllBytes(&quot;identity.onnx&quot;), options);
-using var target = new MIGraphXTarget(native, &quot;gpu&quot;);
-using var compileOptions = new MIGraphXCompileOptions(native, offloadCopy: true);
-program.Compile(target, compileOptions);
-
-var shape = program.GetParameterShapes()[&quot;input&quot;];
-using var input = MIGraphXArgument.Create(native, shape, new[] { 1f, 2f, 3f, 4f });
-using var parameters = new MIGraphXParameterMap(native);
-parameters.Add(&quot;input&quot;, input);
-
-using var outputs = program.Run(parameters);
-Console.WriteLine(string.Join(&quot;, &quot;, outputs[0].ToArray&lt;float&gt;()));
-</code></pre>
-<p>执行 <code>dotnet run -c Release</code>，得到：</p>
-<pre><code class="language-text">1, 2, 3, 4
-</code></pre>
-<p>这个例子先用 <code>offloadCopy: true</code> 组织主机输入输出。换成自己的模型时，按模型信息准备输入名、尺寸、类型和预处理即可；持续处理数据时，可以在启动阶段完成解析与编译，后续复用同一个 program。</p>
-<p>想直接看图像结果，也可以从前面提到的 YOLO26、PaddleOCR、CLIP 和 PP-Structure 开始。相关源码入口都在这里：</p>
-<pre><code class="language-text">HIP 教程、HeatDiffusion 与 VisualInspection 综合案例
-https://github.com/guojin-yan/HIP-CSharp-API/tree/main/samples
-
-MIGraphX 完整模型示例
-https://github.com/guojin-yan/MIGraphX-CSharp-API/tree/v1.0.0/samples
-</code></pre>
-<p>设备能调用、模型能运行之后，我还想再往前走一步：把输入导入、任务处理、人工复核和报告导出都加上，看看这些接口放进完整应用里是什么样子。于是就有了下面这组项目。</p>
-<h2 id="_1">四、接口之外，我还做了四个应用</h2>
-<p>为了把这些接口放进具体场景，我还做了一个 ROCm C# 应用集合，围绕图像质检、信号分析、单据核验和视频事件检索四个方向展开。每个项目按需使用 HIP 或 MIGraphX，把数据导入、GPU 处理、结果复核和报告导出连起来，也方便大家参考其中的代码，继续做自己的应用。</p>
-<p><strong>SurfaceLab：表面质检与复核。</strong></p>
-<p><img alt="SurfaceLab：图像批次、GPU 检测、人工复核与证据导出" src="assets/03-surfacelab-v3.png" /></p>
-<p><em>应用流程示意：图像批次 → GPU 检测 → 人工复核 → 证据导出。</em></p>
-<p>SurfaceLab 是一个本机图像质检工作台。从批量导入 PNG、JPEG、BMP 图像开始，设置检测配方和 ROI，再选择 HIP GPU 规则或 MIGraphX 异常模型进行处理。检测之后，可以对照原图、缺陷掩码和异常热图，查看具体区域，再进入人工复核队列。</p>
-<p>我比较看重的是检测之后的使用过程：机器判定保留，人工修改单独记录，修改原因和历史可以回看，最后把证据图、CSV、JSON 与离线报告一起导出。如果你准备做图像检测工具，可以参考它怎样把 GPU 处理、批次任务和复核界面组织成一个应用。</p>
-<p>项目源码：</p>
-<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/main/projects/IndustrialInspection
-</code></pre>
-<p><strong>SignalDiagnostics：把波形变成可以回看的分析结果。</strong></p>
-<p><img alt="SignalDiagnostics：离线信号、HIP FFT、频谱分析、规则复核与归档" src="assets/04-signal-diagnostics-v3.png" /></p>
-<p><em>应用流程示意：离线信号 → HIP FFT → 频谱 / PSD → 规则复核 → 报告归档。</em></p>
-<p>同样的处理与复核思路，放到波形数据里，就是 SignalDiagnostics。它读取离线 CSV 信号，使用 HIP 执行 FFT，完成分窗计算、频谱与功率谱密度（PSD）分析，再按频段规则整理需要关注的结果。查看某个分析窗口时，还可以定位到原始样本区间，把频域结果和时域波形对应起来。</p>
-<p>分析结果可以导出为 HTML、JSON 和 CSV，便于离线查看与后续比较。这个项目更适合想研究 GPU 数值计算的朋友：从输入数据、窗函数到频谱结果，看看怎样用 HIP 实现计算，再用 C# 组织完整的文件分析流程。</p>
-<p>项目源码：</p>
-<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/main/projects/SignalDiagnostics
-</code></pre>
-<p><strong>DocumentEvidence：文字识别之后，继续核验字段与证据。</strong></p>
-<p><img alt="DocumentEvidence：指定行区域 OCR、字段核验、人工修改与证据导出" src="assets/05-document-evidence-v3.png" /></p>
-<p><em>应用流程示意：指定文字行 → MIGraphX OCR → 字段与金额核验 → 证据导出。</em></p>
-<p>对于单据，文字识别只是开始，还需要把文字对应到页面和业务字段。DocumentEvidence 可以导入已有 OCR 结果，也可以使用 MIGraphX 识别原页中指定的文字行，再按模板提取编号、数量、单价、金额等字段，检查置信度与金额之间的关系，并进入人工纠正和复核流程。</p>
-<p>它会把机器读取值、人工修改、原图坐标和修改历史分别保留，再导出可独立阅读的 HTML 报告以及 JSON、CSV。这样，查看一个字段时，就能回到对应的页面证据。想把 OCR 接进自己的单据处理程序，可以参考这套从识别结果到字段核验、再到报告交付的组织方式。</p>
-<p>项目源码：</p>
-<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/main/projects/DocumentEvidence
-</code></pre>
-<p><strong>VideoEventSearch：从一段视频，找到值得回看的事件。</strong></p>
-<p><img alt="VideoEventSearch：离线视频、检测跟踪、规则事件、候选索引与原帧回看" src="assets/06-video-event-search-v3.png" /></p>
-<p><em>应用流程示意：视频原帧 / PTS → 检测与跟踪 → 规则事件 → 候选索引与证据回看。</em></p>
-<p>文档按页面组织证据，视频则按时间组织。VideoEventSearch 面向离线视频，保留抽取帧的原始时间戳（PTS），结合 MIGraphX 目标检测与跟踪，按区域进入、离开、越线和停留等规则整理候选事件。后续可以按事件类型、目标类别和时间范围检索，定位到对应的原始帧。</p>
-<p>它把逐帧检测结果继续组织成时间线、事件索引和离线报告，让使用者能从“某一帧检测到了什么”，走到“哪段时间值得回看”。如果你已经有目标检测代码，想进一步加入跟踪、规则和证据导出，这个项目可以作为继续扩展的参考。</p>
-<p>项目源码：</p>
-<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/main/projects/VideoEventSearch
-</code></pre>
-<p>四个项目从不同任务出发，最终都回到同一个目标：把 GPU 计算和模型推理，接进有输入、有操作流程、也有结果交付的 C# 应用。后面我会再分别展开它们的实现和使用方法，大家也可以先从源码里挑一个感兴趣的方向试试。</p>
-<h2 id="_2">五、已经开源，欢迎大家一起试试</h2>
-<p>从之前的 OpenVINO、TensorRT，到这次的 HIP 和 MIGraphX，我一直想做的事情都比较直接：把计算能力接进 C#，让大家继续用熟悉的 .NET 工程组织自己的应用。</p>
-<p>这次两个 1.0 正式版，把自定义 GPU 计算和 ONNX 模型推理一起带到了 AMD GPU 这条路上。想写 Kernel，可以从 HIP 开始；想部署模型，可以从 MIGraphX 开始；想做完整应用，也有组合接口和案例可以继续参考。</p>
-<p>如果这些项目对你有帮助，欢迎点个 Star，也欢迎提交 Issue、分享自己的运行效果，或者一起补充更多有意思的计算与模型示例。</p>
+<p>从空目录创建工程时，按下面三条路径选包。Windows 是本文实跑路径；Ubuntu 使用表中的对应 Runtime、<code>linux-x64</code> RID，并按 Linux 部署指南配置驱动和库。</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th>资源</th>
-<th>地址</th>
+<th>路径</th>
+<th>最少引用</th>
+<th>下一步</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>HIP 项目</td>
-<td>https://github.com/guojin-yan/HIP-CSharp-API</td>
+<td>HIP Kernel</td>
+<td>HIP Core 1.0.0 + win Runtime 10.1.0，或兼容系统 HIP</td>
+<td>HipHello、VectorAdd</td>
 </tr>
 <tr>
-<td>MIGraphX 项目</td>
-<td>https://github.com/guojin-yan/MIGraphX-CSharp-API</td>
+<td>ONNX 推理</td>
+<td>MIGraphX Core 1.0.0 + win 引擎包 1.0.0 + ROCm 系统依赖</td>
+<td>Identity、非平凡 ONNX</td>
 </tr>
 <tr>
-<td>ROCm C# 应用案例集合</td>
-<td>https://github.com/guojin-yan/ROCm-CSharp-Projects</td>
+<td>联合流程</td>
+<td>上述两个 Core + HIP.Interop 1.0.0，同一套原生环境</td>
+<td>Stream、设备 I/O、HIP 前后处理</td>
 </tr>
 </tbody>
 </table></div>
-<p>项目源码采用 Apache-2.0 开源。欢迎大家把自己的想法，也接进这套 C# + AMD GPU 的工程里。</p>
+<p>例如先建一个 ONNX 工程：</p>
+<pre><code class="language-powershell">dotnet new console -n MyOnnx -f net10.0
+cd MyOnnx
+dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API --version 1.0.0
+dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64 --version 1.0.0
+# 需要联合处理时再加：
+dotnet add package JYPPX.ROCm.HIP.CSharp.API --version 1.0.0
+dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop --version 1.0.0
+</code></pre>
+<p>想先看完整运行结果，可以直接下载或克隆文章仓库。先安装 .NET SDK、兼容驱动、VC++ x64 运行库和 ROCm 10.1 系统依赖，再从 <strong>BlogArticle 仓库根目录</strong> 执行下面命令，把 SDK 路径和架构改为自己的配置。</p>
+<pre><code class="language-text">文章仓库
+https://github.com/guojin-yan/BlogArticle
+</code></pre>
+<pre><code class="language-powershell">pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Architecture gfx1100
+</code></pre>
+<p>包装脚本只为当前进程配置 ROCm 路径，然后依次检查下面四项；首次运行包括 NuGet 还原，驱动和 SDK 安装时间需另外预留。</p>
+<h3 id="hip-kernel">从设备到 HIP Kernel</h3>
+<p>HipHello 会打印 Runtime、Driver 和设备名。我本机是：</p>
+<pre><code class="language-text">HipHello
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/HipHello/Program.cs
+</code></pre>
+<pre><code class="language-text">HIP Runtime: 7.16.26385
+HIP Driver:  7.16.26385
+0: AMD Radeon PRO W7900
+</code></pre>
+<p>原生库报告的版本号与 NuGet 分发版本分开解释。枚举设备后，VectorAdd 会执行 <code>c[i] = a[i] + b[i]</code>：上传固定输入、编译 Kernel、启动、同步、下载，再与 CPU 逐元素比较。每轮输出预填 NaN，尾部元素和漏写结果也会检查。</p>
+<pre><code class="language-text">VectorAdd
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/HipVectorAdd/Program.cs
+</code></pre>
+<pre><code class="language-text">Kernel: VectorAdd; arch=gfx1100; blocks=257; threads=256
+PASS: length=65539; repetitions=3; max_abs_error=0; atol=1E-06
+</code></pre>
+<p>这是实际执行结果，原始日志还保留生成代码的哈希。架构参数按实际 GPU 填写。</p>
+<pre><code class="language-text">原始日志
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-vectoradd-run.log
+</code></pre>
+<h3 id="onnx-api">ONNX：先跑通 API，再检查真正的计算</h3>
+<p>Identity 示例的输入是 <code>float32[1,4]</code>、参数名 <code>input</code>，输出为：</p>
+<pre><code class="language-text">Identity 示例
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxHello/Program.cs
+</code></pre>
+<pre><code class="language-text">1, 2, 3, 4
+</code></pre>
+<p>它是 <strong>Loader/API/模型执行链路的 Smoke Test</strong>。Identity 图可能被优化，正确输出和 <code>target="gpu"</code> 都不能单独证明 GPU Kernel 做了非平凡计算，更不能证明性能提升。</p>
+<p>接着运行 MigraphxCompute。随文模型是固定 <code>float32[64,64]</code>，公式为 <code>max(0, x × 0.5 + 0.25)</code>，由标准库生成器生成；输入也由固定公式生成。它比较独立 C# 公式、ONNX Runtime CPU、MIGraphX 主机 I/O 和 HIP 联合路径的全部 4,096 个输出，容差预先固定为 <code>0.001 + 0.001 × abs(CPU参考)</code>，本轮最大绝对误差均为 0。</p>
+<pre><code class="language-text">MigraphxCompute
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/Program.cs
+
+标准库生成器
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/generate-model.py
+</code></pre>
+<p>想看实际执行记录，在仓库根目录执行：</p>
+<pre><code class="language-powershell">pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Mode trace
+</code></pre>
+<p>本轮编译图与执行跟踪出现了以下 GPU 指令：</p>
+<pre><code class="language-text">gpu::code_object[symbol_name=mul_add_relu_kernel,global=2048,local=1024,...]
+hip::copy_from_gpu
+hip::sync_stream
+PASS: affine-relu.onnx; outputElements=4096; host and joint match CPU
+</code></pre>
+<p>这里有三组相互配合的证据：实际执行跟踪、仅使用设备输入的同步运行与 CPU 数值对照，以及包围模型和 D2D 复制的 HIP event 完成区间，见结果 JSON。RunTrace 是执行元数据，event 区间包含复制与排队，二者均不提供独立的逐 Kernel Profiler 时间线。这些记录用于核验该固定计算的 GPU 路径；性能另外测量。</p>
+<pre><code class="language-text">实际执行跟踪
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-affine-trace.log
+
+结果 JSON
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-affine-result.json
+</code></pre>
+<h3 id="_3">第一次运行失败，先查哪里？</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先检查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缺少 <code>amdhip64</code> / <code>hiprtc</code></td>
+<td>x64 进程、平台 Runtime、原生文件是否复制、SDK/PATH 与 HIP 加载诊断</td>
+</tr>
+<tr>
+<td>MIGraphX <code>ProbeSystem()</code> 失败</td>
+<td><code>Diagnostics</code>、<code>LoadedPath</code>、RID 目录、GPU 插件及其依赖</td>
+</tr>
+<tr>
+<td>rocBLAS / hipBLASLt 初始化失败</td>
+<td>ROCm 家族是否一致、Tensile/gfx 设备数据目录是否完整</td>
+</tr>
+<tr>
+<td>HIPRTC 或 module 加载失败</td>
+<td>实际 GPU 架构、<code>--arch</code>、完整编译日志与错误码</td>
+</tr>
+<tr>
+<td>插件存在但不能加载</td>
+<td>传递依赖；Ubuntu 还要核对符号链接和 helper 权限</td>
+</tr>
+</tbody>
+</table></div>
+<p>具体环境变量、Ubuntu 包替换、模型哈希及手动运行命令，见上手与验证和示例说明。</p>
+<pre><code class="language-text">上手与验证
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/05-上手与验证.md
+
+示例说明
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md
+</code></pre>
+<h2 id="_4">五、从模型走向业务流水线</h2>
+<p>把模型跑通后，还可以继续把前后处理接进 GPU：HIP 做布局变换和数值处理，MIGraphX 运行模型，HIP 再做筛选，最后取回业务需要的结果。</p>
+<p><img alt="C#、两个独立 Core、可选 HIP 适配器与 AMD GPU 的关系" src="assets/02-api-architecture-v3.png" /></p>
+<p><em>两个 Core 独立使用；需要 HIP Stream 和设备缓冲区时，再加入 HIP.Interop。</em></p>
+<p>本文联合示例实际做了 <strong>主机 HWC float 输入 → H2D → HIP 转 CHW → MIGraphX → D2D 输出复制 → HIP clamp → D2H → 同步</strong>。<code>RunDeviceIntoAsync</code> 会复制输出到调用者缓冲区，不能把它称为零拷贝。只要最后仍需完整输出，下载成本就仍在；收益要结合传输、同步、Kernel 启动、缓冲区复用和托管调用开销一起看。</p>
+<p>我还做了四个应用参考。这里选信号分析展开，另外三个先用一张表说明用途与实际状态：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>应用与源码</th>
+<th>可以参考什么</th>
+<th>需要单独验收什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SurfaceLab<br><code>https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/IndustrialInspection</code></td>
+<td>图像批次、缺陷叠加/热图、人工复核与证据报告</td>
+<td>真实缺陷的漏检与误报；实验模型未达到质量目标，保留人工复核</td>
+</tr>
+<tr>
+<td>DocumentEvidence<br><code>https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/DocumentEvidence</code></td>
+<td>已有 OCR 结果或指定文字行识别，字段/金额核验与纠正历史</td>
+<td>自动整页检测、真实字段精度；指定行识别不等于完成整页自动识别</td>
+</tr>
+<tr>
+<td>VideoEventSearch<br><code>https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/VideoEventSearch</code></td>
+<td>原始 PTS、检测跟踪、区域/越线/停留候选与原帧回看</td>
+<td>独立人工事件标注；没有据此建立事件准确率</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="SurfaceLab：图像批次、GPU 检测、人工复核与证据导出" src="assets/03-surfacelab-v3.png" /></p>
+<p><em>SurfaceLab 流程概念图。下面补充实际保留的输入与模型热图，二者分开阅读。</em></p>
+<p><img alt="SurfaceLab 实际 VisA 输入和异常热图，机器结果为漏检" src="assets/evidence/surfacelab-real-result.png" /></p>
+<p><em>真实产物来自已复用的 12 图流程检查，图中异常样本是 FN，仍需人工复核；全组 TP 3、FN 3、FP 0、TN 6。来源：Amazon Science VisA / spot-diff，CC BY 4.0；缩放并列展示，见来源记录。另一项 pcb2 首次类别测试为召回 73%、正常误报 6%，未达到 99%/10% 目标，见实际失败清单。</em></p>
+<pre><code class="language-text">VisA / spot-diff
+https://github.com/amazon-science/spot-diff
+
+来源记录
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-surfacelab-evidence.json
+
+实际失败清单
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-surfacelab-quality.json
+</code></pre>
+<h3 id="signaldiagnostics">SignalDiagnostics：把一条输入走到可复核的报告</h3>
+<p><img alt="SignalDiagnostics：离线信号、HIP FFT、频谱分析、规则复核与归档" src="assets/04-signal-diagnostics-v3.png" /></p>
+<p><em>这是流程概念图。实际示例读取 CSV，使用 HIP FFT，并将频谱、PSD、窗口规则与原始样本关联。</em></p>
+<p>SignalDiagnostics 不依赖 MIGraphX。先用可控输入把数值和业务流程看清：8 秒、4096 Hz，64 Hz 基础成分，2–3 秒加入 192 Hz；单位是 <code>arbitrary-unit</code>，这是一条作者编写的演示信号。</p>
+<pre><code class="language-text">SignalDiagnostics
+https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/SignalDiagnostics
+</code></pre>
+<p>下载应用仓库，固定本文使用的提交，从其仓库根目录运行：</p>
+<pre><code class="language-powershell">git checkout --detach 2f70b96267484b441fa726a3d496b8cc55d47219
+dotnet run --project projects/SignalDiagnostics/src/Signal.App -c Release -- demo --output ../runs/article-signal/cpu
+# 在已配置好 HIP 的终端继续：
+$env:SIGNAL_GPU_ARCH = 'gfx1100'
+dotnet run --project projects/SignalDiagnostics/src/Signal.App -c Release -- verify-gpu
+dotnet run --project projects/SignalDiagnostics/src/Signal.App -c Release -- demo --hip --output ../runs/article-signal/hip
+</code></pre>
+<p>程序打印独立输出目录，其中有输入 CSV、配置、逐窗 CSV、<code>result.json</code> 和 HTML 报告。我实际运行后，CPU/HIP 都得到 <strong>125 个完整窗口、15 个待复核窗口</strong>，输入和配置哈希、每窗位置及决策一致。64,125 个 PSD 值的最大绝对差是 <code>7.403744700651416e-9</code>，满足预设容差；12 组 FFT 数值检查也通过，见对照摘要、完整 PSD 数值对和 GPU 检查日志。</p>
+<pre><code class="language-text">对照摘要
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-signal-comparison.json
+
+完整 PSD 数值对
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-signal-psd.csv.gz
+
+GPU 检查日志
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-signal-gpu-check.log
+</code></pre>
+<p><img alt="本轮 SignalDiagnostics 的 CPU 与 HIP PSD 数值对照及待复核窗口数" src="assets/evidence/signal-cpu-hip.png" /></p>
+<p>换成自己的信号时，从 CSV 的 <code>time_s,value</code>、真实采样率、单位和窗参数开始，再比较 CPU/HIP 数值。需要回看某窗，就按样本范围定位原始信号，用 <code>review</code> 命令追加复核记录，保留机器结果。频段命中说明值得检查，不能直接给设备贴上故障标签。本例验证数值与软件流程，现场诊断准确率、长期运行和工业验收仍需另外完成。</p>
+<p><img alt="DocumentEvidence：指定行区域 OCR、字段核验、人工修改与证据导出" src="assets/05-document-evidence-v3.png" /></p>
+<p><em>DocumentEvidence 流程概念图。已有结果导入、指定行 OCR、自动页面检测是不同入口。历史 7 条作者英文行测试中 6 条完全匹配，另一条多了前导空格；这不是独立真实文档精度验收，见原始范围和失败样例。</em></p>
+<pre><code class="language-text">原始范围和失败样例
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-document-evidence.json
+</code></pre>
+<p><img alt="VideoEventSearch：离线视频、检测跟踪、规则事件、候选索引与原帧回看" src="assets/06-video-event-search-v3.png" /></p>
+<p><em>VideoEventSearch 流程概念图。下面是作者演示数据的实际 PTS 与事件证据，不能代替真实视频标注评估。</em></p>
+<p><img alt="VideoEventSearch 实际演示帧、原始 PTS 与候选事件回看" src="assets/evidence/video-pts-evidence.png" /></p>
+<p><em>保留 <code>zone-enter</code> 候选的原帧和 PTS，并标为 NeedsReview，见事件记录。真实视频缺独立事件标签时，不给事件准确率，也不把“0 个候选”解释为没有事件。</em></p>
+<pre><code class="language-text">事件记录
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-video-evidence.json
+</code></pre>
+<h2 id="_5">六、已验证平台、性能与已知限制</h2>
+<h3 id="_6">先看自己的机器是否在证据范围内</h3>
+<p>下面把包发布验证与本篇新增运行分开。<code>PASS</code>、能力跳过 <code>SKIP</code>、未测 <code>NOT TESTED</code> 和已知失败 <code>KNOWN FAIL</code> 各有含义，跳过项不计作通过。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>平台 / 对象</th>
+<th>硬件与原生组合</th>
+<th>正式包</th>
+<th>已有证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows x64 / HIP</td>
+<td>W7900 / gfx1100；ROCm/HIP Runtime 10.1</td>
+<td>Core 1.0.0 + Runtime 10.1.0</td>
+<td>PASS 23 / SKIP 1（managed memory），含 net48、RID、VectorAdd；来源<br><code>https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/compatibility/platforms.md</code></td>
+</tr>
+<tr>
+<td>Ubuntu 24.04 / WSL2 / HIP</td>
+<td>W7900 / gfx1100；宿主驱动桥接；Runtime 10.1</td>
+<td>Core 1.0.0 + Runtime 10.1.0</td>
+<td>PASS 21 / SKIP 2（managed memory、arrays）；来源<br><code>https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/compatibility/platforms.md</code></td>
+</tr>
+<tr>
+<td>Windows 11 / MIGraphX</td>
+<td>W7900 / gfx1100；ROCm 10.1 / MIGraphX 2.18</td>
+<td>Core、Interop、引擎包 1.0.0；HIP Core 1.0.0</td>
+<td>发布记录 PASS 25 项 GPU 组合检查；来源<br><code>https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/release-notes/1.0.0.md</code></td>
+</tr>
+<tr>
+<td>Ubuntu 24.04 / WSL2 / MIGraphX</td>
+<td>W7900 / gfx1100；ROCm 10.1 / MIGraphX 2.18</td>
+<td>同上，使用 Ubuntu 引擎包</td>
+<td>发布记录 PASS 7 组 / 30 项；来源<br><code>https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/release-notes/1.0.0.md</code></td>
+</tr>
+<tr>
+<td>原生 Linux / KFD，当前正式组合</td>
+<td>需独立驱动、设备节点与验证</td>
+<td>当前 1.0 组合</td>
+<td>NOT TESTED：上述 WSL2 结果不外推；旧 ROCm 7.2.1 / MIGraphX 2.15 资料保留为历史</td>
+</tr>
+<tr>
+<td>本文新增 Windows 运行</td>
+<td>Windows 11 10.0.26300；驱动 32.0.21030.2001；W7900/gfx1100；ROCm 10.1 / MIGraphX 2.18</td>
+<td>与上表一致；net10.0</td>
+<td>设备、VectorAdd、Identity、Affine/ReLU、YOLOX Nano 和信号数值检查通过；详见本篇日志与 JSON</td>
+</tr>
+</tbody>
+</table></div>
+<p>历史发布行的驱动具体版本以原始发布报告为准，不用本轮驱动号回填。两个托管库的 <code>.NET Framework 4.6–4.8.1</code>、<code>.NET Core 3.1</code>、<code>.NET 5–10</code> 覆盖指的是<strong>目标框架与包构建范围</strong>，不代表每个旧运行时、OS/GPU 组合都完成真机认证；部分旧框架已经结束上游支持。完整矩阵和稳定来源见配套说明。</p>
+<pre><code class="language-text">配套说明
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/05-上手与验证.md
+</code></pre>
+<h3 id="_7">一次真实模型的三路径测量</h3>
+<p>这次使用上游发布的 <strong>YOLOX Nano ONNX</strong>，模型 SHA-256 为 <code>c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d</code>。CPU 是 Ryzen 9 5900XT（16 核 / 32 线程）、ONNX Runtime CPU 1.23.2 默认线程策略；GPU 是上表 W7900，float32，batch=1，输入 <code>1×3×416×416</code>，MIGraphX <code>fastMath=false</code>。</p>
+<p>三条路径使用完全相同的固定合成 RGB 输入和 HWC→CHW 转换，输出统一做 elementwise clamp，再取回全部 301,665 个 float。这是实际模型的数值/调用成本实验，<strong>不含图像解码、NMS 或检测准确率评估</strong>。主机 I/O 和联合路径相对 CPU 参考的最大绝对差均为 <code>2.19047e-5</code>，全部元素通过同一容差，未做 clamp 的原始模型张量以及测量后的输出也另外复核通过。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>路径</th>
+<th>Warm model API P50 / P95，ms</th>
+<th>端到端 P50 / P95，ms</th>
+<th>端到端串行吞吐，项/秒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ONNX Runtime CPU</td>
+<td>13.388 / 14.916</td>
+<td>15.053 / 17.147</td>
+<td>65.49</td>
+</tr>
+<tr>
+<td>MIGraphX，主机输入输出</td>
+<td>17.770 / 19.451</td>
+<td>19.770 / 20.796</td>
+<td>50.75</td>
+</tr>
+<tr>
+<td>HIP + MIGraphX，设备前后处理</td>
+<td>3.368 / 3.433</td>
+<td>4.155 / 4.404</td>
+<td>240.24</td>
+</tr>
+</tbody>
+</table></div>
+<p>本表使用加入原始张量复核后的最终运行，首轮结果也保留；两轮耗时存在波动。每条路径先预热 10 次，再保留 30 次原始计时，P50/P95 用 nearest rank，未删除离群值；逐项执行，结束前完成 GPU 同步。<strong>可比较的端到端范围</strong>从已解码主机 HWC float 开始，到处理完的主机输出结束，包括本路径的传输、前后处理和同步；排除模型编译、解码与可复用缓冲区分配。Warm model API 三条路径的 I/O 边界不同，只用于定位成本，不能直接解释成纯 Kernel 加速比。</p>
+<pre><code class="language-text">首轮结果
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-yolox-benchmark-round1.json
+</code></pre>
+<p>模型解析/编译单列：主机 I/O GPU 编译约 29.100 秒，设备 I/O GPU 编译约 19.348 秒，CPU Session 创建约 98.623 ms；本进程三条路径的首次运行分别约 24.924、43.689、21.089 ms。没有清空驱动或磁盘缓存，因此不称为干净冷启动。<code>hipMemGetInfo</code> 全设备快照从可用 51,366,887,424 字节变为 51,172,704,256 字节，包含其他进程；没有取得单进程峰值显存。</p>
+<p>这个实验里，MIGraphX 主机路径没有获得端到端收益；联合路径减少了一部分主机和接口开销。后者仍有 H2D/D2H 和 D2D 输出复制，收益也包括缓冲区复用，不能只归因于少了一次数据复制。桌面环境没有锁 GPU 时钟/功耗，输入也是合成数据，请把它当作这台机器上的一次 PoC，再测自己的图片和业务流程。</p>
+<p>复现命令和模型下载/hash 检查见示例说明，全部逐次计时、首次运行、显存快照和边界见原始 benchmark JSON。首轮原生编译还输出过 MIOpen solver 的 <code>Invalid elapsed time</code> 诊断，最终数值检查通过；首轮日志保留，后一次运行未重现该诊断，不作为普遍无警告部署结论。</p>
+<pre><code class="language-text">示例说明
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md
+
+原始 benchmark JSON
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-yolox-benchmark.json
+
+首轮日志
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-yolox-benchmark-round1.log
+</code></pre>
+<h3 id="_8">已知问题要一起带走</h3>
+<ul>
+<li><strong>Windows MIGraphX 2.18 的 2×2 INT8 原生访问冲突尚存。</strong> 32×32 通过不表示小矩阵问题已修复；项目构建的 Windows 引擎没有 TensorFlow importer，见平台说明与 2.18 指南。</li>
+</ul>
+<pre><code class="language-text">平台说明
+https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/compatibility/platforms.md
+
+2.18 指南
+https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/guides/runtime-2.18.md
+</code></pre>
+<ul>
+<li>本轮另发现固定 <strong>64×64 float32 MatMul + ReLU</strong> 在此 Windows 组合编译时出现 <code>0xC0000005</code>，保留模型夹具与失败日志。原因未定位，不能说任意 ONNX 都已支持；本文成功入门例使用 Affine/ReLU。</li>
+</ul>
+<pre><code class="language-text">模型夹具
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/matmul-relu.onnx
+
+失败日志
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-matmul-verify.log
+</code></pre>
+<ul>
+<li>HIP.Interop 的 Stream、设备 I/O 和资源生命周期有指定范围的通过记录；不保证任意任务零拷贝、自动重叠或吞吐提升。旧 Linux 2.15 的 O3/OCKL 问题与显式 O2 规避属于另一个版本组合。</li>
+<li>四个应用的流程可运行、模型精度达标、长期稳定和工业生产验收是不同结论。SurfaceLab 质量目标未达到，单据自动检测与字段质量需另验，视频缺事件标注；这些应用仍是可继续修改的开发参考。</li>
+</ul>
+<h2 id="_9">七、下一步：接入你自己的项目</h2>
+<p>最后按目标选一条 Start Here，复制对应源码地址，先得到一个可以检查的结果，再继续扩展：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Start Here</th>
+<th>先运行</th>
+<th>接着做</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HIP 自定义计算<br><code>https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/HipVectorAdd/Program.cs</code></td>
+<td>VectorAdd 与 CPU 比对</td>
+<td>看 HIP 教程与综合案例<br><code>https://github.com/guojin-yan/HIP-CSharp-API/tree/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/samples</code>，替换为自己的 Kernel</td>
+</tr>
+<tr>
+<td>ONNX 模型推理<br><code>https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/README.md</code></td>
+<td>Identity → Affine/ReLU → 自己的模型</td>
+<td>固定模型、输入、预处理和 CPU 参考，核对 GPU 输出</td>
+</tr>
+<tr>
+<td>HIP 联合流水线<br><code>https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md</code></td>
+<td>相同模型的主机 I/O 与设备 I/O</td>
+<td>核对 Stream、编译后全部参数、资源释放及完整端到端时间</td>
+</tr>
+</tbody>
+</table></div>
+<p>遇到问题时，在对应仓库提交最小复现，可以直接附下面这些信息：</p>
+<pre><code class="language-text">OS / GPU型号与gfx / 驱动：
+ROCm / MIGraphX / .NET / NuGet版本：
+实际原生库加载路径：
+复现命令、固定模型与输入：
+预期结果 / 实际结果：
+错误码、加载诊断或编译日志：
+</code></pre>
+<p>欢迎试用、Star，也欢迎补充设备验证、模型示例或文档勘误。项目入口和反馈：HIP、MIGraphX、ROCm C# 应用集合；文章建议可以放到 BlogArticle Issues。贡献时附可复现输入和验证结果，方便一起确认。</p>
+<pre><code class="language-text">HIP
+https://github.com/guojin-yan/HIP-CSharp-API
+
+MIGraphX
+https://github.com/guojin-yan/MIGraphX-CSharp-API
+
+ROCm C# 应用集合
+https://github.com/guojin-yan/ROCm-CSharp-Projects
+
+BlogArticle Issues
+https://github.com/guojin-yan/BlogArticle/issues
+</code></pre>
+<p>项目源码采用 Apache-2.0；AMD 上游与其他原生组件、模型、数据、文章和配图的授权分别确认。Runtime 的 manifest、licenses 与 source/notices 保留各自来源，项目源码许可不自动覆盖全部内容。</p>
 <p>Copyright © 2026 Guojin Yan / 椒颜皮皮虾。</p></article><aside><h4>本篇内容</h4><div class="toc">
 <ul>
-<li><a href="#gpu-c">一、GPU 计算与模型推理，C# 都安排上</a></li>
-<li><a href="#nuget">二、七个正式版 NuGet 包，一次整理好</a></li>
-<li><a href="#gpu-onnx">三、从发现 GPU，到运行第一个 ONNX</a></li>
-<li><a href="#_1">四、接口之外，我还做了四个应用</a></li>
-<li><a href="#_2">五、已经开源，欢迎大家一起试试</a></li>
+<li><a href="#c-amd-gpu">一、让你的 C# 项目用上 AMD GPU</a></li>
+<li><a href="#hip-migraphx">二、为什么选择 HIP + MIGraphX？</a></li>
+<li><a href="#10">三、1.0 正式发布了什么？</a></li>
+<li><a href="#_1">四、从零运行，再验证计算结果</a></li>
+<li><a href="#_4">五、从模型走向业务流水线</a></li>
+<li><a href="#_5">六、已验证平台、性能与已知限制</a></li>
+<li><a href="#_9">七、下一步：接入你自己的项目</a></li>
 </ul>
 </div>
-<div class="review-tip">六张概念配图 · 七个正式版 NuGet 包<br>Markdown 正文为编辑主文件。</div></aside></main><footer>ROCm 系列 · 初稿预览 · 本页未对外发布</footer></body></html>
+<div class="review-tip">七章正文 · 七个正式版 NuGet 包<br>概念配图与实际验证结果分别标注。<br>Markdown 正文为编辑主文件。</div></aside></main><footer>ROCm 系列 · 文章 001 · 本地阅读预览</footer></body></html>

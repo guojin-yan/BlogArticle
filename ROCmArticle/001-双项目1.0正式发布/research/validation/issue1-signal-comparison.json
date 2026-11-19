@@ -1,0 +1,44 @@
+{
+  "checkedDate": "2026-11-19",
+  "applicationCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "inputSha256": "25190a24634ec2a9f73ecfd716d4cf24a9a7e85f238672ff5c4f6b6c89a10eb4",
+  "configSha256": "a91f9d8d88e9b0d70a3dc2aa78cdb584ff95f9eb87552147a53c54a07d1ec764",
+  "frames": 125,
+  "needsReview": {
+    "cpu": 15,
+    "hip": 15
+  },
+  "decisionLabels": {
+    "cpu": [
+      "needs-review",
+      "no-rule-trigger"
+    ],
+    "hip": [
+      "needs-review",
+      "no-rule-trigger"
+    ]
+  },
+  "allFrameDecisionsMatch": true,
+  "psdBinsCompared": 64125,
+  "maxPsdAbsoluteError": 7.403744700651416e-09,
+  "psdTolerance": "abs(HIP-CPU)<=1e-5+1e-4*abs(CPU)",
+  "reports": {
+    "cpu": {
+      "path": ".validation/case-runs/cpu/827ece1bcc54416683cd5a0d1a806e63/result.json",
+      "sha256": "9436798bd81981d087c3087041e2bc6d0ae1b2f88d47977dff7eec948bb96cad",
+      "backend": "CPU double radix-2 reference"
+    },
+    "hip": {
+      "path": ".validation/case-runs/hip/b1190151599d4459a245ec410f7c7bb3/result.json",
+      "sha256": "a472a48d058997395f407951e214f4be80e90e765385daae946cdd5176260990",
+      "backend": "HIP float32 radix-2 GPU; CPU window/statistics"
+    }
+  },
+  "scope": "Deterministic authored demo, numerical/workflow check; no equipment accuracy or performance claim.",
+  "publishedNumericalPairs": {
+    "path": "issue1-signal-psd.csv.gz",
+    "sha256": "a5b1bebce38a2144eb5d10cf01e803e4e9707f7e46c5b2f5d80b2143312ab290",
+    "rows": 64125,
+    "scope": "Full CPU/HIP PSD pairs with per-window locations and decisions; excludes unrelated runtime metadata"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "date": "2026-11-19",
+  "links": [
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_nano.onnx'",
+      "ok": true,
+      "detail": "{\"full_name\":\"Megvii-BaseDetection/YOLOX\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/amazon-science/spot-diff",
+      "ok": true,
+      "detail": "{\"full_name\":\"amazon-science/spot-diff\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/BlogArticle",
+      "ok": true,
+      "detail": "{\"full_name\":\"guojin-yan/BlogArticle\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/BlogArticle/issues",
+      "ok": true,
+      "detail": "{\"full_name\":\"guojin-yan/BlogArticle\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API",
+      "ok": true,
+      "detail": "{\"full_name\":\"guojin-yan/HIP-CSharp-API\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/compatibility/frameworks.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"39783600b9640275481494877a3fe2c57c2b535e\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/compatibility/platforms.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"3ba91afadd4783105a275d1f02636f3843f8e1dc\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/guides/runtime-distribution-10.1.0.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"c08fb6763be933a3ce2e54572ca52dc4ac56d577\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/guides/upstream-runtime-issues.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"45bcb296d90518ab62b0efb907cbc9f78bb2b7db\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/releases/1.0.0.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"cdfc58d0880ab155208e90d44ac4ca76a95121d8\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/HIP-CSharp-API/tree/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/samples",
+      "ok": true,
+      "detail": "{\"entries\":6}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/MIGraphX-CSharp-API",
+      "ok": true,
+      "detail": "{\"full_name\":\"guojin-yan/MIGraphX-CSharp-API\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/compatibility/platforms.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"4692677fadca635e1b8dd88d438997637b674aff\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/guides/runtime-2.18.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"02364530a175d05502e9f62703465e268dd6e1df\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/guides/runtime-deployment.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"a6bf7d1dbaa6447630d44503c89fc17f339245c9\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/release-notes/1.0.0.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"f06120251d004f036fdd6c8750701fa084e0a042\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/tree/v1.0.0/samples",
+      "ok": true,
+      "detail": "{\"entries\":7}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects",
+      "ok": true,
+      "detail": "{\"full_name\":\"guojin-yan/ROCm-CSharp-Projects\",\"sha\":null}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects.git",
+      "ok": true,
+      "method": "Repository identity checked without clone suffix",
+      "detail": "guojin-yan/ROCm-CSharp-Projects"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects/blob/2f70b96267484b441fa726a3d496b8cc55d47219/docs/getting-started.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"211121e7b08064e2aa4401be27570206cb50f7d7\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects/blob/2f70b96267484b441fa726a3d496b8cc55d47219/projects/SignalDiagnostics/README.md",
+      "ok": true,
+      "detail": "{\"full_name\":null,\"sha\":\"b8f158f7bffde2bd6ec35c0ffa8c5935504eb397\"}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/DocumentEvidence",
+      "ok": true,
+      "detail": "{\"entries\":5}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/IndustrialInspection",
+      "ok": true,
+      "detail": "{\"entries\":5}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/SignalDiagnostics",
+      "ok": true,
+      "detail": "{\"entries\":5}"
+    },
+    {
+      "url": "https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/VideoEventSearch",
+      "ok": true,
+      "detail": "{\"entries\":5}"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API.Runtime.ubuntu.24.04-x64/10.1.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64/10.1.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.HIP.CSharp.API/1.0.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop/1.0.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.ubuntu.24.04-x64/1.0.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64/1.0.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    },
+    {
+      "url": "https://www.nuget.org/packages/JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0",
+      "ok": true,
+      "status": 200,
+      "method": "GET response headers; NuGet HEAD returns 404"
+    }
+  ]
+}

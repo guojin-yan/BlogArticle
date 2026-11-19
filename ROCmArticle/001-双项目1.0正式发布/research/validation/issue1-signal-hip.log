@@ -1,0 +1,12 @@
+{
+  "output": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\.validation\\case-runs\\hip\\b1190151599d4459a245ec410f7c7bb3",
+  "report": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\.validation\\case-runs\\hip\\b1190151599d4459a245ec410f7c7bb3\\report.html",
+  "id": "b1190151599d4459a245ec410f7c7bb3",
+  "backend": "HIP float32 radix-2 GPU; CPU window/statistics",
+  "device": "AMD Radeon PRO W7900",
+  "configSha256": "a91f9d8d88e9b0d70a3dc2aa78cdb584ff95f9eb87552147a53c54a07d1ec764",
+  "frames": 125,
+  "needsReview": 15,
+  "omittedTailSamples": 0,
+  "scope": "authored signal; software/workflow demonstration only"
+}

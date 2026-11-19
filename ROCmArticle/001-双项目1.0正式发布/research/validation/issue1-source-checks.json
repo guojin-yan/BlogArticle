@@ -1,0 +1,93 @@
+{
+  "checkedDate": "2026-11-19",
+  "sources": [
+    {
+      "id": "H1",
+      "repository": "guojin-yan/HIP-CSharp-API",
+      "ref": "b18bb40ef9b85a4c09747ea8b42e2382d261f0e3",
+      "path": "docs/compatibility/platforms.md",
+      "blobSha": "3ba91afadd4783105a275d1f02636f3843f8e1dc",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "H2",
+      "repository": "guojin-yan/HIP-CSharp-API",
+      "ref": "b18bb40ef9b85a4c09747ea8b42e2382d261f0e3",
+      "path": "docs/guides/runtime-distribution-10.1.0.md",
+      "blobSha": "c08fb6763be933a3ce2e54572ca52dc4ac56d577",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "H3",
+      "repository": "guojin-yan/HIP-CSharp-API",
+      "ref": "b18bb40ef9b85a4c09747ea8b42e2382d261f0e3",
+      "path": "docs/compatibility/frameworks.md",
+      "blobSha": "39783600b9640275481494877a3fe2c57c2b535e",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "H4",
+      "repository": "guojin-yan/HIP-CSharp-API",
+      "ref": "b18bb40ef9b85a4c09747ea8b42e2382d261f0e3",
+      "path": "docs/guides/upstream-runtime-issues.md",
+      "blobSha": "45bcb296d90518ab62b0efb907cbc9f78bb2b7db",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "M1",
+      "repository": "guojin-yan/MIGraphX-CSharp-API",
+      "ref": "74b9c8781e02067f2b3a3769a2292df712f71644",
+      "path": "docs/release-notes/1.0.0.md",
+      "blobSha": "f06120251d004f036fdd6c8750701fa084e0a042",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "M2",
+      "repository": "guojin-yan/MIGraphX-CSharp-API",
+      "ref": "74b9c8781e02067f2b3a3769a2292df712f71644",
+      "path": "docs/compatibility/platforms.md",
+      "blobSha": "4692677fadca635e1b8dd88d438997637b674aff",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "M3",
+      "repository": "guojin-yan/MIGraphX-CSharp-API",
+      "ref": "74b9c8781e02067f2b3a3769a2292df712f71644",
+      "path": "docs/guides/runtime-deployment.md",
+      "blobSha": "a6bf7d1dbaa6447630d44503c89fc17f339245c9",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "M4",
+      "repository": "guojin-yan/MIGraphX-CSharp-API",
+      "ref": "74b9c8781e02067f2b3a3769a2292df712f71644",
+      "path": "docs/guides/runtime-2.18.md",
+      "blobSha": "02364530a175d05502e9f62703465e268dd6e1df",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "C1",
+      "repository": "guojin-yan/ROCm-CSharp-Projects",
+      "ref": "2f70b96267484b441fa726a3d496b8cc55d47219",
+      "path": "docs/getting-started.md",
+      "blobSha": "211121e7b08064e2aa4401be27570206cb50f7d7",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "C2",
+      "repository": "guojin-yan/ROCm-CSharp-Projects",
+      "ref": "2f70b96267484b441fa726a3d496b8cc55d47219",
+      "path": "projects/SignalDiagnostics/README.md",
+      "blobSha": "b8f158f7bffde2bd6ec35c0ffa8c5935504eb397",
+      "publicMatchesLocal": true
+    },
+    {
+      "id": "H5",
+      "repository": "guojin-yan/HIP-CSharp-API",
+      "ref": "b18bb40ef9b85a4c09747ea8b42e2382d261f0e3",
+      "path": "docs/releases/1.0.0.md",
+      "blobSha": "cdfc58d0880ab155208e90d44ac4ca76a95121d8",
+      "publicMatchesLocal": true
+    }
+  ]
+}

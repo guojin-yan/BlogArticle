@@ -1,0 +1,7 @@
+Device: 0: AMD Radeon PRO W7900
+HIP Runtime: 7.16.26385
+Kernel: VectorAdd; arch=gfx1100; blocks=257; threads=256
+Code SHA-256: 7F07B97D28C65DDD23E5D0E4193D91130030F2343C8F182CA35E880E58A18B96
+PASS: length=65539; repetitions=3; max_abs_error=0; atol=1E-06
+Evidence: HIPRTC compile, HIP kernel launch, device synchronization, D2H, CPU comparison.
+No profiler trace or performance comparison was collected.

@@ -1,0 +1,33 @@
+{
+  "startedAtUtc": "2026-11-18T03:52:59.871313+00:00",
+  "finishedAtUtc": "2026-11-18T03:56:23.126250+00:00",
+  "scope": "Fixed authored English text lines only; not real documents or independent OCR quality acceptance",
+  "backend": "actual C# MIGraphX GPU; CPU line preprocessing/CTC",
+  "modelManifestSha256": "0785851f0087c0d3398834069fdc5c5c0ac7a1302f268a35023a6227fcc487e8",
+  "manifestSha256": "fcde9a508ed10a2dcc4c7f798fd2929b93ef31c889546d80ea07590beb35484e",
+  "protocolSha256": "7279c0ab9143d48e5ba22d801b4e49826e56672b9d2781fe83591c98dd4873d6",
+  "sampleCount": 7,
+  "exactLines": 6,
+  "exactLineAccuracy": 0.8571428571428571,
+  "characterErrorRate": 0.013513513513513514,
+  "maxAbsoluteReferenceError": 6.67572e-06,
+  "failures": [
+    {
+      "id": "line-03",
+      "image": "line-03.png",
+      "imageSha256": "ae0b12f25ddc1dc947d37176ae0de76e702477e2977039e333634b47ef1087ad",
+      "expected": "SUPPLIER ACME",
+      "predicted": " SUPPLIER ACME",
+      "exactMatch": false,
+      "editDistance": 1,
+      "reference": {
+        "passed": true,
+        "values": 3880,
+        "maxAbsoluteError": 1.5795231e-06,
+        "referenceSha256": "d571f45a6ca4872243563d87b934223065c51b11ce621a139b254c4670d9ea9c",
+        "scope": "One supplied tensor/crop; abs <= 0.0001 + 0.0001 * abs(reference); not OCR domain accuracy."
+      },
+      "recognitionSha256": "2689d6978e741bcd436f84c2289427a7aac9442b692250046fdf9e7b1379d8d2"
+    }
+  ]
+}

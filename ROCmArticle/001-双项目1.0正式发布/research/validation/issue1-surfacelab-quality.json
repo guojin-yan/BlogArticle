@@ -1,0 +1,102 @@
+{
+  "scope": "Historical pcb2 first category test; not rerun in article task",
+  "evaluationSha256": "083945c72adc1a264b8d44c13e3ad961fa3f6a7b755051391820b1fe08aa5f23",
+  "dataset": "VisA",
+  "category": "pcb2",
+  "count": 200,
+  "backend": "MIGraphX GPU · host I/O",
+  "confusion": {
+    "tp": 73,
+    "fp": 6,
+    "tn": 94,
+    "fn": 27
+  },
+  "precision": 0.9240506329113924,
+  "recall": 0.73,
+  "falsePositiveRate": 0.06,
+  "falseNegativeRate": 0.27,
+  "examples": [
+    {
+      "id": "pcb2-normal-0011",
+      "image": "pcb2/Data/Images/Normal/0011.JPG",
+      "mask": null,
+      "imageSha256": "d2e925aba355079bbb108322e64efcb9db5f68bca3d0763d3b1b2fd95706fbe6",
+      "maskSha256": null,
+      "anomaly": false,
+      "predictedAnomaly": true,
+      "outcome": "FP",
+      "defectPixels": 18200,
+      "anomalyEvidence": {
+        "modelId": "visa-pcb2-patchcore-resnet18-v1",
+        "modelSha256": "dd16dec4c05cee23f572787f70b14f316aa393547cddc2bfa9dcbb42b014b4f4",
+        "manifestSha256": "2a4f612c9ebcc181daff29045703e30d649bd595e0038ba2fc86321a685baf3b",
+        "score": 2.381707191467285,
+        "imageThreshold": 1.985973834991455,
+        "pixelThreshold": 1.7799351215362549,
+        "inputSize": 384,
+        "category": "pcb2",
+        "experimental": true,
+        "algorithm": "patchcore-resnet18-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "resnet18",
+          "weightsSha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+          "featureDimension": 384,
+          "patchStride": 8,
+          "normalization": "ImageNet RGB inside graph; descriptors not L2 normalized",
+          "features": "pooled layer2/3",
+          "configSha256": null,
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "pixelIoU": 0,
+      "predictionMaskSha256": "520cd1af431a84b79d7dcfa49054486d6f79441bffc9a994236ba3cb67932ce0",
+      "computeMs": 76.3481,
+      "transferAndComputeMs": 97.8109,
+      "sourceImage": null
+    },
+    {
+      "id": "pcb2-anomaly-000",
+      "image": "pcb2/Data/Images/Anomaly/000.JPG",
+      "mask": "pcb2/Data/Masks/Anomaly/000.png",
+      "imageSha256": "7ee5d8e7d7496860aa60447f3e779003f4bd852a9f2a1f35b9ed49103a7ef708",
+      "maskSha256": "f42fd0018ffafe756cbea26e556a5d0fab36ca2413ad18896206559d63ee7667",
+      "anomaly": true,
+      "predictedAnomaly": false,
+      "outcome": "FN",
+      "defectPixels": 37,
+      "anomalyEvidence": {
+        "modelId": "visa-pcb2-patchcore-resnet18-v1",
+        "modelSha256": "dd16dec4c05cee23f572787f70b14f316aa393547cddc2bfa9dcbb42b014b4f4",
+        "manifestSha256": "2a4f612c9ebcc181daff29045703e30d649bd595e0038ba2fc86321a685baf3b",
+        "score": 1.7816593647003174,
+        "imageThreshold": 1.985973834991455,
+        "pixelThreshold": 1.7799351215362549,
+        "inputSize": 384,
+        "category": "pcb2",
+        "experimental": true,
+        "algorithm": "patchcore-resnet18-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "resnet18",
+          "weightsSha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+          "featureDimension": 384,
+          "patchStride": 8,
+          "normalization": "ImageNet RGB inside graph; descriptors not L2 normalized",
+          "features": "pooled layer2/3",
+          "configSha256": null,
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "pixelIoU": 0,
+      "predictionMaskSha256": "8c539e31bcecd0e5cd2b99709185f660e89fb09ed41b333df4722a0a20e8413c",
+      "computeMs": 54.1282,
+      "transferAndComputeMs": 67.6238,
+      "sourceImage": null
+    }
+  ]
+}

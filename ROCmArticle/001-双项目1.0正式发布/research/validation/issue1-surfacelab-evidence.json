@@ -1,0 +1,57 @@
+{
+  "scope": "Historical retained application output, not rerun in article task; reused 12-image flow check",
+  "evaluationSha256": "f0c52f592a8cbfbcf7ea4fb4a341e616d29062f2f89082407282e29345fbcc88",
+  "inputSha256": "e67db34e1045d7b8f01173a2f3e0138a6d89700e8a83d1426b6de0464e1e5e9d",
+  "heatmapSha256": "f76f6397a2dbed41c71dc85b7241c9268c24cd2dfdd02ee9e1b5488af9027378",
+  "sample": {
+    "id": "pcb1-anomaly-000",
+    "image": "images/pcb1-anomaly-000.jpg",
+    "mask": null,
+    "imageSha256": "e67db34e1045d7b8f01173a2f3e0138a6d89700e8a83d1426b6de0464e1e5e9d",
+    "maskSha256": null,
+    "anomaly": true,
+    "predictedAnomaly": false,
+    "outcome": "FN",
+    "defectPixels": 4431,
+    "anomalyEvidence": {
+      "modelId": "visa-pcb1-dinov2-patchcore-v1",
+      "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+      "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+      "score": 0.5864299535751343,
+      "imageThreshold": 0.6117777228355408,
+      "pixelThreshold": 0.4964463412761688,
+      "inputSize": 392,
+      "category": "pcb1",
+      "experimental": true,
+      "algorithm": "patchcore-dinov2-vits14-v1",
+      "scoreKind": "nearest-normal-patch-l2",
+      "targetNormalFpr": 0.05,
+      "backbone": {
+        "id": "dinov2-vits14",
+        "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+        "featureDimension": 384,
+        "patchStride": 14,
+        "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+        "features": "final normalized patch tokens, CLS/register tokens excluded",
+        "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+        "featureProfile": "native",
+        "localPooling": 1
+      }
+    },
+    "pixelIoU": null,
+    "predictionMaskSha256": "8885f243b5de4fb7dd049a0ab4350aec6f6d156a63a7edf9739092032fed0817",
+    "computeMs": 32.3432,
+    "transferAndComputeMs": 49.0498,
+    "sourceImage": null
+  },
+  "confusion": {
+    "tp": 3,
+    "fp": 0,
+    "tn": 6,
+    "fn": 3
+  },
+  "dataset": "VisA reused 12-image flow check",
+  "source": "https://github.com/amazon-science/spot-diff",
+  "license": "CC-BY-4.0",
+  "transformation": "Resized original input and retained heatmap side by side, labels added"
+}

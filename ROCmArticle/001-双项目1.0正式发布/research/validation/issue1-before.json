@@ -1,0 +1,120 @@
+{
+  "assets": [
+    {
+      "path": "assets\\01-cover-v2.png",
+      "sha256": "C30C44598AAA7B37C42F6334904AEEC48B7576B36B079293596E7540391E457F"
+    },
+    {
+      "path": "assets\\01-cover.png",
+      "sha256": "DBAA723279BAC83BC2E742B9AB876032DDCB6A0968C1C99145CE98339ECD2D59"
+    },
+    {
+      "path": "assets\\02-api-architecture-v3.png",
+      "sha256": "B6FE4364CAA4401832E88ABFC761586FF4E6B0F942E57314C1A66C54F9E0C914"
+    },
+    {
+      "path": "assets\\02-api-architecture.png",
+      "sha256": "674DE8C3E6167DD61067C03426A3DB3CA2B6AAE0A0DDED68146943869DD74F95"
+    },
+    {
+      "path": "assets\\03-surfacelab-v3.png",
+      "sha256": "678C7D7C7A2EAD5002B4ACD1B2E6CF18ABB9BF15387A80437CB17DD8FFA9F033"
+    },
+    {
+      "path": "assets\\03-surfacelab.png",
+      "sha256": "BBE49932DBB175ACF6842A29F8C66B7DCFA0BDC4A8D2C8CE0ED6005C2FCC6B9B"
+    },
+    {
+      "path": "assets\\04-signal-diagnostics-v3.png",
+      "sha256": "4D97493D96EABE686C6F8120FAC165336F9595C47E6700BC847D553C5EDCBF12"
+    },
+    {
+      "path": "assets\\04-signal-diagnostics.png",
+      "sha256": "EB4B67789968714866AABF0FA709B7703158C5336DE0385262B67B1E61A4E04F"
+    },
+    {
+      "path": "assets\\05-document-evidence-v3.png",
+      "sha256": "C76474CB55D6696EB51F13B36D7F0E78C2BB33FF1BF3D23D6FD2C1C19F1F0C6D"
+    },
+    {
+      "path": "assets\\05-document-evidence.png",
+      "sha256": "C5E9ECAEC222ECFF0E4C717270BF4AF1CEC81BAA804AE87948F10E3196684C18"
+    },
+    {
+      "path": "assets\\06-video-event-search-v3.png",
+      "sha256": "75E9EDDDA75C3ABE967D6ADDC24F34A0280F583CF87219F1CE66EE907344DB52"
+    },
+    {
+      "path": "assets\\06-video-event-search.png",
+      "sha256": "8AE53CA11658D5C1F40791B0F93FA4D405A91A31B5A4FA593AC9F8BB7745943D"
+    },
+    {
+      "path": "assets\\image-manifest.json",
+      "sha256": "2426B7CCC5B51A4F748D6AF6830A9009038B413BAD45209E212D2BCB8AD96650"
+    },
+    {
+      "path": "assets\\models\\identity.onnx",
+      "sha256": "0B6FA0302A08A3FCCF375D8CE4F84B7DA59CCFA742FC59A0BAA5F31722AE75F9"
+    },
+    {
+      "path": "assets\\originals\\01-cover.png",
+      "sha256": "6277EEAD76A2B90BDCDB7C06E9218E72BC66EAAD72BAF27B056322859D7B4B63"
+    },
+    {
+      "path": "assets\\originals\\02-api-architecture.png",
+      "sha256": "674DE8C3E6167DD61067C03426A3DB3CA2B6AAE0A0DDED68146943869DD74F95"
+    },
+    {
+      "path": "assets\\originals\\03-surfacelab.png",
+      "sha256": "AD9FF3F15906974F10B628A1A4D576BDC5BE25193AEF96FF6689B0C2394E0A41"
+    },
+    {
+      "path": "assets\\originals\\04-signal-diagnostics.png",
+      "sha256": "8E3829905BF08ECADFD19AAD1DBB4FC96624B95EA8B9D111E5F0B9B05A5C156B"
+    },
+    {
+      "path": "assets\\originals\\05-document-evidence.png",
+      "sha256": "622764E7A5B9705F26F67462A5B89DA40B7EB217A05BD47EAE325017FA2022CC"
+    },
+    {
+      "path": "assets\\originals\\06-video-event-search.png",
+      "sha256": "2A1574700002EAC0EBE0D036C9E9A6E02B43189DEA88AE029EA9B72A7035ACDC"
+    },
+    {
+      "path": "assets\\originals-v2\\02-api-architecture-v2-background.png",
+      "sha256": "6FA67E73BAC8B44830EC55551B3EF70D7DA448DB12C6031A55A2259EDE643D5C"
+    },
+    {
+      "path": "assets\\originals-v2\\03-surfacelab-v2-background.png",
+      "sha256": "F5CDF30B3FC27A71B14577D1584F5E83D2A9EAE0D1B097D10D4C1FF9782AFBB1"
+    },
+    {
+      "path": "assets\\originals-v2\\05-document-evidence-v2-background.png",
+      "sha256": "F781604FCA428B6E2565688ABCB6131948451652AAC25839775CCC562DB5C663"
+    },
+    {
+      "path": "assets\\originals-v3\\01-cover-v2-full.png",
+      "sha256": "70627F698B053E78810CFE0D2A2695C1047685DCDC13BF79EBD49F1AB0E552E7"
+    },
+    {
+      "path": "assets\\originals-v3\\02-api-architecture-v3.png",
+      "sha256": "DA97AD79FDCDD45468BFB865D3ADA0A9AD0703F94AD0AE0A1467A1D23D9BFE97"
+    },
+    {
+      "path": "assets\\originals-v3\\04-signal-diagnostics-v3.png",
+      "sha256": "B8BB9DBD354CD4FBD5F7BDFB69C656EEDD299E72692520796350C1FEE36EAAAA"
+    },
+    {
+      "path": "assets\\originals-v3\\06-video-event-search-v3.png",
+      "sha256": "F8062B4D3E000F3F828A09DCDDA4B7AA67A1B1D02C76C3A93F3FCB9FE38A584C"
+    }
+  ],
+  "htmlImageTags": [
+    "<img alt=\"C# 连接 HIP 自定义计算与 MIGraphX ONNX 推理，共同使用 AMD GPU\" src=\"assets/01-cover-v2.png\" />",
+    "<img alt=\"C#、两个独立 Core、可选 HIP 适配器与 AMD GPU 的关系\" src=\"assets/02-api-architecture-v3.png\" />",
+    "<img alt=\"SurfaceLab：图像批次、GPU 检测、人工复核与证据导出\" src=\"assets/03-surfacelab-v3.png\" />",
+    "<img alt=\"SignalDiagnostics：离线信号、HIP FFT、频谱分析、规则复核与归档\" src=\"assets/04-signal-diagnostics-v3.png\" />",
+    "<img alt=\"DocumentEvidence：指定行区域 OCR、字段核验、人工修改与证据导出\" src=\"assets/05-document-evidence-v3.png\" />",
+    "<img alt=\"VideoEventSearch：离线视频、检测跟踪、规则事件、候选索引与原帧回看\" src=\"assets/06-video-event-search-v3.png\" />"
+  ]
+}

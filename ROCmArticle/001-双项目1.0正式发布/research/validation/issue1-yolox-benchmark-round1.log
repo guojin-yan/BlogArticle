@@ -1,0 +1,3 @@
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/conv/solver_finders.cpp:535: Invalid elapsed time detected in EvaluateInvokers, failed condition: elapsed <= 0
+PASS: yolox_nano.onnx; outputElements=301665; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\validation\issue1-yolox-benchmark.json

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="matmul-relu.onnx" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="affine-relu.onnx" CopyToOutputDirectory="PreserveNewest" />
+    <PackageReference Include="JYPPX.ROCm.MIGraphX.CSharp.API" Version="1.0.0" />
+    <PackageReference Include="JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64" Version="1.0.0" />
+    <PackageReference Include="JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop" Version="1.0.0" />
+    <PackageReference Include="JYPPX.ROCm.HIP.CSharp.API" Version="1.0.0" />
+    <PackageReference Include="JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64" Version="10.1.0" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.23.2" />
+  </ItemGroup>
+</Project>
