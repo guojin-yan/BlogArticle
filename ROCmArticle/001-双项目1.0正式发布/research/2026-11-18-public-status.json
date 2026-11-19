@@ -1,0 +1,155 @@
+{
+  "checkedAtUtc": "2026-11-18T14:05:01.7621714+00:00",
+  "userTimezone": "Asia/Shanghai",
+  "purpose": "Article planning public availability snapshot; not a new package signature or GPU validation",
+  "packages": [
+    {
+      "id": "JYPPX.ROCm.HIP.CSharp.API",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.hip.csharp.api/index.json",
+      "versions": [
+        "0.9.0",
+        "0.9.1",
+        "0.10.0",
+        "1.0.0"
+      ],
+      "error": null
+    },
+    {
+      "id": "JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.hip.csharp.api.runtime.win-x64/index.json",
+      "versions": [
+        "10.1.0"
+      ],
+      "error": null
+    },
+    {
+      "id": "JYPPX.ROCm.HIP.CSharp.API.Runtime.ubuntu.24.04-x64",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.hip.csharp.api.runtime.ubuntu.24.04-x64/index.json",
+      "versions": [
+        "7.2.1",
+        "10.1.0"
+      ],
+      "error": null
+    },
+    {
+      "id": "JYPPX.ROCm.MIGraphX.CSharp.API",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.migraphx.csharp.api/index.json",
+      "versions": [
+        "0.0.1",
+        "0.0.2",
+        "1.0.0"
+      ],
+      "error": null
+    },
+    {
+      "id": "JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.migraphx.csharp.api.hip.interop/index.json",
+      "versions": [
+        "0.0.1",
+        "0.0.2",
+        "1.0.0"
+      ],
+      "error": null
+    },
+    {
+      "id": "JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.migraphx.csharp.api.runtime.win-x64/index.json",
+      "versions": [
+        "1.0.0"
+      ],
+      "error": null
+    },
+    {
+      "id": "JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.ubuntu.24.04-x64",
+      "queryUrl": "https://api.nuget.org/v3-flatcontainer/jyppx.rocm.migraphx.csharp.api.runtime.ubuntu.24.04-x64/index.json",
+      "versions": [
+        "1.0.0"
+      ],
+      "error": null
+    }
+  ],
+  "github": [
+    {
+      "repository": "HIP-CSharp-API",
+      "queryUrl": "https://api.github.com/repos/guojin-yan/HIP-CSharp-API/releases?per_page=5",
+      "releases": [
+        {
+          "tag_name": "runtime-sources-10.1.0",
+          "name": "HIP Runtime 10.1.0 source and notices",
+          "draft": false,
+          "prerelease": false,
+          "published_at": "2026-11-17T03:45:18Z",
+          "html_url": "https://github.com/guojin-yan/HIP-CSharp-API/releases/tag/runtime-sources-10.1.0"
+        },
+        {
+          "tag_name": "runtime-10.1.0-review-bac5281",
+          "name": "Reviewed Runtime 10.1.0 publication inputs",
+          "draft": false,
+          "prerelease": true,
+          "published_at": "2026-11-17T03:58:02Z",
+          "html_url": "https://github.com/guojin-yan/HIP-CSharp-API/releases/tag/runtime-10.1.0-review-bac5281"
+        },
+        {
+          "tag_name": "runtime-ubuntu.24.04-v7.2.1",
+          "name": "Ubuntu 24.04 Runtime 7.2.1",
+          "draft": false,
+          "prerelease": false,
+          "published_at": "2026-08-19T12:12:29Z",
+          "html_url": "https://github.com/guojin-yan/HIP-CSharp-API/releases/tag/runtime-ubuntu.24.04-v7.2.1"
+        },
+        {
+          "tag_name": "v0.9.1",
+          "name": "HIP-CSharp-API 0.9.1",
+          "draft": false,
+          "prerelease": false,
+          "published_at": "2026-08-14T11:08:45Z",
+          "html_url": "https://github.com/guojin-yan/HIP-CSharp-API/releases/tag/v0.9.1"
+        }
+      ],
+      "error": null
+    },
+    {
+      "repository": "MIGraphX-CSharp-API",
+      "queryUrl": "https://api.github.com/repos/guojin-yan/MIGraphX-CSharp-API/releases?per_page=5",
+      "releases": [
+        {
+          "tag_name": "v1.0.0",
+          "name": "MIGraphX CSharp API v1.0.0",
+          "draft": false,
+          "prerelease": false,
+          "published_at": "2026-11-17T07:17:52Z",
+          "html_url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/releases/tag/v1.0.0"
+        },
+        {
+          "tag_name": "v0.0.2",
+          "name": "MIGraphXSharp v0.0.2",
+          "draft": false,
+          "prerelease": false,
+          "published_at": "2026-11-01T03:23:19Z",
+          "html_url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/releases/tag/v0.0.2"
+        },
+        {
+          "tag_name": "v0.0.1",
+          "name": "MIGraphXSharp v0.0.1",
+          "draft": false,
+          "prerelease": false,
+          "published_at": "2026-10-31T14:52:19Z",
+          "html_url": "https://github.com/guojin-yan/MIGraphX-CSharp-API/releases/tag/v0.0.1"
+        }
+      ],
+      "error": null
+    },
+    {
+      "repository": "ROCm-CSharp-Projects",
+      "queryUrl": "https://api.github.com/repos/guojin-yan/ROCm-CSharp-Projects/releases?per_page=5",
+      "releases": [],
+      "error": "Response status code does not indicate success: 404 (Not Found)."
+    }
+  ],
+  "sourceRevisions": {
+    "migraphxLocalAndReleaseSource": "74b9c8781e02067f2b3a3769a2292df712f71644",
+    "hipCorePublishedSource": "7b6f75d0047bb87b72094aa910bcea8be2c5e2bc",
+    "caseCollection": "Read v023 development snapshot; no verified public URL",
+    "hipLocalHead": "b18bb40ef9b85a4c09747ea8b42e2382d261f0e3"
+  }
+}

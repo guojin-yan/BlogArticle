@@ -1,0 +1,59 @@
+{
+  "model": "gpt-image-2.6",
+  "quality": "high",
+  "sourceSize": "1536x1024",
+  "revision": "v3: rich original scenes, concrete workflows and Chinese labels",
+  "method": "Bundled imagegen CLI edit of original artwork; minor local typography repairs",
+  "prompts": "research/image-prompts-v4/",
+  "purpose": "Conceptual editorial illustrations, not software screenshots or measured results",
+  "images": [
+    {
+      "file": "assets/01-cover-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "c30c44598aaa7b37c42f6334904aeec48b7576b36b079293596e7540391e457f"
+    },
+    {
+      "file": "assets/02-api-architecture-v3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "b6fe4364caa4401832e88abfc761586ff4e6b0f942e57314c1a66c54f9e0c914"
+    },
+    {
+      "file": "assets/03-surfacelab-v3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "678c7d7c7a2ead5002b4acd1b2e6cf18abb9bf15387a80437cb17dd8ffa9f033"
+    },
+    {
+      "file": "assets/04-signal-diagnostics-v3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "4d97493d96eabe686c6f8120fac165336f9595c47e6700bc847d553c5edcbf12"
+    },
+    {
+      "file": "assets/05-document-evidence-v3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "c76474cb55d6696eb51f13b36d7f0e78c2bb33ff1bf3d23d6fd2c1c19f1f0c6d"
+    },
+    {
+      "file": "assets/06-video-event-search-v3.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "75e9eddda75c3abe967d6addc24f34a0280f583cf87219f1ce66ee907344db52"
+    }
+  ]
+}

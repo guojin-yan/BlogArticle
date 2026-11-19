@@ -1,0 +1,9 @@
+: Error: No mapping for the Unicode character exists in the target multi-byte code page.
+Unhandled exception. JYPPX.ROCm.MIGraphXSharp.MIGraphXException: MIGraphX call 'migraphx_parse_onnx' failed with status 4 (UnknownError). The frozen C API exposes no last-error text function.
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeStatus.ThrowIfFailed(NativeMIGraphXStatus status, String operation)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeProgramHandle.CompleteParsed(NativeMIGraphXStatus status, IntPtr raw, String operation)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeProgramHandle.ParseFile(IntPtr path, IntPtr options)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.<>c__DisplayClass6_0.<ParseOnnxFile>b__0(IntPtr handle)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceOwner`1.WithHandle[TResult](Func`2 action)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.ParseOnnxFile(String modelPath, MIGraphXOnnxOptions options)
+   at Program.<Main>$(String[] args) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxHello\Program.cs:line 10
