@@ -302,69 +302,42 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 <p>对离线视频整理区域进入、越线、停留等候选事件，并关联原始帧和时间点，方便按事件定位、回看和复核。</p>
 <pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/VideoEventSearch
 </code></pre>
-<h2 id="_5">六、已验证平台、性能与已知限制</h2>
-<h3 id="_6">先看自己的机器是否在证据范围内</h3>
-<p>下面把包发布验证与本篇新增运行分开。<code>PASS</code>、能力跳过 <code>SKIP</code>、未测 <code>NOT TESTED</code> 和已知失败 <code>KNOWN FAIL</code> 各有含义，跳过项不计作通过。</p>
+<h2 id="_5">六、验证结果与使用边界</h2>
+<h3 id="_6">平台验证</h3>
+<p>正式组合以 <strong>W7900 / gfx1100、ROCm 10.1、MIGraphX 2.18</strong> 为主要 GPU 验证基线，包版本见第三节。</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
-<th>平台 / 对象</th>
-<th>硬件与原生组合</th>
-<th>正式包</th>
-<th>已有证据</th>
+<th>平台</th>
+<th>HIP 发布检查</th>
+<th>MIGraphX 发布检查</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Windows x64 / HIP</td>
-<td>W7900 / gfx1100；ROCm/HIP Runtime 10.1</td>
-<td>Core 1.0.0 + Runtime 10.1.0</td>
-<td>PASS 23 / SKIP 1（managed memory），含 net48、RID、VectorAdd；来源<br><code>https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/compatibility/platforms.md</code></td>
+<td>Windows x64</td>
+<td>23 项通过，1 项能力跳过（managed memory）</td>
+<td>25 项 GPU 组合检查通过</td>
 </tr>
 <tr>
-<td>Ubuntu 24.04 / WSL2 / HIP</td>
-<td>W7900 / gfx1100；宿主驱动桥接；Runtime 10.1</td>
-<td>Core 1.0.0 + Runtime 10.1.0</td>
-<td>PASS 21 / SKIP 2（managed memory、arrays）；来源<br><code>https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/compatibility/platforms.md</code></td>
+<td>Ubuntu 24.04 / WSL2</td>
+<td>21 项通过，2 项能力跳过（managed memory、arrays）</td>
+<td>7 组 / 30 项通过</td>
 </tr>
 <tr>
-<td>Windows 11 / MIGraphX</td>
-<td>W7900 / gfx1100；ROCm 10.1 / MIGraphX 2.18</td>
-<td>Core、Interop、引擎包 1.0.0；HIP Core 1.0.0</td>
-<td>发布记录 PASS 25 项 GPU 组合检查；来源<br><code>https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/release-notes/1.0.0.md</code></td>
-</tr>
-<tr>
-<td>Ubuntu 24.04 / WSL2 / MIGraphX</td>
-<td>W7900 / gfx1100；ROCm 10.1 / MIGraphX 2.18</td>
-<td>同上，使用 Ubuntu 引擎包</td>
-<td>发布记录 PASS 7 组 / 30 项；来源<br><code>https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/release-notes/1.0.0.md</code></td>
-</tr>
-<tr>
-<td>原生 Linux / KFD，当前正式组合</td>
-<td>需独立驱动、设备节点与验证</td>
-<td>当前 1.0 组合</td>
-<td>NOT TESTED：上述 WSL2 结果不外推；旧 ROCm 7.2.1 / MIGraphX 2.15 资料保留为历史</td>
-</tr>
-<tr>
-<td>本文新增 Windows 运行</td>
-<td>Windows 11 10.0.26300；驱动 32.0.21030.2001；W7900/gfx1100；ROCm 10.1 / MIGraphX 2.18</td>
-<td>与上表一致；net10.0</td>
-<td>设备、VectorAdd、Identity、Affine/ReLU、YOLOX Nano 和信号数值检查通过；详见本篇日志与 JSON</td>
+<td>原生 Linux / KFD</td>
+<td>当前正式组合未独立验证</td>
+<td>当前正式组合未独立验证</td>
 </tr>
 </tbody>
 </table></div>
-<p>历史发布行的驱动具体版本以原始发布报告为准，不用本轮驱动号回填。两个托管库的 <code>.NET Framework 4.6–4.8.1</code>、<code>.NET Core 3.1</code>、<code>.NET 5–10</code> 覆盖指的是<strong>目标框架与包构建范围</strong>，不代表每个旧运行时、OS/GPU 组合都完成真机认证；部分旧框架已经结束上游支持。完整矩阵和稳定来源见配套说明。</p>
-<pre><code class="language-text">配套说明
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/05-上手与验证.md
-</code></pre>
-<h3 id="_7">一次真实模型的三路径测量</h3>
-<p>这次使用上游发布的 <strong>YOLOX Nano ONNX</strong>，模型 SHA-256 为 <code>c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d</code>。CPU 是 Ryzen 9 5900XT（16 核 / 32 线程）、ONNX Runtime CPU 1.23.2 默认线程策略；GPU 是上表 W7900，float32，batch=1，输入 <code>1×3×416×416</code>，MIGraphX <code>fastMath=false</code>。</p>
-<p>三条路径使用完全相同的固定合成 RGB 输入和 HWC→CHW 转换，输出统一做 elementwise clamp，再取回全部 301,665 个 float。这是实际模型的数值/调用成本实验，<strong>不含图像解码、NMS 或检测准确率评估</strong>。主机 I/O 和联合路径相对 CPU 参考的最大绝对差均为 <code>2.19047e-5</code>，全部元素通过同一容差，未做 clamp 的原始模型张量以及测量后的输出也另外复核通过。</p>
+<p>本文新增运行在 <strong>Windows 11 / .NET 10</strong>，设备枚举、VectorAdd、Identity、Affine/ReLU、YOLOX Nano 与信号数值检查均通过。WSL2 结果不外推为原生 Linux 验证；其他 GPU 仍需实测，多目标框架构建也不等于所有系统组合都已认证。</p>
+<h3 id="_7">一次实际模型测量</h3>
+<p>我用 <strong>Ryzen 9 5900XT + W7900</strong> 对 YOLOX Nano ONNX 做了三条路径比较：CPU 使用 ONNX Runtime 1.23.2，GPU 环境同上。输入统一为固定合成 RGB，float32、batch=1、<code>1×3×416×416</code>，输出统一做 clamp。</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
 <th>路径</th>
-<th>Warm model API P50 / P95，ms</th>
 <th>端到端 P50 / P95，ms</th>
 <th>端到端串行吞吐，项/秒</th>
 </tr>
@@ -372,100 +345,47 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 <tbody>
 <tr>
 <td>ONNX Runtime CPU</td>
-<td>13.388 / 14.916</td>
 <td>15.053 / 17.147</td>
 <td>65.49</td>
 </tr>
 <tr>
 <td>MIGraphX，主机输入输出</td>
-<td>17.770 / 19.451</td>
 <td>19.770 / 20.796</td>
 <td>50.75</td>
 </tr>
 <tr>
 <td>HIP + MIGraphX，设备前后处理</td>
-<td>3.368 / 3.433</td>
 <td>4.155 / 4.404</td>
 <td>240.24</td>
 </tr>
 </tbody>
 </table></div>
-<p>本表使用加入原始张量复核后的最终运行，首轮结果也保留；两轮耗时存在波动。每条路径先预热 10 次，再保留 30 次原始计时，P50/P95 用 nearest rank，未删除离群值；逐项执行，结束前完成 GPU 同步。<strong>可比较的端到端范围</strong>从已解码主机 HWC float 开始，到处理完的主机输出结束，包括本路径的传输、前后处理和同步；排除模型编译、解码与可复用缓冲区分配。Warm model API 三条路径的 I/O 边界不同，只用于定位成本，不能直接解释成纯 Kernel 加速比。</p>
-<pre><code class="language-text">首轮结果
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-yolox-benchmark-round1.json
-</code></pre>
-<p>模型解析/编译单列：主机 I/O GPU 编译约 29.100 秒，设备 I/O GPU 编译约 19.348 秒，CPU Session 创建约 98.623 ms；本进程三条路径的首次运行分别约 24.924、43.689、21.089 ms。没有清空驱动或磁盘缓存，因此不称为干净冷启动。<code>hipMemGetInfo</code> 全设备快照从可用 51,366,887,424 字节变为 51,172,704,256 字节，包含其他进程；没有取得单进程峰值显存。</p>
-<p>这个实验里，MIGraphX 主机路径没有获得端到端收益；联合路径减少了一部分主机和接口开销。后者仍有 H2D/D2H 和 D2D 输出复制，收益也包括缓冲区复用，不能只归因于少了一次数据复制。桌面环境没有锁 GPU 时钟/功耗，输入也是合成数据，请把它当作这台机器上的一次 PoC，再测自己的图片和业务流程。</p>
-<p>复现命令和模型下载/hash 检查见示例说明，全部逐次计时、首次运行、显存快照和边界见原始 benchmark JSON。首轮原生编译还输出过 MIOpen solver 的 <code>Invalid elapsed time</code> 诊断，最终数值检查通过；首轮日志保留，后一次运行未重现该诊断，不作为普遍无警告部署结论。</p>
-<pre><code class="language-text">示例说明
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md
+<p>每条路径预热 <strong>10 次、测量 30 次</strong>，P50 为中位耗时，P95 为 95% 分位耗时。计时从主机输入到主机输出，包含传输、布局转换、推理、clamp 和同步；排除模型编译、解码、NMS 与可复用缓冲区分配，<strong>不评估检测准确率</strong>。两条 GPU 路径与 CPU 参考的最大绝对差均约 <code>2.19047e-5</code>，原始及处理后的输出均通过容差检查。</p>
+<p>这台机器上，主机 I/O 路径慢于 CPU，联合路径更快。联合路径仍含 H2D/D2H 和 D2D 复制，收益也涉及缓冲区复用与接口开销，建议用自己的数据和完整流程复测。</p>
+<h3 id="_8">接入前留意三点</h3>
+<ul>
+<li><strong>模型兼容</strong>：Windows MIGraphX 2.18 仍有 2×2 INT8 原生访问冲突，本轮 64×64 float32 MatMul + ReLU 编译也出现 <code>0xC0000005</code>；Windows 引擎不含 TensorFlow importer。</li>
+<li><strong>测量范围</strong>：本轮没有独立 Kernel Profiler、干净冷启动或单进程峰值显存数据，也未锁 GPU 时钟和功耗。</li>
+<li><strong>应用成熟度</strong>：四个应用是开发参考。SurfaceLab 质量目标尚未达标，文档与视频的业务精度、长期稳定和生产验收仍需另验。</li>
+</ul>
+<p>完整平台矩阵、模型 hash、复现命令、计时明细与失败记录集中在配套资料：</p>
+<pre><code class="language-text">上手与验证
+https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/05-上手与验证.md
 
 原始 benchmark JSON
 https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-yolox-benchmark.json
-
-首轮日志
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-yolox-benchmark-round1.log
 </code></pre>
-<h3 id="_8">已知问题要一起带走</h3>
-<ul>
-<li><strong>Windows MIGraphX 2.18 的 2×2 INT8 原生访问冲突尚存。</strong> 32×32 通过不表示小矩阵问题已修复；项目构建的 Windows 引擎没有 TensorFlow importer，见平台说明与 2.18 指南。</li>
-</ul>
-<pre><code class="language-text">平台说明
-https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/compatibility/platforms.md
-
-2.18 指南
-https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/guides/runtime-2.18.md
-</code></pre>
-<ul>
-<li>本轮另发现固定 <strong>64×64 float32 MatMul + ReLU</strong> 在此 Windows 组合编译时出现 <code>0xC0000005</code>，保留模型夹具与失败日志。原因未定位，不能说任意 ONNX 都已支持；本文成功入门例使用 Affine/ReLU。</li>
-</ul>
-<pre><code class="language-text">模型夹具
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/matmul-relu.onnx
-
-失败日志
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-matmul-verify.log
-</code></pre>
-<ul>
-<li>HIP.Interop 的 Stream、设备 I/O 和资源生命周期有指定范围的通过记录；不保证任意任务零拷贝、自动重叠或吞吐提升。旧 Linux 2.15 的 O3/OCKL 问题与显式 O2 规避属于另一个版本组合。</li>
-<li>四个应用的流程可运行、模型精度达标、长期稳定和工业生产验收是不同结论。SurfaceLab 质量目标未达到，单据自动检测与字段质量需另验，视频缺事件标注；这些应用仍是可继续修改的开发参考。</li>
-</ul>
 <h2 id="_9">七、下一步：接入你自己的项目</h2>
-<p>最后按目标选一条 Start Here，复制对应源码地址，先得到一个可以检查的结果，再继续扩展：</p>
-<div class="table-scroll"><table>
-<thead>
-<tr>
-<th>Start Here</th>
-<th>先运行</th>
-<th>接着做</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HIP 自定义计算<br><code>https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/HipVectorAdd/Program.cs</code></td>
-<td>VectorAdd 与 CPU 比对</td>
-<td>看 HIP 教程与综合案例<br><code>https://github.com/guojin-yan/HIP-CSharp-API/tree/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/samples</code>，替换为自己的 Kernel</td>
-</tr>
-<tr>
-<td>ONNX 模型推理<br><code>https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/README.md</code></td>
-<td>Identity → Affine/ReLU → 自己的模型</td>
-<td>固定模型、输入、预处理和 CPU 参考，核对 GPU 输出</td>
-</tr>
-<tr>
-<td>HIP 联合流水线<br><code>https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md</code></td>
-<td>相同模型的主机 I/O 与设备 I/O</td>
-<td>核对 Stream、编译后全部参数、资源释放及完整端到端时间</td>
-</tr>
-</tbody>
-</table></div>
-<p>遇到问题时，在对应仓库提交最小复现，可以直接附下面这些信息：</p>
-<pre><code class="language-text">OS / GPU型号与gfx / 驱动：
-ROCm / MIGraphX / .NET / NuGet版本：
-实际原生库加载路径：
-复现命令、固定模型与输入：
-预期结果 / 实际结果：
-错误码、加载诊断或编译日志：
+<p>按需求选一条路线，先跑通示例，再换成自己的计算或模型：</p>
+<ul>
+<li><strong>自定义计算</strong>：VectorAdd → 与 CPU 比对 → 替换为自己的 HIP Kernel。</li>
+<li><strong>ONNX 推理</strong>：Identity → Affine/ReLU → 自己的模型，固定输入并核对 CPU/GPU 输出。</li>
+<li><strong>联合流水线</strong>：比较主机与设备 I/O，检查 Stream、参数和资源释放，再测端到端耗时。</li>
+</ul>
+<p>三条路线的源码和命令都在这里，环境配置见第四节及配套说明：</p>
+<pre><code class="language-text">https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md
 </code></pre>
-<p>欢迎试用、Star，也欢迎补充设备验证、模型示例或文档勘误。项目入口和反馈：HIP、MIGraphX、ROCm C# 应用集合；文章建议可以放到 BlogArticle Issues。贡献时附可复现输入和验证结果，方便一起确认。</p>
+<p>欢迎试用、Star，也欢迎提 Issue、补充设备验证或模型示例。反馈请附<strong>环境版本、原生库加载路径、最小复现与输入、预期/实际结果和日志</strong>，完整模板见配套说明。</p>
 <pre><code class="language-text">HIP
 https://github.com/guojin-yan/HIP-CSharp-API
 
@@ -475,10 +395,10 @@ https://github.com/guojin-yan/MIGraphX-CSharp-API
 ROCm C# 应用集合
 https://github.com/guojin-yan/ROCm-CSharp-Projects
 
-BlogArticle Issues
+文章反馈
 https://github.com/guojin-yan/BlogArticle/issues
 </code></pre>
-<p>项目源码采用 Apache-2.0；AMD 上游与其他原生组件、模型、数据、文章和配图的授权分别确认。Runtime 的 manifest、licenses 与 source/notices 保留各自来源，项目源码许可不自动覆盖全部内容。</p>
+<p>项目源码采用 Apache-2.0；原生组件、模型、数据、文章和配图按各自授权使用，分发时保留相应许可与来源通知。</p>
 <p>Copyright © 2026 Guojin Yan / 椒颜皮皮虾。</p></article><aside><h4>本篇内容</h4><div class="toc">
 <ul>
 <li><a href="#c-amd-gpu">一、让你的 C# 项目用上 AMD GPU</a></li>
@@ -486,7 +406,7 @@ https://github.com/guojin-yan/BlogArticle/issues
 <li><a href="#hip-migraphx100">三、HIP 与 MIGraphX：1.0.0 正式发布</a></li>
 <li><a href="#_1">四、从零运行，再验证计算结果</a></li>
 <li><a href="#_4">五、从模型走向业务流水线</a></li>
-<li><a href="#_5">六、已验证平台、性能与已知限制</a></li>
+<li><a href="#_5">六、验证结果与使用边界</a></li>
 <li><a href="#_9">七、下一步：接入你自己的项目</a></li>
 </ul>
 </div>

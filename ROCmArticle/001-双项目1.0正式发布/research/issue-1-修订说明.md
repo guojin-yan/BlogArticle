@@ -4,12 +4,14 @@
 
 主交付：[正文](../03-正文.md)、[上手与验证](../05-上手与验证.md)、[可运行示例](../examples/README.md)。原定标题、六张原配图及引用保留，三张实际证据图放在配套验证资料；新材料均位于 ROCmArticle，三个源码仓库只读。按作者后续反馈，正文案例只作简要展示，详细复现和数值记录由配套资料承接。
 
+按作者最新反馈，第六、七章进一步压缩：正文保留平台简表、端到端性能与测量条件、三条关键边界、三条上手路线和项目入口；完整来源、Warm API 计时、编译/首次执行/显存、诊断日志及反馈模板保留在配套说明。以下完成项按正文与配套资料共同核对。
+
 ## P0：工程可信度
 
 | 建议 | 完成内容与证据 | 保留边界 |
 | --- | --- | --- |
 | 七章逻辑与读者结果 | 正文按七章重写；按作者最新要求，首章只介绍GPU批量计算、ONNX推理和联合流程三类效果，上手命令统一放第四章 | 不承诺首次安装全部依赖只需 5 分钟 |
-| P0-A 平台/框架范围 | 正文第六章与配套矩阵区分 Windows、WSL2、原生 Linux/KFD，明确 W7900/gfx1100、包版本、PASS/SKIP/NOT TESTED/KNOWN FAIL | 发布矩阵引用固定版本资料，本轮新增运行只在 Windows；历史驱动版本不填造 |
+| P0-A 平台/框架范围 | 正文第六章简表区分 Windows、WSL2、原生 Linux/KFD 与能力跳过；完整包版本、PASS/SKIP/NOT TESTED/KNOWN FAIL 和固定来源在配套矩阵 | 本轮新增运行只在 Windows；历史驱动版本不填造 |
 | P0-B 来源和依赖 | 正文第三章列七包与版本关系、Windows 源码构建及补丁、Ubuntu 二进制来源、ROCm 系统库/驱动/VC++ 前提、manifest 和第三方许可 | 社区封装与 AMD 上游归属分开，不称官方认证 |
 | P0-C Identity 定位 | Identity 仅作 Loader/API/执行链路冒烟检查；新增固定 Affine/ReLU、独立 C# 与 ORT CPU 对照、实际 RunTrace、设备 I/O 与 HIP event | [trace](validation/issue1-affine-trace.log)和[JSON](validation/issue1-affine-result.json)不是独立逐 Kernel 硬件 Profiler 时间线 |
 | P0-C 数值计算 | [VectorAdd](../examples/HipVectorAdd/Program.cs)：65,539 元素×3轮，maxAbs=0；[Affine/ReLU](../examples/MigraphxCompute/README.md)：4,096 元素，多参考结果一致 | 核验固定输入/模型；不代表任意 ONNX 或 GPU 兼容 |
@@ -33,7 +35,7 @@
 | --- | --- |
 | 链接与博客排版 | 按作者最新要求，正文的七个NuGet、仓库、指南、源码和证据地址使用代码块/行内代码，替代Issue建议的文字超链接；相对资料地址展开为公开GitHub完整地址。仓库配套文档仍可点击；宽表横向滚动 |
 | 稳定来源 | HIP文档固定提交、MIGraphX v1.0.0、应用固定提交；[来源核对](validation/issue1-source-checks.json)保留公开blob与本地一致的记录 |
-| Start Here / 反馈 | 文末提供 HIP / ONNX / 联合流水线三条源码地址、环境/复现/日志模板及贡献入口 |
+| Start Here / 反馈 | 文末提供 HIP / ONNX / 联合流水线三条路线与统一示例入口、反馈要点及贡献入口；完整环境/复现/日志模板在配套说明 |
 | 归属与许可 | 明确 C# 封装、AMD 上游和第三方归属；Apache-2.0 不覆盖全部原生组件、模型、数据、文章和图片；[新增图片来源](../assets/evidence/README.md)逐项说明 |
 
 ## 验收解释

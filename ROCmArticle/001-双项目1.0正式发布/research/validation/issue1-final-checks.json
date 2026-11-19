@@ -7,7 +7,7 @@
   "originalHtmlImageTagsPreserved": 6,
   "originalAssetsUnchanged": 27,
   "articleImages": 6,
-  "checkedLocalLinks": 64,
+  "checkedLocalLinks": 59,
   "localLinksResolve": true,
   "articleUrlsUseCode": true,
   "articleTextHyperlinks": 0,
@@ -17,6 +17,6 @@
   "benchmarkRawSamplesAndTableMatch": true,
   "benchmarkRawAndFinalOutputsPass": true,
   "signalNumericalPairs": 64125,
-  "visualReview": "Desktop and 390px layout reviewed; application evidence figures now in supporting guide",
+  "visualReview": "Earlier desktop and 390px layout review retained; latest text edits checked in generated HTML and source",
   "limits": "No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance"
 }

@@ -21,6 +21,7 @@ def sha(path):
 
 
 article = (ROOT / '03-正文.md').read_text(encoding='utf-8')
+guide = (ROOT / '05-上手与验证.md').read_text(encoding='utf-8')
 preview = (ROOT / '03-正文预览.html').read_text(encoding='utf-8')
 before = read_json(VALIDATION / 'issue1-before.json')
 assert article.splitlines()[0] == '# C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来'
@@ -83,8 +84,9 @@ for path, measurement in benchmark['measurements'].items():
         ordered = sorted(samples)
         assert values['p50Ms'] == ordered[14] and values['p95Ms'] == ordered[28]
         assert math.isclose(values['serializedItemsPerSecond'], 30000 / sum(samples))
+        measurement_text = article if boundary == 'endToEnd' else guide
         for metric in ['p50Ms', 'p95Ms']:
-            assert f"{values[metric]:.3f}" in article, (path, boundary, metric)
+            assert f"{values[metric]:.3f}" in measurement_text, (path, boundary, metric)
     assert f"{measurement['endToEnd']['serializedItemsPerSecond']:.2f}" in article
 assert 'max_abs_error=0' in (VALIDATION / 'issue1-vectoradd-run.log').read_text(encoding='utf-8-sig')
 signal = read_json(VALIDATION / 'issue1-signal-comparison.json')
@@ -111,7 +113,7 @@ result = {'date': '2026-11-19', 'revision': 'v4', 'titlePreserved': True,
     'fixedModelHashesMatch': True, 'affineExecutionAndNumericalEvidence': True,
     'benchmarkRawSamplesAndTableMatch': True, 'benchmarkRawAndFinalOutputsPass': True,
     'signalNumericalPairs': len(rows) if pair_file.exists() else None,
-    'visualReview': 'Desktop and 390px layout reviewed; application evidence figures now in supporting guide',
+    'visualReview': 'Earlier desktop and 390px layout review retained; latest text edits checked in generated HTML and source',
     'limits': 'No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance'}
 (VALIDATION / 'issue1-final-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(json.dumps(result, ensure_ascii=False))
