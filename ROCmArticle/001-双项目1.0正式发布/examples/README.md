@@ -4,11 +4,16 @@
 
 Windows 示例只消费固定版本的正式 NuGet 包。首次还原需要 NuGet 网络；MigraphxCompute 另使用 ONNX Runtime CPU 1.23.2 作数值参考。没有自动 CPU 回退来掩盖 GPU 路径失败。
 
-从 BlogArticle 根目录执行，替换自己的 SDK 路径与实际 GPU 架构：
+在准备存放源码的目录打开 PowerShell 7。首次使用先克隆仓库；已有副本时直接进入其根目录，跳过前两行：
 
 ```powershell
-pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Architecture gfx1100
+git clone https://github.com/guojin-yan/BlogArticle.git
+Set-Location './BlogArticle'
+$articleDir = (Resolve-Path './ROCmArticle/001-双项目1.0正式发布').Path
+pwsh -File "$articleDir/examples/run-windows.ps1" -Architecture gfx1100
 ```
+
+仓库可放在任意盘符和目录。脚本默认读取 `HIP_PATH`；未配置时，按提示输入自己的 ROCm 10.1 HIP 安装目录（包含 `bin`、`lib`）。可通过 `-HipRoot` 显式传入其他安装目录。`gfx1100` 为本文设备基线，其他架构需先核对引擎支持范围。
 
 依次检查设备、HIP VectorAdd、Identity 和 `max(0,x*0.5+0.25)` 的 ONNX 计算。最后一个例子比较 4,096 个 float32 输出，核对 ONNX Runtime CPU、独立 C# 公式、MIGraphX 主机 I/O 和 HIP 设备 I/O。模型经过 HIP 设备缓冲区、Stream、前后处理 Kernel，并记录模型路径的 HIP event 完成间隔。
 
@@ -21,8 +26,10 @@ pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1'
 
 ## 查看实际执行的 GPU 算子
 
+在上面的终端继续运行：
+
 ```powershell
-pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Mode trace
+pwsh -File "$articleDir/examples/run-windows.ps1" -Mode trace
 ```
 
 输出编译后的 GPU 图及 RunTrace 记录。随文固定模型的执行记录含 `mul_add_relu_kernel`。RunTrace 提供执行元数据；HIP event 区间还包含所需 D2D 输出复制，不能拿它当逐 Kernel Profiler 时间线或纯 Kernel 性能。完整说明见正文的证据解释。
@@ -38,7 +45,7 @@ New-Item -ItemType Directory -Force -Path $modelDir | Out-Null
 $modelPath = "$modelDir/yolox_nano.onnx"
 Invoke-WebRequest 'https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_nano.onnx' -OutFile $modelPath
 if ((Get-FileHash -LiteralPath $modelPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d') { throw 'Model hash mismatch' }
-pwsh -File "$articleDir/examples/run-windows.ps1" -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Mode benchmark -ModelPath $modelPath -OutputPath "$articleDir/.validation/yolox-benchmark.json"
+pwsh -File "$articleDir/examples/run-windows.ps1" -Mode benchmark -ModelPath $modelPath -OutputPath "$articleDir/.validation/yolox-benchmark.json"
 ```
 
 每条路径先预热 10 次，再逐项记录 30 次；分位数采用 nearest rank，不删除离群值。比较端到端时间：从已解码主机 HWC floats 到后处理后的主机输出，包含本路径的数据传输和同步。图像解码、模型编译、一次性缓冲区分配不计入端到端循环；解析、编译与本进程首次执行另列。`warmModelApi` 的不同 I/O 边界写在 JSON 中，不作为纯 Kernel 加速比。

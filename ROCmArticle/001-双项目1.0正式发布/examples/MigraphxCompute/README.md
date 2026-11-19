@@ -4,7 +4,7 @@
 
 `float32[64,64] → max(0, x × 0.5 + 0.25)`
 
-程序同时比较独立 C# 公式、ONNX Runtime CPU、MIGraphX 主机输入输出和 HIP 联合设备路径的 4,096 个输出。默认容差是 `0.001 + 0.001 × abs(CPU参考)`。模型生成器只使用 Python 标准库，运行：
+程序同时比较独立 C# 公式、ONNX Runtime CPU、MIGraphX 主机输入输出和 HIP 联合设备路径的 4,096 个输出。默认容差是 `0.001 + 0.001 × abs(CPU参考)`。先按[配套说明](../../05-上手与验证.md)配置当前终端的原生环境，再从本示例目录运行；模型生成器只使用 Python 标准库：
 
 ```powershell
 python generate-model.py
@@ -16,8 +16,10 @@ dotnet run -c Release -- --mode benchmark
 从文章仓库根目录执行时，也可以使用：
 
 ```powershell
-pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Mode trace
+pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -Mode trace
 ```
+
+包装脚本默认读取 `HIP_PATH`；未配置时会提示输入自己的 ROCm 10.1 HIP 安装目录，也可用 `-HipRoot` 显式指定。
 
 `trace` 输出 MIGraphX 的执行记录和 HIP 同步信息；它用于确认固定模型走过 GPU 执行路径，不是独立硬件 Profiler 的逐 Kernel 时间线。`benchmark` 的计时边界包含程序运行、设备拷贝和同步，不能直接当成单个 Kernel 时间。
 

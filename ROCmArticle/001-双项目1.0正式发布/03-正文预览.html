@@ -3,8 +3,8 @@
 article a{color:#5145af;text-underline-offset:3px;overflow-wrap:anywhere}article a:hover{color:#352878}a code{color:inherit}</style></head><body><div class="masthead"><b>椒颜皮皮虾</b> / ROCm × C# / ARTICLE 001</div><header class="hero"><div class="eyebrow">OPEN SOURCE · RELEASE 1.0.0</div><h1>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</h1><div class="meta">Guojin Yan · 2026-11-19 · v4，Issue #1 完整结构修订</div></header><main class="layout"><article>
 <p><strong>用熟悉的 C#/.NET，调用 AMD GPU 做自定义计算、ONNX 推理和模型前后处理。</strong></p>
 <p><img alt="C# 连接 HIP 自定义计算与 MIGraphX ONNX 推理，共同使用 AMD GPU" src="assets/01-cover-v2.png" /></p>
-<p>之前和大家分享过 OpenVINO、TensorRT 的 C# 接口，这次轮到 AMD GPU 了。<strong>HIP CSharp API 和 MIGraphX CSharp API 的 1.0.0 正式版已经发布</strong>，配套平台 Runtime 和 HIP 适配包也已上架 NuGet。</p>
-<p>如果你正在用 C#/.NET 开发工业视觉、桌面 AI 或数据处理应用，想自己写 GPU Kernel，或者把 ONNX 模型接进现有工程，这篇就带大家从选包、检查环境开始，完成第一次运行和数值验证，再看看怎样组合成应用。</p>
+<p>之前和大家分享过 OpenVINO、TensorRT 的 C# 接口，轻松实现了在英特尔和英伟达设备上进行模型推理加速，但是AMD设备迟迟没有补齐，那这次轮到 AMD GPU 了。<strong>HIP CSharp API 和 MIGraphX CSharp API 的 1.0.0 正式版已经发布</strong>，配套平台 Runtime 和 HIP 适配包也已上架 NuGet，助力大家快速在自己的AMD设备上进行模型部署加速。</p>
+<p>如果你正在用AMD显卡设备使用 C#/.NET 开发工业视觉、桌面 AI 或数据处理应用，想自己写 GPU Kernel，或者把 ONNX 模型接进现有工程，这篇就带大家从选包、检查环境开始，完成第一次运行和数值验证，再看看怎样组合成应用。</p>
 <h2 id="c-amd-gpu">一、让你的 C# 项目用上 AMD GPU</h2>
 <p>接入这两个项目后，C# 应用可以用 AMD GPU 完成三类工作。</p>
 <p><strong>把批量计算交给 GPU。</strong> 图像像素、信号采样和数组中经常有大量相同的计算。通过 HIP，可以编写自己的并行算法，再由 C# 上传数据、调用 GPU 计算并取回结果，把这部分能力接进现有业务代码。</p>
@@ -122,9 +122,9 @@ https://github.com/guojin-yan/MIGraphX-CSharp-API/tree/v1.0.0/samples
 </tbody>
 </table></div>
 <p>注意区分三个版本：C# Core/适配器是 <code>1.0.0</code>，HIP Runtime 包是 <code>10.1.0</code>，MIGraphX Runtime 包是 <code>1.0.0</code>、内部引擎是 <code>2.18.0</code>。升级联合工程时，两个 Core 和适配器一起核对，避免输出目录残留旧原生库。</p>
-<p><strong>Windows MIGraphX 引擎是我基于 AMD 源码、加入 Windows 适配补丁构建的版本</strong>，随项目 Runtime 分发，设备代码针对 gfx1100。Ubuntu 引擎采用 AMD 二进制并调整 ELF 加载路径。包内 <code>native-manifest.json</code> 保留源码身份、版本、文件哈希和主机依赖，<code>licenses/</code> 保留第三方许可。</p>
-<p>MIGraphX 引擎包需要配合 <strong>ROCm 10.1 的 HIP/HIPRTC、COMGR、MIOpen、rocBLAS、hipBLASLt、GPU 设备数据和 bitcode</strong>；显卡驱动另装，Windows 还需要 VC++ x64 运行库。NuGet 不安装完整 ROCm，也不替换驱动。同一进程内保持同一套原生库家族。</p>
-<p>安装前先看 MIGraphX 部署指南和 HIP Runtime 来源与分发说明。AMD 维护上游 HIP/MIGraphX，我维护 C# 封装和本项目分发工作；本项目的发布与测试不能理解为 AMD 官方认证。</p>
+<p><strong>Windows MIGraphX 引擎是我在本地基于 AMD 源码、加入 Windows 适配补丁构建的版本</strong>，随项目 Runtime 分发，设备代码针对 gfx1100。Ubuntu 引擎采用 AMD 二进制并调整 ELF 加载路径。包内 <code>native-manifest.json</code> 保留源码身份、版本、文件哈希和主机依赖，<code>licenses/</code> 保留第三方许可。</p>
+<p>MIGraphX 引擎包需要配合 <strong>ROCm 10.1 的 HIP/HIPRTC、COMGR、MIOpen、rocBLAS、hipBLASLt、GPU 设备数据和 bitcode</strong>；显卡驱动另装，Windows 还需要 VC++ x64 运行库。此处NuGet 不安装完整 ROCm，也不替换驱动。同一进程内保持同一套原生库家族。</p>
+<p>安装前先看 MIGraphX 部署指南和 HIP Runtime 来源与分发说明。AMD 维护上游 HIP/MIGraphX，我主要维护 C# 封装和本项目分发工作；本项目的发布与测试不能理解为 AMD 官方认证。</p>
 <pre><code class="language-text">MIGraphX 部署指南
 https://github.com/guojin-yan/MIGraphX-CSharp-API/blob/v1.0.0/docs/guides/runtime-deployment.md
 
@@ -132,7 +132,7 @@ HIP Runtime 来源与分发说明
 https://github.com/guojin-yan/HIP-CSharp-API/blob/b18bb40ef9b85a4c09747ea8b42e2382d261f0e3/docs/guides/runtime-distribution-10.1.0.md
 </code></pre>
 <h2 id="_1">四、从零运行，再验证计算结果</h2>
-<p>本次核验日期为 <strong>2026-11-19</strong>，本文命令的实际 GPU 基线是 <strong>Radeon PRO W7900 / gfx1100、Windows 11、ROCm 10.1、MIGraphX 2.18</strong>。项目的 Ubuntu 24.04 / WSL2 发布验证列在第六节。</p>
+<p>本文命令的实际 GPU 基线是 <strong>Radeon PRO W7900 / gfx1100、Windows 11、ROCm 10.1、MIGraphX 2.18</strong>。</p>
 <h3 id="_2">先检查环境，按用途安装</h3>
 <p>本文工程目标为 .NET 10。安装好系统依赖后，先确认 SDK 和设备：</p>
 <pre><code class="language-powershell">dotnet --list-sdks
@@ -174,13 +174,14 @@ dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64 --version 1.0.
 dotnet add package JYPPX.ROCm.HIP.CSharp.API --version 1.0.0
 dotnet add package JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop --version 1.0.0
 </code></pre>
-<p>想先看完整运行结果，可以直接下载或克隆文章仓库。先安装 .NET SDK、兼容驱动、VC++ x64 运行库和 ROCm 10.1 系统依赖，再从 <strong>BlogArticle 仓库根目录</strong> 执行下面命令，把 SDK 路径和架构改为自己的配置。</p>
-<pre><code class="language-text">文章仓库
-https://github.com/guojin-yan/BlogArticle
+<p>想先看完整运行结果，可以直接运行随文示例。安装好 .NET SDK、兼容驱动、VC++ x64 运行库和 ROCm 10.1 系统依赖后，在准备存放源码的目录另开一个 <strong>PowerShell 7</strong> 终端：</p>
+<pre><code class="language-powershell">git clone https://github.com/guojin-yan/BlogArticle.git
+Set-Location './BlogArticle'
+$articleDir = (Resolve-Path './ROCmArticle/001-双项目1.0正式发布').Path
+pwsh -File &quot;$articleDir/examples/run-windows.ps1&quot; -Architecture gfx1100
 </code></pre>
-<pre><code class="language-powershell">pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Architecture gfx1100
-</code></pre>
-<p>包装脚本只为当前进程配置 ROCm 路径，然后依次检查下面四项；首次运行包括 NuGet 还原，驱动和 SDK 安装时间需另外预留。</p>
+<p>已有仓库副本时，直接进入其根目录，执行最后两行即可；仓库可以放在任意盘符和目录。脚本优先读取 <code>HIP_PATH</code>，未配置时会提示输入你自己的 ROCm 10.1 HIP 安装目录（包含 <code>bin</code>、<code>lib</code>）。也可用 <code>-HipRoot</code> 显式指定。</p>
+<p>包装脚本只为当前进程配置 ROCm 路径，然后依次检查下面四项；首次运行包括 NuGet 还原，驱动和 SDK 安装时间需另外预留。<code>gfx1100</code> 是本文设备架构，其他设备先核对对应支持范围。</p>
 <h3 id="hip-kernel">从设备到 HIP Kernel</h3>
 <p>HipHello 会打印 Runtime、Driver 和设备名。我本机是：</p>
 <pre><code class="language-text">HipHello
@@ -216,8 +217,8 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 标准库生成器
 https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/generate-model.py
 </code></pre>
-<p>想看实际执行记录，在仓库根目录执行：</p>
-<pre><code class="language-powershell">pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1' -HipRoot 'D:/AMD/ROCm/10.1.0/HIP' -Mode trace
+<p>想看实际执行记录，在上面的终端继续执行：</p>
+<pre><code class="language-powershell">pwsh -File &quot;$articleDir/examples/run-windows.ps1&quot; -Mode trace
 </code></pre>
 <p>本轮编译图与执行跟踪出现了以下 GPU 指令：</p>
 <pre><code class="language-text">gpu::code_object[symbol_name=mul_add_relu_kernel,global=2048,local=1024,...]

@@ -49,6 +49,9 @@ for line in article.splitlines():
 documents = [ROOT / name for name in ['03-正文.md', '05-上手与验证.md',
     'examples/README.md', 'examples/MigraphxCompute/README.md',
     'research/issue-1-修订说明.md', 'assets/evidence/README.md']]
+for document in documents[:4] + [ROOT / '03-正文预览.html', ROOT / 'examples/run-windows.ps1']:
+    assert not re.search(r'(?i)(\b[a-z]:[\\/]|file://|/home/|/mnt/[a-z]/|/Users/)',
+        document.read_text(encoding='utf-8')), f'{document.name}: machine-specific path'
 local_links = []
 public_article_base = 'https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/'
 for target in re.findall(r'https://[^\s`|]+', article):
@@ -110,6 +113,7 @@ result = {'date': '2026-11-19', 'revision': 'v4', 'titlePreserved': True,
     'originalAssetsUnchanged': len(before['assets']), 'articleImages': len(images),
     'checkedLocalLinks': len(local_links), 'localLinksResolve': True,
     'articleUrlsUseCode': True, 'articleTextHyperlinks': 0, 'firstSectionHasNoCommands': True,
+    'readerInstructionsHaveNoMachineSpecificPaths': True,
     'fixedModelHashesMatch': True, 'affineExecutionAndNumericalEvidence': True,
     'benchmarkRawSamplesAndTableMatch': True, 'benchmarkRawAndFinalOutputsPass': True,
     'signalNumericalPairs': len(rows) if pair_file.exists() else None,

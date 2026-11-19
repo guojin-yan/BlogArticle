@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory)][string] $HipRoot,
+    [string] $HipRoot = $env:HIP_PATH,
     [string] $Architecture = 'gfx1100',
     [ValidateSet('verify', 'benchmark', 'trace')][string] $Mode = 'verify',
     [string] $ModelPath,
@@ -8,6 +8,10 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $articleRoot = Split-Path -Parent $PSScriptRoot
+if ([string]::IsNullOrWhiteSpace($HipRoot)) {
+    $HipRoot = Read-Host 'Enter the ROCm 10.1 HIP installation directory (containing bin and lib)'
+}
+if ([string]::IsNullOrWhiteSpace($HipRoot)) { throw 'Specify -HipRoot or configure HIP_PATH.' }
 $rocmHipRoot = (Resolve-Path -LiteralPath $HipRoot).Path
 if (!(Test-Path -LiteralPath "$rocmHipRoot/bin")) { throw 'HIP SDK bin directory is missing.' }
 if ($Architecture -notmatch '^gfx[0-9a-f]+$') { throw 'Specify the actual GPU architecture, for example gfx1100.' }
