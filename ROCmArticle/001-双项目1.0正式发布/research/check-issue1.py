@@ -28,7 +28,7 @@ assert len(re.findall(r'^## ', article, re.M)) == 7
 first_section = article.split('## 一、', 1)[1].split('## 二、', 1)[0]
 assert '```' not in first_section
 images = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', article)
-assert len(images) == 9
+assert len(images) == 6
 for asset in before['assets']:
     assert sha(ROOT / asset['path'].replace('\\', '/')).lower() == asset['sha256'].lower(), asset['path']
 for tag in before['htmlImageTags']:
@@ -111,7 +111,7 @@ result = {'date': '2026-11-19', 'revision': 'v4', 'titlePreserved': True,
     'fixedModelHashesMatch': True, 'affineExecutionAndNumericalEvidence': True,
     'benchmarkRawSamplesAndTableMatch': True, 'benchmarkRawAndFinalOutputsPass': True,
     'signalNumericalPairs': len(rows) if pair_file.exists() else None,
-    'visualReview': 'Desktop and 390px viewport: 9 loaded images, tables scroll, no page overflow',
+    'visualReview': 'Desktop and 390px layout reviewed; application evidence figures now in supporting guide',
     'limits': 'No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance'}
 (VALIDATION / 'issue1-final-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(json.dumps(result, ensure_ascii=False))

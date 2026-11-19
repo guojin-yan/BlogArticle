@@ -6,8 +6,8 @@
   "nugetPackages": 7,
   "originalHtmlImageTagsPreserved": 6,
   "originalAssetsUnchanged": 27,
-  "articleImages": 9,
-  "checkedLocalLinks": 66,
+  "articleImages": 6,
+  "checkedLocalLinks": 64,
   "localLinksResolve": true,
   "articleUrlsUseCode": true,
   "articleTextHyperlinks": 0,
@@ -17,6 +17,6 @@
   "benchmarkRawSamplesAndTableMatch": true,
   "benchmarkRawAndFinalOutputsPass": true,
   "signalNumericalPairs": 64125,
-  "visualReview": "Desktop and 390px viewport: 9 loaded images, tables scroll, no page overflow",
+  "visualReview": "Desktop and 390px layout reviewed; application evidence figures now in supporting guide",
   "limits": "No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance"
 }

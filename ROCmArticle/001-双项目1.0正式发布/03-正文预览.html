@@ -275,84 +275,32 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 <p><img alt="C#、两个独立 Core、可选 HIP 适配器与 AMD GPU 的关系" src="assets/02-api-architecture-v3.png" /></p>
 <p><em>两个 Core 独立使用；需要 HIP Stream 和设备缓冲区时，再加入 HIP.Interop。</em></p>
 <p>本文联合示例实际做了 <strong>主机 HWC float 输入 → H2D → HIP 转 CHW → MIGraphX → D2D 输出复制 → HIP clamp → D2H → 同步</strong>。<code>RunDeviceIntoAsync</code> 会复制输出到调用者缓冲区，不能把它称为零拷贝。只要最后仍需完整输出，下载成本就仍在；收益要结合传输、同步、Kernel 启动、缓冲区复用和托管调用开销一起看。</p>
-<p>我还做了四个应用参考。这里选信号分析展开，另外三个先用一张表说明用途与实际状态：</p>
-<div class="table-scroll"><table>
-<thead>
-<tr>
-<th>应用与源码</th>
-<th>可以参考什么</th>
-<th>需要单独验收什么</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SurfaceLab<br><code>https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/IndustrialInspection</code></td>
-<td>图像批次、缺陷叠加/热图、人工复核与证据报告</td>
-<td>真实缺陷的漏检与误报；实验模型未达到质量目标，保留人工复核</td>
-</tr>
-<tr>
-<td>DocumentEvidence<br><code>https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/DocumentEvidence</code></td>
-<td>已有 OCR 结果或指定文字行识别，字段/金额核验与纠正历史</td>
-<td>自动整页检测、真实字段精度；指定行识别不等于完成整页自动识别</td>
-</tr>
-<tr>
-<td>VideoEventSearch<br><code>https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/VideoEventSearch</code></td>
-<td>原始 PTS、检测跟踪、区域/越线/停留候选与原帧回看</td>
-<td>独立人工事件标注；没有据此建立事件准确率</td>
-</tr>
-</tbody>
-</table></div>
+<p>我还做了四个持续完善的应用参考，展示这些接口在业务中的用法。下面四张图是应用流程概念图，源码和运行说明见各项目地址。</p>
+<h3 id="surfacelab">SurfaceLab：工业图像检测与复核</h3>
 <p><img alt="SurfaceLab：图像批次、GPU 检测、人工复核与证据导出" src="assets/03-surfacelab-v3.png" /></p>
-<p><em>SurfaceLab 流程概念图。下面补充实际保留的输入与模型热图，二者分开阅读。</em></p>
-<p><img alt="SurfaceLab 实际 VisA 输入和异常热图，机器结果为漏检" src="assets/evidence/surfacelab-real-result.png" /></p>
-<p><em>真实产物来自已复用的 12 图流程检查，图中异常样本是 FN，仍需人工复核；全组 TP 3、FN 3、FP 0、TN 6。来源：Amazon Science VisA / spot-diff，CC BY 4.0；缩放并列展示，见来源记录。另一项 pcb2 首次类别测试为召回 73%、正常误报 6%，未达到 99%/10% 目标，见实际失败清单。</em></p>
-<pre><code class="language-text">VisA / spot-diff
-https://github.com/amazon-science/spot-diff
-
-来源记录
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-surfacelab-evidence.json
-
-实际失败清单
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-surfacelab-quality.json
+<p>把图像批次、规则检测与实验异常模型、热图展示和人工复核串在一起，提供质检工具的开发参考，并支持导出复核报告。</p>
+<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/IndustrialInspection
 </code></pre>
-<h3 id="signaldiagnostics">SignalDiagnostics：把一条输入走到可复核的报告</h3>
+<h3 id="signaldiagnostics">SignalDiagnostics：从离线信号到分析报告</h3>
 <p><img alt="SignalDiagnostics：离线信号、HIP FFT、频谱分析、规则复核与归档" src="assets/04-signal-diagnostics-v3.png" /></p>
-<p><em>这是流程概念图。实际示例读取 CSV，使用 HIP FFT，并将频谱、PSD、窗口规则与原始样本关联。</em></p>
-<p>SignalDiagnostics 不依赖 MIGraphX。先用可控输入把数值和业务流程看清：8 秒、4096 Hz，64 Hz 基础成分，2–3 秒加入 192 Hz；单位是 <code>arbitrary-unit</code>，这是一条作者编写的演示信号。</p>
-<pre><code class="language-text">SignalDiagnostics
-https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/SignalDiagnostics
+<p>以这个案例为例，可以看看一项 GPU 计算怎样接进完整应用：</p>
+<ul>
+<li><strong>输入</strong>：带时间和采样值的离线 CSV 信号。</li>
+<li><strong>处理</strong>：用 HIP FFT 分析频率成分，按规则找出待复核的时间段。</li>
+<li><strong>输出</strong>：波形、频谱和 HTML 报告，支持回看原始样本、记录人工复核结果。</li>
+</ul>
+<p>做采样数据分析或离线检测工具的朋友，可以从这里参考数据导入、GPU 计算和报告展示的组织方式。</p>
+<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/SignalDiagnostics
 </code></pre>
-<p>下载应用仓库，固定本文使用的提交，从其仓库根目录运行：</p>
-<pre><code class="language-powershell">git checkout --detach 2f70b96267484b441fa726a3d496b8cc55d47219
-dotnet run --project projects/SignalDiagnostics/src/Signal.App -c Release -- demo --output ../runs/article-signal/cpu
-# 在已配置好 HIP 的终端继续：
-$env:SIGNAL_GPU_ARCH = 'gfx1100'
-dotnet run --project projects/SignalDiagnostics/src/Signal.App -c Release -- verify-gpu
-dotnet run --project projects/SignalDiagnostics/src/Signal.App -c Release -- demo --hip --output ../runs/article-signal/hip
-</code></pre>
-<p>程序打印独立输出目录，其中有输入 CSV、配置、逐窗 CSV、<code>result.json</code> 和 HTML 报告。我实际运行后，CPU/HIP 都得到 <strong>125 个完整窗口、15 个待复核窗口</strong>，输入和配置哈希、每窗位置及决策一致。64,125 个 PSD 值的最大绝对差是 <code>7.403744700651416e-9</code>，满足预设容差；12 组 FFT 数值检查也通过，见对照摘要、完整 PSD 数值对和 GPU 检查日志。</p>
-<pre><code class="language-text">对照摘要
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-signal-comparison.json
-
-完整 PSD 数值对
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-signal-psd.csv.gz
-
-GPU 检查日志
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-signal-gpu-check.log
-</code></pre>
-<p><img alt="本轮 SignalDiagnostics 的 CPU 与 HIP PSD 数值对照及待复核窗口数" src="assets/evidence/signal-cpu-hip.png" /></p>
-<p>换成自己的信号时，从 CSV 的 <code>time_s,value</code>、真实采样率、单位和窗参数开始，再比较 CPU/HIP 数值。需要回看某窗，就按样本范围定位原始信号，用 <code>review</code> 命令追加复核记录，保留机器结果。频段命中说明值得检查，不能直接给设备贴上故障标签。本例验证数值与软件流程，现场诊断准确率、长期运行和工业验收仍需另外完成。</p>
+<h3 id="documentevidenceocr">DocumentEvidence：OCR 与文档核验</h3>
 <p><img alt="DocumentEvidence：指定行区域 OCR、字段核验、人工修改与证据导出" src="assets/05-document-evidence-v3.png" /></p>
-<p><em>DocumentEvidence 流程概念图。已有结果导入、指定行 OCR、自动页面检测是不同入口。历史 7 条作者英文行测试中 6 条完全匹配，另一条多了前导空格；这不是独立真实文档精度验收，见原始范围和失败样例。</em></p>
-<pre><code class="language-text">原始范围和失败样例
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-document-evidence.json
+<p>将已有 OCR 结果或指定文字行识别，与字段、金额核验和人工修正记录结合，输出便于查阅的文档报告。</p>
+<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/DocumentEvidence
 </code></pre>
+<h3 id="videoeventsearch">VideoEventSearch：按候选事件回看视频</h3>
 <p><img alt="VideoEventSearch：离线视频、检测跟踪、规则事件、候选索引与原帧回看" src="assets/06-video-event-search-v3.png" /></p>
-<p><em>VideoEventSearch 流程概念图。下面是作者演示数据的实际 PTS 与事件证据，不能代替真实视频标注评估。</em></p>
-<p><img alt="VideoEventSearch 实际演示帧、原始 PTS 与候选事件回看" src="assets/evidence/video-pts-evidence.png" /></p>
-<p><em>保留 <code>zone-enter</code> 候选的原帧和 PTS，并标为 NeedsReview，见事件记录。真实视频缺独立事件标签时，不给事件准确率，也不把“0 个候选”解释为没有事件。</em></p>
-<pre><code class="language-text">事件记录
-https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/research/validation/issue1-video-evidence.json
+<p>对离线视频整理区域进入、越线、停留等候选事件，并关联原始帧和时间点，方便按事件定位、回看和复核。</p>
+<pre><code class="language-text">https://github.com/guojin-yan/ROCm-CSharp-Projects/tree/2f70b96267484b441fa726a3d496b8cc55d47219/projects/VideoEventSearch
 </code></pre>
 <h2 id="_5">六、已验证平台、性能与已知限制</h2>
 <h3 id="_6">先看自己的机器是否在证据范围内</h3>
