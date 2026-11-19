@@ -46,16 +46,27 @@ https://github.com/guojin-yan/MIGraphX-CSharp-API/tree/v1.0.0/samples
 </code></pre>
 <p>两个 Core 可以独立使用。只有需要连接 HIP Stream 和设备缓冲区时，才加入适配器；刚开始不必把全部包都装上。</p>
 <h2 id="hip-migraphx100">三、HIP 与 MIGraphX：1.0.0 正式发布</h2>
-<p>这次正式和大家介绍两个开源项目：<strong>HIP CSharp API 面向自定义 GPU 计算，MIGraphX CSharp API 面向 AI 模型推理。</strong> 我把原生调用、数据输入输出和资源管理整理成了 .NET 接口，让大家可以在现有 C# 工程中接入 AMD GPU。</p>
+<p>这次带来两个开源项目：<strong>HIP CSharp API 做自定义 GPU 计算，MIGraphX CSharp API 做 AI 模型推理。</strong> 两者都能通过 NuGet 接入现有 C# 工程。</p>
 <h3 id="hip-csharp-api-c-gpu">HIP CSharp API：从 C# 调用自己的 GPU 算法</h3>
-<p>HIP CSharp API 是 <strong>AMD HIP Runtime 与 HIPRTC 的 C#/.NET 接口库</strong>，覆盖一次 GPU 计算的主要环节：发现和选择设备、分配显存、上传与下载数据、加载计算模块、启动 Kernel，以及通过 Stream/Event 安排任务和同步结果。</p>
-<p>Kernel 使用 HIP C/C++ 编写，C# 负责组织数据和调用。既可以加载预先编译的设备代码，也可以通过 HIPRTC 在运行时编译 Kernel，再把计算接进图像前后处理、信号分析或数值计算流程。算法和业务代码各有清楚的入口，方便在现有程序中逐步引入 GPU 计算。</p>
-<p>在使用体验上，显存、Stream、Event、Module 等资源都有对应的托管对象，可以通过 <code>using</code> / <code>Dispose</code> 管理；异步提交也有在途资源保活机制。需要深入原生接口时，还可以使用低层 API。项目同时提供中英文 API 注释，以及设备、内存拷贝、VectorAdd、Stream/Event 等可运行教程，便于从一个计算任务开始上手。</p>
+<p>AMD HIP Runtime 与 HIPRTC 的 C#/.NET 接口库，提供托管对象和低层 API 两种入口。</p>
+<ul>
+<li><strong>自己写 GPU 算法</strong>：用 HIP C/C++ 编写 Kernel，由 C# 调用，接入图像、信号和数值处理。</li>
+<li><strong>运行时编译</strong>：通过 HIPRTC 编译 Kernel，也能直接加载预编译的设备模块。</li>
+<li><strong>显存与数据传输</strong>：设备选择、显存分配、数据上传下载，都有对应接口。</li>
+<li><strong>异步执行与计时</strong>：通过 Stream/Event 安排计算任务、同步结果、测量执行时间。</li>
+<li><strong>熟悉的资源管理</strong>：使用 <code>using</code> / <code>Dispose</code> 管理资源，异步在途资源有保活机制。</li>
+<li><strong>现成教程与示例</strong>：中英文 API 注释，配有设备枚举、内存拷贝、VectorAdd 等可运行示例。</li>
+</ul>
 <h3 id="migraphx-csharp-api-onnx-net">MIGraphX CSharp API：把 ONNX 模型接进 .NET 应用</h3>
-<p>MIGraphX CSharp API 是 <strong>AMD MIGraphX 的 C#/.NET 模型推理接口库</strong>。它可以从文件或内存解析 ONNX，查看输入输出的形状和数据类型，面向 GPU 编译计算图，再绑定输入、执行模型并把结果读取为 C# 数组，覆盖从模型加载到结果使用的完整调用过程。</p>
-<p>除了基本推理，还提供多输入输出、类型化张量、动态输入形状、编译后程序保存与加载，以及显式模型缓存。对于需要反复调用同一模型的桌面或服务程序，可以复用已创建的程序和执行资源，在兼容的原生环境中管理编译产物与缓存。</p>
-<p>仓库配有 <strong>YOLO26 检测与分割、PaddleOCR 文字识别、CLIP 图文匹配、PP-Structure 文档结构分析</strong>等工程示例，模型输入、结果解析和展示都有代码可参考。进一步结合 HIP.Interop，还可以在同一 HIP Stream 上接入设备缓冲区，把自定义前处理、模型推理和 GPU 后处理连接起来。</p>
-<p>两个 Core 都可以独立使用，需要联合计算时再加入适配包。<strong>接口库、平台 Runtime 和适配器均已提供 NuGet 包</strong>，可以按自己的用途选择组合。七个正式包如下，复制地址即可打开对应版本：</p>
+<p>AMD MIGraphX 的 C#/.NET 接口库，覆盖模型加载、张量管理、GPU 编译与推理。</p>
+<ul>
+<li><strong>ONNX 模型直接接入</strong>：从文件或内存加载模型，在 C# 中完成 GPU 编译和执行。</li>
+<li><strong>灵活的输入输出</strong>：支持多输入输出、类型化张量和动态输入形状，结果可读取为 C# 数组。</li>
+<li><strong>模型编译后复用</strong>：支持程序保存、加载和显式缓存，在兼容环境中复用编译结果。</li>
+<li><strong>前处理、推理、后处理串联</strong>：通过 HIP.Interop，在同一 HIP Stream 上连接设备缓冲区与计算任务。</li>
+<li><strong>四类工程示例</strong>：YOLO26 检测与分割、PaddleOCR 文字识别、CLIP 图文匹配、PP-Structure 文档结构分析。</li>
+</ul>
+<p>两个 Core 可独立引用，联合流程再加入 HIP.Interop。<strong>七个 NuGet 包已发布</strong>，按用途选择即可：</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
