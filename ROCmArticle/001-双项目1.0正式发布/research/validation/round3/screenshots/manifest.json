@@ -1,0 +1,195 @@
+{
+  "environment": "../environment.json",
+  "applicationSourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "gpu": "AMD Radeon PRO W7900",
+  "gfx": "gfx1100",
+  "os": "Windows 11 build 26300",
+  "nativeEngine": "MIGraphX 2.18 / ROCm 10.1",
+  "captureScope": "Real browser viewport, no OS chrome, full desktop or terminal screenshot; raw JPEG bytes unmodified",
+  "licensing": "../inputs/README.md",
+  "commands": "../commands.json",
+  "files": [
+    {
+      "file": "screenshots/raw/01-yolox-gpu-report-ready.jpg",
+      "status": "INVALID_LAYOUT",
+      "title": "Invalid fullPage layout",
+      "url": "http://127.0.0.1:8766/research/validation/round2/results/photo-final/detection-report.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:11:33.480014+08:00",
+      "format": "JPEG",
+      "width": 1119,
+      "height": 1243,
+      "sha256": "10e08ad1b71a95f67e95a1ff118a2e3cf9b44258de469f91532c9e6a552db087",
+      "bytes": 35433,
+      "scope": "FullPage backend narrow-layout anomaly; retained, not displayed as successful capture",
+      "evidence": [],
+      "captureApi": "cua_repl Tab.screenshot(fullPage=true)",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/01-yolox-gpu-report-viewport.jpg",
+      "status": "VALID",
+      "title": "YOLOX previous-round GPU report",
+      "url": "http://127.0.0.1:8766/research/validation/round2/results/photo-final/detection-report.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:11:56.665837+08:00",
+      "format": "JPEG",
+      "width": 1119,
+      "height": 1243,
+      "sha256": "a0c848c48589c04d48be8edbaa7f897a28ffe9e2a78443990f9578ce4bd9afc3",
+      "bytes": 149251,
+      "scope": "NASA Eileen Collins via scikit-image; previous run, screenshot only",
+      "evidence": [
+        "research/validation/round2/results/photo-final/detection-report.html",
+        "research/validation/round2/results/photo-final/photo.json"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/01-yolox-gpu-report.jpg",
+      "status": "INVALID_LAYOUT",
+      "title": "Invalid fullPage layout",
+      "url": "http://127.0.0.1:8766/research/validation/round2/results/photo-final/detection-report.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:10:07.613852+08:00",
+      "format": "JPEG",
+      "width": 1119,
+      "height": 1243,
+      "sha256": "05ee4cb61ca989280b435858729e8ef7b5afd7a876c679d15c84026c902aa5f7",
+      "bytes": 35448,
+      "scope": "FullPage backend narrow-layout anomaly; retained, not displayed as successful capture",
+      "evidence": [],
+      "captureApi": "cua_repl Tab.screenshot(fullPage=true)",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/02-surfacelab-hip-workspace.jpg",
+      "status": "VALID",
+      "title": "SurfaceLab live HIP rule workspace",
+      "url": "http://127.0.0.1:5086/",
+      "capturedAtFromFileMtime": "2026-11-20T23:27:29.489225+08:00",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 712,
+      "sha256": "180a09346484b0d059261264b88244977fb27f0c84e741f43daf6ba7ed95ddde",
+      "bytes": 64295,
+      "scope": "Authored deterministic six-image fixture; model Compile failed separately",
+      "evidence": [
+        "research/validation/round3/results/surface-hip-batch.json",
+        "research/validation/round3/logs/surface-smoke-hip.log"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/03-signal-hip-report.jpg",
+      "status": "VALID",
+      "title": "SignalDiagnostics generated HIP HTML report",
+      "url": "http://127.0.0.1:8766/research/validation/round3/results/signal-hip/2e134d9c08c04b2da3e885dbf3111ba8/report.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:24:43.229336+08:00",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 712,
+      "sha256": "637ad2711a9a490c6c4534292860c5dd6e76affd62bab9ab9ca5a70a9610eb80",
+      "bytes": 105635,
+      "scope": "Authored 4096Hz fixture, window RMS trend; no diagnostic accuracy",
+      "evidence": [
+        "research/validation/round3/results/signal-comparison.json",
+        "research/validation/round3/logs/signal-hip-analyze.log"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/04-document-authored-workflow.jpg",
+      "status": "VALID",
+      "title": "DocumentEvidence generated authored workflow report",
+      "url": "http://127.0.0.1:8766/research/validation/round3/results/document-cpu-demo/initial-report/evidence.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:28:49.897299+08:00",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 712,
+      "sha256": "7196bad97c226569071234767a1c185e8f59a304ce72642c909ce1ad1d20d9d6",
+      "bytes": 82186,
+      "scope": "Authored bitmap/OCR-text fixture; CPU rules; not successful GPU OCR",
+      "evidence": [
+        "research/validation/round3/logs/document-cpu-workflow-demo.log"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/05-video-gpu-report.jpg",
+      "status": "VALID",
+      "title": "VideoEventSearch actual GPU generated report",
+      "url": "http://127.0.0.1:8766/research/validation/round3/results/video-gpu/analysis/report.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:28:57.869448+08:00",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 712,
+      "sha256": "68ce3a1f91e75c4136c5b5f4ab7059a5b14b455b76caebb082ef0eece506e45d",
+      "bytes": 99627,
+      "scope": "NASA factual technical analysis; 20 frozen frames,2 detections,0 events,independent labels pending",
+      "evidence": [
+        "research/validation/round3/results/video-gpu/workflow-run.json",
+        "research/validation/round3/results/video-gpu/analysis/result.json"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/05b-video-original-frame18.jpg",
+      "status": "VALID",
+      "title": "VideoEventSearch retained incorrect train prediction",
+      "url": "http://127.0.0.1:8766/research/validation/round3/results/video-gpu/analysis/report.html#frame-18",
+      "capturedAtFromFileMtime": "2026-11-20T23:30:01.268592+08:00",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 712,
+      "sha256": "ee15a93d82f97033d8488b0ba60d62b10b49213cbfd236fcc203a36735fdf86e",
+      "bytes": 68878,
+      "scope": "NASA original frame18 PTS110592; incorrect prediction unchanged",
+      "evidence": [
+        "research/validation/round3/results/video-gpu/analysis/result.json"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/06-core-verify-log-view.jpg",
+      "status": "VALID",
+      "title": "Browser view of verbatim actual core stdout",
+      "url": "http://127.0.0.1:8766/research/validation/round3/results/core-verify-log-view.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:32:24.853362+08:00",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 720,
+      "sha256": "715e854d949e3dda634403a89b91975c78afdcbc2d300ea9c2f4efb66c6cf8ff",
+      "bytes": 79033,
+      "scope": "Browser log viewer, not terminal screenshot",
+      "evidence": [
+        "research/validation/round3/logs/core-verify.log",
+        "research/validation/round3/results/core-verify.json"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    },
+    {
+      "file": "screenshots/raw/07-migraphx-trace-log-view.jpg",
+      "status": "VALID",
+      "title": "Browser view of verbatim actual MIGraphX trace",
+      "url": "http://127.0.0.1:8766/research/validation/round3/results/core-trace-log-view.html",
+      "capturedAtFromFileMtime": "2026-11-20T23:32:42.545494+08:00",
+      "format": "JPEG",
+      "width": 1265,
+      "height": 712,
+      "sha256": "5d62afba36b08c441e0da4ac2864c4bee85f7384f4f61f760ce490876383d5dd",
+      "bytes": 100439,
+      "scope": "Trace metadata; not terminal or independent profiler screenshot",
+      "evidence": [
+        "research/validation/round3/logs/core-trace.log",
+        "research/validation/round3/results/core-trace.json"
+      ],
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false
+    }
+  ]
+}

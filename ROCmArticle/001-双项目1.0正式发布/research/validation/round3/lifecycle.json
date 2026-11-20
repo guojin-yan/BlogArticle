@@ -1,0 +1,7 @@
+{
+  "stoppedAt": "2026-11-20T23:39:52.541682+08:00",
+  "surfaceLiveService": "stopped after screenshots; reports and batch JSON remain",
+  "outputDriveAlias": "removed after document runs",
+  "pythonReportServer": "127.0.0.1:8766 remains for article preview",
+  "globalPathDriverOrDependenciesChanged": false
+}

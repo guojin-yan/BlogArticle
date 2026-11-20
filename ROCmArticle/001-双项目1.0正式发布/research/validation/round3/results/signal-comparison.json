@@ -1,0 +1,11 @@
+{
+  "frames": 125,
+  "psdValues": 64125,
+  "maxAbs": 7.403744700651416e-09,
+  "cpuNeedsReview": 15,
+  "hipNeedsReview": 15,
+  "passed": true,
+  "cpuReport": "results/signal-cpu/6f1e4f9121ef4274a2781e1f96683d33/report.html",
+  "hipReport": "results/signal-hip/2e134d9c08c04b2da3e885dbf3111ba8/report.html",
+  "scope": "Authored 4096 Hz two-frequency fixture; GPU numerical/software integration, no device diagnosis accuracy."
+}

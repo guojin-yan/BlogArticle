@@ -1,0 +1,16 @@
+{
+  "sampleRateHz": 4096,
+  "unit": "arbitrary-unit",
+  "fftSize": 1024,
+  "hopSize": 256,
+  "window": "hann-periodic",
+  "removeMean": false,
+  "bands": [
+    {
+      "id": "192hz-band",
+      "lowHz": 180,
+      "highHz": 220,
+      "maxRms": 0.4
+    }
+  ]
+}

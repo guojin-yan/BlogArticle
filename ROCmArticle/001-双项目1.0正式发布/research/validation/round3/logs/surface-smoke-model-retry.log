@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\eng\smoke-inspection.py", line 144, in <module>
+    result = json.dumps(run(args.url.rstrip("/"), args.gpu, args.model, args.manifest), indent=2)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\eng\smoke-inspection.py", line 106, in run
+    model_batch = complete(json.load(response)['id'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\eng\smoke-inspection.py", line 32, in complete
+    batch = json.loads(request("/api/batches/" + batch_id))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\eng\smoke-inspection.py", line 21, in request
+    with urllib.request.urlopen(urllib.request.Request(base + path, data=data, headers=hdrs), timeout=30) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\urllib\request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 1478, in getresponse
+    response.begin()
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 343, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\http\client.py", line 304, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。

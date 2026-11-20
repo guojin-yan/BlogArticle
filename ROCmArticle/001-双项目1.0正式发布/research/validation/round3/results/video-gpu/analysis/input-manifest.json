@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "walkout-preview.mp4 sha256:66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "detectionSource": "unprocessed",
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 15360
+  },
+  "width": 480,
+  "height": 270,
+  "frames": [
+    {
+      "pts": 0,
+      "image": "frames/f000000.png",
+      "sha256": "7dd7cb572c42641afc819685204c9f5217beffe8c5a4592fe3afecebf79ff5ee",
+      "detections": []
+    },
+    {
+      "pts": 6144,
+      "image": "frames/f000001.png",
+      "sha256": "0571b50550d3b46da123ee6e0aa2dee65d26b539d3da215bf817e7637cae3907",
+      "detections": []
+    },
+    {
+      "pts": 12288,
+      "image": "frames/f000002.png",
+      "sha256": "0382cb59d0b7c2133433653b289dd59ebf56c51604328ea9f18d080b2fec4b9e",
+      "detections": []
+    },
+    {
+      "pts": 18432,
+      "image": "frames/f000003.png",
+      "sha256": "14b9d2333dadecad314caef9b57993d9b72fc9c40cf7f79d2e93797097c3213d",
+      "detections": []
+    },
+    {
+      "pts": 24576,
+      "image": "frames/f000004.png",
+      "sha256": "8d5752eb4a75fa95bc305be28a43acb53c10d407a30b94bd6b708b27b3ec25bf",
+      "detections": []
+    },
+    {
+      "pts": 30720,
+      "image": "frames/f000005.png",
+      "sha256": "9b199765135c3e3f65f6f0fe90cd924a41344af6a62b5e82b29ee74580f259f0",
+      "detections": []
+    },
+    {
+      "pts": 36864,
+      "image": "frames/f000006.png",
+      "sha256": "4885b7a0651cf73bfa3467c1f4c1b0e3f442be7b72e179453c6c924d5d154067",
+      "detections": []
+    },
+    {
+      "pts": 43008,
+      "image": "frames/f000007.png",
+      "sha256": "b32299147e60d03829824ae5a433f33237698e2ee87485396a456d252ae93ff5",
+      "detections": []
+    },
+    {
+      "pts": 49152,
+      "image": "frames/f000008.png",
+      "sha256": "c60d621bfd6873cb5d6095166c178f5e07225c263f37000d3de9c2da94a69819",
+      "detections": []
+    },
+    {
+      "pts": 55296,
+      "image": "frames/f000009.png",
+      "sha256": "94ea6432e530bd83b053b18a9d89a61aa6b2b9f5407ebb2cbfee1750521bd8ba",
+      "detections": []
+    },
+    {
+      "pts": 61440,
+      "image": "frames/f000010.png",
+      "sha256": "7fe44e8522aa83780b408ad4a661ac772e3512b7b602fa13f503064f7307a2ab",
+      "detections": []
+    },
+    {
+      "pts": 67584,
+      "image": "frames/f000011.png",
+      "sha256": "100ee6e83b9b5d3dc1619055992710f5641663a56903a4d12f4393b5df49fe49",
+      "detections": []
+    },
+    {
+      "pts": 73728,
+      "image": "frames/f000012.png",
+      "sha256": "5af848ce468bc1082ef455825a5c15f2dbe0c9c964a269b15eea194e36a55b27",
+      "detections": []
+    },
+    {
+      "pts": 79872,
+      "image": "frames/f000013.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131",
+      "detections": []
+    },
+    {
+      "pts": 86016,
+      "image": "frames/f000014.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131",
+      "detections": []
+    },
+    {
+      "pts": 92160,
+      "image": "frames/f000015.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131",
+      "detections": []
+    },
+    {
+      "pts": 98304,
+      "image": "frames/f000016.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131",
+      "detections": []
+    },
+    {
+      "pts": 104448,
+      "image": "frames/f000017.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131",
+      "detections": []
+    },
+    {
+      "pts": 110592,
+      "image": "frames/f000018.png",
+      "sha256": "6a124dbe3314b4bafc624d912fb5bb0877d634c9091996841e59b8850d60ff03",
+      "detections": []
+    },
+    {
+      "pts": 116736,
+      "image": "frames/f000019.png",
+      "sha256": "10093febaaa49ebdf39080c62895e2a48c817ae9f8125c70681b9acf5e36343a",
+      "detections": []
+    }
+  ],
+  "media": {
+    "file": "media-provenance.json",
+    "sha256": "dbe13ee8eecb41179786653779364843643ebd0195cbe3ab376e4f2c5d40ee1f"
+  }
+}

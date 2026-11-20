@@ -1,0 +1,15 @@
+{
+  "label": "document-cpu-workflow-demo",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+    "demo",
+    "R:\\results\\document-cpu-demo"
+  ],
+  "started": "2026-11-20T23:28:08.667991+08:00",
+  "finished": "2026-11-20T23:28:08.906207+08:00",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/document-cpu-workflow-demo.log",
+  "logSha256": "54b97f62552960323c9fe440e722c4d2b490f8ace646fcbd94e82b6886b82b35"
+}

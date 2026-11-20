@@ -1,0 +1,22 @@
+{
+  "copied": "git archive HEAD into article .tools; source repository read-only",
+  "powershell": "7.6.9",
+  "sourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "os": {
+    "Caption": "Microsoft Windows 11 专业版",
+    "Version": "10.0.26300",
+    "BuildNumber": "26300"
+  },
+  "gpu": [
+    {
+      "Name": "OrayIddDriver Device",
+      "DriverVersion": "16.54.44.444"
+    },
+    {
+      "Name": "AMD Radeon PRO W7900",
+      "DriverVersion": "32.0.21030.2001"
+    }
+  ],
+  "dotnet": "11.0.100",
+  "date": "2026-11-20T23:09:08.5973671+08:00"
+}

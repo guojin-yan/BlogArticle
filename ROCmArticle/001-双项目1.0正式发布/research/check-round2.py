@@ -133,16 +133,16 @@ class ImageCheck(HTMLParser):
             assert urlsplit(src).scheme or (self.base / unquote(src)).is_file(), src
 for page in [ROOT / '03-正文预览.html', R2 / 'results/detection-report.html', R2 / 'results/photo-final/detection-report.html']:
     parser = ImageCheck(page.parent); parser.feed(page.read_text(encoding='utf-8'))
-    assert parser.count == (7 if page.name == '03-正文预览.html' else 2)
+    assert parser.count == (13 if page.name == '03-正文预览.html' else 2)
 assert not list((R2 / 'screenshots/raw').glob('*.png'))
 assert 'NOT CAPTURED' in (R2 / 'screenshots/raw/README.md').read_text(encoding='utf-8')
 assert 'ROOT CAUSE UNKNOWN' in article and 'cache-cold NOT TESTED' in article
-result = {'date': '2026-11-20', 'revision': 'v5', 'fiveIndependentBenchmarkRounds': True,
+result = {'date': '2026-11-20', 'revision': 'v6', 'fiveIndependentBenchmarkRounds': True,
     'timedSamples': 750, 'randomOrderAndQuantilesChecked': True, 'photoInputsAndActualPngHashesMatch': True,
     'parsedCacheMissAndTwoProcessHits': True, 'cacheFailuresRetained': True, 'matmulFailureRetained': True,
     'quickstartInitialAndFinalNumericalChecks': True, 'doctorMissingSdkWritesStructuredFailure': True,
     'benchmarkSourceHashMatchesRecordedRun': True,
     'linksAndHtmlImagesResolve': True, 'readerPathsPortable': True,
-    'screenshots': 'BLOCKED / NOT CAPTURED', 'fourApplications': 'NOT RE-RUN', 'allIssue2AcceptanceMet': False}
-(R2 / 'final-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    'screenshots': 'See round3/screenshots/manifest.json', 'fourApplications': 'Executed with two GPU Compile failures; see round3/rerun-status.json', 'allIssue2AcceptanceMet': False}
+(R2.parent / 'round3/round2-regression-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(json.dumps(result, ensure_ascii=False))

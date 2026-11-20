@@ -1,0 +1,24 @@
+{
+  "scope": "Authored bitmap/OCR evidence and review workflow only; no model execution or real document accuracy",
+  "initialFindings": [
+    {
+      "code": "confidence",
+      "field": "total",
+      "message": "OCR evidence is missing or below the review confidence threshold."
+    },
+    {
+      "code": "line-amount",
+      "field": "amount1",
+      "message": "Quantity \u00D7 unit price, rounded to cents away from zero, differs from line amount."
+    },
+    {
+      "code": "subtotal",
+      "field": "subtotal",
+      "message": "Line amounts do not sum to subtotal."
+    }
+  ],
+  "reviewStatus": "ApprovedByHuman",
+  "version": 3,
+  "casePath": "R:\\results\\document-cpu-demo\\case",
+  "report": "R:\\results\\document-cpu-demo\\final-report/evidence.html"
+}

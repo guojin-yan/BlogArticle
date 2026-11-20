@@ -1,0 +1,14 @@
+{
+  "label": "signal-gpu-verify",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+    "verify-gpu"
+  ],
+  "started": "2026-11-20T23:21:36.831117+08:00",
+  "finished": "2026-11-20T23:21:39.346722+08:00",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/signal-gpu-verify.log",
+  "logSha256": "5f077830b6cd0ee6107127a9e591da2c496723b8e5404e6aff10799bf5f130a5"
+}

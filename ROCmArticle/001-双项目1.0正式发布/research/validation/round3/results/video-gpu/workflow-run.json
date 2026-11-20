@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "completed-awaiting-independent-human-labels",
+  "preparedWorkflowSha256": "7e6c00433d8947ed57bb5e26fc2780f5b668b86471c072f523619636aefbe89f",
+  "protocolSha256": "27ee2aec8d7c1658a893053d4e0190f7cc947cd374dcdd73b9a79b287f44b4cf",
+  "sourceSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "assemblies": {
+    "VideoEvents.App.dll": "606b0df4a84351b0f5743ae56d0d94d83d3dabebab44522db04e925c4e33d803",
+    "VideoEvents.Processing.dll": "ad5904096540944bf3ec35725e4673d299c79ae2662c02c896767cfec6fd6213",
+    "VideoEvents.Core.dll": "e77428ca984a311e12c1c0a41325b7fb41794a3d66c859de69921ae06f443237"
+  },
+  "dotnetSha256": "56428a0bbb054f1b4a9d4fb221aa3c008b1a7579090d14a246294107f05acb66",
+  "scriptSha256": "56cda90962901fe6da6a71b06dd3cc8778910fdaa6dfc4a0368a5bb2780387c4",
+  "annotationState": "pending-independent-human-review",
+  "eventQualityMeasured": false,
+  "metrics": null,
+  "analysisSha256": "18b3d901f1f587766f92c95f39022b2f09a76a5ab903dae77fce1463fbd61f69",
+  "framesProcessed": 20,
+  "observations": 2,
+  "unreviewedEventPredictions": 0,
+  "backend": "MIGraphX GPU",
+  "scope": "Actual media-to-GPU-to-event evidence integration. No independent event labels; no event precision/recall measured."
+}

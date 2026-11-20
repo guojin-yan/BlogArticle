@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "applicationVersion": "0.12.0",
+  "id": "5a968d052f7b493b88998c2cd5154e23",
+  "name": "\u5747\u5300\u8868\u9762 \u00B7 \u516D\u4EF6\u6F14\u793A\u6279\u6B21",
+  "createdAt": "2026-11-20T15:25:58.6778996+00:00",
+  "finishedAt": "2026-11-20T15:26:00.0522045+00:00",
+  "recipe": {
+    "name": "\u5747\u5300\u8868\u9762 \u00B7 \u7070\u5EA6\u4E0E\u5C40\u90E8\u5BF9\u6BD4",
+    "dark": 80,
+    "bright": 200,
+    "localRadius": 3,
+    "localContrast": 0,
+    "minArea": 8,
+    "region": null,
+    "modelId": null,
+    "modelFingerprint": null,
+    "tiling": null,
+    "version": "9520bdb60e2f95a5"
+  },
+  "backend": "Hip",
+  "status": "Completed",
+  "cancelRequested": false,
+  "error": null,
+  "synthetic": true,
+  "phase": null,
+  "initializationMs": 302.8815,
+  "backendInitialization": {
+    "resourceKey": "4e57ede9f084d1f72319b3328dbcd57975bacdd86b4a3f9c883cc1a73c41f619",
+    "reused": false,
+    "waitMs": 0.0371,
+    "buildMs": 291.2145,
+    "originalCompileMs": 249.6872,
+    "maxResidentResources": 1,
+    "scope": "Process-local serial GPU resource reuse. One resident instance, not a GPU byte quota or persistent compiled-file cache."
+  },
+  "items": [
+    {
+      "id": "58bf660d7b1144f68fac6affa43a1f4a",
+      "fileName": "surface-01.png",
+      "sourceHash": "cff00d4e8a163d9dbb0a246037e41a42e5eb856d4709216301f836490aaa7719",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "HIP",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 0.4699000120162964,
+        "transferAndComputeMs": 8.9529,
+        "decodeMs": 1.3936,
+        "postprocessMs": 0.2192,
+        "totalMs": 114.43,
+        "kernelHash": "6f48ce8f8abb427cb9e0f72b0dacee426743919a9c9f45100adb37bd81c600c3",
+        "computeTiming": {
+          "source": "hipEventElapsedTime",
+          "sampleCount": 1,
+          "invalidSamples": []
+        }
+      },
+      "anomaly": null,
+      "finalDecision": "Pass"
+    },
+    {
+      "id": "3ec201433a734d0d9c07c6e1ecb37f38",
+      "fileName": "surface-02.png",
+      "sourceHash": "00da24fbc80e79b1a8d02f35df348074eb8ea853dc24ed39f08b23ea36522ae7",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 1295,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 200,
+          "y": 65,
+          "width": 7,
+          "height": 185,
+          "area": 1295
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "HIP",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 0.17917999625205994,
+        "transferAndComputeMs": 1.6676,
+        "decodeMs": 1.4608,
+        "postprocessMs": 3.4918,
+        "totalMs": 92.6965,
+        "kernelHash": "6f48ce8f8abb427cb9e0f72b0dacee426743919a9c9f45100adb37bd81c600c3",
+        "computeTiming": {
+          "source": "hipEventElapsedTime",
+          "sampleCount": 1,
+          "invalidSamples": []
+        }
+      },
+      "anomaly": null,
+      "finalDecision": "Defect"
+    },
+    {
+      "id": "23a7ebc1dcf94c1ca9e865f1c2f297fe",
+      "fileName": "surface-03.png",
+      "sourceHash": "e9dc746cc2e6918c6a44eb7fc809cf3e0118b617980e376e871ca60a47b77a6b",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 1400,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 320,
+          "y": 140,
+          "width": 40,
+          "height": 35,
+          "area": 1400
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "HIP",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": null,
+        "transferAndComputeMs": 0.5851,
+        "decodeMs": 1.4794,
+        "postprocessMs": 0.1907,
+        "totalMs": 86.8712,
+        "kernelHash": "6f48ce8f8abb427cb9e0f72b0dacee426743919a9c9f45100adb37bd81c600c3",
+        "computeTiming": {
+          "source": "hipEventElapsedTime",
+          "sampleCount": 1,
+          "invalidSamples": [
+            {
+              "rawMilliseconds": "-0.09783999621868134",
+              "tileX": null,
+              "tileY": null
+            }
+          ]
+        }
+      },
+      "anomaly": null,
+      "finalDecision": "Defect"
+    },
+    {
+      "id": "11cba716c84a4442aa4f57b6343c5619",
+      "fileName": "surface-04.png",
+      "sourceHash": "6c21d3b4afefe503b81aa7ce360b0c63e779913f1308bb0c4c236df4f9d4c536",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "HIP",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": null,
+        "transferAndComputeMs": 0.5697,
+        "decodeMs": 1.4123,
+        "postprocessMs": 0.1569,
+        "totalMs": 85.4832,
+        "kernelHash": "6f48ce8f8abb427cb9e0f72b0dacee426743919a9c9f45100adb37bd81c600c3",
+        "computeTiming": {
+          "source": "hipEventElapsedTime",
+          "sampleCount": 1,
+          "invalidSamples": [
+            {
+              "rawMilliseconds": "-0.010370000265538692",
+              "tileX": null,
+              "tileY": null
+            }
+          ]
+        }
+      },
+      "anomaly": null,
+      "finalDecision": "Pass"
+    },
+    {
+      "id": "27906464fbbc44e28b178678d1f1e00a",
+      "fileName": "surface-05.png",
+      "sourceHash": "7baaa6eafc72c3890691522a4d040d5fa95f0c786b334b499d61140b9485a772",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 2695,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 320,
+          "y": 140,
+          "width": 40,
+          "height": 35,
+          "area": 1400
+        },
+        {
+          "x": 200,
+          "y": 65,
+          "width": 7,
+          "height": 185,
+          "area": 1295
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "HIP",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 0.06250999867916107,
+        "transferAndComputeMs": 0.6854,
+        "decodeMs": 1.4287,
+        "postprocessMs": 0.2462,
+        "totalMs": 86.5205,
+        "kernelHash": "6f48ce8f8abb427cb9e0f72b0dacee426743919a9c9f45100adb37bd81c600c3",
+        "computeTiming": {
+          "source": "hipEventElapsedTime",
+          "sampleCount": 1,
+          "invalidSamples": []
+        }
+      },
+      "anomaly": null,
+      "finalDecision": "Defect"
+    },
+    {
+      "id": "e9b79de11aee403887701de3d1ba51b1",
+      "fileName": "surface-06.png",
+      "sourceHash": "8959ba61113c5f5342b084db4e0f3e2e01848ee75ac48616c3a81330e786d2ed",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "HIP",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": null,
+        "transferAndComputeMs": 0.5442,
+        "decodeMs": 1.8459,
+        "postprocessMs": 0.2483,
+        "totalMs": 89.8855,
+        "kernelHash": "6f48ce8f8abb427cb9e0f72b0dacee426743919a9c9f45100adb37bd81c600c3",
+        "computeTiming": {
+          "source": "hipEventElapsedTime",
+          "sampleCount": 1,
+          "invalidSamples": [
+            {
+              "rawMilliseconds": "-0.006750000175088644",
+              "tileX": null,
+              "tileY": null
+            }
+          ]
+        }
+      },
+      "anomaly": null,
+      "finalDecision": "Pass"
+    }
+  ],
+  "reviewProgress": {
+    "total": 6,
+    "ready": 6,
+    "unreviewed": 6,
+    "deferred": 0,
+    "confirmed": 0,
+    "unavailable": 0,
+    "overridden": 0
+  }
+}

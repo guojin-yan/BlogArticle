@@ -1,0 +1,238 @@
+{
+  "date": "2026-11-20T23:30:50.2777546\u002B08:00",
+  "mode": "verify",
+  "model": "affine-relu.onnx",
+  "modelSha256": "a576429543db2891d85d3ef11403feee445e51dfe540e8700029151e11a0357a",
+  "rawInputSha256": "67dd5400ef10e956cbf260c48b651142ed189f3bd49aee5a81df69e3a3845ad0",
+  "modelInputSha256": "67dd5400ef10e956cbf260c48b651142ed189f3bd49aee5a81df69e3a3845ad0",
+  "inputName": "input",
+  "inputShape": [
+    64,
+    64
+  ],
+  "outputElements": 4096,
+  "inputKind": "Fixed authored float matrix",
+  "preprocessing": "HWC to CHW layout; channels=1 is a copy",
+  "postprocessing": "elementwise max(value,0)",
+  "device": "0: AMD Radeon PRO W7900",
+  "runtime": "7.16.26385",
+  "nativeLibrary": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll",
+  "os": "Microsoft Windows NT 10.0.26300.0",
+  "logicalProcessors": 32,
+  "cpuReference": "ONNX Runtime CPU 1.23.2; default CPU thread policy; sequential graph; no GPU provider",
+  "precision": "float32; MIGraphX fastMath=false, exhaustiveTune=false",
+  "batch": 1,
+  "parseMs": 7.4706,
+  "cpuSessionMs": 68.6747,
+  "hostCompileMs": 1167.7438,
+  "deviceCompileMs": 311.2406,
+  "hipCompileMs": 86.1146,
+  "startupToFirstGpuMs": 1527.6318,
+  "firstRunMs": {
+    "cpu": 13.5458,
+    "gpu": 46.8971,
+    "joint": 17.9295
+  },
+  "firstRunScope": "First run of each path in this process; disk/driver caches were not cleared; startupToFirstGpu also includes CPU setup/reference",
+  "tolerance": "abs(actual-reference)\u003C=0.001\u002B0.001*abs(reference), every finite element",
+  "hostError": {
+    "compared": 4096,
+    "maxAbs": 0,
+    "maxRelative": 0,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 772,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "deviceError": {
+    "compared": 4096,
+    "maxAbs": 0,
+    "maxRelative": 0,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 772,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "rawHostError": {
+    "compared": 4096,
+    "maxAbs": 0,
+    "maxRelative": 0,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 772,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "rawDeviceError": {
+    "compared": 4096,
+    "maxAbs": 0,
+    "maxRelative": 0,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 772,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "finalHostError": {
+    "compared": 4096,
+    "maxAbs": 0,
+    "maxRelative": 0,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 772,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "finalDeviceError": {
+    "compared": 4096,
+    "maxAbs": 0,
+    "maxRelative": 0,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 772,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "fixtureReference": {
+    "cpu": {
+      "compared": 4096,
+      "maxAbs": 0,
+      "maxRelative": 0,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 772,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    },
+    "gpu": {
+      "compared": 4096,
+      "maxAbs": 0,
+      "maxRelative": 0,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 772,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    },
+    "joint": {
+      "compared": 4096,
+      "maxAbs": 0,
+      "maxRelative": 0,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 772,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    }
+  },
+  "referenceFirst16": [
+    0,
+    0,
+    0.0625,
+    0.1640625,
+    0.265625,
+    0.3671875,
+    0.46875,
+    0.5703125,
+    0,
+    0,
+    0.0859375,
+    0.1875,
+    0.2890625,
+    0.390625,
+    0.4921875,
+    0.59375
+  ],
+  "gpuFirst16": [
+    0,
+    0,
+    0.0625,
+    0.1640625,
+    0.265625,
+    0.3671875,
+    0.46875,
+    0.5703125,
+    0,
+    0,
+    0.0859375,
+    0.1875,
+    0.2890625,
+    0.390625,
+    0.4921875,
+    0.59375
+  ],
+  "jointFirst16": [
+    0,
+    0,
+    0.0625,
+    0.1640625,
+    0.265625,
+    0.3671875,
+    0.46875,
+    0.5703125,
+    0,
+    0,
+    0.0859375,
+    0.1875,
+    0.2890625,
+    0.390625,
+    0.4921875,
+    0.59375
+  ],
+  "warmups": 0,
+  "repetitions": 1,
+  "measurements": {},
+  "executionOrder": [],
+  "ablationErrors": {},
+  "seed": "20261120",
+  "hostReuseLimitation": "hostFixedInputReuse replays immutable input because public host API has no update/replace operation. NOT equivalent to changing frames; not evidence that all host allocation cost can be removed.",
+  "traceOperations": [],
+  "modelDeviceEventMs": 0.0234,
+  "gpuEvidenceScope": "Compiled GPU instruction trace plus device-only bindings, synchronized device output matching independent CPU, and a HIP stream event interval around the model\u002BD2D copies; not an independent per-kernel profiler timeline",
+  "nativeEnvironment": {
+    "disableMlir": null
+  },
+  "compiledDeviceParameters": [
+    {
+      "Name": "input",
+      "shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "Name": "main:#output_0",
+      "shape": [
+        64,
+        64
+      ]
+    }
+  ],
+  "memory": {
+    "beforeFreeBytes": 51366887424,
+    "afterFreeBytes": 51328712704,
+    "totalBytes": 51522830336,
+    "scope": "hipMemGetInfo whole-device snapshots, includes other processes; not per-process peak VRAM"
+  },
+  "benchmarkScope": "Serialized batch=1. E2E begins with decoded host HWC floats and ends with postprocessed host float output. Decode, model parse/compile and reusable buffer allocation excluded. Joint includes H2D, HIP layout, model, D2D output copy, HIP clamp, D2H and stream sync. Host API includes its managed/native copies. warmModelApi has different I/O boundaries across paths and must not be used as a pure-kernel speedup comparison. No GPU clock/power isolation."
+}

@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-20T23:45:02.231457+08:00",
+  "revision": "v6",
+  "testsPassed": 264,
+  "fourApplicationsExecuted": true,
+  "gpuCompileFailuresRetained": 2,
+  "validBrowserScreenshots": 8,
+  "invalidLayoutCapturesRetained": 2,
+  "signalPsdValuesChecked": 64125,
+  "videoIncorrectPredictionsRetained": true,
+  "historicalRound2HashEntriesVerified": 146,
+  "readerPathsPortable": true,
+  "productionAcceptance": false,
+  "allIssue2AcceptanceMet": false
+}

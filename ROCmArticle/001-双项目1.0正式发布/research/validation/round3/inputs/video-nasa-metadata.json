@@ -1,0 +1,466 @@
+{
+  "AVAIL:Album": [
+    "SpaceX_Demo_2"
+  ],
+  "AVAIL:Center": "KSC",
+  "AVAIL:DateCreated": "2020:05:30",
+  "AVAIL:Description": "Demo-2 astronauts Bob Behnken and Doug Hurley walk out of Neil Armstrong Operations and Checkout Building at Kennedy Space Center. Handheld camera in 4K resolution. Video includes launch day, May 30, 2020.",
+  "AVAIL:Description508": "",
+  "AVAIL:Keywords": [
+    "NASA",
+    "SpaceX",
+    "Commercial Crew Program",
+    "CCP",
+    "Demo-2",
+    "DM-2",
+    "Flight Test",
+    "American rockets",
+    "American spacecraft",
+    "American soil",
+    "International Space Station",
+    "Space Station",
+    "Astronauts",
+    "Robert Behnken",
+    "Bob Behnken",
+    "Douglas Hurley",
+    "Doug Hurley",
+    "Kennedy Space Center",
+    "Launch Complex 39A",
+    "LC-39A",
+    "SpaceX Falcon 9",
+    "SpaceX Crew Dragon",
+    "Rocket",
+    "Spacecraft"
+  ],
+  "AVAIL:Location": "O&C",
+  "AVAIL:MediaType": "video",
+  "AVAIL:NASAID": "KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K",
+  "AVAIL:Owner": "ajwatso3",
+  "AVAIL:Photographer": "NASA",
+  "AVAIL:SecondaryCreator": "",
+  "AVAIL:Title": "SpaceX Demo-2 Walkout",
+  "Composite:AvgBitrate": "10.6 Mbps",
+  "Composite:ImageSize": "3840x2160",
+  "Composite:Megapixels": 8.3,
+  "Composite:Rotation": 0,
+  "ExifTool:ExifToolVersion": 10.05,
+  "File:Directory": "/tmp",
+  "File:FileAccessDate": "2020:06:11 17:25:43+00:00",
+  "File:FileInodeChangeDate": "2020:06:11 17:25:46+00:00",
+  "File:FileModifyDate": "2020:06:11 17:25:46+00:00",
+  "File:FileName": "tmpedoswyc8",
+  "File:FilePermissions": "rw-------",
+  "File:FileSize": "192 MB",
+  "File:FileType": "MP4",
+  "File:FileTypeExtension": "mp4",
+  "File:MIMEType": "video/mp4",
+  "QuickTime:AudioBitsPerSample": 16,
+  "QuickTime:AudioChannels": 2,
+  "QuickTime:AudioFormat": "mp4a",
+  "QuickTime:AudioSampleRate": 48000,
+  "QuickTime:Balance": 0,
+  "QuickTime:BitDepth": 24,
+  "QuickTime:CompatibleBrands": [
+    "mp42",
+    "mp41"
+  ],
+  "QuickTime:CompressorID": "avc1",
+  "QuickTime:CompressorName": "AVC Coding",
+  "QuickTime:Copyright": "For copyright and restrictions refer http://www.nasa.gov/multimedia/guidelines/index.html",
+  "QuickTime:CreateDate": "2020:06:11 17:13:22",
+  "QuickTime:CurrentTime": "0 s",
+  "QuickTime:Duration": "0:02:31",
+  "QuickTime:GraphicsMode": "srcCopy",
+  "QuickTime:HandlerDescription": "Alias Data Handler",
+  "QuickTime:HandlerType": "Alias Data",
+  "QuickTime:ImageHeight": 2160,
+  "QuickTime:ImageWidth": 3840,
+  "QuickTime:MajorBrand": "MP4 v2 [ISO 14496-14]",
+  "QuickTime:MatrixStructure": "1 0 0 0 1 0 0 0 1",
+  "QuickTime:MediaCreateDate": "2020:06:11 17:13:24",
+  "QuickTime:MediaDuration": "0:02:31",
+  "QuickTime:MediaHeaderVersion": 0,
+  "QuickTime:MediaLanguageCode": "eng",
+  "QuickTime:MediaModifyDate": "2020:06:11 17:13:24",
+  "QuickTime:MediaTimeScale": 48000,
+  "QuickTime:MinorVersion": "0.0.0",
+  "QuickTime:ModifyDate": "2020:06:11 17:19:26",
+  "QuickTime:MovieDataOffset": 144034,
+  "QuickTime:MovieDataSize": 201284713,
+  "QuickTime:MovieHeaderVersion": 0,
+  "QuickTime:NextTrackID": 3,
+  "QuickTime:OpColor": "0 0 0",
+  "QuickTime:PosterTime": "0 s",
+  "QuickTime:PreferredRate": 1,
+  "QuickTime:PreferredVolume": "100.00%",
+  "QuickTime:PreviewDuration": "0 s",
+  "QuickTime:PreviewTime": "0 s",
+  "QuickTime:SelectionDuration": "0 s",
+  "QuickTime:SelectionTime": "0 s",
+  "QuickTime:SourceImageHeight": 2160,
+  "QuickTime:SourceImageWidth": 3840,
+  "QuickTime:TimeScale": 90000,
+  "QuickTime:Title": "SpaceX Demo-2 Walkout",
+  "QuickTime:TrackCreateDate": "2020:06:11 17:13:23",
+  "QuickTime:TrackDuration": "0:02:31",
+  "QuickTime:TrackHeaderVersion": 0,
+  "QuickTime:TrackID": 1,
+  "QuickTime:TrackLayer": 0,
+  "QuickTime:TrackModifyDate": "2020:06:11 17:13:23",
+  "QuickTime:TrackVolume": "0.00%",
+  "QuickTime:UserData_TIM": "00:00:00:00",
+  "QuickTime:UserData_TSC": 60000,
+  "QuickTime:UserData_TSZ": 1001,
+  "QuickTime:VideoFrameRate": 59.94,
+  "QuickTime:XResolution": 72,
+  "QuickTime:YResolution": 72,
+  "SourceFile": "/tmp/tmpedoswyc8",
+  "XMP:AltTimecode": {
+    "TimeFormat": "59.94 fps (non-drop)",
+    "TimeValue": "00:00:00:00"
+  },
+  "XMP:AudioChannelType": "Stereo",
+  "XMP:AudioSampleRate": 48000,
+  "XMP:AudioSampleType": "16-bit integer",
+  "XMP:City": "KSC",
+  "XMP:CreateDate": "2020:06:11 13:13:22-04:00",
+  "XMP:Creator": [
+    "NASA"
+  ],
+  "XMP:Credit": "NASA",
+  "XMP:DateCreated": "2020:05:30",
+  "XMP:DerivedFrom": {
+    "DocumentID": "xmp.did:b64d951b-8c8c-411e-ae21-f16577a5a441",
+    "InstanceID": "xmp.iid:b64d951b-8c8c-411e-ae21-f16577a5a441",
+    "OriginalDocumentID": "xmp.did:415326c9-e71e-4e98-bed9-7841669bfcb6"
+  },
+  "XMP:Description": "Demo-2 astronauts Bob Behnken and Doug Hurley walk out of Neil Armstrong Operations and Checkout Building at Kennedy Space Center. Handheld camera in 4K resolution. Video includes launch day, May 30, 2020.",
+  "XMP:DocumentID": "88485607-34a8-bc8d-b2d2-08a2000000c1",
+  "XMP:Duration": {
+    "Scale": 1.11111111111111e-05,
+    "Value": 13672659
+  },
+  "XMP:Format": "H.264",
+  "XMP:Headline": "AFS-8/101",
+  "XMP:History": [
+    {
+      "Action": "saved",
+      "Changed": "/",
+      "InstanceID": "285a7340-be92-0677-2e0e-fcb2000000ee",
+      "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:19:26-04:00"
+    },
+    {
+      "Action": "saved",
+      "Changed": "/metadata/xmpDM/Tracks",
+      "InstanceID": "xmp.iid:415326c9-e71e-4e98-bed9-7841669bfcb6",
+      "SoftwareAgent": "Adobe Premiere Pro CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:04:23-04:00"
+    },
+    {
+      "Action": "saved",
+      "Changed": "/metadata/xmpDM/Tracks",
+      "InstanceID": "xmp.iid:db2f44d5-ec3a-4ba5-98d1-6b79fa5fd0a8",
+      "SoftwareAgent": "Adobe Premiere Pro CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:09:06-04:00"
+    },
+    {
+      "Action": "saved",
+      "Changed": "/metadata",
+      "InstanceID": "xmp.iid:96bb88d3-d42c-4e30-90b0-829f44dd0772",
+      "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:13:21-04:00"
+    },
+    {
+      "Action": "saved",
+      "Changed": "/",
+      "InstanceID": "xmp.iid:b64d951b-8c8c-411e-ae21-f16577a5a441",
+      "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:13:21-04:00"
+    },
+    {
+      "Action": "saved",
+      "Changed": "/",
+      "InstanceID": "xmp.iid:07ab24e7-9314-4675-8424-230d5057befd",
+      "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:19:26-04:00"
+    },
+    {
+      "Action": "saved",
+      "Changed": "/metadata",
+      "InstanceID": "xmp.iid:bf989f2e-1753-486d-8b56-537d2ab9e574",
+      "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+      "When": "2020:06:11 13:19:26-04:00"
+    }
+  ],
+  "XMP:Ingredients": [
+    {
+      "DocumentID": "0fc59ee9-1c53-9aac-08e6-ff2a0000006d",
+      "FilePath": "Glenn's Camera, Crew Quarters.MOV",
+      "FromPart": "time:2573157470083200f254016000000d10039427798400f254016000000",
+      "InstanceID": "9221cbde-5c9c-d61d-3ebc-09b80000009a",
+      "MaskMarkers": "None",
+      "ToPart": "time:1771414444800f254016000000d10039427798400f254016000000"
+    },
+    {
+      "DocumentID": "0fc59ee9-1c53-9aac-08e6-ff2a0000006d",
+      "FilePath": "Glenn's Camera, Crew Quarters.MOV",
+      "FromPart": "time:2667059386992000f254016000000d3585207225600f254016000000",
+      "InstanceID": "9221cbde-5c9c-d61d-3ebc-09b80000009a",
+      "MaskMarkers": "None",
+      "ToPart": "time:27728145244800f254016000000d3585207225600f254016000000"
+    },
+    {
+      "DocumentID": "0fc59ee9-1c53-9aac-08e6-ff2a0000006d",
+      "FilePath": "Glenn's Camera, Crew Quarters.MOV",
+      "FromPart": "time:2686519518883200f254016000000d2741878339200f254016000000",
+      "InstanceID": "9221cbde-5c9c-d61d-3ebc-09b80000009a",
+      "MaskMarkers": "None",
+      "ToPart": "time:35843596588800f254016000000d2741878339200f254016000000"
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "FilePath": "C7 Exit, Walkout.MOV",
+      "FromPart": "time:1748301300345600f254016000000d15917303001600f254016000000",
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "MaskMarkers": "None",
+      "ToPart": "time:11810842243200f254016000000d15917303001600f254016000000"
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "FilePath": "C7 Exit, Walkout.MOV",
+      "FromPart": "time:1748301300345600f254016000000d26774632684800f254016000000",
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "MaskMarkers": "None",
+      "ToPart": "time:11810842243200f254016000000d26774632684800f254016000000"
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "FilePath": "C7 Exit, Walkout.MOV",
+      "FromPart": "time:1748301300345600f254016000000d26774632684800f254016000000",
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "MaskMarkers": "None",
+      "ToPart": "time:11810842243200f254016000000d26774632684800f254016000000"
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "FilePath": "C7 Exit, Walkout.MOV",
+      "FromPart": "time:1748301300345600f254016000000d26774632684800f254016000000",
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "MaskMarkers": "None",
+      "ToPart": "time:11810842243200f254016000000d26774632684800f254016000000"
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "FilePath": "C7 Exit, Walkout.MOV",
+      "FromPart": "time:1748301300345600f254016000000d26774632684800f254016000000",
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "MaskMarkers": "None",
+      "ToPart": "time:11810842243200f254016000000d26774632684800f254016000000"
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "FilePath": "C7 Exit, Walkout.MOV",
+      "FromPart": "time:1776521034288000f254016000000d4530244118400f254016000000",
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "MaskMarkers": "None",
+      "ToPart": "time:31313352470400f254016000000d4530244118400f254016000000"
+    },
+    {
+      "DocumentID": "adobe:docid:photoshop:9398b54b-b3db-df48-bc43-a81cbd1d1f15",
+      "FilePath": "Walkout (4K).psd",
+      "FromPart": "time:0",
+      "InstanceID": "xmp.iid:c090d2b6-6d6d-4c48-a05d-a1c08872524e",
+      "MaskMarkers": "None",
+      "ToPart": "time:0d1262874412800f254016000000"
+    }
+  ],
+  "XMP:InstanceID": "xmp.iid:bf989f2e-1753-486d-8b56-537d2ab9e574",
+  "XMP:Instructions": "05/30/2027",
+  "XMP:Location": "O&C",
+  "XMP:MacAtom": {
+    "ApplicationCode": 1347449455,
+    "InvocationAppleEvent": 1129468018,
+    "PosixProjectPath": "/Volumes/Editing_XSAN/Live_Broadcasts/Demo-2/3249388-20200527-SpaceX_Demo-2_Live_Launch_Coverage/Project Files/3249388-20200527-SpaceX_Demo-2_Live_Launch_Coverage_2.prproj"
+  },
+  "XMP:MetadataDate": "2020:06:11 13:19:26-04:00",
+  "XMP:ModifyDate": "2020:06:11 13:19:26-04:00",
+  "XMP:Orientation": "Horizontal (normal)",
+  "XMP:OriginalDocumentID": "xmp.did:ed89ecb7-7882-4324-bb28-f4193536ebba",
+  "XMP:Pantry": [
+    {
+      "DocumentID": "0fc59ee9-1c53-9aac-08e6-ff2a0000006d",
+      "History": [
+        {
+          "Action": "saved",
+          "Changed": "/",
+          "InstanceID": "9221cbde-5c9c-d61d-3ebc-09b80000009a",
+          "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+          "When": "2020:06:11 13:13:21-04:00"
+        }
+      ],
+      "InstanceID": "9221cbde-5c9c-d61d-3ebc-09b80000009a",
+      "OriginalDocumentID": "xmp.did:b3fcdb41-c57f-40a5-9ec3-30e08e44455c",
+      "XMP-tiff:Orientation": "Horizontal (normal)",
+      "XMP-xmp:CreateDate": "2024:12:19 01:43:24Z",
+      "XMP-xmp:MetadataDate": "2020:06:11 13:13:21-04:00",
+      "XMP-xmp:ModifyDate": "2020:06:11 13:13:21-04:00",
+      "XMP-xmpDM:AltTimecode": {
+        "TimeFormat": "59.94 fps (drop)",
+        "TimeValue": "02;36;24;35"
+      },
+      "XMP-xmpDM:Duration": {
+        "Scale": 1.66666666666667e-05,
+        "Value": 76682606
+      },
+      "XMP-xmpDM:StartTimeSampleSize": 1001,
+      "XMP-xmpDM:StartTimeScale": 60000
+    },
+    {
+      "DocumentID": "040034fb-ec52-18e6-c4f8-032000000053",
+      "History": [
+        {
+          "Action": "saved",
+          "Changed": "/",
+          "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+          "SoftwareAgent": "Adobe Adobe Media Encoder CC 2018.1 (Macintosh)",
+          "When": "2020:06:11 13:13:21-04:00"
+        }
+      ],
+      "InstanceID": "c9fc01ae-84d2-2a66-a558-351000000080",
+      "OriginalDocumentID": "xmp.did:739e5551-4934-4519-b7fc-13d9d43d66a3",
+      "XMP-tiff:Orientation": "Horizontal (normal)",
+      "XMP-xmp:CreateDate": "2024:12:21 06:39:35Z",
+      "XMP-xmp:MetadataDate": "2020:06:11 13:13:21-04:00",
+      "XMP-xmp:ModifyDate": "2020:06:11 13:13:21-04:00",
+      "XMP-xmpDM:AltTimecode": {
+        "TimeFormat": "59.94 fps (drop)",
+        "TimeValue": "01;43;29;10"
+      },
+      "XMP-xmpDM:Duration": {
+        "Scale": 1.66666666666667e-05,
+        "Value": 54024971
+      },
+      "XMP-xmpDM:StartTimeSampleSize": 1001,
+      "XMP-xmpDM:StartTimeScale": 60000
+    },
+    {
+      "DerivedFrom": {
+        "DocumentID": "uuid:291E42CCF9BC11DDBA94DD36BB4160E8",
+        "InstanceID": "uuid:B7C3720EF9BC11DDBA94DD36BB4160E8"
+      },
+      "DocumentID": "adobe:docid:photoshop:9398b54b-b3db-df48-bc43-a81cbd1d1f15",
+      "History": [
+        {
+          "Action": "saved",
+          "Changed": "/",
+          "InstanceID": "xmp.iid:F77F11740720681192B0BCF3B0E870A1",
+          "SoftwareAgent": "Adobe Photoshop CS4 Macintosh",
+          "When": "2010:04:08 10:19:30-04:00"
+        },
+        {
+          "Action": "saved",
+          "Changed": "/",
+          "InstanceID": "xmp.iid:c090d2b6-6d6d-4c48-a05d-a1c08872524e",
+          "SoftwareAgent": "Adobe Photoshop 21.1 (Macintosh)",
+          "When": "2020:06:11 13:10:34-04:00"
+        }
+      ],
+      "InstanceID": "xmp.iid:c090d2b6-6d6d-4c48-a05d-a1c08872524e",
+      "OriginalDocumentID": "uuid:B7C37215F9BC11DDBA94DD36BB4160E8",
+      "XMP-dc:Format": "application/vnd.adobe.photoshop",
+      "XMP-exif:ColorSpace": "Uncalibrated",
+      "XMP-exif:PixelXDimension": 3840,
+      "XMP-exif:PixelYDimension": 2160,
+      "XMP-photoshop:ColorMode": "RGB",
+      "XMP-photoshop:DocumentAncestors": [
+        "4BEFEF4E75DA5F750AB8A9C98E8DBCB4"
+      ],
+      "XMP-photoshop:TextLayers": [
+        {
+          "LayerName": "TRT - 02:24 Date - 05/30/2020 KSC Contact - Marie Lewis (321) 8",
+          "LayerText": "TRT - 02:24 Date - 05/30/2020 KSC Contact - Marie Lewis (321) 867-2468 More Info (website): www.nasa.gov/kennedy    "
+        },
+        {
+          "LayerName": "Layer 1"
+        },
+        {
+          "LayerName": "Demo-2 astronauts Bob Behnken and Doug Hurley walk out of Neil ",
+          "LayerText": "Demo-2 astronauts Bob Behnken and Doug Hurley walk out of Neil Armstrong Operations and Checkout Building at Kennedy Space Center. Handheld camera in 4K resolution. Video includes launch day, May 30, 2020.   Partial audio.  "
+        },
+        {
+          "LayerName": "Orbital ATK Dedicates Cygnus Spacecraft to John Glenn",
+          "LayerText": "Orbital ATK Dedicates Cygnus Spacecraft to John Glenn"
+        },
+        {
+          "LayerName": "TRT - 4:21 Date - 03/09/2017 Super(s) - NASA Center Contact - T",
+          "LayerText": "TRT - 4:21 Date - 03/09/2017 Super(s) - NASA Center Contact - Tracy Young (321) 867-2468    "
+        },
+        {
+          "LayerName": "SpaceX Demo-2 Crew Walkout",
+          "LayerText": "SpaceX Demo-2 Crew Walkout"
+        }
+      ],
+      "XMP-tiff:Orientation": "Horizontal (normal)",
+      "XMP-tiff:ResolutionUnit": "inches",
+      "XMP-tiff:XResolution": 72,
+      "XMP-tiff:YResolution": 72,
+      "XMP-xmp:CreateDate": "2009:02:11 10:56:05-05:00",
+      "XMP-xmp:CreatorTool": "Adobe Photoshop 21.1 (Macintosh)",
+      "XMP-xmp:MetadataDate": "2020:06:11 13:10:34-04:00",
+      "XMP-xmp:ModifyDate": "2020:06:11 13:10:34-04:00"
+    }
+  ],
+  "XMP:ProjectRef": {
+    "Type": "Movie"
+  },
+  "XMP:Rights": "For copyright and restrictions refer http://www.nasa.gov/multimedia/guidelines/index.html",
+  "XMP:Source": "Digital Moving Image",
+  "XMP:StartTimeSampleSize": 1001,
+  "XMP:StartTimeScale": 60000,
+  "XMP:StartTimecode": {
+    "TimeFormat": "59.94 fps (non-drop)",
+    "TimeValue": "00:00:00:00"
+  },
+  "XMP:Subject": [
+    "NASA",
+    "SpaceX",
+    "Commercial Crew Program",
+    "CCP",
+    "Demo-2",
+    "DM-2",
+    "Flight Test",
+    "American rockets",
+    "American spacecraft",
+    "American soil",
+    "International Space Station",
+    "Space Station",
+    "Astronauts",
+    "Robert Behnken",
+    "Bob Behnken",
+    "Douglas Hurley",
+    "Doug Hurley",
+    "Kennedy Space Center",
+    "Launch Complex 39A",
+    "LC-39A",
+    "SpaceX Falcon 9",
+    "SpaceX Crew Dragon",
+    "Rocket",
+    "Spacecraft"
+  ],
+  "XMP:Title": "SpaceX Demo-2 Walkout",
+  "XMP:UsageTerms": "PAO Approved For Release",
+  "XMP:VideoFieldOrder": "Progressive",
+  "XMP:VideoFrameRate": 59.94006,
+  "XMP:VideoFrameSize": {
+    "H": 2160,
+    "Unit": "pixel",
+    "W": 3840
+  },
+  "XMP:VideoPixelAspectRatio": 1,
+  "XMP:WindowsAtom": {
+    "Extension": ".prproj",
+    "InvocationFlags": "/L"
+  },
+  "XMP:XMPToolkit": "Adobe XMP Core 5.6-c144 79.162045, 2018/01/23-06:05:52        "
+}

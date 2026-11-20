@@ -1,0 +1,1 @@
+﻿eventId,kind,ruleId,trackId,class,startPts,endPts,startSeconds,endSeconds,observedDurationSeconds,samplingIntervalSeconds,direction,reviewStatus,runId,manifestSha256,recipeSha256,detectionSource,modelManifestSha256,modelSha256,sourceMediaSha256,mediaProvenanceSha256,ptsOffset

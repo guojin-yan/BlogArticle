@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-20",
+  "revision": "v6",
+  "titlePreserved": true,
+  "mainSections": 7,
+  "nugetPackages": 7,
+  "originalHtmlImageTagsPreserved": 6,
+  "originalAssetsUnchanged": 27,
+  "articleImages": 13,
+  "checkedLocalLinks": 91,
+  "localLinksResolve": true,
+  "articleUrlsUseCodeExceptThreeStartHere": true,
+  "articleTextHyperlinks": 3,
+  "firstSectionHasNoCommands": true,
+  "readerInstructionsHaveNoMachineSpecificPaths": true,
+  "fixedModelHashesMatch": true,
+  "affineExecutionAndNumericalEvidence": true,
+  "benchmarkRawSamplesAndTableMatch": true,
+  "benchmarkRawAndFinalOutputsPass": true,
+  "signalNumericalPairs": 64125,
+  "visualReview": "v6 actual browser viewport captures; captures are scoped in round3/screenshots/manifest.json.",
+  "limits": "No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance"
+}

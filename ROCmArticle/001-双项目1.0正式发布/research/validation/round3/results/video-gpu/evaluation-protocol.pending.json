@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "name": "Pending independent human labels; do not score the empty template",
+  "matchingVersion": "event-boundaries-max-cardinality-v1",
+  "analysisSha256": "18b3d901f1f587766f92c95f39022b2f09a76a5ab903dae77fce1463fbd61f69",
+  "annotationsSha256": "0bec4a8d5ac1dd1fe34274b14729aef43dd98e2aa5e3cf8f48234666dab2db1b",
+  "sourceMediaSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 15360
+  },
+  "predictionPtsOffset": 0,
+  "boundaryToleranceSeconds": 0.5,
+  "coverage": null
+}

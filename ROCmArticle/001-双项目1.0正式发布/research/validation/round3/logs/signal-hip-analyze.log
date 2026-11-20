@@ -1,0 +1,12 @@
+{
+  "output": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\research\\validation\\round3\\results\\signal-hip\\2e134d9c08c04b2da3e885dbf3111ba8",
+  "report": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\research\\validation\\round3\\results\\signal-hip\\2e134d9c08c04b2da3e885dbf3111ba8\\report.html",
+  "id": "2e134d9c08c04b2da3e885dbf3111ba8",
+  "backend": "HIP float32 radix-2 GPU; CPU window/statistics",
+  "device": "AMD Radeon PRO W7900",
+  "configSha256": "a91f9d8d88e9b0d70a3dc2aa78cdb584ff95f9eb87552147a53c54a07d1ec764",
+  "frames": 125,
+  "needsReview": 15,
+  "omittedTailSamples": 0,
+  "scope": "Offline single channel; full windows only; [start,end) time support, unpadded omitted tail explicit. One-sided peak amplitude and PSD, periodic Hann/rectangular; band includes low and excludes high except Nyquist. CPU window/statistics, selected FFT backend. Alerts are deterministic rule evidence, not fault classes or equipment clearance. No real-device accuracy or general speedup claim."
+}

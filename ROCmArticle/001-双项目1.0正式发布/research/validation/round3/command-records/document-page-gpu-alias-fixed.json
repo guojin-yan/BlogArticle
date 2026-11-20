@@ -1,0 +1,24 @@
+{
+  "label": "document-page-gpu-alias-fixed",
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\run-round3-document-page.py",
+    "--evaluator",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\document-evaluate-page.py",
+    "--model",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json",
+    "--declaration",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\authored-page-v1\\page-lines.json",
+    "--app",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+    "--output",
+    "R:\\results\\document-gpu-alias-fixed"
+  ],
+  "started": "2026-11-20T23:24:10.794166+08:00",
+  "finished": "2026-11-20T23:24:29.249357+08:00",
+  "exitCode": 1,
+  "expectedExit": 0,
+  "log": "logs/document-page-gpu-alias-fixed.log",
+  "logSha256": "37760698980b0f954efc84446e4ef7fb2641b1e67854ceeda5fb492e155142fc"
+}

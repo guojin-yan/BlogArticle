@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "backend": "HIP float32 radix-2 GPU; CPU window/statistics",
+  "device": "AMD Radeon PRO W7900",
+  "kernelSha256": "346dace4aa10506f2654ae0bb1d6b84cf7a638628d0aeb3e907d9f58e87ce976",
+  "compileMs": 185.7617,
+  "lengths": [
+    16,
+    256,
+    1024,
+    4096
+  ],
+  "complexBins": 16176,
+  "maxComplexAbsoluteError": 0.00039574499401900373,
+  "tolerance": "complex magnitude error \u003C=0.002\u002B0.0002*abs(CPU double reference)",
+  "scope": "12 authored DC/Nyquist/two-tone signals; numerical software check, not equipment accuracy or performance benchmark"
+}

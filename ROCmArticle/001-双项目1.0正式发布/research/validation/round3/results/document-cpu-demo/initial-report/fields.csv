@@ -1,0 +1,9 @@
+field,machineValue,finalValue,confidence,humanConfirmed,pageId,blockIds,reviewStatus,inputManifestSha256,templateSha256
+"number","INV-001","INV-001","0.99","False","page1","b0","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"currency","USD","USD","0.99","False","page1","b1","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"quantity1","2","2","0.99","False","page1","b2","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"price1","10.00","10.00","0.99","False","page1","b3","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"amount1","21.00","21.00","0.99","False","page1","b4","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"subtotal","20.00","20.00","0.99","False","page1","b5","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"tax","1.00","1.00","0.99","False","page1","b6","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"
+"total","21.00","21.00","0.4","False","page1","b7","NeedsReview","2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422","7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a"

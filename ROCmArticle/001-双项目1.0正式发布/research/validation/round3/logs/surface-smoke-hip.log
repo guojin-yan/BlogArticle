@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "published static page",
+    "CPU batch and expected defect areas",
+    "HIP HTTP pipeline and byte-identical CPU masks",
+    "review history, machine result preservation, stale revision rejection",
+    "portable ZIP report and matching persisted review",
+    "cross-origin write and invalid host rejection",
+    "invalid image cannot become a passing result"
+  ],
+  "cpuBatch": "e52afec926c3474a8d8742014f5a7e6b",
+  "gpuBatch": "5a968d052f7b493b88998c2cd5154e23",
+  "modelBatch": null
+}

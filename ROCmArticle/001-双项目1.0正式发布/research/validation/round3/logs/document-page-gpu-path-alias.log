@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\eng\document-evaluate-page.py", line 121, in <module>
+    evaluate(parser.parse_args())
+  File "E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\eng\document-evaluate-page.py", line 84, in evaluate
+    raise RuntimeError(f"C# page verification failed; exit {run.returncode}; see cli.log")
+RuntimeError: C# page verification failed; exit 1; see cli.log

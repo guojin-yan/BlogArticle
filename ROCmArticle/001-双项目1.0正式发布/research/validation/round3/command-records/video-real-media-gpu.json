@@ -1,0 +1,23 @@
+{
+  "label": "video-real-media-gpu",
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\video-run-workflow.py",
+    "run",
+    "--prepared",
+    "E:/GitSpace/ROCm-CSharp-Projects/runs/video-event-search/nasa-walkout-prepared-v012",
+    "--app",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\VideoEvents.App\\Release\\net10.0\\VideoEvents.App.dll",
+    "--dotnet",
+    "C:\\Program Files\\dotnet\\dotnet.exe",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\video-gpu"
+  ],
+  "started": "2026-11-20T23:25:28.565696+08:00",
+  "finished": "2026-11-20T23:26:01.302662+08:00",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/video-real-media-gpu.log",
+  "logSha256": "71eff3c2286aebb88d0a5994044a51a7bfc345f9a2f440679a77a48377615fe8"
+}

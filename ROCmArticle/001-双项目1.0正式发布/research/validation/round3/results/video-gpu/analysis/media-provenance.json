@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "source": "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\nasa-walkout-v1\\walkout-preview.mp4",
+  "sourceSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "sourceHashVerification": "matched caller-supplied hash",
+  "sourceLicense": "NASA media guidelines: factual educational/informational use, acknowledge NASA, no endorsement; logos/identifiable people not licensed for commercial promotion; external technical evidence only",
+  "sourceReference": "NASA KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K preview; official NASA photographer metadata",
+  "tools": {
+    "ffmpeg": {
+      "path": "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\tools\\ffmpeg-9.0.2\\bin\\ffmpeg.exe",
+      "sha256": "3256173f3f8bffd7df12227c68adf68025edb1832273a9530688a7bb1ed8edec",
+      "version": "ffmpeg version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers\nbuilt with gcc 16.2.0 (Rev3, Built by MSYS2 project)\nconfiguration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband\nlibavutil      61.  1.102 / 61.  1.102\nlibavcodec     63.  1.102 / 63.  1.102\nlibavformat    63.  1.102 / 63.  1.102\nlibavdevice    63.  1.102 / 63.  1.102\nlibavfilter    12.  1.102 / 12.  1.102\nlibswscale     10.  1.102 / 10.  1.102\nlibswresample   7.  1.102 /  7.  1.102\n\nExiting with exit code 0\n"
+    },
+    "ffprobe": {
+      "path": "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\tools\\ffmpeg-9.0.2\\bin\\ffprobe.exe",
+      "sha256": "f0d36ecbbdd3bcfac3efa078c96c7271c2e68b3810595552ac3b7f17e9a65c52",
+      "version": "ffprobe version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers\nbuilt with gcc 16.2.0 (Rev3, Built by MSYS2 project)\nconfiguration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband\nlibavutil      61.  1.102 / 61.  1.102\nlibavcodec     63.  1.102 / 63.  1.102\nlibavformat    63.  1.102 / 63.  1.102\nlibavdevice    63.  1.102 / 63.  1.102\nlibavfilter    12.  1.102 / 12.  1.102\nlibswscale     10.  1.102 / 10.  1.102\nlibswresample   7.  1.102 /  7.  1.102\n"
+    }
+  },
+  "probeCommand": [
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\tools\\ffmpeg-9.0.2\\bin\\ffprobe.exe",
+    "-v",
+    "error",
+    "-select_streams",
+    "v:0",
+    "-show_streams",
+    "-show_frames",
+    "-show_entries",
+    "stream=index,codec_name,codec_type,width,height,time_base,start_pts,start_time,avg_frame_rate,r_frame_rate:stream_disposition=attached_pic:frame=media_type,pts,width,height",
+    "-of",
+    "json",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\nasa-walkout-v1\\walkout-preview.mp4"
+  ],
+  "decodeCommand": [
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\tools\\ffmpeg-9.0.2\\bin\\ffmpeg.exe",
+    "-nostdin",
+    "-n",
+    "-hide_banner",
+    "-loglevel",
+    "info",
+    "-copyts",
+    "-noautorotate",
+    "-i",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\nasa-walkout-v1\\walkout-preview.mp4",
+    "-map",
+    "0:v:0",
+    "-an",
+    "-sn",
+    "-dn",
+    "-vf",
+    "select=gte(n\\,0)*lt(n\\,240)*not(mod(n-0\\,12)),showinfo",
+    "-fps_mode",
+    "passthrough",
+    "-start_number",
+    "0",
+    "-compression_level",
+    "3",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\runs\\video-event-search\\nasa-walkout-prepared-v012\\media\\frames\\f%06d.png"
+  ],
+  "ffprobeSha256": "d01acc30326e117568f527be46c4efa19d548084a649bd428430b5c36e83a973",
+  "videoStreamOrdinal": 0,
+  "everyDecodedFrames": 12,
+  "width": 480,
+  "height": 270,
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 15360
+  },
+  "sourceFirstPts": 0,
+  "ptsOffset": 0,
+  "decodedFrameCount": 4559,
+  "sourceFrameStartInclusive": 0,
+  "sourceFrameStopExclusive": 240,
+  "records": [
+    {
+      "sourceFrameIndex": 0,
+      "sourcePts": 0,
+      "pts": 0,
+      "selectedFrameIndex": 0,
+      "image": "frames/f000000.png",
+      "sha256": "7dd7cb572c42641afc819685204c9f5217beffe8c5a4592fe3afecebf79ff5ee"
+    },
+    {
+      "sourceFrameIndex": 12,
+      "sourcePts": 6144,
+      "pts": 6144,
+      "selectedFrameIndex": 1,
+      "image": "frames/f000001.png",
+      "sha256": "0571b50550d3b46da123ee6e0aa2dee65d26b539d3da215bf817e7637cae3907"
+    },
+    {
+      "sourceFrameIndex": 24,
+      "sourcePts": 12288,
+      "pts": 12288,
+      "selectedFrameIndex": 2,
+      "image": "frames/f000002.png",
+      "sha256": "0382cb59d0b7c2133433653b289dd59ebf56c51604328ea9f18d080b2fec4b9e"
+    },
+    {
+      "sourceFrameIndex": 36,
+      "sourcePts": 18432,
+      "pts": 18432,
+      "selectedFrameIndex": 3,
+      "image": "frames/f000003.png",
+      "sha256": "14b9d2333dadecad314caef9b57993d9b72fc9c40cf7f79d2e93797097c3213d"
+    },
+    {
+      "sourceFrameIndex": 48,
+      "sourcePts": 24576,
+      "pts": 24576,
+      "selectedFrameIndex": 4,
+      "image": "frames/f000004.png",
+      "sha256": "8d5752eb4a75fa95bc305be28a43acb53c10d407a30b94bd6b708b27b3ec25bf"
+    },
+    {
+      "sourceFrameIndex": 60,
+      "sourcePts": 30720,
+      "pts": 30720,
+      "selectedFrameIndex": 5,
+      "image": "frames/f000005.png",
+      "sha256": "9b199765135c3e3f65f6f0fe90cd924a41344af6a62b5e82b29ee74580f259f0"
+    },
+    {
+      "sourceFrameIndex": 72,
+      "sourcePts": 36864,
+      "pts": 36864,
+      "selectedFrameIndex": 6,
+      "image": "frames/f000006.png",
+      "sha256": "4885b7a0651cf73bfa3467c1f4c1b0e3f442be7b72e179453c6c924d5d154067"
+    },
+    {
+      "sourceFrameIndex": 84,
+      "sourcePts": 43008,
+      "pts": 43008,
+      "selectedFrameIndex": 7,
+      "image": "frames/f000007.png",
+      "sha256": "b32299147e60d03829824ae5a433f33237698e2ee87485396a456d252ae93ff5"
+    },
+    {
+      "sourceFrameIndex": 96,
+      "sourcePts": 49152,
+      "pts": 49152,
+      "selectedFrameIndex": 8,
+      "image": "frames/f000008.png",
+      "sha256": "c60d621bfd6873cb5d6095166c178f5e07225c263f37000d3de9c2da94a69819"
+    },
+    {
+      "sourceFrameIndex": 108,
+      "sourcePts": 55296,
+      "pts": 55296,
+      "selectedFrameIndex": 9,
+      "image": "frames/f000009.png",
+      "sha256": "94ea6432e530bd83b053b18a9d89a61aa6b2b9f5407ebb2cbfee1750521bd8ba"
+    },
+    {
+      "sourceFrameIndex": 120,
+      "sourcePts": 61440,
+      "pts": 61440,
+      "selectedFrameIndex": 10,
+      "image": "frames/f000010.png",
+      "sha256": "7fe44e8522aa83780b408ad4a661ac772e3512b7b602fa13f503064f7307a2ab"
+    },
+    {
+      "sourceFrameIndex": 132,
+      "sourcePts": 67584,
+      "pts": 67584,
+      "selectedFrameIndex": 11,
+      "image": "frames/f000011.png",
+      "sha256": "100ee6e83b9b5d3dc1619055992710f5641663a56903a4d12f4393b5df49fe49"
+    },
+    {
+      "sourceFrameIndex": 144,
+      "sourcePts": 73728,
+      "pts": 73728,
+      "selectedFrameIndex": 12,
+      "image": "frames/f000012.png",
+      "sha256": "5af848ce468bc1082ef455825a5c15f2dbe0c9c964a269b15eea194e36a55b27"
+    },
+    {
+      "sourceFrameIndex": 156,
+      "sourcePts": 79872,
+      "pts": 79872,
+      "selectedFrameIndex": 13,
+      "image": "frames/f000013.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131"
+    },
+    {
+      "sourceFrameIndex": 168,
+      "sourcePts": 86016,
+      "pts": 86016,
+      "selectedFrameIndex": 14,
+      "image": "frames/f000014.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131"
+    },
+    {
+      "sourceFrameIndex": 180,
+      "sourcePts": 92160,
+      "pts": 92160,
+      "selectedFrameIndex": 15,
+      "image": "frames/f000015.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131"
+    },
+    {
+      "sourceFrameIndex": 192,
+      "sourcePts": 98304,
+      "pts": 98304,
+      "selectedFrameIndex": 16,
+      "image": "frames/f000016.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131"
+    },
+    {
+      "sourceFrameIndex": 204,
+      "sourcePts": 104448,
+      "pts": 104448,
+      "selectedFrameIndex": 17,
+      "image": "frames/f000017.png",
+      "sha256": "63f2719d91d866533fa93d90d97430cb4d7cd25e864cd2a5aed3f1f251543131"
+    },
+    {
+      "sourceFrameIndex": 216,
+      "sourcePts": 110592,
+      "pts": 110592,
+      "selectedFrameIndex": 18,
+      "image": "frames/f000018.png",
+      "sha256": "6a124dbe3314b4bafc624d912fb5bb0877d634c9091996841e59b8850d60ff03"
+    },
+    {
+      "sourceFrameIndex": 228,
+      "sourcePts": 116736,
+      "pts": 116736,
+      "selectedFrameIndex": 19,
+      "image": "frames/f000019.png",
+      "sha256": "10093febaaa49ebdf39080c62895e2a48c817ae9f8125c70681b9acf5e36343a"
+    }
+  ],
+  "timestampMapping": "manifestPts = originalSourcePts + ptsOffset; same original rational time base; no FPS-derived timestamps",
+  "orientation": "no autorotate; native decoded width/height and normalized coordinates; display metadata not applied",
+  "audio": "not decoded or exported",
+  "scope": "real media decoding and timestamp preparation only; no detector, tracking or event-quality evidence",
+  "scriptHashes": {
+    "video_media.py": "fc6656aaf5b4102206703b29bba72799c36729af643d72e6e48706e0979ff1af",
+    "video-prepare-media.py": "b96477b0b93413c088f0083a0541ad272828d1dcddb98cc77c2d5eba62c58280"
+  }
+}

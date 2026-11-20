@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-20",
+  "revision": "v6",
+  "fiveIndependentBenchmarkRounds": true,
+  "timedSamples": 750,
+  "randomOrderAndQuantilesChecked": true,
+  "photoInputsAndActualPngHashesMatch": true,
+  "parsedCacheMissAndTwoProcessHits": true,
+  "cacheFailuresRetained": true,
+  "matmulFailureRetained": true,
+  "quickstartInitialAndFinalNumericalChecks": true,
+  "doctorMissingSdkWritesStructuredFailure": true,
+  "benchmarkSourceHashMatchesRecordedRun": true,
+  "linksAndHtmlImagesResolve": true,
+  "readerPathsPortable": true,
+  "screenshots": "See round3/screenshots/manifest.json",
+  "fourApplications": "Executed with two GPU Compile failures; see round3/rerun-status.json",
+  "allIssue2AcceptanceMet": false
+}

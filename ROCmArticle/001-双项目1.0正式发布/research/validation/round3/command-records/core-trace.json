@@ -1,0 +1,23 @@
+{
+  "label": "core-trace",
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\run-windows.ps1",
+    "-HipRoot",
+    "D:/AMD/ROCm/10.1.0/HIP",
+    "-Architecture",
+    "gfx1100",
+    "-Mode",
+    "trace",
+    "-OutputPath",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\core-trace.json"
+  ],
+  "started": "2026-11-20T23:30:50.510332+08:00",
+  "finished": "2026-11-20T23:30:54.086476+08:00",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/core-trace.log",
+  "logSha256": "85407d63654e0e5b4b4fdf84dd4fd0564c5e2c164c926398da1e72d1ab2c81c4"
+}

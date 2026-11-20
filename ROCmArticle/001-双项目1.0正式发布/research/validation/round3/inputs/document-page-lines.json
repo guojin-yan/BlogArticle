@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "templateId": "authored-page-purchase-v1",
+  "pageId": "page1",
+  "image": "page.png",
+  "imageSha256": "e258e8772ff34836060c7ea8efbd53b4d464e5e9044bc677d2b455879e652d0f",
+  "width": 640,
+  "height": 540,
+  "geometrySource": {
+    "kind": "manual",
+    "provider": "author-rendered fixed page layout",
+    "scope": "Manually declared rectangles from authored placement; no text detection or orientation inference"
+  },
+  "lines": [
+    {
+      "id": "number",
+      "bounds": {
+        "x": 20,
+        "y": 20,
+        "width": 233,
+        "height": 43
+      },
+      "reference": "number-reference.json",
+      "referenceSha256": "7da21eec02316c122ef852a3f2b90b757b126d0608fe3409caf5a69d6d27bf26"
+    },
+    {
+      "id": "currency",
+      "bounds": {
+        "x": 20,
+        "y": 84,
+        "width": 99,
+        "height": 43
+      },
+      "reference": "currency-reference.json",
+      "referenceSha256": "be248aaace68460b51ee7574b0eb608ed4c298c005b3c0cd89142d9abcea3f72"
+    },
+    {
+      "id": "quantity1",
+      "bounds": {
+        "x": 20,
+        "y": 148,
+        "width": 50,
+        "height": 43
+      },
+      "reference": "quantity1-reference.json",
+      "referenceSha256": "81aa5b444a70ccef269788c0e818fa4e9792d9fba3337a32c12c9d2780de9545"
+    },
+    {
+      "id": "price1",
+      "bounds": {
+        "x": 20,
+        "y": 212,
+        "width": 113,
+        "height": 43
+      },
+      "reference": "price1-reference.json",
+      "referenceSha256": "8021cce583cc185cbd4d55d97f604944061a7932cde37c6d8707503cd9fc8a7b"
+    },
+    {
+      "id": "amount1",
+      "bounds": {
+        "x": 20,
+        "y": 276,
+        "width": 113,
+        "height": 43
+      },
+      "reference": "amount1-reference.json",
+      "referenceSha256": "fdebb1035829a0ef48d66f1bf13942f4d2fdc59f63afd7e1e3db3edd83669b09"
+    },
+    {
+      "id": "tax",
+      "bounds": {
+        "x": 20,
+        "y": 404,
+        "width": 95,
+        "height": 43
+      },
+      "reference": "tax-reference.json",
+      "referenceSha256": "33b7ae7d36ddf3ed535e422e7b5ffcbc5af55bd6ad8efb56d7229e8568ab2ba5"
+    },
+    {
+      "id": "total",
+      "bounds": {
+        "x": 20,
+        "y": 468,
+        "width": 113,
+        "height": 43
+      },
+      "reference": "total-reference.json",
+      "referenceSha256": "c8f66954e15fa37f555a1f7adef57e038d018f04d961088e70056af213940e9e"
+    }
+  ]
+}

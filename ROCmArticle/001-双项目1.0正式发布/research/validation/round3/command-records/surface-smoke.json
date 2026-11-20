@@ -1,0 +1,23 @@
+{
+  "label": "surface-smoke",
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+    "--url",
+    "http://127.0.0.1:5086",
+    "--gpu",
+    "--model",
+    "visa-pcb1-patchbank-v1",
+    "--manifest",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\visa\\pcb1-smoke\\manifest.json",
+    "--report",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\surface-smoke.json"
+  ],
+  "started": "2026-11-20T23:16:29.263994+08:00",
+  "finished": "2026-11-20T23:16:44.997161+08:00",
+  "exitCode": 1,
+  "expectedExit": 0,
+  "log": "logs/surface-smoke.log",
+  "logSha256": "8260c012e789442c20e369e2760d26f8a076a96263c29a00226d61cbf563bd11"
+}

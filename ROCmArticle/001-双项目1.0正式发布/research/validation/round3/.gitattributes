@@ -1,0 +1,2 @@
+# Evidence hashes cover original bytes, including CRLF emitted by applications.
+* -text

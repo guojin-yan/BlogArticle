@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>MIGraphX 执行跟踪 · 原始日志查看</title><style>body{font:16px/1.7 "Segoe UI","Microsoft YaHei",sans-serif;margin:32px;color:#19293b}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.65 Consolas,monospace;background:#f3f6f9;padding:20px}h1{font-size:26px}</style><h1>MIGraphX 执行跟踪 · 本轮实跑记录</h1><p>浏览器日志查看页：逐字呈现实际程序标准输出，不是终端截图。W7900 / gfx1100 · Windows 11 · ROCm 10.1 · MIGraphX 2.18。</p><p>来源：<code>logs/core-trace.log</code>；命令、时间与退出码见 <code>commands.json</code>。</p><pre>BEGIN_COMPILED_GPU_PROGRAM
+module: &quot;main&quot;
+@0 = check_context::migraphx::gpu::context -&gt; float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {32768}, {1},id=main:scratch] -&gt; int8_type, {32768}, {1}
+@2 = load[offset=16384,end=32768](@1) -&gt; float_type, {64, 64}, {64, 1}
+input = @param:input -&gt; float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -&gt; float_type, {64, 64}, {64, 1}
+@5 = load[offset=0,end=16384](@1) -&gt; float_type, {64, 64}, {64, 1}
+@6 = gpu::code_object[code_object=4720,symbol_name=mul_add_relu_kernel,global=2048,local=1024,](@4,@5) -&gt; float_type, {64, 64}, {64, 1}
+@7 = hip::copy_from_gpu(@6) -&gt; float_type, {64, 64}, {64, 1}
+@8 = hip::sync_stream(@7) -&gt; float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+
+BEGIN_MODEL_EXECUTION
+END_MODEL_EXECUTION
+Trace operations: hip::hip_allocate_memory[shape=int8_type, {32768}, {1},id=main:scratch], @param:input, hip::copy_to_gpu, gpu::code_object[code_object=4720,symbol_name=mul_add_relu_kernel,global=2048,local=1024,], hip::copy_from_gpu, hip::sync_stream
+PASS: affine-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\validation\round3\results\core-trace.json
+</pre></html>

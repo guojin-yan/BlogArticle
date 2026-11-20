@@ -1,0 +1,23 @@
+{
+  "label": "surface-smoke-model-retry",
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+    "--url",
+    "http://127.0.0.1:5086",
+    "--gpu",
+    "--report",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\surface-smoke-model-retry.json",
+    "--model",
+    "visa-pcb1-patchbank-v1",
+    "--manifest",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\visa\\pcb1-smoke\\manifest.json"
+  ],
+  "started": "2026-11-20T23:22:34.620401+08:00",
+  "finished": "2026-11-20T23:22:52.900565+08:00",
+  "exitCode": 1,
+  "expectedExit": 0,
+  "log": "logs/surface-smoke-model-retry.log",
+  "logSha256": "8260c012e789442c20e369e2760d26f8a076a96263c29a00226d61cbf563bd11"
+}

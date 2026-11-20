@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "applicationVersion": "0.12.0",
+  "id": "e52afec926c3474a8d8742014f5a7e6b",
+  "name": "\u5747\u5300\u8868\u9762 \u00B7 \u516D\u4EF6\u6F14\u793A\u6279\u6B21",
+  "createdAt": "2026-11-20T15:25:57.4829899+00:00",
+  "finishedAt": "2026-11-20T15:25:58.2993601+00:00",
+  "recipe": {
+    "name": "\u5747\u5300\u8868\u9762 \u00B7 \u7070\u5EA6\u4E0E\u5C40\u90E8\u5BF9\u6BD4",
+    "dark": 80,
+    "bright": 200,
+    "localRadius": 3,
+    "localContrast": 0,
+    "minArea": 8,
+    "region": null,
+    "modelId": null,
+    "modelFingerprint": null,
+    "tiling": null,
+    "version": "9520bdb60e2f95a5"
+  },
+  "backend": "Cpu",
+  "status": "Completed",
+  "cancelRequested": false,
+  "error": null,
+  "synthetic": true,
+  "phase": null,
+  "initializationMs": 1.5484,
+  "backendInitialization": null,
+  "items": [
+    {
+      "id": "6534073260e640ba8db4dc63ef5ea895",
+      "fileName": "surface-01.png",
+      "sourceHash": "cff00d4e8a163d9dbb0a246037e41a42e5eb856d4709216301f836490aaa7719",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "CPU reference",
+        "device": "32 logical processors",
+        "computeMs": 1.4299,
+        "transferAndComputeMs": 1.4314,
+        "decodeMs": 14.4221,
+        "postprocessMs": 2.5348,
+        "totalMs": 97.9126,
+        "kernelHash": null,
+        "computeTiming": null
+      },
+      "anomaly": null,
+      "finalDecision": "Pass"
+    },
+    {
+      "id": "e5a8a6597c6641bc94c2343a19a8703b",
+      "fileName": "surface-02.png",
+      "sourceHash": "00da24fbc80e79b1a8d02f35df348074eb8ea853dc24ed39f08b23ea36522ae7",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 1295,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 200,
+          "y": 65,
+          "width": 7,
+          "height": 185,
+          "area": 1295
+        }
+      ],
+      "reviews": [
+        {
+          "revision": 1,
+          "decision": "NeedsReview",
+          "reason": "HTTP smoke verification",
+          "reviewer": "smoke-test",
+          "at": "2026-11-20T15:26:00.1876137+00:00"
+        }
+      ],
+      "error": null,
+      "measurement": {
+        "backend": "CPU reference",
+        "device": "32 logical processors",
+        "computeMs": 0.2182,
+        "transferAndComputeMs": 0.2183,
+        "decodeMs": 1.4036,
+        "postprocessMs": 0.2152,
+        "totalMs": 72.0961,
+        "kernelHash": null,
+        "computeTiming": null
+      },
+      "anomaly": null,
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "326bbced27bb4c57b8425713e059a378",
+      "fileName": "surface-03.png",
+      "sourceHash": "e9dc746cc2e6918c6a44eb7fc809cf3e0118b617980e376e871ca60a47b77a6b",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 1400,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 320,
+          "y": 140,
+          "width": 40,
+          "height": 35,
+          "area": 1400
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "CPU reference",
+        "device": "32 logical processors",
+        "computeMs": 0.2487,
+        "transferAndComputeMs": 0.2488,
+        "decodeMs": 1.7152,
+        "postprocessMs": 0.2006,
+        "totalMs": 71.4436,
+        "kernelHash": null,
+        "computeTiming": null
+      },
+      "anomaly": null,
+      "finalDecision": "Defect"
+    },
+    {
+      "id": "613b7f91a2514e5bae94294c66267cc5",
+      "fileName": "surface-04.png",
+      "sourceHash": "6c21d3b4afefe503b81aa7ce360b0c63e779913f1308bb0c4c236df4f9d4c536",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "CPU reference",
+        "device": "32 logical processors",
+        "computeMs": 3.5445,
+        "transferAndComputeMs": 3.5446,
+        "decodeMs": 3.1689,
+        "postprocessMs": 0.1905,
+        "totalMs": 77.3158,
+        "kernelHash": null,
+        "computeTiming": null
+      },
+      "anomaly": null,
+      "finalDecision": "Pass"
+    },
+    {
+      "id": "788275b7c50447d39c15840eed089142",
+      "fileName": "surface-05.png",
+      "sourceHash": "7baaa6eafc72c3890691522a4d040d5fa95f0c786b334b499d61140b9485a772",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 2695,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 320,
+          "y": 140,
+          "width": 40,
+          "height": 35,
+          "area": 1400
+        },
+        {
+          "x": 200,
+          "y": 65,
+          "width": 7,
+          "height": 185,
+          "area": 1295
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "CPU reference",
+        "device": "32 logical processors",
+        "computeMs": 0.2508,
+        "transferAndComputeMs": 0.2508,
+        "decodeMs": 1.3458,
+        "postprocessMs": 3.3186,
+        "totalMs": 80.0774,
+        "kernelHash": null,
+        "computeTiming": null
+      },
+      "anomaly": null,
+      "finalDecision": "Defect"
+    },
+    {
+      "id": "a93e695b92464ad3b811f4a7e8ecdd8d",
+      "fileName": "surface-06.png",
+      "sourceHash": "8959ba61113c5f5342b084db4e0f3e2e01848ee75ac48616c3a81330e786d2ed",
+      "sourceFile": "original.png",
+      "status": "Completed",
+      "width": 512,
+      "height": 320,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "CPU reference",
+        "device": "32 logical processors",
+        "computeMs": 0.32,
+        "transferAndComputeMs": 0.3203,
+        "decodeMs": 1.7598,
+        "postprocessMs": 3.7458,
+        "totalMs": 131.0705,
+        "kernelHash": null,
+        "computeTiming": null
+      },
+      "anomaly": null,
+      "finalDecision": "Pass"
+    }
+  ],
+  "reviewProgress": {
+    "total": 6,
+    "ready": 6,
+    "unreviewed": 5,
+    "deferred": 1,
+    "confirmed": 0,
+    "unavailable": 0,
+    "overridden": 0
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "dataset": "VisA",
+  "category": "pcb1",
+  "license": "CC-BY-4.0",
+  "source": "https://amazon-visual-anomaly.s3.us-west-2.amazonaws.com/VisA_20220922.tar",
+  "archiveSha256": "2eb8690c803ab37de0324772964100169ec8ba1fa3f7e94291c9ca673f40f362",
+  "hashVerification": "locally measured; publisher checksum not supplied",
+  "splitSource": "https://raw.githubusercontent.com/amazon-science/spot-diff/main/split_csv/1cls.csv",
+  "splitSha256": "a48557e6033318cb90556f706196bc9d247a776a23ea51aecee5a80dd0332995",
+  "samples": [
+    {
+      "id": "pcb1-normal-0011",
+      "image": "pcb1/Data/Images/Normal/0011.JPG",
+      "mask": null,
+      "anomaly": false,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-normal-0013",
+      "image": "pcb1/Data/Images/Normal/0013.JPG",
+      "mask": null,
+      "anomaly": false,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-normal-0016",
+      "image": "pcb1/Data/Images/Normal/0016.JPG",
+      "mask": null,
+      "anomaly": false,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-normal-0024",
+      "image": "pcb1/Data/Images/Normal/0024.JPG",
+      "mask": null,
+      "anomaly": false,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-normal-0026",
+      "image": "pcb1/Data/Images/Normal/0026.JPG",
+      "mask": null,
+      "anomaly": false,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-normal-0027",
+      "image": "pcb1/Data/Images/Normal/0027.JPG",
+      "mask": null,
+      "anomaly": false,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-anomaly-000",
+      "image": "pcb1/Data/Images/Anomaly/000.JPG",
+      "mask": "pcb1/Data/Masks/Anomaly/000.png",
+      "anomaly": true,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-anomaly-001",
+      "image": "pcb1/Data/Images/Anomaly/001.JPG",
+      "mask": "pcb1/Data/Masks/Anomaly/001.png",
+      "anomaly": true,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-anomaly-002",
+      "image": "pcb1/Data/Images/Anomaly/002.JPG",
+      "mask": "pcb1/Data/Masks/Anomaly/002.png",
+      "anomaly": true,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-anomaly-003",
+      "image": "pcb1/Data/Images/Anomaly/003.JPG",
+      "mask": "pcb1/Data/Masks/Anomaly/003.png",
+      "anomaly": true,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-anomaly-004",
+      "image": "pcb1/Data/Images/Anomaly/004.JPG",
+      "mask": "pcb1/Data/Masks/Anomaly/004.png",
+      "anomaly": true,
+      "split": "test"
+    },
+    {
+      "id": "pcb1-anomaly-005",
+      "image": "pcb1/Data/Images/Anomaly/005.JPG",
+      "mask": "pcb1/Data/Masks/Anomaly/005.png",
+      "anomaly": true,
+      "split": "test"
+    }
+  ]
+}

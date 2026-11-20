@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "id": "3618d07863e94cb9af4888e0503a05e9",
+  "inputManifestSha256": "2d19205ed57425245ceb50dd35e55ae058fdc46a388257117a15a37a25a62422",
+  "templateSha256": "7f1f34bc35141e5c4ccbd0fd2efdc317920d6a04a2f8a42c29ddbe1d923e7c9a",
+  "source": "Imported OCR evidence: authored workflow fixture",
+  "scope": "CPU fixed-template extraction/rules; no OCR inference in this import. Provider scope: Manually authored text and confidence on a generated bitmap, not OCR output or real business evidence.",
+  "template": {
+    "schemaVersion": 1,
+    "id": "authored-purchase-v1",
+    "minConfidence": 0.9,
+    "fields": [
+      {
+        "name": "number",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 15,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "currency",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 57,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "quantity1",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 99,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "price1",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 141,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "amount1",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 183,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "subtotal",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 225,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "tax",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 267,
+          "width": 350,
+          "height": 30
+        }
+      },
+      {
+        "name": "total",
+        "pageId": "page1",
+        "bounds": {
+          "x": 10,
+          "y": 309,
+          "width": 350,
+          "height": 30
+        }
+      }
+    ],
+    "rows": [
+      {
+        "id": "row1",
+        "quantity": "quantity1",
+        "unitPrice": "price1",
+        "amount": "amount1"
+      }
+    ],
+    "numberField": "number",
+    "currencyField": "currency",
+    "subtotalField": "subtotal",
+    "taxField": "tax",
+    "totalField": "total"
+  },
+  "pages": [
+    {
+      "id": "page1",
+      "image": "pages/001.image",
+      "imageSha256": "37ef8bcb58a9a0df717cf51333d11c20fb2b762cc47d6ad34e13782a7c0d0db3",
+      "width": 400,
+      "height": 360,
+      "blocks": [
+        {
+          "id": "b0",
+          "text": "INV-001",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 19,
+            "width": 84,
+            "height": 14
+          }
+        },
+        {
+          "id": "b1",
+          "text": "USD",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 61,
+            "width": 36,
+            "height": 14
+          }
+        },
+        {
+          "id": "b2",
+          "text": "2",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 103,
+            "width": 12,
+            "height": 14
+          }
+        },
+        {
+          "id": "b3",
+          "text": "10.00",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 145,
+            "width": 60,
+            "height": 14
+          }
+        },
+        {
+          "id": "b4",
+          "text": "21.00",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 187,
+            "width": 60,
+            "height": 14
+          }
+        },
+        {
+          "id": "b5",
+          "text": "20.00",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 229,
+            "width": 60,
+            "height": 14
+          }
+        },
+        {
+          "id": "b6",
+          "text": "1.00",
+          "confidence": 0.99,
+          "bounds": {
+            "x": 20,
+            "y": 271,
+            "width": 48,
+            "height": 14
+          }
+        },
+        {
+          "id": "b7",
+          "text": "21.00",
+          "confidence": 0.4,
+          "bounds": {
+            "x": 20,
+            "y": 313,
+            "width": 60,
+            "height": 14
+          }
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "number",
+      "pageId": "page1",
+      "blockIds": [
+        "b0"
+      ],
+      "machineText": "INV-001",
+      "finalText": "INV-001",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "currency",
+      "pageId": "page1",
+      "blockIds": [
+        "b1"
+      ],
+      "machineText": "USD",
+      "finalText": "USD",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "quantity1",
+      "pageId": "page1",
+      "blockIds": [
+        "b2"
+      ],
+      "machineText": "2",
+      "finalText": "2",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "price1",
+      "pageId": "page1",
+      "blockIds": [
+        "b3"
+      ],
+      "machineText": "10.00",
+      "finalText": "10.00",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "amount1",
+      "pageId": "page1",
+      "blockIds": [
+        "b4"
+      ],
+      "machineText": "21.00",
+      "finalText": "21.00",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "subtotal",
+      "pageId": "page1",
+      "blockIds": [
+        "b5"
+      ],
+      "machineText": "20.00",
+      "finalText": "20.00",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "tax",
+      "pageId": "page1",
+      "blockIds": [
+        "b6"
+      ],
+      "machineText": "1.00",
+      "finalText": "1.00",
+      "confidence": 0.99,
+      "humanConfirmed": false
+    },
+    {
+      "name": "total",
+      "pageId": "page1",
+      "blockIds": [
+        "b7"
+      ],
+      "machineText": "21.00",
+      "finalText": "21.00",
+      "confidence": 0.4,
+      "humanConfirmed": false
+    }
+  ],
+  "revisions": [],
+  "reviewStatus": "NeedsReview",
+  "checks": [
+    {
+      "code": "confidence",
+      "field": "total",
+      "message": "OCR evidence is missing or below the review confidence threshold."
+    },
+    {
+      "code": "line-amount",
+      "field": "amount1",
+      "message": "Quantity \u00D7 unit price, rounded to cents away from zero, differs from line amount."
+    },
+    {
+      "code": "subtotal",
+      "field": "subtotal",
+      "message": "Line amounts do not sum to subtotal."
+    }
+  ],
+  "recognition": null,
+  "version": 0
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "authored-purchase-v1",
+  "minConfidence": 0.9,
+  "fields": [
+    {
+      "name": "number",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 15,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "currency",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 57,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "quantity1",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 99,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "price1",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 141,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "amount1",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 183,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "subtotal",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 225,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "tax",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 267,
+        "width": 350,
+        "height": 30
+      }
+    },
+    {
+      "name": "total",
+      "pageId": "page1",
+      "bounds": {
+        "x": 10,
+        "y": 309,
+        "width": 350,
+        "height": 30
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "row1",
+      "quantity": "quantity1",
+      "unitPrice": "price1",
+      "amount": "amount1"
+    }
+  ],
+  "numberField": "number",
+  "currencyField": "currency",
+  "subtotalField": "subtotal",
+  "taxField": "tax",
+  "totalField": "total"
+}

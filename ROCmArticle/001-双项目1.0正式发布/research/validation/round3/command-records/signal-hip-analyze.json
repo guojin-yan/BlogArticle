@@ -1,0 +1,20 @@
+{
+  "label": "signal-hip-analyze",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+    "analyze",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-cpu\\6f1e4f9121ef4274a2781e1f96683d33\\input.csv",
+    "--config",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-cpu\\6f1e4f9121ef4274a2781e1f96683d33\\config.json",
+    "--hip",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-hip"
+  ],
+  "started": "2026-11-20T23:21:39.621775+08:00",
+  "finished": "2026-11-20T23:21:40.153889+08:00",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/signal-hip-analyze.log",
+  "logSha256": "760609f2a9865fbeb385b24ccc7ca5bdf5e639949438e7708db685e88868e9e3"
+}

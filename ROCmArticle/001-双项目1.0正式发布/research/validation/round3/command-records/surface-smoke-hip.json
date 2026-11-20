@@ -1,0 +1,21 @@
+{
+  "label": "surface-smoke-hip",
+  "command": [
+    "C:/Users/guoji/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+    "--url",
+    "http://127.0.0.1:5086",
+    "--gpu",
+    "--report",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\surface-smoke-hip.json"
+  ],
+  "started": "2026-11-20T23:25:56.778306+08:00",
+  "finished": "2026-11-20T23:26:00.514169+08:00",
+  "timestampSource": "Recovered approximate execution bounds from log filesystem creation/mtime, not original process timestamps",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/surface-smoke-hip.log",
+  "logSha256": "4f8de4fff3400e0988e016bb293ef2704c299f6231535a9ec44413897ba08f9b",
+  "recordRecovery": "Summary row lost when overlapping video stage wrote its older commands list. Recovered from actual tool invocation and captured exit 0 output; original log unchanged."
+}

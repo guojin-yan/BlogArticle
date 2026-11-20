@@ -1,0 +1,26 @@
+[
+  {
+    "file": "collection.json",
+    "url": "https://images-assets.nasa.gov/video/KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K/collection.json",
+    "sha256": "1f5147aad5c1173adc2a8dad79b306797969e76021137fe5319c35947acc40fb",
+    "bytes": 6151
+  },
+  {
+    "file": "metadata.json",
+    "url": "https://images-assets.nasa.gov/video/KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K/metadata.json",
+    "sha256": "2df77c886abe5570cd4fb9be72c1591c7fdd46d279e27e335f04b40f00492fcc",
+    "bytes": 17487
+  },
+  {
+    "file": "nasa-media-guidelines.html",
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "sha256": "1b5981673c25006fc98536513c1629d9b8e3bf4f5aebe6b53ee0ee2d76c3474d",
+    "bytes": 320563
+  },
+  {
+    "file": "walkout-preview.mp4",
+    "url": "https://images-assets.nasa.gov/video/KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K/KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K~preview.mp4",
+    "sha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+    "bytes": 12087175
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "applicationsExecuted": 4,
+  "gpuPipelineCompleted": [
+    "SurfaceLab HIP rules",
+    "SignalDiagnostics HIP FFT",
+    "VideoEventSearch MIGraphX"
+  ],
+  "gpuCompileFailed": [
+    "SurfaceLab patchbank",
+    "DocumentEvidence PP-OCRv3"
+  ],
+  "documentAuthoredCpuWorkflowCompleted": true,
+  "tests": 264,
+  "validScreenshots": 8,
+  "invalidLayoutScreenshotsRetained": 2,
+  "productionAcceptance": false,
+  "allIssue2AcceptanceMet": false
+}

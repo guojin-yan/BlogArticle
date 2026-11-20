@@ -29,7 +29,7 @@ assert len(re.findall(r'^## ', article, re.M)) == 7
 first_section = article.split('## 一、', 1)[1].split('## 二、', 1)[0]
 assert '```' not in first_section
 images = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', article)
-assert len(images) == 7
+assert len(images) == 13
 for asset in before['assets']:
     assert sha(ROOT / asset['path'].replace('\\', '/')).lower() == asset['sha256'].lower(), asset['path']
 for tag in before['htmlImageTags']:
@@ -113,7 +113,7 @@ if pair_file.exists():
         max_error = max(max_error, error)
     assert max_error == signal['maxPsdAbsoluteError']
 
-result = {'date': '2026-11-20', 'revision': 'v5', 'titlePreserved': True,
+result = {'date': '2026-11-20', 'revision': 'v6', 'titlePreserved': True,
     'mainSections': 7, 'nugetPackages': 7, 'originalHtmlImageTagsPreserved': 6,
     'originalAssetsUnchanged': len(before['assets']), 'articleImages': len(images),
     'checkedLocalLinks': len(local_links), 'localLinksResolve': True,
@@ -122,7 +122,7 @@ result = {'date': '2026-11-20', 'revision': 'v5', 'titlePreserved': True,
     'fixedModelHashesMatch': True, 'affineExecutionAndNumericalEvidence': True,
     'benchmarkRawSamplesAndTableMatch': True, 'benchmarkRawAndFinalOutputsPass': True,
     'signalNumericalPairs': len(rows) if pair_file.exists() else None,
-    'visualReview': 'v5 generated HTML/source checks only. UI screenshot collection blocked by computer-use URL policy; earlier v4 review is historical.',
+    'visualReview': 'v6 actual browser viewport captures; captures are scoped in round3/screenshots/manifest.json.',
     'limits': 'No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance'}
-(VALIDATION / 'round2/issue1-regression-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
+(VALIDATION / 'round3/issue1-regression-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(json.dumps(result, ensure_ascii=False))

@@ -1,0 +1,19 @@
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/conv/solver_finders.cpp:535: Invalid elapsed time detected in EvaluateInvokers, failed condition: elapsed <= 0
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered

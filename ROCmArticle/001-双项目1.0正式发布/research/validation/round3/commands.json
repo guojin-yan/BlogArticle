@@ -1,0 +1,271 @@
+[
+  {
+    "label": "surface-smoke",
+    "command": [
+      "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+      "--url",
+      "http://127.0.0.1:5086",
+      "--gpu",
+      "--model",
+      "visa-pcb1-patchbank-v1",
+      "--manifest",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\visa\\pcb1-smoke\\manifest.json",
+      "--report",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\surface-smoke.json"
+    ],
+    "started": "2026-11-20T23:16:29.263994+08:00",
+    "finished": "2026-11-20T23:16:44.997161+08:00",
+    "exitCode": 1,
+    "expectedExit": 0,
+    "log": "logs/surface-smoke.log",
+    "logSha256": "8260c012e789442c20e369e2760d26f8a076a96263c29a00226d61cbf563bd11"
+  },
+  {
+    "label": "signal-gpu-verify",
+    "command": [
+      "dotnet",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+      "verify-gpu"
+    ],
+    "started": "2026-11-20T23:21:36.831117+08:00",
+    "finished": "2026-11-20T23:21:39.346722+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/signal-gpu-verify.log",
+    "logSha256": "5f077830b6cd0ee6107127a9e591da2c496723b8e5404e6aff10799bf5f130a5"
+  },
+  {
+    "label": "signal-cpu-demo",
+    "command": [
+      "dotnet",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+      "demo",
+      "--output",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-cpu"
+    ],
+    "started": "2026-11-20T23:21:39.353724+08:00",
+    "finished": "2026-11-20T23:21:39.615774+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/signal-cpu-demo.log",
+    "logSha256": "f298b5dd55fb06bcc9fd6716eace3befba5598581d153867580fa162ceee2ead"
+  },
+  {
+    "label": "signal-hip-analyze",
+    "command": [
+      "dotnet",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+      "analyze",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-cpu\\6f1e4f9121ef4274a2781e1f96683d33\\input.csv",
+      "--config",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-cpu\\6f1e4f9121ef4274a2781e1f96683d33\\config.json",
+      "--hip",
+      "--output",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\signal-hip"
+    ],
+    "started": "2026-11-20T23:21:39.621775+08:00",
+    "finished": "2026-11-20T23:21:40.153889+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/signal-hip-analyze.log",
+    "logSha256": "760609f2a9865fbeb385b24ccc7ca5bdf5e639949438e7708db685e88868e9e3"
+  },
+  {
+    "label": "document-page-gpu",
+    "command": [
+      "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\document-evaluate-page.py",
+      "--model",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json",
+      "--declaration",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\authored-page-v1\\page-lines.json",
+      "--app",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+      "--output",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\document-gpu"
+    ],
+    "started": "2026-11-20T23:22:06.217742+08:00",
+    "finished": "2026-11-20T23:22:07.632497+08:00",
+    "exitCode": 1,
+    "expectedExit": 0,
+    "log": "logs/document-page-gpu.log",
+    "logSha256": "d36a3e7e3278811c4b486bba6ba0fcc1eeffa9e51eb76e2257fbb900adfca24d"
+  },
+  {
+    "label": "surface-smoke-model-retry",
+    "command": [
+      "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+      "--url",
+      "http://127.0.0.1:5086",
+      "--gpu",
+      "--report",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\surface-smoke-model-retry.json",
+      "--model",
+      "visa-pcb1-patchbank-v1",
+      "--manifest",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\visa\\pcb1-smoke\\manifest.json"
+    ],
+    "started": "2026-11-20T23:22:34.620401+08:00",
+    "finished": "2026-11-20T23:22:52.900565+08:00",
+    "exitCode": 1,
+    "expectedExit": 0,
+    "log": "logs/surface-smoke-model-retry.log",
+    "logSha256": "8260c012e789442c20e369e2760d26f8a076a96263c29a00226d61cbf563bd11"
+  },
+  {
+    "label": "document-page-gpu-path-alias",
+    "command": [
+      "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\document-evaluate-page.py",
+      "--model",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json",
+      "--declaration",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\authored-page-v1\\page-lines.json",
+      "--app",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+      "--output",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\document-gpu-path-alias"
+    ],
+    "started": "2026-11-20T23:23:30.884145+08:00",
+    "finished": "2026-11-20T23:23:31.127170+08:00",
+    "exitCode": 1,
+    "expectedExit": 0,
+    "log": "logs/document-page-gpu-path-alias.log",
+    "logSha256": "d36a3e7e3278811c4b486bba6ba0fcc1eeffa9e51eb76e2257fbb900adfca24d"
+  },
+  {
+    "label": "document-page-gpu-alias-fixed",
+    "command": [
+      "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\run-round3-document-page.py",
+      "--evaluator",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\document-evaluate-page.py",
+      "--model",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json",
+      "--declaration",
+      "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\authored-page-v1\\page-lines.json",
+      "--app",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+      "--output",
+      "R:\\results\\document-gpu-alias-fixed"
+    ],
+    "started": "2026-11-20T23:24:10.794166+08:00",
+    "finished": "2026-11-20T23:24:29.249357+08:00",
+    "exitCode": 1,
+    "expectedExit": 0,
+    "log": "logs/document-page-gpu-alias-fixed.log",
+    "logSha256": "37760698980b0f954efc84446e4ef7fb2641b1e67854ceeda5fb492e155142fc"
+  },
+  {
+    "label": "video-real-media-gpu",
+    "command": [
+      "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\video-run-workflow.py",
+      "run",
+      "--prepared",
+      "E:/GitSpace/ROCm-CSharp-Projects/runs/video-event-search/nasa-walkout-prepared-v012",
+      "--app",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\VideoEvents.App\\Release\\net10.0\\VideoEvents.App.dll",
+      "--dotnet",
+      "C:\\Program Files\\dotnet\\dotnet.exe",
+      "--output",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\video-gpu"
+    ],
+    "started": "2026-11-20T23:25:28.565696+08:00",
+    "finished": "2026-11-20T23:26:01.302662+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/video-real-media-gpu.log",
+    "logSha256": "71eff3c2286aebb88d0a5994044a51a7bfc345f9a2f440679a77a48377615fe8"
+  },
+  {
+    "label": "document-cpu-workflow-demo",
+    "command": [
+      "dotnet",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+      "demo",
+      "R:\\results\\document-cpu-demo"
+    ],
+    "started": "2026-11-20T23:28:08.667991+08:00",
+    "finished": "2026-11-20T23:28:08.906207+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/document-cpu-workflow-demo.log",
+    "logSha256": "54b97f62552960323c9fe440e722c4d2b490f8ace646fcbd94e82b6886b82b35"
+  },
+  {
+    "label": "core-verify",
+    "command": [
+      "pwsh",
+      "-NoProfile",
+      "-File",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\run-windows.ps1",
+      "-HipRoot",
+      "D:/AMD/ROCm/10.1.0/HIP",
+      "-Architecture",
+      "gfx1100",
+      "-Mode",
+      "verify",
+      "-OutputPath",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\core-verify.json"
+    ],
+    "started": "2026-11-20T23:30:30.317203+08:00",
+    "finished": "2026-11-20T23:30:50.502235+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/core-verify.log",
+    "logSha256": "69476c1f2f392421a175f8e7d030494944f7c015d891945ee52caf97dcf76b6e"
+  },
+  {
+    "label": "core-trace",
+    "command": [
+      "pwsh",
+      "-NoProfile",
+      "-File",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\run-windows.ps1",
+      "-HipRoot",
+      "D:/AMD/ROCm/10.1.0/HIP",
+      "-Architecture",
+      "gfx1100",
+      "-Mode",
+      "trace",
+      "-OutputPath",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\core-trace.json"
+    ],
+    "started": "2026-11-20T23:30:50.510332+08:00",
+    "finished": "2026-11-20T23:30:54.086476+08:00",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/core-trace.log",
+    "logSha256": "85407d63654e0e5b4b4fdf84dd4fd0564c5e2c164c926398da1e72d1ab2c81c4"
+  },
+  {
+    "label": "surface-smoke-hip",
+    "command": [
+      "C:/Users/guoji/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "-B",
+      "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+      "--url",
+      "http://127.0.0.1:5086",
+      "--gpu",
+      "--report",
+      "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\surface-smoke-hip.json"
+    ],
+    "started": "2026-11-20T23:25:56.778306+08:00",
+    "finished": "2026-11-20T23:26:00.514169+08:00",
+    "timestampSource": "Recovered approximate execution bounds from log filesystem creation/mtime, not original process timestamps",
+    "exitCode": 0,
+    "expectedExit": 0,
+    "log": "logs/surface-smoke-hip.log",
+    "logSha256": "4f8de4fff3400e0988e016bb293ef2704c299f6231535a9ec44413897ba08f9b",
+    "recordRecovery": "Summary row lost when overlapping video stage wrote its older commands list. Recovered from actual tool invocation and captured exit 0 output; original log unchanged."
+  }
+]

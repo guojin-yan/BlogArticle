@@ -1,0 +1,59 @@
+{
+  "Inspection.App": {
+    "JYPPX.ROCm.HIP.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F01UrGj/ooaMV30TtQQ86R8564aGTfP+mTJJXQuB84ZWrK7nQDhk9F9It3RKTheuorS1PcJNy+NfAvdxqQkjwQ==",
+      "path": "jyppx.rocm.hip.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.hip.csharp.api.1.0.0.nupkg.sha512"
+    },
+    "JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GoEKhanc18sSi8hDMxj7jZbWFM2w+SSXd1KxGV3zhh94r/c9442w8C6hsQGi88ZJ2dmHaXlGeXj5sITwl8sMyA==",
+      "path": "jyppx.rocm.migraphx.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.migraphx.csharp.api.1.0.0.nupkg.sha512"
+    }
+  },
+  "Signal.App": {
+    "JYPPX.ROCm.HIP.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F01UrGj/ooaMV30TtQQ86R8564aGTfP+mTJJXQuB84ZWrK7nQDhk9F9It3RKTheuorS1PcJNy+NfAvdxqQkjwQ==",
+      "path": "jyppx.rocm.hip.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.hip.csharp.api.1.0.0.nupkg.sha512"
+    }
+  },
+  "Documents.App": {
+    "JYPPX.ROCm.HIP.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F01UrGj/ooaMV30TtQQ86R8564aGTfP+mTJJXQuB84ZWrK7nQDhk9F9It3RKTheuorS1PcJNy+NfAvdxqQkjwQ==",
+      "path": "jyppx.rocm.hip.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.hip.csharp.api.1.0.0.nupkg.sha512"
+    },
+    "JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GoEKhanc18sSi8hDMxj7jZbWFM2w+SSXd1KxGV3zhh94r/c9442w8C6hsQGi88ZJ2dmHaXlGeXj5sITwl8sMyA==",
+      "path": "jyppx.rocm.migraphx.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.migraphx.csharp.api.1.0.0.nupkg.sha512"
+    }
+  },
+  "VideoEvents.App": {
+    "JYPPX.ROCm.HIP.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F01UrGj/ooaMV30TtQQ86R8564aGTfP+mTJJXQuB84ZWrK7nQDhk9F9It3RKTheuorS1PcJNy+NfAvdxqQkjwQ==",
+      "path": "jyppx.rocm.hip.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.hip.csharp.api.1.0.0.nupkg.sha512"
+    },
+    "JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GoEKhanc18sSi8hDMxj7jZbWFM2w+SSXd1KxGV3zhh94r/c9442w8C6hsQGi88ZJ2dmHaXlGeXj5sITwl8sMyA==",
+      "path": "jyppx.rocm.migraphx.csharp.api/1.0.0",
+      "hashPath": "jyppx.rocm.migraphx.csharp.api.1.0.0.nupkg.sha512"
+    }
+  }
+}

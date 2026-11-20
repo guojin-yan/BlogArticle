@@ -1,0 +1,22 @@
+{
+  "pid": 3968,
+  "started": "2026-11-20T23:25:38.727986+08:00",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Inspection.App\\Release\\net10.0\\Inspection.App.dll",
+    "serve"
+  ],
+  "log": "E:\\BlogArticle\\ROCmArticle\\001-\u53cc\u9879\u76ee1.0\u6b63\u5f0f\u53d1\u5e03\\research\\validation\\round3\\logs\\surface-server-hip.log",
+  "environment": {
+    "HIP_PATH": "D:/AMD/ROCm/10.1.0/HIP",
+    "ROCM_PATH": "D:/AMD/ROCm/10.1.0/HIP",
+    "HIP_DEVICE_LIB_PATH": "D:/AMD/ROCm/10.1.0/HIP/lib/llvm/amdgcn/bitcode",
+    "ROCBLAS_TENSILE_LIBPATH": "D:/AMD/ROCm/10.1.0/HIP/bin/rocblas/library",
+    "HIPBLASLT_TENSILE_LIBPATH": "D:/AMD/ROCm/10.1.0/HIP/bin/hipblaslt/library/gfx1100",
+    "MIGRAPHX_NATIVE_PATH": "D:/AMD/ROCm/10.1.0/MIGraphX/bin/migraphx_c.dll",
+    "INSPECTION_GPU_ARCH": "gfx1100",
+    "INSPECTION_MODEL_ROOT": "E:/GitSpace/ROCm-CSharp-Projects/assets/models",
+    "INSPECTION_DATA_ROOT": "E:\\BlogArticle\\ROCmArticle\\001-\u53cc\u9879\u76ee1.0\u6b63\u5f0f\u53d1\u5e03\\research\\validation\\round3\\results\\surface-runtime-hip",
+    "INSPECTION_URL": "http://127.0.0.1:5086"
+  }
+}

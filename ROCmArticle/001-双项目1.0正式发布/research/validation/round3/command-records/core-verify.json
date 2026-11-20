@@ -1,0 +1,23 @@
+{
+  "label": "core-verify",
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\run-windows.ps1",
+    "-HipRoot",
+    "D:/AMD/ROCm/10.1.0/HIP",
+    "-Architecture",
+    "gfx1100",
+    "-Mode",
+    "verify",
+    "-OutputPath",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round3\\results\\core-verify.json"
+  ],
+  "started": "2026-11-20T23:30:30.317203+08:00",
+  "finished": "2026-11-20T23:30:50.502235+08:00",
+  "exitCode": 0,
+  "expectedExit": 0,
+  "log": "logs/core-verify.log",
+  "logSha256": "69476c1f2f392421a175f8e7d030494944f7c015d891945ee52caf97dcf76b6e"
+}

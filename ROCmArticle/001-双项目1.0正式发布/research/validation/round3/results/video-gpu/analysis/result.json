@@ -1,0 +1,53 @@
+{
+  "runId": "f9cc456668054fa589fde812a32ca40e",
+  "sourceId": "walkout-preview.mp4 sha256:66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "detectionSource": "MIGraphX GPU",
+  "manifestSha256": "b3e0b3b90ace9078badd36ca1d8a16b01b3e4a785e9f31665e8d27d23e7ef723",
+  "recipeSha256": "7eaf2caf38a8a29133600f820328aaa84f75ad4e417becd44b1274f166394322",
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 15360
+  },
+  "framesProcessed": 20,
+  "status": "completed",
+  "observations": [
+    {
+      "frameIndex": 18,
+      "pts": 110592,
+      "trackId": "f9cc456668054fa589fde812a32ca40e:T1",
+      "class": "train",
+      "confidence": 0.7765655334791717,
+      "box": {
+        "x1": 0.036290511304721454,
+        "y1": 0.0011693210664830886,
+        "x2": 0.5242616089040187,
+        "y2": 0.9897663713538896
+      }
+    },
+    {
+      "frameIndex": 19,
+      "pts": 116736,
+      "trackId": "f9cc456668054fa589fde812a32ca40e:T1",
+      "class": "train",
+      "confidence": 0.7238146306988895,
+      "box": {
+        "x1": 0.050523439836212505,
+        "y1": 0.0008141081829187461,
+        "x2": 0.5277490862445792,
+        "y2": 0.9722647581073122
+      }
+    }
+  ],
+  "events": [],
+  "warnings": [],
+  "scope": "Single-shot IoU tracks, IDs scoped to this run. Sampled center transitions only; no continuous-presence proof, identity recognition, detection-quality or safety qualification.",
+  "modelManifestSha256": "7c86000ba31f04127a931a3050c81b04924b3e5e2e681aedce2e16a107fa22a6",
+  "modelSha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+  "media": {
+    "provenanceSha256": "dbe13ee8eecb41179786653779364843643ebd0195cbe3ab376e4f2c5d40ee1f",
+    "sourceSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+    "originalSourceFirstPts": 0,
+    "ptsOffset": 0,
+    "scope": "Recorded decoder provenance and selected frame byte/PTS mappings checked. Original media/tool binaries are not reread during analysis; not publisher authenticity or event-quality evidence."
+  }
+}

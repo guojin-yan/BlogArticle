@@ -1,0 +1,37 @@
+  正在确定要还原的项目…
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\VideoEventSearch\src\VideoEvents.Core\VideoEvents.Core.csproj (用时 9 毫秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\IndustrialInspection\src\Inspection.Core\Inspection.Core.csproj (用时 8 毫秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\SignalDiagnostics\src\Signal.Core\Signal.Core.csproj (用时 13.43 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\SignalDiagnostics\src\Signal.App\Signal.App.csproj (用时 13.43 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\DocumentEvidence\src\Documents.Core\Documents.Core.csproj (用时 13.79 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\DocumentEvidence\src\Documents.App\Documents.App.csproj (用时 13.79 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\DocumentEvidence\src\Documents.Diagnostics\Documents.Diagnostics.csproj (用时 13.79 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\VideoEventSearch\src\VideoEvents.Processing\VideoEvents.Processing.csproj (用时 17.08 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\VideoEventSearch\src\VideoEvents.App\VideoEvents.App.csproj (用时 17.08 秒)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\VideoEventSearch\tests\VideoEvents.Tests\VideoEvents.Tests.csproj (用时 1.05 分钟)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\SignalDiagnostics\tests\Signal.Tests\Signal.Tests.csproj (用时 1.05 分钟)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\DocumentEvidence\tests\Documents.Tests\Documents.Tests.csproj (用时 1.05 分钟)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\IndustrialInspection\src\Inspection.Processing\Inspection.Processing.csproj (用时 1.73 分钟)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\IndustrialInspection\src\Inspection.App\Inspection.App.csproj (用时 1.73 分钟)。
+  已还原 E:\BlogArticle\ROCmArticle\.tools\apps-round3-source\projects\IndustrialInspection\tests\Inspection.Tests\Inspection.Tests.csproj (用时 1.73 分钟)。
+  VideoEvents.Core -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\VideoEvents.Core\Release\net10.0\VideoEvents.Core.dll
+  Inspection.Core -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Inspection.Core\Release\net10.0\Inspection.Core.dll
+  Documents.Core -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Documents.Core\Release\net10.0\Documents.Core.dll
+  Signal.Core -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Signal.Core\Release\net10.0\Signal.Core.dll
+  Documents.App -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Documents.App\Release\net10.0\Documents.App.dll
+  Documents.Diagnostics -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Documents.Diagnostics\Release\net10.0\Documents.Diagnostics.dll
+  Signal.App -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Signal.App\Release\net10.0\Signal.App.dll
+  VideoEvents.Processing -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\VideoEvents.Processing\Release\net10.0\VideoEvents.Processing.dll
+  Inspection.Processing -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Inspection.Processing\Release\net10.0\Inspection.Processing.dll
+  VideoEvents.App -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\VideoEvents.App\Release\net10.0\VideoEvents.App.dll
+  Documents.Tests -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Documents.Tests\Release\net10.0\Documents.Tests.dll
+  VideoEvents.Tests -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\VideoEvents.Tests\Release\net10.0\VideoEvents.Tests.dll
+  Signal.Tests -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Signal.Tests\Release\net10.0\Signal.Tests.dll
+  Inspection.Tests -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Inspection.Tests\Release\net10.0\Inspection.Tests.dll
+  Inspection.App -> E:\BlogArticle\ROCmArticle\.tools\apps-round3-build\bin\Inspection.App\Release\net10.0\Inspection.App.dll
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:01:52.53
