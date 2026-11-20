@@ -14,5 +14,7 @@
     <PackageReference Include="JYPPX.ROCm.HIP.CSharp.API" Version="1.0.0" />
     <PackageReference Include="JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64" Version="10.1.0" />
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.23.2" />
+    <PackageReference Include="StbImageSharp" Version="2.30.15" />
+    <PackageReference Include="StbImageWriteSharp" Version="1.16.7" />
   </ItemGroup>
 </Project>

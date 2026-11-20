@@ -1,0 +1,2 @@
+PASS: yolox_nano.onnx; outputElements=301665; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\validation\round2\results\benchmark-2.json

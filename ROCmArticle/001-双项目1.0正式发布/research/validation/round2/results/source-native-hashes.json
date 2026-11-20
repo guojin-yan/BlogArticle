@@ -1,0 +1,12 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9BA606C78579055E6E11E3D77968FF01395CAA4FFC2C026E6E3BAC44D80A85BB",
+    "Path": "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\MigraphxCompute\\Program.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8E4AC30EBD51808BA0210D1A9292221D74041B1EDB7FA576FA9D22909BB18AAB",
+    "Path": "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll"
+  }
+]

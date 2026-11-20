@@ -1,0 +1,52 @@
+[
+  {
+    "name": "doctor",
+    "exitCode": 0,
+    "date": "2026-11-20T22:29:18.9751972+08:00"
+  },
+  {
+    "name": "photo",
+    "exitCode": 0,
+    "date": "2026-11-20T22:29:46.6082934+08:00"
+  },
+  {
+    "name": "cache-miss",
+    "exitCode": 1,
+    "date": "2026-11-20T22:30:13.6928236+08:00"
+  },
+  {
+    "name": "cache-hit-process2",
+    "exitCode": 1,
+    "date": "2026-11-20T22:30:40.7578304+08:00"
+  },
+  {
+    "name": "cache-hit-process3",
+    "exitCode": 1,
+    "date": "2026-11-20T22:31:07.5099576+08:00"
+  },
+  {
+    "name": "affine-trace",
+    "exitCode": 0,
+    "date": "2026-11-20T22:31:09.7891908+08:00"
+  },
+  {
+    "name": "matmul-csharp",
+    "exitCode": -1073741819,
+    "date": "2026-11-20T22:31:13.2035987+08:00"
+  },
+  {
+    "name": "affine-native",
+    "exitCode": 0,
+    "date": "2026-11-20T22:31:14.9006403+08:00"
+  },
+  {
+    "name": "matmul-native",
+    "exitCode": 1,
+    "date": "2026-11-20T22:31:15.5565488+08:00"
+  },
+  {
+    "name": "matmul-native-fast",
+    "exitCode": 1,
+    "date": "2026-11-20T22:31:16.2214200+08:00"
+  }
+]

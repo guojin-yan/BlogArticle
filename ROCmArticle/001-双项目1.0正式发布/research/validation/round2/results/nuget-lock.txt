@@ -1,0 +1,10 @@
+JYPPX.ROCm.HIP.CSharp.API.Runtime.win-x64/10.1.0
+JYPPX.ROCm.HIP.CSharp.API/1.0.0
+JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop/1.0.0
+JYPPX.ROCm.MIGraphX.CSharp.API.Runtime.win-x64/1.0.0
+JYPPX.ROCm.MIGraphX.CSharp.API/1.0.0
+Microsoft.ML.OnnxRuntime.Managed/1.23.2
+Microsoft.ML.OnnxRuntime/1.23.2
+StbImageSharp/2.30.15
+StbImageWriteSharp/1.16.7
+System.Numerics.Tensors/9.0.0

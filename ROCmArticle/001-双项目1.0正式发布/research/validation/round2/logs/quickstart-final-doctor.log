@@ -1,0 +1,28 @@
+PASS         Process/RID: win-x64
+PASS         .NET: .NET 10.0.15
+PASS         HIP_PATH: D:\AMD\ROCm\10.1.0\HIP
+PASS         File amdhip64*.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\amdhip64_7.dll
+PASS         File hiprtc[0-9]*.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\hiprtc0716.dll
+PASS         File amd_comgr.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\amd_comgr.dll
+PASS         File MIOpen.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\MIOpen.dll
+PASS         File rocblas.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\rocblas.dll
+PASS         File libhipblaslt.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\libhipblaslt.dll
+PASS         Device data: lib/llvm/amdgcn/bitcode
+PASS         Device data: bin/rocblas/library
+PASS         Device data: bin/hipblaslt/library/gfx1100
+0: AMD Radeon PRO W7900
+7.16.26385
+PASS         HIP device/runtime: check completed
+PASS         HIPRTC compile: check completed
+PASS         MIGraphX object probe: E:\BlogArticle\ROCmArticle\.tools\round2-reader\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_c.dll
+PASS         Plugin migraphx_c.dll: E:\BlogArticle\ROCmArticle\.tools\round2-reader\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_c.dll
+PASS         Plugin migraphx.dll: E:\BlogArticle\ROCmArticle\.tools\round2-reader\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx.dll
+PASS         Plugin migraphx_gpu.dll: E:\BlogArticle\ROCmArticle\.tools\round2-reader\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_gpu.dll
+PASS         Model affine-relu.onnx: Fixed fixture in application output directory
+PASS         Model matmul-relu.onnx: Fixed fixture in application output directory
+PASS         Loaded native modules: Recorded 18 modules with actual paths and SHA256; presence is not a full dependency proof.
+NOT CHECKED  GPU math dependency chain: Object probe/HIPRTC do not exercise every MIGraphX kernel, MIOpen/BLAS solver or transitive dependency.
+NOT CHECKED  Version conflicts: Loaded paths are recorded; binary compatibility of every PATH candidate is not certified.
+NOT CHECKED  Actual GPU gfx: gfx1100 is a requested compile target, not independently detected hardware gfx.
+NOT CHECKED  Driver/PowerShell: Collected separately by the PowerShell launcher.
+SKIP         Linux/other GPU: Windows host only

@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-20",
+  "rounds": 5,
+  "samplesPerPathPerRound": 30,
+  "paths": {
+    "ortCpu": {
+      "p50PerRoundMs": [
+        14.861,
+        14.4241,
+        14.6336,
+        15.0216,
+        14.7732
+      ],
+      "p95PerRoundMs": [
+        16.4418,
+        15.5685,
+        16.7189,
+        16.1301,
+        16.0355
+      ],
+      "medianOfRoundP50Ms": 14.7732,
+      "minRoundP50Ms": 14.4241,
+      "maxRoundP50Ms": 15.0216
+    },
+    "hostNew": {
+      "p50PerRoundMs": [
+        20.6362,
+        20.5645,
+        19.8358,
+        21.4784,
+        20.5638
+      ],
+      "p95PerRoundMs": [
+        22.4385,
+        22.6103,
+        27.1778,
+        23.4227,
+        23.5457
+      ],
+      "medianOfRoundP50Ms": 20.5645,
+      "minRoundP50Ms": 19.8358,
+      "maxRoundP50Ms": 21.4784
+    },
+    "hostFixedInputReuse": {
+      "p50PerRoundMs": [
+        19.0545,
+        19.2487,
+        17.7459,
+        19.4519,
+        19.2635
+      ],
+      "p95PerRoundMs": [
+        22.503,
+        22.1878,
+        32.1427,
+        23.8073,
+        21.6624
+      ],
+      "medianOfRoundP50Ms": 19.2487,
+      "minRoundP50Ms": 17.7459,
+      "maxRoundP50Ms": 19.4519
+    },
+    "deviceCpuOps": {
+      "p50PerRoundMs": [
+        6.9672,
+        6.8525,
+        7.3855,
+        7.3633,
+        7.2323
+      ],
+      "p95PerRoundMs": [
+        8.4767,
+        7.7296,
+        12.9618,
+        8.568,
+        9.132
+      ],
+      "medianOfRoundP50Ms": 7.2323,
+      "minRoundP50Ms": 6.8525,
+      "maxRoundP50Ms": 7.3855
+    },
+    "fullHip": {
+      "p50PerRoundMs": [
+        5.2017,
+        5.0531,
+        5.2284,
+        5.3971,
+        5.2865
+      ],
+      "p95PerRoundMs": [
+        6.5144,
+        6.0695,
+        7.519,
+        6.4189,
+        6.4378
+      ],
+      "medianOfRoundP50Ms": 5.2284,
+      "minRoundP50Ms": 5.0531,
+      "maxRoundP50Ms": 5.3971
+    }
+  },
+  "environment": "environment.json",
+  "scope": "Serialized batch=1. E2E begins with decoded host HWC floats and ends with postprocessed host float output. Decode, model parse/compile and reusable buffer allocation excluded. Joint includes H2D, HIP layout, model, D2D output copy, HIP clamp, D2H and stream sync. Host API includes its managed/native copies. warmModelApi has different I/O boundaries across paths and must not be used as a pure-kernel speedup comparison. No GPU clock/power isolation.",
+  "cacheCold": "NOT TESTED",
+  "hostReuseLimitation": "hostFixedInputReuse replays immutable input because public host API has no update/replace operation. NOT equivalent to changing frames; not evidence that all host allocation cost can be removed.",
+  "inputHashes": {
+    "modelSha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+    "rawInputSha256": "3e663dbd3b83f70e651c5c621c985cad2649ec549f06288fc9d6ecad2ad23a75",
+    "modelInputSha256": "f67b55bcbfdf855ca73e7aa58d2258f38952ad97ee6a67bc71bdb7f2f8bcf148"
+  },
+  "startup": {
+    "cpuSessionMs": {
+      "perRoundMs": [
+        258.1,
+        100.1425,
+        93.2421,
+        97.6775,
+        99.9408
+      ],
+      "medianMs": 99.9408
+    },
+    "hostCompileMs": {
+      "perRoundMs": [
+        25127.6276,
+        25184.1951,
+        25679.7367,
+        24945.3151,
+        24730.2387
+      ],
+      "medianMs": 25127.6276
+    },
+    "deviceCompileMs": {
+      "perRoundMs": [
+        19196.1121,
+        19464.5447,
+        19414.7566,
+        19702.3853,
+        19176.3248
+      ],
+      "medianMs": 19414.7566
+    },
+    "hipCompileMs": {
+      "perRoundMs": [
+        65.1474,
+        62.5261,
+        65.56,
+        63.2087,
+        62.1269
+      ],
+      "medianMs": 63.2087
+    }
+  },
+  "firstRunMs": {
+    "cpu": [
+      161.3284,
+      28.4336,
+      26.843,
+      26.9747,
+      27.8113
+    ],
+    "gpu": [
+      40.7321,
+      38.7463,
+      44.1841,
+      38.1329,
+      42.3207
+    ],
+    "joint": [
+      20.3039,
+      20.291,
+      21.0287,
+      20.818,
+      21.4772
+    ]
+  },
+  "numerical": {
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "maxRawAbsoluteError": 2.3692846298217773e-05,
+    "maxRelative": 5381.316725561192,
+    "relativeDenominatorFloor": 1e-12,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "explanation": "Relative error divides by max(1e-12,abs(reference)); tiny reference values can yield a large ratio while satisfying the elementwise atol+rtol*abs(reference) criterion."
+  }
+}

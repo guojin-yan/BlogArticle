@@ -1,0 +1,14 @@
+: Error: No mapping for the Unicode character exists in the target multi-byte code page.
+JYPPX.ROCm.MIGraphXSharp.MIGraphXException: MIGraphX call 'migraphx_save' failed with status 4 (UnknownError). The frozen C API exposes no last-error text function.
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeStatus.ThrowIfFailed(NativeMIGraphXStatus status, String operation)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.<>c__DisplayClass20_0.<Save>b__0()
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.<>c__DisplayClass2_0.<With>b__0()
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.With[TResult](IReadOnlyList`1 resources, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.With(IReadOnlyList`1 resources, Action action)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.Save(String path, MIGraphXFileOptions options)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXModelCache.GetOrBuild(MIGraphXCacheMetadata metadata, MIGraphXFileOptions fileOptions, Func`1 builder)
+   at Round2Tools.Cache(String modelPath, String output, String cacheRoot) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\Round2Tools.cs:line 93
+   at Program.<Main>$(String[] args) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\Program.cs:line 33

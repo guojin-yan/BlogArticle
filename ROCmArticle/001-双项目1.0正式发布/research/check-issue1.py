@@ -1,4 +1,4 @@
-"""Check the v4 delivery's links, preserved assets, and published measurements."""
+"""Regress the first-round evidence and preserved assets after the v5 edits."""
 from pathlib import Path
 import gzip
 import csv
@@ -29,7 +29,7 @@ assert len(re.findall(r'^## ', article, re.M)) == 7
 first_section = article.split('## 一、', 1)[1].split('## 二、', 1)[0]
 assert '```' not in first_section
 images = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', article)
-assert len(images) == 6
+assert len(images) == 7
 for asset in before['assets']:
     assert sha(ROOT / asset['path'].replace('\\', '/')).lower() == asset['sha256'].lower(), asset['path']
 for tag in before['htmlImageTags']:
@@ -37,18 +37,23 @@ for tag in before['htmlImageTags']:
 nuget = re.findall(r'https://www.nuget.org/packages/[^\s`|]+', article)
 assert len(nuget) == len(set(nuget)) == 7
 assert all(f'`{url}`' in article for url in nuget)
-assert not re.search(r'(?<!!)\[[^\]]+\]\([^)]+\)', article)
+expected_start_here = [public_path for public_path in [
+    'examples/HipVectorAdd/Program.cs', 'examples/MigraphxCompute/README.md', 'examples/README.md']]
+links = re.findall(r'(?<!!)\[[^\]]+\]\(([^)]+)\)', article)
+assert links == ['https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/' + p for p in expected_start_here]
 in_code_block = False
 for line in article.splitlines():
     if line.startswith('```'):
         in_code_block = not in_code_block
     if not in_code_block:
+        line = re.sub(r'(?<!!)\[[^\]]+\]\([^)]+\)', '', line)
         for url in re.findall(r'https://[^\s`|]+', line):
             assert f'`{url}`' in line, url
 
 documents = [ROOT / name for name in ['03-正文.md', '05-上手与验证.md',
     'examples/README.md', 'examples/MigraphxCompute/README.md',
-    'research/issue-1-修订说明.md', 'assets/evidence/README.md']]
+    'research/issue-1-修订说明.md', 'assets/evidence/README.md',
+    'research/issue-2-修订说明.md', 'research/validation/round2/README.md']]
 for document in documents[:4] + [ROOT / '03-正文预览.html', ROOT / 'examples/run-windows.ps1']:
     assert not re.search(r'(?i)(\b[a-z]:[\\/]|file://|/home/|/mnt/[a-z]/|/Users/)',
         document.read_text(encoding='utf-8')), f'{document.name}: machine-specific path'
@@ -56,7 +61,7 @@ local_links = []
 public_article_base = 'https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/'
 for target in re.findall(r'https://[^\s`|]+', article):
     if target.startswith(public_article_base):
-        relative = unquote(target.removeprefix(public_article_base))
+        relative = unquote(target.removeprefix(public_article_base)).rstrip(')。.,')
         assert (ROOT / relative).exists(), target
         local_links.append(relative)
 for document in documents:
@@ -87,10 +92,10 @@ for path, measurement in benchmark['measurements'].items():
         ordered = sorted(samples)
         assert values['p50Ms'] == ordered[14] and values['p95Ms'] == ordered[28]
         assert math.isclose(values['serializedItemsPerSecond'], 30000 / sum(samples))
-        measurement_text = article if boundary == 'endToEnd' else guide
+        measurement_text = guide  # historical table remains in the companion guide
         for metric in ['p50Ms', 'p95Ms']:
             assert f"{values[metric]:.3f}" in measurement_text, (path, boundary, metric)
-    assert f"{measurement['endToEnd']['serializedItemsPerSecond']:.2f}" in article
+    assert f"{measurement['endToEnd']['serializedItemsPerSecond']:.2f}" in guide
 assert 'max_abs_error=0' in (VALIDATION / 'issue1-vectoradd-run.log').read_text(encoding='utf-8-sig')
 signal = read_json(VALIDATION / 'issue1-signal-comparison.json')
 assert signal['frames'] == 125 and signal['psdBinsCompared'] == 64125 and signal['allFrameDecisionsMatch']
@@ -108,16 +113,16 @@ if pair_file.exists():
         max_error = max(max_error, error)
     assert max_error == signal['maxPsdAbsoluteError']
 
-result = {'date': '2026-11-19', 'revision': 'v4', 'titlePreserved': True,
+result = {'date': '2026-11-20', 'revision': 'v5', 'titlePreserved': True,
     'mainSections': 7, 'nugetPackages': 7, 'originalHtmlImageTagsPreserved': 6,
     'originalAssetsUnchanged': len(before['assets']), 'articleImages': len(images),
     'checkedLocalLinks': len(local_links), 'localLinksResolve': True,
-    'articleUrlsUseCode': True, 'articleTextHyperlinks': 0, 'firstSectionHasNoCommands': True,
+    'articleUrlsUseCodeExceptThreeStartHere': True, 'articleTextHyperlinks': 3, 'firstSectionHasNoCommands': True,
     'readerInstructionsHaveNoMachineSpecificPaths': True,
     'fixedModelHashesMatch': True, 'affineExecutionAndNumericalEvidence': True,
     'benchmarkRawSamplesAndTableMatch': True, 'benchmarkRawAndFinalOutputsPass': True,
     'signalNumericalPairs': len(rows) if pair_file.exists() else None,
-    'visualReview': 'Earlier desktop and 390px layout review retained; latest text edits checked in generated HTML and source',
+    'visualReview': 'v5 generated HTML/source checks only. UI screenshot collection blocked by computer-use URL policy; earlier v4 review is historical.',
     'limits': 'No independent kernel profiler, clean cold start, process peak VRAM, other-platform rerun or industrial acceptance'}
-(VALIDATION / 'issue1-final-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
+(VALIDATION / 'round2/issue1-regression-checks.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(json.dumps(result, ensure_ascii=False))

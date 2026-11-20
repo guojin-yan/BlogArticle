@@ -22,13 +22,16 @@ try
         if (i + 1 == args.Length || !args[i].StartsWith("--") || !arguments.TryAdd(args[i], args[i + 1]))
             throw new ArgumentException("Use --model PATH --output PATH --mode verify|benchmark|trace --arch gfx1100");
     }
-    var allowed = new[] { "--model", "--output", "--mode", "--arch" };
+    var allowed = new[] { "--model", "--output", "--mode", "--arch", "--seed", "--cache", "--image", "--cache-kind" };
     if (arguments.Keys.Any(key => !allowed.Contains(key))) throw new ArgumentException("Unknown option");
     string modelPath = Path.GetFullPath(arguments.GetValueOrDefault("--model", Path.Combine(AppContext.BaseDirectory, "affine-relu.onnx")));
     string resultPath = Path.GetFullPath(arguments.GetValueOrDefault("--output", "compute-result.json"));
     string mode = arguments.GetValueOrDefault("--mode", "verify");
-    if (mode is not ("verify" or "benchmark" or "trace")) throw new ArgumentException("Unknown mode");
+    if (mode is not ("verify" or "benchmark" or "trace" or "ablation" or "cache" or "detect" or "doctor")) throw new ArgumentException("Unknown mode");
     string arch = arguments.GetValueOrDefault("--arch", "gfx1100");
+    if (mode == "doctor") return Round2Tools.Doctor(resultPath, arch);
+    if (mode == "cache") return Round2Tools.Cache(modelPath, resultPath, arguments["--cache"], arguments.GetValueOrDefault("--cache-kind", "parsed"));
+    if (mode == "detect") return PhotoDetection.Run(modelPath, arguments["--image"], resultPath);
     byte[] modelBytes = File.ReadAllBytes(modelPath);
     var probe = MIGraphXEnvironment.ProbeSystem();
     if (!probe.ObjectsExecuted) throw new InvalidOperationException(string.Join("; ", probe.Diagnostics.Select(d => d.Message)));
@@ -219,9 +222,66 @@ try
         var expected = normalized.Select(value => Math.Max(0, value * .5f + .25f)).ToArray();
         fixtureReference = new { cpu = Compare(expected, reference), gpu = Compare(expected, hostResult), joint = Compare(expected, deviceResult) };
     }
-    int warmups = mode == "benchmark" ? 10 : 0;
-    int repetitions = mode == "benchmark" ? 30 : 1;
+    int warmups = mode is "benchmark" or "ablation" ? 10 : 0;
+    int repetitions = mode is "benchmark" or "ablation" ? 30 : 1;
     var measurements = new Dictionary<string, object>();
+    var executionOrder = new List<string[]>();
+    var ablationErrors = new Dictionary<string, object>();
+    if (mode == "ablation")
+    {
+        // The public API deep-copies host arguments and has no update/replace API.
+        // Reusing the map is valid only for this immutable fixed input, not new frames.
+        using var reusedInput = MIGraphXArgument.Create(native, shape, normalized);
+        using var reusedMap = new MIGraphXParameterMap(native);
+        reusedMap.Add(name, reusedInput);
+        float[] HostFixedInput()
+        {
+            Preprocess();
+            using var output = hostProgram.Run(reusedMap);
+            hip.Synchronize();
+            var values = output[0].ToArray<float>();
+            Postprocess(values);
+            return values;
+        }
+        float[] DeviceCpuOperations()
+        {
+            Preprocess();
+            // Host packing/copy allocations remain inside the measured boundary.
+            inputDevice.CopyFromAsync(Bytes(normalized), stream);
+            using var run = deviceProgram.RunDeviceIntoAsync(deviceInputs, deviceOutputs, stream);
+            modelOutput.CopyToAsync(outputBytes, stream);
+            run.Synchronize();
+            var values = new float[outputCount];
+            Buffer.BlockCopy(outputBytes, 0, values, 0, outputBytes.Length);
+            Postprocess(values);
+            return values;
+        }
+        var paths = new Dictionary<string, Func<float[]>> {
+            ["ortCpu"] = CpuEndToEnd, ["hostNew"] = HostEndToEnd,
+            ["hostFixedInputReuse"] = HostFixedInput, ["deviceCpuOps"] = DeviceCpuOperations,
+            ["fullHip"] = DeviceEndToEnd };
+        var random = new Random(int.Parse(arguments.GetValueOrDefault("--seed", "20261120")));
+        var samples = paths.Keys.ToDictionary(key => key, _ => new List<double>());
+        for (int cycle = -warmups; cycle < repetitions; cycle++)
+        {
+            var order = paths.Keys.OrderBy(_ => random.Next()).ToArray();
+            if (cycle >= 0) executionOrder.Add(order);
+            foreach (var key in order)
+            {
+                var timer = Stopwatch.StartNew();
+                var values = paths[key]();
+                double elapsed = timer.Elapsed.TotalMilliseconds;
+                ablationErrors[key] = Compare(reference, values); // outside timed region
+                if (cycle >= 0) samples[key].Add(elapsed);
+            }
+        }
+        foreach (var pair in samples)
+        {
+            var ordered = pair.Value.Order().ToArray();
+            measurements[pair.Key] = new { samplesMs = pair.Value, p50Ms = ordered[14], p95Ms = ordered[28],
+                serializedItemsPerSecond = 30000 / pair.Value.Sum() };
+        }
+    }
     if (mode == "benchmark")
     {
         measurements["ortCpu"] = new { endToEnd = Measure(() => { _ = CpuEndToEnd(); }, warmups, repetitions), warmModelApi = Measure(() => { _ = CpuModel(); }, warmups, repetitions) };
@@ -258,7 +318,10 @@ try
         firstRunScope = "First run of each path in this process; disk/driver caches were not cleared; startupToFirstGpu also includes CPU setup/reference",
         tolerance = "abs(actual-reference)<=0.001+0.001*abs(reference), every finite element",
         hostError, deviceError, rawHostError, rawDeviceError, finalHostError, finalDeviceError, fixtureReference, referenceFirst16 = reference.Take(16), gpuFirst16 = hostResult.Take(16), jointFirst16 = deviceResult.Take(16),
-        warmups, repetitions, measurements, traceOperations = traceNames,
+        warmups, repetitions, measurements, executionOrder, ablationErrors,
+        seed = arguments.GetValueOrDefault("--seed", "20261120"),
+        hostReuseLimitation = "hostFixedInputReuse replays immutable input because public host API has no update/replace operation. NOT equivalent to changing frames; not evidence that all host allocation cost can be removed.",
+        traceOperations = traceNames,
         modelDeviceEventMs, gpuEvidenceScope = "Compiled GPU instruction trace plus device-only bindings, synchronized device output matching independent CPU, and a HIP stream event interval around the model+D2D copies; not an independent per-kernel profiler timeline",
         nativeEnvironment = new { disableMlir = Environment.GetEnvironmentVariable("MIGRAPHX_DISABLE_MLIR") },
         compiledDeviceParameters = deviceInputs.Select(value => new { value.Name, shape = value.Shape.Lengths }),
@@ -289,15 +352,19 @@ static object Compare(float[] expected, float[] actual)
 {
     if (expected.Length != actual.Length) throw new InvalidOperationException("Output length mismatch");
     double maxAbs = 0, maxRelative = 0;
+    int failedElements = 0, nonFiniteElements = 0, nearZeroReferenceElements = 0;
     for (int i = 0; i < expected.Length; i++)
     {
         double error = Math.Abs((double)actual[i] - expected[i]);
-        if (!float.IsFinite(expected[i]) || !float.IsFinite(actual[i]) || error > .001 + .001 * Math.Abs(expected[i]))
-            throw new InvalidOperationException($"Numerical mismatch at {i}: CPU={expected[i]}, actual={actual[i]}");
+        if (!float.IsFinite(expected[i]) || !float.IsFinite(actual[i])) nonFiniteElements++;
+        if (Math.Abs(expected[i]) < 1e-6) nearZeroReferenceElements++;
+        if (!float.IsFinite(expected[i]) || !float.IsFinite(actual[i]) || error > .001 + .001 * Math.Abs(expected[i])) failedElements++;
         maxAbs = Math.Max(maxAbs, error);
         maxRelative = Math.Max(maxRelative, error / Math.Max(1e-12, Math.Abs(expected[i])));
     }
-    return new { compared = expected.Length, maxAbs, maxRelative, passed = true };
+    if (failedElements != 0) throw new InvalidOperationException($"Numerical mismatch: {failedElements} failed; {nonFiniteElements} non-finite");
+    return new { compared = expected.Length, maxAbs, maxRelative, failedElements, nonFiniteElements, nearZeroReferenceElements,
+        atol = .001, rtol = .001, relativeDenominatorFloor = 1e-12, passed = true };
 }
 static object Measure(Action action, int warmups, int repetitions)
 {

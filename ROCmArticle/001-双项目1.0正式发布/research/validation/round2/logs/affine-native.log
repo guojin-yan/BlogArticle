@@ -1,0 +1,26 @@
+{"nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab", "modelSha256": "a576429543db2891d85d3ef11403feee445e51dfe540e8700029151e11a0357a", "fastMath": false, "offloadCopy": true, "exhaustiveTune": false, "entry": "ctypes direct C ABI; no managed wrapper"}
+CALL migraphx_onnx_options_create
+RETURN migraphx_onnx_options_create 0
+CALL migraphx_parse_onnx_buffer
+RETURN migraphx_parse_onnx_buffer 0
+CALL migraphx_target_create
+RETURN migraphx_target_create 0
+CALL migraphx_compile_options_create
+RETURN migraphx_compile_options_create 0
+CALL migraphx_compile_options_set_offload_copy
+RETURN migraphx_compile_options_set_offload_copy 0
+CALL migraphx_compile_options_set_fast_math
+RETURN migraphx_compile_options_set_fast_math 0
+CALL migraphx_compile_options_set_exhaustive_tune_flag
+RETURN migraphx_compile_options_set_exhaustive_tune_flag 0
+CALL migraphx_program_compile
+RETURN migraphx_program_compile 0
+COMPILE PASS 1.2906277000438422
+CALL migraphx_program_destroy
+RETURN migraphx_program_destroy 0
+CALL migraphx_compile_options_destroy
+RETURN migraphx_compile_options_destroy 0
+CALL migraphx_target_destroy
+RETURN migraphx_target_destroy 0
+CALL migraphx_onnx_options_destroy
+RETURN migraphx_onnx_options_destroy 0

@@ -2,18 +2,24 @@
 param(
     [string] $HipRoot = $env:HIP_PATH,
     [string] $Architecture = 'gfx1100',
-    [ValidateSet('verify', 'benchmark', 'trace')][string] $Mode = 'verify',
+    [ValidateSet('verify', 'benchmark', 'trace', 'ablation', 'cache', 'detect', 'doctor')][string] $Mode = 'verify',
     [string] $ModelPath,
-    [string] $OutputPath
+    [string] $OutputPath,
+    [string] $CachePath,
+    [ValidateSet('parsed','compiled')][string] $CacheKind = 'parsed',
+    [string] $ImagePath,
+    [int] $Seed = 20261120,
+    [switch] $CheckOnly
 )
 $ErrorActionPreference = 'Stop'
+if ($CheckOnly) { $Mode = 'doctor' }
 $articleRoot = Split-Path -Parent $PSScriptRoot
 if ([string]::IsNullOrWhiteSpace($HipRoot)) {
     $HipRoot = Read-Host 'Enter the ROCm 10.1 HIP installation directory (containing bin and lib)'
 }
 if ([string]::IsNullOrWhiteSpace($HipRoot)) { throw 'Specify -HipRoot or configure HIP_PATH.' }
-$rocmHipRoot = (Resolve-Path -LiteralPath $HipRoot).Path
-if (!(Test-Path -LiteralPath "$rocmHipRoot/bin")) { throw 'HIP SDK bin directory is missing.' }
+$rocmHipRoot = if (Test-Path -LiteralPath $HipRoot) { (Resolve-Path -LiteralPath $HipRoot).Path } else { $HipRoot }
+if ($Mode -ne 'doctor' -and !(Test-Path -LiteralPath "$rocmHipRoot/bin")) { throw 'HIP SDK bin directory is missing. Run -CheckOnly for diagnostics.' }
 if ($Architecture -notmatch '^gfx[0-9a-f]+$') { throw 'Specify the actual GPU architecture, for example gfx1100.' }
 $env:HIP_PATH = $rocmHipRoot
 $env:ROCM_PATH = $rocmHipRoot
@@ -35,5 +41,18 @@ if ($Mode -eq 'verify' -and !$ModelPath) {
 }
 $computeArgs = @('--mode', $Mode, '--arch', $Architecture, '--output', $OutputPath)
 if ($ModelPath) { $computeArgs += @('--model', (Resolve-Path -LiteralPath $ModelPath).Path) }
+if ($Mode -eq 'ablation') { $computeArgs += @('--seed', "$Seed") }
+if ($CachePath) { $computeArgs += @('--cache', [System.IO.Path]::GetFullPath($CachePath), '--cache-kind', $CacheKind) }
+if ($ImagePath) { $computeArgs += @('--image', (Resolve-Path -LiteralPath $ImagePath).Path) }
 & dotnet run --project "$PSScriptRoot/MigraphxCompute" -c Release -- @computeArgs
-if ($LASTEXITCODE -ne 0) { throw "MIGraphX compute failed with exit code $LASTEXITCODE" }
+$computeExit = $LASTEXITCODE
+if ($Mode -eq 'doctor') {
+    $inventory = [ordered]@{
+        date = (Get-Date).ToString('o'); powershell = $PSVersionTable.PSVersion.ToString()
+        sdks = (& dotnet --list-sdks); gpuDriver = Get-CimInstance Win32_VideoController | Select-Object Name,DriverVersion,DriverDate
+        os = Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber
+        scope = 'Inventory only; GPU gfx is not inferred from the product name. No global PATH, driver or dependency installation changes.'
+    }
+    $inventory | ConvertTo-Json -Depth 6 | Set-Content -Encoding utf8 -LiteralPath "$OutputPath.inventory.json"
+}
+if ($computeExit -ne 0) { throw "MIGraphX $Mode failed with exit code $computeExit; inspect $OutputPath and the log" }

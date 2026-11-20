@@ -10,7 +10,7 @@
 python generate-model.py
 dotnet run -c Release -- --mode verify
 dotnet run -c Release -- --mode trace
-dotnet run -c Release -- --mode benchmark
+dotnet run -c Release -- --mode doctor
 ```
 
 从文章仓库根目录执行时，也可以使用：
@@ -24,3 +24,16 @@ pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1'
 `trace` 输出 MIGraphX 的执行记录和 HIP 同步信息；它用于确认固定模型走过 GPU 执行路径，不是独立硬件 Profiler 的逐 Kernel 时间线。`benchmark` 的计时边界包含程序运行、设备拷贝和同步，不能直接当成单个 Kernel 时间。
 
 `matmul-relu.onnx` 是保留的失败复现夹具：同一环境下原生编译会触发 `0xC0000005`，因此没有把它算作通过，也没有据此推断 MIGraphX 的根因。详见上级 [示例说明](../README.md) 和文章的[已知限制](../../05-上手与验证.md)。
+
+## 第二轮新增模式
+
+| 模式 | 用途与参数 |
+| --- | --- |
+| `doctor` | 非破坏性预检；完整系统清单请使用上级包装脚本 `-CheckOnly` |
+| `ablation` | `--model PATH --seed 20261121`；CPU、Host 新建、Host 固定输入复用、Device+CPU、完整 HIP 五路随机交错测量 |
+| `detect` | `--model PATH --image PATH`；真实图片预处理、GPU、YOLOX 解码/NMS、PNG/JSON/HTML 导出 |
+| `cache` | `--model PATH --cache ASCII_PATH --cache-kind parsed`；显式缓存、保存/加载、重新编译与 CPU 校验 |
+
+所有模式均可传 `--output PATH`；输入/输出参数是键值对。`detect` 固定为 YOLOX Nano 416、COCO 80 类 raw 输出，不是任意 ONNX 检测器。Host 参数深拷贝且无原地更新接口，复用组仅固定输入重放。`cache-kind compiled` 当前是失败复现分支，默认 `parsed`。
+
+可复制的照片下载/hash检查、缓存三进程命令、五轮入口和许可见[上级说明](../README.md)。结果与边界见[第二轮修订说明](../../research/issue-2-修订说明.md)。历史 `benchmark` 模式保留三条路径和 Warm API 计时，正文采用新五轮消融结果。

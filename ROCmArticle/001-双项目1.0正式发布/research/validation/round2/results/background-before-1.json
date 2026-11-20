@@ -1,0 +1,62 @@
+[
+  {
+    "ProcessName": "msedgewebview2",
+    "CPU": 22585.609375,
+    "WorkingSet64": 56262656
+  },
+  {
+    "ProcessName": "Taskmgr",
+    "CPU": 19474.78125,
+    "WorkingSet64": 247746560
+  },
+  {
+    "ProcessName": "ChatGPT",
+    "CPU": 17653.96875,
+    "WorkingSet64": 1476038656
+  },
+  {
+    "ProcessName": "msedgewebview2",
+    "CPU": 12258.296875,
+    "WorkingSet64": 135069696
+  },
+  {
+    "ProcessName": "AweSun",
+    "CPU": 10619.4375,
+    "WorkingSet64": 188297216
+  },
+  {
+    "ProcessName": "ChatGPT",
+    "CPU": 9848.625,
+    "WorkingSet64": 479617024
+  },
+  {
+    "ProcessName": "ChatGPT",
+    "CPU": 7727.234375,
+    "WorkingSet64": 254455808
+  },
+  {
+    "ProcessName": "UGREEN NAS",
+    "CPU": 3589.453125,
+    "WorkingSet64": 168701952
+  },
+  {
+    "ProcessName": "Weixin",
+    "CPU": 3462.53125,
+    "WorkingSet64": 269107200
+  },
+  {
+    "ProcessName": "steamwebhelper",
+    "CPU": 2996.828125,
+    "WorkingSet64": 337756160
+  },
+  {
+    "ProcessName": "codex",
+    "CPU": 2786.078125,
+    "WorkingSet64": 330649600
+  },
+  {
+    "ProcessName": "steam",
+    "CPU": 2296.25,
+    "WorkingSet64": 85315584
+  }
+]

@@ -1,0 +1,14 @@
+2026-11-20 22:35:19.034211 [ERROR] [:0] Error auto_contiguous: R:/mgx-src/src/targets/gpu/code_object_op.cpp:50: compute_shape: Input shapes have changed: [float_type, {1, 3549, 85}, {301665, 1, 3549}, float_type, {1, 3549, 85}, {301665, 85, 1}] -> [float_type, {1, 3549, 85}, {301665, 85, 1}, float_type, {1, 3549, 85}, {301665, 85, 1}]
+2026-11-20 22:35:19.035517 [ERROR] [:0] Dump: "C:\\Users\\guoji\\AppData\\Local\\Temp\\migraphx\\auto_contiguous604980817252500.mxr"
+: Error: R:/mgx-src/src/targets/gpu/code_object_op.cpp:50: compute_shape: Input shapes have changed: [float_type, {1, 3549, 85}, {301665, 1, 3549}, float_type, {1, 3549, 85}, {301665, 85, 1}] -> [float_type, {1, 3549, 85}, {301665, 85, 1}, float_type, {1, 3549, 85}, {301665, 85, 1}]
+JYPPX.ROCm.MIGraphXSharp.MIGraphXException: MIGraphX call 'migraphx_program_compile' failed with status 4 (UnknownError). The frozen C API exposes no last-error text function.
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeStatus.ThrowIfFailed(NativeMIGraphXStatus status, String operation)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.<>c__DisplayClass12_0.<Compile>b__0()
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[TResult](NativeResourceLockTarget[] resources, Int32 index, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.With[TResult](IReadOnlyList`1 resources, Func`1 action)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.Compile(MIGraphXTarget target, MIGraphXCompileOptions options)
+   at Round2Tools.Cache(String modelPath, String output, String cacheRoot) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\Round2Tools.cs:line 98
+   at Program.<Main>$(String[] args) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\Program.cs:line 33

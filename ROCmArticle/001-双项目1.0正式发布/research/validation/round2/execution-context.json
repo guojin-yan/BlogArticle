@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-20",
+  "pathNotation": "<article>, <examples>, <output>, <ASCII-cache>, <HIP_PATH> are descriptions of the recorded paths; reader commands resolve their own paths.",
+  "historicalCommands": "commands.txt is retained unchanged. Its first cache series omitted --cache-kind because the initial helper always serialized a compiled graph; do not apply the current parsed default to these historical commands.",
+  "cacheSeries": [
+    {
+      "prefix": "cache-miss / cache-hit-process2 / cache-hit-process3",
+      "path": "Chinese article path/.validation/round2-model-cache",
+      "payload": "compiled",
+      "afterLoadCompile": false,
+      "status": "FAIL save Unicode codepage, before Run"
+    },
+    {
+      "prefix": "cache-ascii-*",
+      "path": "<article-root-parent>/.tools/round2-model-cache (ASCII path)",
+      "payload": "compiled",
+      "afterLoadCompile": false,
+      "status": "Save/Load completed, Run rejected: TEST HARNESS ERROR, missing required Compile"
+    },
+    {
+      "prefix": "cache-v2-*",
+      "path": "same ASCII compiled cache",
+      "payload": "compiled",
+      "afterLoadCompile": true,
+      "status": "FAIL auto_contiguous/Input shapes have changed"
+    },
+    {
+      "prefix": "cache-parsed-* excluding final",
+      "path": "<ROCmArticle>/.tools/round2-parsed-cache (ASCII path)",
+      "payload": "parsed",
+      "afterLoadCompile": true,
+      "status": "PASS Rebuilt/Hit/Hit",
+      "arguments": [
+        "--mode",
+        "cache",
+        "--model",
+        "<round2>/inputs/yolox_nano.onnx",
+        "--cache",
+        "<ASCII-parsed-cache>",
+        "--cache-kind",
+        "parsed",
+        "--output",
+        "<round2>/results/cache-parsed-{miss|hit-process2|hit-process3}.json"
+      ]
+    },
+    {
+      "prefix": "cache-parsed-final-hit",
+      "payload": "parsed",
+      "afterLoadCompile": true,
+      "status": "PASS Hit, same existing parsed cache, after logging-field/length-guard correction"
+    }
+  ],
+  "finalRechecks": [
+    "dotnet build <article>/examples/MigraphxCompute -c Release --nologo",
+    "pwsh -File <isolated-checkout>/examples/run-windows.ps1 -HipRoot <HIP_PATH> -CheckOnly -OutputPath <round2>/results/quickstart-final-doctor.json",
+    "pwsh -File <isolated-checkout>/examples/run-windows.ps1 -HipRoot <HIP_PATH> -OutputPath <round2>/results/quickstart-final-verify.json",
+    "pwsh -File <article>/examples/run-windows.ps1 -HipRoot <HIP_PATH> -Mode detect -ModelPath <round2>/inputs/yolox_nano.onnx -ImagePath <round2>/inputs/astronaut.png -OutputPath <round2>/results/photo-final/photo.json",
+    "pwsh -File <article>/examples/run-windows.ps1 -HipRoot <HIP_PATH> -Mode cache -ModelPath <round2>/inputs/yolox_nano.onnx -CacheKind parsed -CachePath <ASCII-parsed-cache> -OutputPath <round2>/results/cache-parsed-final-hit.json"
+  ],
+  "finalQuickstartScope": "Final source consistency recheck reused the already-tested checkout and synchronized examples (including generated artifacts); initial quickstart used new bin/obj. Neither was a new OS or independent reader.",
+  "sourceIdentityLimit": "The benchmark Program.cs hash is recorded and recovered exactly. Initial cache helper variants were not separately archived byte-for-byte; full errors, arguments and the later parsed helper snapshot are retained. Final source hashes are not represented as historical hashes.",
+  "doctorNegativeRecheck": {
+    "initial": "doctor-missing-sdk.log: nonzero but no JSON due to uncaught ProbeSystem exception; inventory was written",
+    "fixed": "doctor-missing-sdk-fixed.log/.json: expected nonzero with FAIL checks/hints, normal case doctor-fixed-positive also rerun",
+    "commands": [
+      "pwsh -File <article>/examples/run-windows.ps1 -HipRoot <article>/.validation/missing-sdk-for-doctor-check -CheckOnly -OutputPath <round2>/results/doctor-missing-sdk-fixed.json",
+      "pwsh -File <article>/examples/run-windows.ps1 -HipRoot <HIP_PATH> -CheckOnly -OutputPath <round2>/results/doctor-fixed-positive.json"
+    ]
+  }
+}

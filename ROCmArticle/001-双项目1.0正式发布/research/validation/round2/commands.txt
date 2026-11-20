@@ -1,0 +1,15 @@
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode ablation --model <output>/inputs/yolox_nano.onnx --output <output>/results/benchmark-1.json --seed 20261121
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode ablation --model <output>/inputs/yolox_nano.onnx --output <output>/results/benchmark-2.json --seed 20261122
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode ablation --model <output>/inputs/yolox_nano.onnx --output <output>/results/benchmark-3.json --seed 20261123
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode ablation --model <output>/inputs/yolox_nano.onnx --output <output>/results/benchmark-4.json --seed 20261124
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode ablation --model <output>/inputs/yolox_nano.onnx --output <output>/results/benchmark-5.json --seed 20261125
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode doctor --output <article>\research\validation\round2/results/doctor.json
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode detect --model <article>\research\validation\round2/inputs/yolox_nano.onnx --image <article>\research\validation\round2/inputs/astronaut.png --output <article>\research\validation\round2/results/photo.json
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode cache --model <article>\research\validation\round2/inputs/yolox_nano.onnx --cache <article>/.validation/round2-model-cache --output <article>\research\validation\round2/results/cache-miss.json
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode cache --model <article>\research\validation\round2/inputs/yolox_nano.onnx --cache <article>/.validation/round2-model-cache --output <article>\research\validation\round2/results/cache-hit-process2.json
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode cache --model <article>\research\validation\round2/inputs/yolox_nano.onnx --cache <article>/.validation/round2-model-cache --output <article>\research\validation\round2/results/cache-hit-process3.json
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode trace --output <article>\research\validation\round2/results/affine-trace.json
+dotnet <examples>/MigraphxCompute/bin/Release/net10.0/MigraphxCompute.dll --mode verify --model <article>/examples/MigraphxCompute/matmul-relu.onnx --output <article>\research\validation\round2/results/matmul-csharp.json
+python <examples>/native-compile-probe.py --native <app>/runtimes/win-x64/native/migraphx_c.dll --model <examples>/MigraphxCompute/affine-relu.onnx --hip-root <HIP_PATH> --fast-math 0
+python <examples>/native-compile-probe.py --native <app>/runtimes/win-x64/native/migraphx_c.dll --model <examples>/MigraphxCompute/matmul-relu.onnx --hip-root <HIP_PATH> --fast-math 0
+python <examples>/native-compile-probe.py --native <app>/runtimes/win-x64/native/migraphx_c.dll --model <examples>/MigraphxCompute/matmul-relu.onnx --hip-root <HIP_PATH> --fast-math 1

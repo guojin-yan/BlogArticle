@@ -1,0 +1,9 @@
+{
+  "independentHumanReader": false,
+  "nugetCache": "Existing global NuGet package cache reused; bin/obj in checkout are new",
+  "newOs": false,
+  "source": "Fresh shallow sparse SSH clone, then candidate example sources overlaid before publication",
+  "globalSettingsChanged": false,
+  "samePhysicalHost": true,
+  "checkoutBase": "b3d5a4a88b23e9c00faf1eed750200fa163f80cf"
+}

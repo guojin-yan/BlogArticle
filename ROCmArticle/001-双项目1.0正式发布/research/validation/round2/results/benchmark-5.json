@@ -1,0 +1,664 @@
+{
+  "date": "2026-11-20T22:28:20.9042229\u002B08:00",
+  "mode": "ablation",
+  "model": "yolox_nano.onnx",
+  "modelSha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+  "rawInputSha256": "3e663dbd3b83f70e651c5c621c985cad2649ec549f06288fc9d6ecad2ad23a75",
+  "modelInputSha256": "f67b55bcbfdf855ca73e7aa58d2258f38952ad97ee6a67bc71bdb7f2f8bcf148",
+  "inputName": "images",
+  "inputShape": [
+    1,
+    3,
+    416,
+    416
+  ],
+  "outputElements": 301665,
+  "inputKind": "Deterministic synthetic HWC RGB float pixels in [0,255]; not an accuracy dataset",
+  "preprocessing": "HWC to CHW layout; channels=1 is a copy",
+  "postprocessing": "elementwise max(value,0)",
+  "device": "0: AMD Radeon PRO W7900",
+  "runtime": "7.16.26385",
+  "nativeLibrary": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll",
+  "os": "Microsoft Windows NT 10.0.26300.0",
+  "logicalProcessors": 32,
+  "cpuReference": "ONNX Runtime CPU 1.23.2; default CPU thread policy; sequential graph; no GPU provider",
+  "precision": "float32; MIGraphX fastMath=false, exhaustiveTune=false",
+  "batch": 1,
+  "parseMs": 39.5354,
+  "cpuSessionMs": 99.9408,
+  "hostCompileMs": 24730.2387,
+  "deviceCompileMs": 19176.3248,
+  "hipCompileMs": 62.1269,
+  "startupToFirstGpuMs": 25165.7004,
+  "firstRunMs": {
+    "cpu": 27.8113,
+    "gpu": 42.3207,
+    "joint": 21.4772
+  },
+  "firstRunScope": "First run of each path in this process; disk/driver caches were not cleared; startupToFirstGpu also includes CPU setup/reference",
+  "tolerance": "abs(actual-reference)\u003C=0.001\u002B0.001*abs(reference), every finite element",
+  "hostError": {
+    "compared": 301665,
+    "maxAbs": 2.1904706954956055E-05,
+    "maxRelative": 5381.306511509365,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 1540,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "deviceError": {
+    "compared": 301665,
+    "maxAbs": 2.1904706954956055E-05,
+    "maxRelative": 5381.306511509365,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 1540,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "rawHostError": {
+    "compared": 301665,
+    "maxAbs": 2.1904706954956055E-05,
+    "maxRelative": 5381.306511509365,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 410,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "rawDeviceError": {
+    "compared": 301665,
+    "maxAbs": 2.1904706954956055E-05,
+    "maxRelative": 5381.306511509365,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 410,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "finalHostError": {
+    "compared": 301665,
+    "maxAbs": 2.1904706954956055E-05,
+    "maxRelative": 5381.306511509365,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 1540,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "finalDeviceError": {
+    "compared": 301665,
+    "maxAbs": 2.1904706954956055E-05,
+    "maxRelative": 5381.306511509365,
+    "failedElements": 0,
+    "nonFiniteElements": 0,
+    "nearZeroReferenceElements": 1540,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "relativeDenominatorFloor": 1E-12,
+    "passed": true
+  },
+  "fixtureReference": null,
+  "referenceFirst16": [
+    0.85342497,
+    0.18675455,
+    0.7544396,
+    0.7185118,
+    5.9604645E-08,
+    0.010491848,
+    0.001231581,
+    0.011590242,
+    0.00016576052,
+    0.00012329221,
+    9.36389E-05,
+    5.8174133E-05,
+    0.0006773174,
+    0.00031527877,
+    0.002863109,
+    0.0013961494
+  ],
+  "gpuFirst16": [
+    0.8534233,
+    0.18675274,
+    0.7544398,
+    0.71851575,
+    6.3315106E-08,
+    0.010491957,
+    0.0012315555,
+    0.011590253,
+    0.00016570854,
+    0.00012331577,
+    9.3644136E-05,
+    5.817598E-05,
+    0.00067730265,
+    0.0003152574,
+    0.002863092,
+    0.0013962195
+  ],
+  "jointFirst16": [
+    0.8534233,
+    0.18675274,
+    0.7544398,
+    0.71851575,
+    6.3315106E-08,
+    0.010491957,
+    0.0012315555,
+    0.011590253,
+    0.00016570854,
+    0.00012331577,
+    9.3644136E-05,
+    5.817598E-05,
+    0.00067730265,
+    0.0003152574,
+    0.002863092,
+    0.0013962195
+  ],
+  "warmups": 10,
+  "repetitions": 30,
+  "measurements": {
+    "ortCpu": {
+      "samplesMs": [
+        14.7088,
+        13.5248,
+        13.3948,
+        15.2519,
+        15.1299,
+        14.2105,
+        15.0385,
+        15.2276,
+        15.3779,
+        15.4406,
+        14.5563,
+        14.4842,
+        16.0355,
+        15.119,
+        14.6202,
+        15.0739,
+        13.9863,
+        14.3852,
+        13.7569,
+        15.6432,
+        14.1979,
+        14.9859,
+        16.171,
+        14.2419,
+        15.5041,
+        14.7732,
+        14.0582,
+        14.8872,
+        15.3711,
+        14.5283
+      ],
+      "p50Ms": 14.7732,
+      "p95Ms": 16.0355,
+      "serializedItemsPerSecond": 67.61556852973102
+    },
+    "hostNew": {
+      "samplesMs": [
+        20.9125,
+        20.3434,
+        20.2083,
+        23.4869,
+        20.3138,
+        20.1156,
+        20.3806,
+        23.7184,
+        20.5638,
+        19.6978,
+        21.5935,
+        20.6824,
+        21.3688,
+        20.3133,
+        20.1438,
+        20.0363,
+        22.08,
+        20.5232,
+        20.4803,
+        20.2811,
+        21.6147,
+        20.6075,
+        20.7689,
+        20.0754,
+        22.0037,
+        19.9623,
+        20.7913,
+        22.9953,
+        23.5457,
+        21.2568
+      ],
+      "p50Ms": 20.5638,
+      "p95Ms": 23.5457,
+      "serializedItemsPerSecond": 47.55372540640206
+    },
+    "hostFixedInputReuse": {
+      "samplesMs": [
+        21.2517,
+        18.2802,
+        19.7741,
+        19.2674,
+        21.6624,
+        20.2539,
+        19.2858,
+        19.7952,
+        20.4865,
+        19.6327,
+        18.5934,
+        20.5044,
+        19.2635,
+        19.2511,
+        19.1865,
+        22.8486,
+        18.6358,
+        18.1088,
+        20.2379,
+        19.8702,
+        18.4439,
+        18.6238,
+        19.8013,
+        18.282,
+        21.6524,
+        18.7795,
+        18.7547,
+        18.7162,
+        17.7437,
+        18.7773
+      ],
+      "p50Ms": 19.2635,
+      "p95Ms": 21.6624,
+      "serializedItemsPerSecond": 51.21508646216256
+    },
+    "deviceCpuOps": {
+      "samplesMs": [
+        7.0271,
+        7.032,
+        7.713,
+        9.3,
+        7.6188,
+        7.004,
+        6.515,
+        6.7325,
+        9.132,
+        8.3534,
+        7.0526,
+        7.2323,
+        7.8963,
+        7.5012,
+        7.6064,
+        7.3724,
+        8.199,
+        8.5794,
+        7.2986,
+        6.3537,
+        7.9606,
+        6.9693,
+        7.096,
+        6.8819,
+        7.0498,
+        7.5806,
+        6.4061,
+        7.6926,
+        7.1694,
+        7.0194
+      ],
+      "p50Ms": 7.2323,
+      "p95Ms": 9.132,
+      "serializedItemsPerSecond": 134.3211008599237
+    },
+    "fullHip": {
+      "samplesMs": [
+        5.8074,
+        5.401,
+        5.0786,
+        5.7087,
+        5.3007,
+        4.49,
+        5.1056,
+        5.6794,
+        6.2298,
+        5.2865,
+        5.1636,
+        4.689,
+        4.9435,
+        5.3407,
+        5.8848,
+        5.1301,
+        5.0433,
+        5.1638,
+        6.4392,
+        5.3295,
+        5.1896,
+        5.858,
+        5.5214,
+        4.6895,
+        4.7483,
+        5.4333,
+        5.2019,
+        5.5772,
+        5.0464,
+        6.4378
+      ],
+      "p50Ms": 5.2865,
+      "p95Ms": 6.4378,
+      "serializedItemsPerSecond": 186.42966071044611
+    }
+  },
+  "executionOrder": [
+    [
+      "ortCpu",
+      "fullHip",
+      "hostFixedInputReuse",
+      "deviceCpuOps",
+      "hostNew"
+    ],
+    [
+      "hostFixedInputReuse",
+      "fullHip",
+      "hostNew",
+      "deviceCpuOps",
+      "ortCpu"
+    ],
+    [
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew",
+      "fullHip",
+      "ortCpu"
+    ],
+    [
+      "deviceCpuOps",
+      "hostNew",
+      "hostFixedInputReuse",
+      "ortCpu",
+      "fullHip"
+    ],
+    [
+      "deviceCpuOps",
+      "ortCpu",
+      "hostFixedInputReuse",
+      "hostNew",
+      "fullHip"
+    ],
+    [
+      "fullHip",
+      "ortCpu",
+      "hostFixedInputReuse",
+      "hostNew",
+      "deviceCpuOps"
+    ],
+    [
+      "deviceCpuOps",
+      "hostNew",
+      "fullHip",
+      "hostFixedInputReuse",
+      "ortCpu"
+    ],
+    [
+      "hostNew",
+      "hostFixedInputReuse",
+      "fullHip",
+      "deviceCpuOps",
+      "ortCpu"
+    ],
+    [
+      "fullHip",
+      "ortCpu",
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew"
+    ],
+    [
+      "fullHip",
+      "ortCpu",
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew"
+    ],
+    [
+      "fullHip",
+      "ortCpu",
+      "hostNew",
+      "deviceCpuOps",
+      "hostFixedInputReuse"
+    ],
+    [
+      "deviceCpuOps",
+      "fullHip",
+      "ortCpu",
+      "hostFixedInputReuse",
+      "hostNew"
+    ],
+    [
+      "hostNew",
+      "ortCpu",
+      "hostFixedInputReuse",
+      "deviceCpuOps",
+      "fullHip"
+    ],
+    [
+      "hostFixedInputReuse",
+      "fullHip",
+      "hostNew",
+      "ortCpu",
+      "deviceCpuOps"
+    ],
+    [
+      "ortCpu",
+      "fullHip",
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew"
+    ],
+    [
+      "hostNew",
+      "fullHip",
+      "ortCpu",
+      "hostFixedInputReuse",
+      "deviceCpuOps"
+    ],
+    [
+      "ortCpu",
+      "deviceCpuOps",
+      "hostNew",
+      "fullHip",
+      "hostFixedInputReuse"
+    ],
+    [
+      "hostNew",
+      "hostFixedInputReuse",
+      "fullHip",
+      "ortCpu",
+      "deviceCpuOps"
+    ],
+    [
+      "hostFixedInputReuse",
+      "deviceCpuOps",
+      "hostNew",
+      "ortCpu",
+      "fullHip"
+    ],
+    [
+      "ortCpu",
+      "fullHip",
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew"
+    ],
+    [
+      "hostFixedInputReuse",
+      "ortCpu",
+      "deviceCpuOps",
+      "hostNew",
+      "fullHip"
+    ],
+    [
+      "hostNew",
+      "hostFixedInputReuse",
+      "deviceCpuOps",
+      "ortCpu",
+      "fullHip"
+    ],
+    [
+      "fullHip",
+      "ortCpu",
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew"
+    ],
+    [
+      "deviceCpuOps",
+      "fullHip",
+      "hostNew",
+      "hostFixedInputReuse",
+      "ortCpu"
+    ],
+    [
+      "hostFixedInputReuse",
+      "deviceCpuOps",
+      "fullHip",
+      "ortCpu",
+      "hostNew"
+    ],
+    [
+      "fullHip",
+      "hostFixedInputReuse",
+      "hostNew",
+      "ortCpu",
+      "deviceCpuOps"
+    ],
+    [
+      "hostFixedInputReuse",
+      "hostNew",
+      "fullHip",
+      "deviceCpuOps",
+      "ortCpu"
+    ],
+    [
+      "fullHip",
+      "deviceCpuOps",
+      "ortCpu",
+      "hostNew",
+      "hostFixedInputReuse"
+    ],
+    [
+      "fullHip",
+      "hostFixedInputReuse",
+      "deviceCpuOps",
+      "ortCpu",
+      "hostNew"
+    ],
+    [
+      "deviceCpuOps",
+      "hostFixedInputReuse",
+      "hostNew",
+      "ortCpu",
+      "fullHip"
+    ]
+  ],
+  "ablationErrors": {
+    "hostNew": {
+      "compared": 301665,
+      "maxAbs": 2.1904706954956055E-05,
+      "maxRelative": 5381.306511509365,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 1540,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    },
+    "fullHip": {
+      "compared": 301665,
+      "maxAbs": 2.1904706954956055E-05,
+      "maxRelative": 5381.306511509365,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 1540,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    },
+    "ortCpu": {
+      "compared": 301665,
+      "maxAbs": 0,
+      "maxRelative": 0,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 1540,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    },
+    "deviceCpuOps": {
+      "compared": 301665,
+      "maxAbs": 2.1904706954956055E-05,
+      "maxRelative": 5381.306511509365,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 1540,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    },
+    "hostFixedInputReuse": {
+      "compared": 301665,
+      "maxAbs": 2.1904706954956055E-05,
+      "maxRelative": 5381.306511509365,
+      "failedElements": 0,
+      "nonFiniteElements": 0,
+      "nearZeroReferenceElements": 1540,
+      "atol": 0.001,
+      "rtol": 0.001,
+      "relativeDenominatorFloor": 1E-12,
+      "passed": true
+    }
+  },
+  "seed": "20261125",
+  "hostReuseLimitation": "hostFixedInputReuse replays immutable input because public host API has no update/replace operation. NOT equivalent to changing frames; not evidence that all host allocation cost can be removed.",
+  "traceOperations": [],
+  "modelDeviceEventMs": 1.1652,
+  "gpuEvidenceScope": "Compiled GPU instruction trace plus device-only bindings, synchronized device output matching independent CPU, and a HIP stream event interval around the model\u002BD2D copies; not an independent per-kernel profiler timeline",
+  "nativeEnvironment": {
+    "disableMlir": null
+  },
+  "compiledDeviceParameters": [
+    {
+      "Name": "images",
+      "shape": [
+        1,
+        3,
+        416,
+        416
+      ]
+    },
+    {
+      "Name": "main:#output_0",
+      "shape": [
+        1,
+        3549,
+        85
+      ]
+    }
+  ],
+  "memory": {
+    "beforeFreeBytes": 51366887424,
+    "afterFreeBytes": 51172704256,
+    "totalBytes": 51522830336,
+    "scope": "hipMemGetInfo whole-device snapshots, includes other processes; not per-process peak VRAM"
+  },
+  "benchmarkScope": "Serialized batch=1. E2E begins with decoded host HWC floats and ends with postprocessed host float output. Decode, model parse/compile and reusable buffer allocation excluded. Joint includes H2D, HIP layout, model, D2D output copy, HIP clamp, D2H and stream sync. Host API includes its managed/native copies. warmModelApi has different I/O boundaries across paths and must not be used as a pure-kernel speedup comparison. No GPU clock/power isolation."
+}

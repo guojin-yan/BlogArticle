@@ -1,0 +1,10 @@
+{
+  "license": "Public domain / no known copyright restrictions, as recorded by skimage.data.astronaut docstring",
+  "source": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/astronaut.png",
+  "subject": "Eileen Collins",
+  "photoSha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+  "use": "Functional model demonstration only; no endorsement by NASA or the subject.",
+  "upstream": "https://flic.kr/p/r9qvLn",
+  "licenseEvidence": "inputs/skimage-fetchers.py lines 405-424",
+  "attribution": "NASA, via scikit-image"
+}

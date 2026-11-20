@@ -1,0 +1,5 @@
+{
+  "exitCode": 1,
+  "expected": "nonzero with FAIL checks and repair hints; no SDK installation or global PATH edits",
+  "date": "2026-11-20T22:57:41.9626576+08:00"
+}

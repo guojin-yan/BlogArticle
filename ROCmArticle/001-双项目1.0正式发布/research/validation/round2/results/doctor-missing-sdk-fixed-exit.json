@@ -1,0 +1,5 @@
+{
+  "date": "2026-11-20T22:58:28.1613221+08:00",
+  "expected": "FAIL with JSON/hints; missing SDK",
+  "exitCode": 1
+}

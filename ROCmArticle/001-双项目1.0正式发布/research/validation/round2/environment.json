@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-20T22:24:11.0274095+08:00",
+  "windows": {
+    "Caption": "Microsoft Windows 11 专业版",
+    "Version": "10.0.26300",
+    "BuildNumber": "26300"
+  },
+  "driver": [
+    {
+      "Name": "OrayIddDriver Device",
+      "DriverVersion": "16.54.44.444",
+      "DriverDate": "2026-09-14T08:00:00+08:00"
+    },
+    {
+      "Name": "AMD Radeon PRO W7900",
+      "DriverVersion": "32.0.21030.2001",
+      "DriverDate": "2025-09-25T08:00:00+08:00"
+    }
+  ],
+  "cpu": {
+    "Name": "AMD Ryzen 9 5900XT 16-Core Processor           ",
+    "NumberOfCores": 16,
+    "NumberOfLogicalProcessors": 32
+  },
+  "powershell": "7.6.9",
+  "dotnet": "11.0.100",
+  "architecture": "gfx1100",
+  "architectureSource": "Same W7900 hardware as issue1; requested HIPRTC target; no new independent hardware gfx detector",
+  "cpuOrt": "1.23.2; default thread counts; sequential graph; CPU provider only",
+  "clockPower": "Not locked",
+  "background": "Interactive desktop; no isolation, browsers and desktop apps remain open",
+  "cacheCold": "NOT TESTED",
+  "processIsolation": "Each round is a new dotnet process on the same physical Windows host",
+  "baselineCommit": "b3d5a4a88b23e9c00faf1eed750200fa163f80cf"
+}

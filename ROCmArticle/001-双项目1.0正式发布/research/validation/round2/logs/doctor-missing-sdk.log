@@ -1,0 +1,30 @@
+PASS         Process/RID: win-x64
+PASS         .NET: .NET 10.0.15
+FAIL         HIP_PATH: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布/.validation/missing-sdk-for-doctor-check
+FAIL         File amdhip64*.dll: File presence only: 
+FAIL         File hiprtc[0-9]*.dll: File presence only: 
+FAIL         File amd_comgr.dll: File presence only: 
+FAIL         File MIOpen.dll: File presence only: 
+FAIL         File rocblas.dll: File presence only: 
+FAIL         File libhipblaslt.dll: File presence only: 
+FAIL         Device data: lib/llvm/amdgcn/bitcode
+FAIL         Device data: bin/rocblas/library
+FAIL         Device data: bin/hipblaslt/library/gfx1100
+0: AMD Radeon PRO W7900
+7.16.26385
+PASS         HIP device/runtime: check completed
+PASS         HIPRTC compile: check completed
+JYPPX.ROCm.MIGraphXSharp.MIGraphXNativeLoadException: DllNotFoundException (HRESULT 0x80131524): Unable to load DLL 'E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_gpu.dll' or one of its dependencies: 找不到指定的模块。 (0x8007007E)
+   at JYPPX.ROCm.MIGraphXSharp.Loading.NativeLibraryLoader.LoadTargetPlugin(String targetName)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeTargetHandle.Create(String name)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeObjectProbe.Execute(String targetName)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXEnvironment.CreateReport(NativeLoadResult result, Boolean exerciseObjects, String targetName)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXEnvironment.ProbeSystem(Boolean exerciseObjects, String targetName)
+   at Round2Tools.Doctor(String output, String architecture) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\Round2Tools.cs:line 49
+   at Program.<Main>$(String[] args) in E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\MigraphxCompute\Program.cs:line 32
+Exception: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\run-windows.ps1:58
+Line |
+  58 |  … it -ne 0) { throw "MIGraphX $Mode failed with exit code $computeExit; …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | MIGraphX doctor failed with exit code 1; inspect
+     | E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布/research/validation/round2/results/doctor-missing-sdk.json and the log
