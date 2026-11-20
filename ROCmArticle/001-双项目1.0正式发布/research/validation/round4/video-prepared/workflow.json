@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared-awaiting-explicit-gpu-run",
+  "protocolSha256": "4cd8860acab74e53b4030f5c774eed021e3d6400541957642758d6bb68b271b3",
+  "sourceFile": "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\nasa-walkout-v1\\walkout-preview.mp4",
+  "sourceSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "modelFile": "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\yolox-nano-coco-first3-v1\\detector.json",
+  "modelManifestSha256": "7c86000ba31f04127a931a3050c81b04924b3e5e2e681aedce2e16a107fa22a6",
+  "scriptSha256": "56cda90962901fe6da6a71b06dd3cc8778910fdaa6dfc4a0368a5bb2780387c4",
+  "frameManifestSha256": "9784ab91aab74e289dca95c4739a3f83bad3c7c738d221fb858c148586775b45",
+  "recipeSha256": "7eaf2caf38a8a29133600f820328aaa84f75ad4e417becd44b1274f166394322",
+  "annotationSessionSha256": "5fdad41c26b925f5468f21ac03d1d25fa81607dabc91b1c3af6130c6c61720b2",
+  "pendingAnnotationsSha256": "0f3dc388f7000970ad4a042b0dc34c74c0a8ffa1b077fc12b560b2599828e2f1",
+  "selectedFrames": 25,
+  "metrics": null
+}

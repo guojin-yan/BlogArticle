@@ -1,0 +1,20 @@
+{
+  "label": "signal-uci-cpu",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+    "analyze",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\signals\\uci447-ps1-cycle1-v2\\signal.csv",
+    "--config",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\signals\\uci447-ps1-cycle1-v2\\config.json",
+    "--source-manifest",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\signals\\uci447-ps1-cycle1-v2\\source-manifest.json",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round4\\signal-cpu"
+  ],
+  "started": "2026-11-21T00:43:11.517404+08:00",
+  "finished": "2026-11-21T00:43:12.514876+08:00",
+  "exitCode": 0,
+  "log": "logs/signal-uci-cpu.log",
+  "logSha256": "b41fd05563251a56baef7a0f45b4b96a6f1b77178c9b71e7033523a83534ace9"
+}

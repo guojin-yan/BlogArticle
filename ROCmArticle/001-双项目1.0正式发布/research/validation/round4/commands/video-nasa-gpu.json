@@ -1,0 +1,22 @@
+{
+  "label": "video-nasa-gpu",
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\video-run-workflow.py",
+    "run",
+    "--prepared",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round4\\video-prepared",
+    "--app",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\VideoEvents.App\\Release\\net10.0\\VideoEvents.App.dll",
+    "--dotnet",
+    "C:\\Program Files\\dotnet\\dotnet.EXE",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round4\\video-gpu"
+  ],
+  "started": "2026-11-21T00:48:07.592124+08:00",
+  "finished": "2026-11-21T00:48:35.820127+08:00",
+  "exitCode": 0,
+  "log": "logs/video-nasa-gpu.log",
+  "logSha256": "98956ddd446a39d82da81e0721ba6127fc4e761b985ed2b833e7b91e77a4b05c"
+}

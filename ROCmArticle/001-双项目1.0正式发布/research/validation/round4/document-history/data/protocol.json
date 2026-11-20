@@ -1,0 +1,888 @@
+{
+  "schemaVersion": 1,
+  "scope": "Real HierText public scene text subset, oracle official line geometry; not document field quality, text detection or independent product acceptance",
+  "rule": {
+    "split": "official test",
+    "images": "first two JPEG file members in official test.tgz archive order; no replacements",
+    "lineOrder": "image archive order, then official paragraph array and line array order",
+    "lineBudget": 24,
+    "filters": "legible=true, handwritten=false, vertical=false; nonempty 1..100 codepoints, each U+0020..U+007E; line top-edge absolute atan2 angle <=5 degrees; bounding rectangle within image, positive dimensions",
+    "crop": "floor minima / ceil maxima of official line vertices, axis-aligned RGB crop, no padding/rotation/rectification",
+    "metrics": "exact raw official line text vs raw CTC text; case/whitespace/punctuation retained; aggregate codepoint Levenshtein CER; no Unicode normalization or failure removal",
+    "candidateBudget": 1,
+    "compressedDownloadBudget": 67108864,
+    "scope": "Real HierText public scene text subset, oracle official line geometry; not document field quality, text detection or independent product acceptance"
+  },
+  "selectionPlanSha256": "278df1543556b4b5f365920ae421cfb89db0300c73d71ebca6d90fdbf1c136c8",
+  "dataset": "HierText official test subset",
+  "revision": "70b6620b2b112597d8219e11eee9773a1403827c",
+  "license": "CC BY-SA 4.0",
+  "sourceFiles": {
+    "test.jsonl.gz": "8a8f6cb6dd706b457b822634e9f19b7f51cc9813729d57401a3bb6ea45abd438",
+    "upstream-README.md": "0726df8cbae6be2e587836ed7d8cc96377e3cc2d873ade2830cc3c33e3274e57",
+    "upstream-LICENSE": "71a43a169b52bb1b39510b65ec5b43b4bbb59196d449a835fe58b50af6a72742"
+  },
+  "archive": {
+    "compressedBytesRead": 768000,
+    "compressedPrefixSha256": "f9d9108286ed6384370552ca136220b1e58c902e7585122514eb537f1977b007",
+    "httpMetadata": {
+      "ETag": "\"623f5f85a8ece90bf11af5f79087b9dc-65\"",
+      "Last-Modified": "Thu, 03 Mar 2022 12:17:36 GMT",
+      "Content-Length": "537066598"
+    },
+    "fullArchiveSha256": null,
+    "note": "Streamed bounded prefix only; each selected JPEG individually SHA-bound; no full archive checksum claim"
+  },
+  "pages": [
+    {
+      "imageId": "417cfad1483563c3",
+      "archiveMember": "test/417cfad1483563c3.jpg",
+      "image": "originals/417cfad1483563c3.jpg",
+      "imageSha256": "b7c1a94cb8dc37e6c32b4a9fd0fddefb3641a78ee86b2ee4ce0512635af38022",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "imageId": "b533107ff30932da",
+      "archiveMember": "test/b533107ff30932da.jpg",
+      "image": "originals/b533107ff30932da.jpg",
+      "imageSha256": "abf91176e175122c44f913e7109d017b819877df53194d37183527410f877d2c",
+      "width": 1500,
+      "height": 994
+    }
+  ],
+  "samples": [
+    {
+      "id": "417cfad1483563c3-p003-l000",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 3,
+      "lineIndex": 0,
+      "vertices": [
+        [
+          759,
+          128
+        ],
+        [
+          784,
+          128
+        ],
+        [
+          784,
+          210
+        ],
+        [
+          759,
+          210
+        ]
+      ],
+      "bounds": {
+        "x": 759,
+        "y": 128,
+        "width": 25,
+        "height": 82
+      },
+      "text": "BAR",
+      "image": "crops/417cfad1483563c3-p003-l000.bmp",
+      "imageSha256": "93937aed4593057e292c89a270b12069357c806e8b559955d362b0097e34d004",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p004-l000",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 4,
+      "lineIndex": 0,
+      "vertices": [
+        [
+          688,
+          131
+        ],
+        [
+          707,
+          131
+        ],
+        [
+          707,
+          211
+        ],
+        [
+          688,
+          211
+        ]
+      ],
+      "bounds": {
+        "x": 688,
+        "y": 131,
+        "width": 19,
+        "height": 80
+      },
+      "text": "BAR",
+      "image": "crops/417cfad1483563c3-p004-l000.bmp",
+      "imageSha256": "e125a8e3a50c18d5ccdeb87aadfdc385d8d984f0740eedf1e40d2b298328f47d",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p004-l001",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 4,
+      "lineIndex": 1,
+      "vertices": [
+        [
+          679,
+          215
+        ],
+        [
+          705,
+          215
+        ],
+        [
+          705,
+          475
+        ],
+        [
+          679,
+          475
+        ]
+      ],
+      "bounds": {
+        "x": 679,
+        "y": 215,
+        "width": 26,
+        "height": 260
+      },
+      "text": "RESTAURANT",
+      "image": "crops/417cfad1483563c3-p004-l001.bmp",
+      "imageSha256": "99c08f106db10b40f2e4dce34242c3ad5b1d4f609835e07d07fe2454e8ca94da",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p006-l000",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 6,
+      "lineIndex": 0,
+      "vertices": [
+        [
+          930,
+          577
+        ],
+        [
+          967,
+          579
+        ],
+        [
+          966,
+          598
+        ],
+        [
+          928,
+          595
+        ]
+      ],
+      "bounds": {
+        "x": 928,
+        "y": 577,
+        "width": 39,
+        "height": 21
+      },
+      "text": "& FOLK",
+      "image": "crops/417cfad1483563c3-p006-l000.bmp",
+      "imageSha256": "c86236fe1cad1920587a851bb5c2c352391f06f72a769f0299b58213cbd40400",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p006-l001",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 6,
+      "lineIndex": 1,
+      "vertices": [
+        [
+          930,
+          557
+        ],
+        [
+          992,
+          559
+        ],
+        [
+          992,
+          582
+        ],
+        [
+          929,
+          579
+        ]
+      ],
+      "bounds": {
+        "x": 929,
+        "y": 557,
+        "width": 63,
+        "height": 25
+      },
+      "text": "IRISH BALLAD",
+      "image": "crops/417cfad1483563c3-p006-l001.bmp",
+      "imageSha256": "37b44311d10391ae4d66e72ced100161e8f8e7f9650d9ca4e26fed2410f17367",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p007-l003",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 7,
+      "lineIndex": 3,
+      "vertices": [
+        [
+          601,
+          307
+        ],
+        [
+          616,
+          307
+        ],
+        [
+          615,
+          334
+        ],
+        [
+          599,
+          333
+        ]
+      ],
+      "bounds": {
+        "x": 599,
+        "y": 307,
+        "width": 17,
+        "height": 27
+      },
+      "text": "B",
+      "image": "crops/417cfad1483563c3-p007-l003.bmp",
+      "imageSha256": "978d07edd0c4e66c544f924b75609173c732dd4afc4b6ed46130e5fbed42a44f",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p007-l004",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 7,
+      "lineIndex": 4,
+      "vertices": [
+        [
+          600,
+          344
+        ],
+        [
+          611,
+          344
+        ],
+        [
+          611,
+          366
+        ],
+        [
+          600,
+          366
+        ]
+      ],
+      "bounds": {
+        "x": 600,
+        "y": 344,
+        "width": 11,
+        "height": 22
+      },
+      "text": "E",
+      "image": "crops/417cfad1483563c3-p007-l004.bmp",
+      "imageSha256": "25856e032cd8b3097fed3efb62305cc2716cc5b9a82adb8590a4c961f57a2e6e",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l000",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 0,
+      "vertices": [
+        [
+          410,
+          680
+        ],
+        [
+          584,
+          678
+        ],
+        [
+          585,
+          702
+        ],
+        [
+          410,
+          703
+        ]
+      ],
+      "bounds": {
+        "x": 410,
+        "y": 678,
+        "width": 175,
+        "height": 25
+      },
+      "text": "THE OLIVER ST.JOHN ARTY",
+      "image": "crops/417cfad1483563c3-p008-l000.bmp",
+      "imageSha256": "c8dbff5cdd48022002c174f8cb26bf3d018dc59e421de07366d71b82f3d91873",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l001",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 1,
+      "vertices": [
+        [
+          534,
+          841
+        ],
+        [
+          576,
+          842
+        ],
+        [
+          576,
+          853
+        ],
+        [
+          533,
+          851
+        ]
+      ],
+      "bounds": {
+        "x": 533,
+        "y": 841,
+        "width": 43,
+        "height": 12
+      },
+      "text": "club m",
+      "image": "crops/417cfad1483563c3-p008-l001.bmp",
+      "imageSha256": "fd2444355dfabcdd90be7da93b8064c613e1913f08f3f0a4c7701e7907bd3e31",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l002",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 2,
+      "vertices": [
+        [
+          534,
+          853
+        ],
+        [
+          578,
+          853
+        ],
+        [
+          578,
+          859
+        ],
+        [
+          534,
+          859
+        ]
+      ],
+      "bounds": {
+        "x": 534,
+        "y": 853,
+        "width": 44,
+        "height": 6
+      },
+      "text": "nightclub",
+      "image": "crops/417cfad1483563c3-p008-l002.bmp",
+      "imageSha256": "28451432f967bca78f942bd70b148b5efa4b783b0443279420092f4793fedd61",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l003",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 3,
+      "vertices": [
+        [
+          539,
+          899
+        ],
+        [
+          582,
+          899
+        ],
+        [
+          582,
+          906
+        ],
+        [
+          539,
+          906
+        ]
+      ],
+      "bounds": {
+        "x": 539,
+        "y": 899,
+        "width": 43,
+        "height": 7
+      },
+      "text": "open",
+      "image": "crops/417cfad1483563c3-p008-l003.bmp",
+      "imageSha256": "b076fbe9f0bab60841d23cde1901199d0d98827ee6ba8c62d0ea2decb79d92f8",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l004",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 4,
+      "vertices": [
+        [
+          423,
+          651
+        ],
+        [
+          447,
+          651
+        ],
+        [
+          447,
+          660
+        ],
+        [
+          422,
+          659
+        ]
+      ],
+      "bounds": {
+        "x": 422,
+        "y": 651,
+        "width": 25,
+        "height": 9
+      },
+      "text": "BaR",
+      "image": "crops/417cfad1483563c3-p008-l004.bmp",
+      "imageSha256": "7f85b9a763f405bfb92fdbe0ec5cdc09f5bd266f4550d20f2d25fccee77b93ad",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l005",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 5,
+      "vertices": [
+        [
+          109,
+          706
+        ],
+        [
+          125,
+          706
+        ],
+        [
+          125,
+          712
+        ],
+        [
+          109,
+          712
+        ]
+      ],
+      "bounds": {
+        "x": 109,
+        "y": 706,
+        "width": 16,
+        "height": 6
+      },
+      "text": "CAFRE",
+      "image": "crops/417cfad1483563c3-p008-l005.bmp",
+      "imageSha256": "103b337253d0a931115c05dfaafee7c6af37f7487aa218386f999c39fdcd6781",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l007",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 7,
+      "vertices": [
+        [
+          43,
+          712
+        ],
+        [
+          55,
+          712
+        ],
+        [
+          55,
+          718
+        ],
+        [
+          43,
+          718
+        ]
+      ],
+      "bounds": {
+        "x": 43,
+        "y": 712,
+        "width": 12,
+        "height": 6
+      },
+      "text": "CAFE",
+      "image": "crops/417cfad1483563c3-p008-l007.bmp",
+      "imageSha256": "a8ba6330c8aaca7f11493ae0eb1f8455a5a4e48ebdcbbbcc1a6cbac9a999790f",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l009",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 9,
+      "vertices": [
+        [
+          614,
+          627
+        ],
+        [
+          629,
+          627
+        ],
+        [
+          629,
+          639
+        ],
+        [
+          614,
+          639
+        ]
+      ],
+      "bounds": {
+        "x": 614,
+        "y": 627,
+        "width": 15,
+        "height": 12
+      },
+      "text": "Ba",
+      "image": "crops/417cfad1483563c3-p008-l009.bmp",
+      "imageSha256": "f1070a21b7ecf1d9e1d072d0649dbf11cecdb467720d5c90537fcef031a2798b",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l010",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 10,
+      "vertices": [
+        [
+          576,
+          615
+        ],
+        [
+          592,
+          614
+        ],
+        [
+          593,
+          622
+        ],
+        [
+          576,
+          623
+        ]
+      ],
+      "bounds": {
+        "x": 576,
+        "y": 614,
+        "width": 17,
+        "height": 9
+      },
+      "text": "ARTY",
+      "image": "crops/417cfad1483563c3-p008-l010.bmp",
+      "imageSha256": "f8e5a41c89631255a5d717be7bc314be80e9a59d4c6ba1d690b83fe68034f468",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l015",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 15,
+      "vertices": [
+        [
+          505,
+          598
+        ],
+        [
+          536,
+          596
+        ],
+        [
+          537,
+          609
+        ],
+        [
+          505,
+          611
+        ]
+      ],
+      "bounds": {
+        "x": 505,
+        "y": 596,
+        "width": 32,
+        "height": 15
+      },
+      "text": "PARTY",
+      "image": "crops/417cfad1483563c3-p008-l015.bmp",
+      "imageSha256": "f3e038dbe88baf3af6bea4aa34056e106893e81971d28249e3556295e0bd0654",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l016",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 16,
+      "vertices": [
+        [
+          497,
+          578
+        ],
+        [
+          548,
+          575
+        ],
+        [
+          550,
+          596
+        ],
+        [
+          498,
+          599
+        ]
+      ],
+      "bounds": {
+        "x": 497,
+        "y": 575,
+        "width": 53,
+        "height": 24
+      },
+      "text": "DANCE",
+      "image": "crops/417cfad1483563c3-p008-l016.bmp",
+      "imageSha256": "0823c35270c4637aa26e435465fed0caf6983b8574dcb84b102e734ac5f5e53f",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l017",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 17,
+      "vertices": [
+        [
+          514,
+          564
+        ],
+        [
+          541,
+          563
+        ],
+        [
+          542,
+          577
+        ],
+        [
+          514,
+          578
+        ]
+      ],
+      "bounds": {
+        "x": 514,
+        "y": 563,
+        "width": 28,
+        "height": 15
+      },
+      "text": "IRISH",
+      "image": "crops/417cfad1483563c3-p008-l017.bmp",
+      "imageSha256": "556cab30cadbd40f81a332d8df4a576bbcc09875830daa1239dd4f919e333e39",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l018",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 18,
+      "vertices": [
+        [
+          292,
+          605
+        ],
+        [
+          343,
+          607
+        ],
+        [
+          343,
+          617
+        ],
+        [
+          291,
+          615
+        ]
+      ],
+      "bounds": {
+        "x": 291,
+        "y": 605,
+        "width": 52,
+        "height": 12
+      },
+      "text": "GOGARTY",
+      "image": "crops/417cfad1483563c3-p008-l018.bmp",
+      "imageSha256": "be162cbfd787561f4d88540b364ec88c8013dd5762089197cd37a39980e64081",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l023",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 23,
+      "vertices": [
+        [
+          216,
+          564
+        ],
+        [
+          285,
+          570
+        ],
+        [
+          283,
+          589
+        ],
+        [
+          214,
+          582
+        ]
+      ],
+      "bounds": {
+        "x": 214,
+        "y": 564,
+        "width": 71,
+        "height": 25
+      },
+      "text": "DANCE",
+      "image": "crops/417cfad1483563c3-p008-l023.bmp",
+      "imageSha256": "68b2c852405705ff5d3dccfe360f81d49cf15b7bf47dd0d9956f351d27a7d83b",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l024",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 24,
+      "vertices": [
+        [
+          240,
+          555
+        ],
+        [
+          275,
+          557
+        ],
+        [
+          274,
+          571
+        ],
+        [
+          238,
+          568
+        ]
+      ],
+      "bounds": {
+        "x": 238,
+        "y": 555,
+        "width": 37,
+        "height": 16
+      },
+      "text": "IRISH",
+      "image": "crops/417cfad1483563c3-p008-l024.bmp",
+      "imageSha256": "1975e3f57f73120221a19e6ef9a9d02ee39fd162c02667cac84d0db25dd3e450",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l030",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 30,
+      "vertices": [
+        [
+          627,
+          493
+        ],
+        [
+          641,
+          494
+        ],
+        [
+          641,
+          500
+        ],
+        [
+          626,
+          498
+        ]
+      ],
+      "bounds": {
+        "x": 626,
+        "y": 493,
+        "width": 15,
+        "height": 7
+      },
+      "text": "IRISH",
+      "image": "crops/417cfad1483563c3-p008-l030.bmp",
+      "imageSha256": "42da8b2fbd0e3ddf8038672e56aea5c4e6ff0ce6b47f6562dd6a8345df67ed23",
+      "labelSource": "official test annotation line.text; verbatim"
+    },
+    {
+      "id": "417cfad1483563c3-p008-l031",
+      "pageId": "417cfad1483563c3",
+      "paragraphIndex": 8,
+      "lineIndex": 31,
+      "vertices": [
+        [
+          631,
+          503
+        ],
+        [
+          643,
+          504
+        ],
+        [
+          642,
+          511
+        ],
+        [
+          629,
+          509
+        ]
+      ],
+      "bounds": {
+        "x": 629,
+        "y": 503,
+        "width": 14,
+        "height": 8
+      },
+      "text": "USIC",
+      "image": "crops/417cfad1483563c3-p008-l031.bmp",
+      "imageSha256": "8d1415a7b4f373ca34cdf21f90b39d3bbbb7aa7319287725572a425ca3557b95",
+      "labelSource": "official test annotation line.text; verbatim"
+    }
+  ],
+  "candidateLines": 138,
+  "exclusions": {
+    "angle": 38,
+    "legibility-or-layout": 56,
+    "budget-after-eligibility": 20
+  },
+  "modelManifestSha256": "0785851f0087c0d3398834069fdc5c5c0ac7a1302f268a35023a6227fcc487e8",
+  "graphSha256": "f700f92dd1754c7e2e7f6aa8d1624ae056ef88889cca61724f5352238b8e1bb3",
+  "dictionarySha256": "f62e0b7a43463665c8de3d9a2d376522417f97c7900f4411b1959464265e6dca",
+  "codeSha256": {
+    "document-prepare-hiertext.py": "267eb5c42c720f0997f5fac71c9160501251884c4e1b538cd4a4db5e4a6c940d",
+    "document-prepare-page.py": "5b86c467c943d3a00c97e7e119bed47382fa98d9aef2d8d282a75488d59e2590",
+    "document-prepare-paddleocr.py": "7896c2e662eea468e8f4d60ed2250fd10875f56ecd4c6fae9a6c6d786511ae79",
+    "prepare_visa_support.py": "dfe89c65fc15f67388641f0ac1f58afb75b84c859c6fee296c2bb1a0c72796d8"
+  },
+  "declaredAtUtc": "2026-11-18T05:53:18.157806+00:00"
+}

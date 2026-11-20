@@ -1,0 +1,12 @@
+{
+  "output": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\research\\validation\\round4\\signal-cpu\\e0335afe33204abfab0c431bef533be2",
+  "report": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\research\\validation\\round4\\signal-cpu\\e0335afe33204abfab0c431bef533be2\\report.html",
+  "id": "e0335afe33204abfab0c431bef533be2",
+  "backend": "CPU double radix-2 reference",
+  "device": "CPU",
+  "configSha256": "fbc87a3453e722c8c156fbb0a6f674a16d8a1afc80418782636b6794057655d4",
+  "frames": 45,
+  "needsReview": 1,
+  "omittedTailSamples": 112,
+  "scope": "Offline single channel; full windows only; [start,end) time support, unpadded omitted tail explicit. One-sided peak amplitude and PSD, periodic Hann/rectangular; band includes low and excludes high except Nyquist. CPU window/statistics, selected FFT backend. Alerts are deterministic rule evidence, not fault classes or equipment clearance. No real-device accuracy or general speedup claim."
+}

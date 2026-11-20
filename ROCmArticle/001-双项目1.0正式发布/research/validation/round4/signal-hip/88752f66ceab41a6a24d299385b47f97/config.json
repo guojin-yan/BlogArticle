@@ -1,0 +1,16 @@
+{
+  "sampleRateHz": 100,
+  "unit": "bar",
+  "fftSize": 256,
+  "hopSize": 128,
+  "window": "hann-periodic",
+  "removeMean": true,
+  "bands": [
+    {
+      "id": "illustrative-ac-band",
+      "lowHz": 1,
+      "highHz": 20,
+      "maxRms": 5
+    }
+  ]
+}

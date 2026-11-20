@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-21T01:00:41.911524+08:00",
+  "publicDataCaseScreenshots": 4,
+  "rawBrowserScreenshots": 5,
+  "surfaceRealImages": 12,
+  "signalPsdValues": 5805,
+  "hiertextHistoricalLinesRescored": 24,
+  "videoRealFrames": 25,
+  "videoDetections": 109,
+  "videoUnreviewedEvents": 12,
+  "nativeCompileFailuresRetained": 2,
+  "historicalHashesVerified": {
+    "round2": 146,
+    "round3": 373
+  },
+  "readerPathsPortable": true,
+  "originalSixConceptImagesRetained": true,
+  "newBuildOr264TestsRerun": false,
+  "productionAcceptance": false
+}

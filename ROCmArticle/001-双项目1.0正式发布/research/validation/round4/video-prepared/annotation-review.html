@@ -1,0 +1,417 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent event annotation packet</title>
+<style>body{font:16px system-ui;max-width:1000px;margin:2rem auto;padding:1rem}img{width:100%;display:block}figure{margin:2rem 0}code{overflow-wrap:anywhere}.frame{position:relative}.frame svg{position:absolute;inset:0;width:100%;height:100%}</style>
+<h1>Pending independent human event review</h1><p>No model predictions are included. Empty labels are not ground truth; event quality has not been measured.</p>
+<p>Review the entire declared interval. Coordinates show frozen rules, not detection boxes. Mark original media PTS, not frame index or an assumed FPS. Sampled frames cannot establish what happened between samples.</p>
+<p>Source SHA-256 <code>66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d</code><br>Protocol <code>4cd8860acab74e53b4030f5c774eed021e3d6400541957642758d6bb68b271b3</code></p>
+<p>Source/rights: NASA KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K preview; official NASA photographer metadata<br>NASA media guidelines: factual educational/informational use, acknowledge NASA, no endorsement; logos/identifiable people not licensed for commercial promotion; external technical evidence only</p>
+<p><a href="annotations.pending.json">Blank annotation template</a> · <a href="annotation-session.json">Scope and pending review state</a> · <a href="recipe.json">Frozen rules</a> · <a href="protocol.json">Frozen protocol</a></p>
+<p>Record independently observed line-cross, zone-enter, zone-exit and dwell events with unique IDs/source records, rule ID, class, direction and original start/end PTS. Fill actual annotation provenance; only after an actual human review may annotationMethod be independent-human-labels. This packet does not certify reviewer independence.</p>
+<h2>Complete original-media review</h2>
+<p>Declared original decoded frames [900, 1200) contain 300 original frames. Original start PTS 460800; last included frame PTS 613888; exclusive end PTS 614400.</p>
+<p>Selected samples end at PTS 608256. This is a sample timestamp, not the declared interval endpoint. Original PTS seconds are exact rational PTS × time base: start 30, last included 1199/30, exclusive end 40.</p>
+<video controls preload="metadata" style="width:100%" src="original-media.mp4">Browser playback unavailable. Open the original file in a compatible external player.</video>
+<p><a href="original-media.mp4">Open exact original media</a> · <a href="review-interval.json">Complete original-frame PTS mapping</a>. Source SHA-256 <code>66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d</code>.</p>
+<p>Native browser currentTime is its own media timeline. It is not an original PTS readout, frame-accurate seek or proof of interval review; use the exact source-frame/PTS mapping. Browser audio/orientation may differ from noautorotate video-only extraction.</p>
+<p>The original file includes media outside the declared interval. Playback does not filter that media, mark labels, confirm coverage, or turn this pending packet into a human review. Complete the declared interval with an appropriate player before asserting completeIntervalReviewed.</p>
+<details><summary>Every original frame in the declared interval</summary><table><tr><th>Original decoded index</th><th>Original PTS</th><th>Selected sample</th></tr>
+<tr><td>900</td><td>460800</td><td>True</td></tr>
+<tr><td>901</td><td>461312</td><td>False</td></tr>
+<tr><td>902</td><td>461824</td><td>False</td></tr>
+<tr><td>903</td><td>462336</td><td>False</td></tr>
+<tr><td>904</td><td>462848</td><td>False</td></tr>
+<tr><td>905</td><td>463360</td><td>False</td></tr>
+<tr><td>906</td><td>463872</td><td>False</td></tr>
+<tr><td>907</td><td>464384</td><td>False</td></tr>
+<tr><td>908</td><td>464896</td><td>False</td></tr>
+<tr><td>909</td><td>465408</td><td>False</td></tr>
+<tr><td>910</td><td>465920</td><td>False</td></tr>
+<tr><td>911</td><td>466432</td><td>False</td></tr>
+<tr><td>912</td><td>466944</td><td>True</td></tr>
+<tr><td>913</td><td>467456</td><td>False</td></tr>
+<tr><td>914</td><td>467968</td><td>False</td></tr>
+<tr><td>915</td><td>468480</td><td>False</td></tr>
+<tr><td>916</td><td>468992</td><td>False</td></tr>
+<tr><td>917</td><td>469504</td><td>False</td></tr>
+<tr><td>918</td><td>470016</td><td>False</td></tr>
+<tr><td>919</td><td>470528</td><td>False</td></tr>
+<tr><td>920</td><td>471040</td><td>False</td></tr>
+<tr><td>921</td><td>471552</td><td>False</td></tr>
+<tr><td>922</td><td>472064</td><td>False</td></tr>
+<tr><td>923</td><td>472576</td><td>False</td></tr>
+<tr><td>924</td><td>473088</td><td>True</td></tr>
+<tr><td>925</td><td>473600</td><td>False</td></tr>
+<tr><td>926</td><td>474112</td><td>False</td></tr>
+<tr><td>927</td><td>474624</td><td>False</td></tr>
+<tr><td>928</td><td>475136</td><td>False</td></tr>
+<tr><td>929</td><td>475648</td><td>False</td></tr>
+<tr><td>930</td><td>476160</td><td>False</td></tr>
+<tr><td>931</td><td>476672</td><td>False</td></tr>
+<tr><td>932</td><td>477184</td><td>False</td></tr>
+<tr><td>933</td><td>477696</td><td>False</td></tr>
+<tr><td>934</td><td>478208</td><td>False</td></tr>
+<tr><td>935</td><td>478720</td><td>False</td></tr>
+<tr><td>936</td><td>479232</td><td>True</td></tr>
+<tr><td>937</td><td>479744</td><td>False</td></tr>
+<tr><td>938</td><td>480256</td><td>False</td></tr>
+<tr><td>939</td><td>480768</td><td>False</td></tr>
+<tr><td>940</td><td>481280</td><td>False</td></tr>
+<tr><td>941</td><td>481792</td><td>False</td></tr>
+<tr><td>942</td><td>482304</td><td>False</td></tr>
+<tr><td>943</td><td>482816</td><td>False</td></tr>
+<tr><td>944</td><td>483328</td><td>False</td></tr>
+<tr><td>945</td><td>483840</td><td>False</td></tr>
+<tr><td>946</td><td>484352</td><td>False</td></tr>
+<tr><td>947</td><td>484864</td><td>False</td></tr>
+<tr><td>948</td><td>485376</td><td>True</td></tr>
+<tr><td>949</td><td>485888</td><td>False</td></tr>
+<tr><td>950</td><td>486400</td><td>False</td></tr>
+<tr><td>951</td><td>486912</td><td>False</td></tr>
+<tr><td>952</td><td>487424</td><td>False</td></tr>
+<tr><td>953</td><td>487936</td><td>False</td></tr>
+<tr><td>954</td><td>488448</td><td>False</td></tr>
+<tr><td>955</td><td>488960</td><td>False</td></tr>
+<tr><td>956</td><td>489472</td><td>False</td></tr>
+<tr><td>957</td><td>489984</td><td>False</td></tr>
+<tr><td>958</td><td>490496</td><td>False</td></tr>
+<tr><td>959</td><td>491008</td><td>False</td></tr>
+<tr><td>960</td><td>491520</td><td>True</td></tr>
+<tr><td>961</td><td>492032</td><td>False</td></tr>
+<tr><td>962</td><td>492544</td><td>False</td></tr>
+<tr><td>963</td><td>493056</td><td>False</td></tr>
+<tr><td>964</td><td>493568</td><td>False</td></tr>
+<tr><td>965</td><td>494080</td><td>False</td></tr>
+<tr><td>966</td><td>494592</td><td>False</td></tr>
+<tr><td>967</td><td>495104</td><td>False</td></tr>
+<tr><td>968</td><td>495616</td><td>False</td></tr>
+<tr><td>969</td><td>496128</td><td>False</td></tr>
+<tr><td>970</td><td>496640</td><td>False</td></tr>
+<tr><td>971</td><td>497152</td><td>False</td></tr>
+<tr><td>972</td><td>497664</td><td>True</td></tr>
+<tr><td>973</td><td>498176</td><td>False</td></tr>
+<tr><td>974</td><td>498688</td><td>False</td></tr>
+<tr><td>975</td><td>499200</td><td>False</td></tr>
+<tr><td>976</td><td>499712</td><td>False</td></tr>
+<tr><td>977</td><td>500224</td><td>False</td></tr>
+<tr><td>978</td><td>500736</td><td>False</td></tr>
+<tr><td>979</td><td>501248</td><td>False</td></tr>
+<tr><td>980</td><td>501760</td><td>False</td></tr>
+<tr><td>981</td><td>502272</td><td>False</td></tr>
+<tr><td>982</td><td>502784</td><td>False</td></tr>
+<tr><td>983</td><td>503296</td><td>False</td></tr>
+<tr><td>984</td><td>503808</td><td>True</td></tr>
+<tr><td>985</td><td>504320</td><td>False</td></tr>
+<tr><td>986</td><td>504832</td><td>False</td></tr>
+<tr><td>987</td><td>505344</td><td>False</td></tr>
+<tr><td>988</td><td>505856</td><td>False</td></tr>
+<tr><td>989</td><td>506368</td><td>False</td></tr>
+<tr><td>990</td><td>506880</td><td>False</td></tr>
+<tr><td>991</td><td>507392</td><td>False</td></tr>
+<tr><td>992</td><td>507904</td><td>False</td></tr>
+<tr><td>993</td><td>508416</td><td>False</td></tr>
+<tr><td>994</td><td>508928</td><td>False</td></tr>
+<tr><td>995</td><td>509440</td><td>False</td></tr>
+<tr><td>996</td><td>509952</td><td>True</td></tr>
+<tr><td>997</td><td>510464</td><td>False</td></tr>
+<tr><td>998</td><td>510976</td><td>False</td></tr>
+<tr><td>999</td><td>511488</td><td>False</td></tr>
+<tr><td>1000</td><td>512000</td><td>False</td></tr>
+<tr><td>1001</td><td>512512</td><td>False</td></tr>
+<tr><td>1002</td><td>513024</td><td>False</td></tr>
+<tr><td>1003</td><td>513536</td><td>False</td></tr>
+<tr><td>1004</td><td>514048</td><td>False</td></tr>
+<tr><td>1005</td><td>514560</td><td>False</td></tr>
+<tr><td>1006</td><td>515072</td><td>False</td></tr>
+<tr><td>1007</td><td>515584</td><td>False</td></tr>
+<tr><td>1008</td><td>516096</td><td>True</td></tr>
+<tr><td>1009</td><td>516608</td><td>False</td></tr>
+<tr><td>1010</td><td>517120</td><td>False</td></tr>
+<tr><td>1011</td><td>517632</td><td>False</td></tr>
+<tr><td>1012</td><td>518144</td><td>False</td></tr>
+<tr><td>1013</td><td>518656</td><td>False</td></tr>
+<tr><td>1014</td><td>519168</td><td>False</td></tr>
+<tr><td>1015</td><td>519680</td><td>False</td></tr>
+<tr><td>1016</td><td>520192</td><td>False</td></tr>
+<tr><td>1017</td><td>520704</td><td>False</td></tr>
+<tr><td>1018</td><td>521216</td><td>False</td></tr>
+<tr><td>1019</td><td>521728</td><td>False</td></tr>
+<tr><td>1020</td><td>522240</td><td>True</td></tr>
+<tr><td>1021</td><td>522752</td><td>False</td></tr>
+<tr><td>1022</td><td>523264</td><td>False</td></tr>
+<tr><td>1023</td><td>523776</td><td>False</td></tr>
+<tr><td>1024</td><td>524288</td><td>False</td></tr>
+<tr><td>1025</td><td>524800</td><td>False</td></tr>
+<tr><td>1026</td><td>525312</td><td>False</td></tr>
+<tr><td>1027</td><td>525824</td><td>False</td></tr>
+<tr><td>1028</td><td>526336</td><td>False</td></tr>
+<tr><td>1029</td><td>526848</td><td>False</td></tr>
+<tr><td>1030</td><td>527360</td><td>False</td></tr>
+<tr><td>1031</td><td>527872</td><td>False</td></tr>
+<tr><td>1032</td><td>528384</td><td>True</td></tr>
+<tr><td>1033</td><td>528896</td><td>False</td></tr>
+<tr><td>1034</td><td>529408</td><td>False</td></tr>
+<tr><td>1035</td><td>529920</td><td>False</td></tr>
+<tr><td>1036</td><td>530432</td><td>False</td></tr>
+<tr><td>1037</td><td>530944</td><td>False</td></tr>
+<tr><td>1038</td><td>531456</td><td>False</td></tr>
+<tr><td>1039</td><td>531968</td><td>False</td></tr>
+<tr><td>1040</td><td>532480</td><td>False</td></tr>
+<tr><td>1041</td><td>532992</td><td>False</td></tr>
+<tr><td>1042</td><td>533504</td><td>False</td></tr>
+<tr><td>1043</td><td>534016</td><td>False</td></tr>
+<tr><td>1044</td><td>534528</td><td>True</td></tr>
+<tr><td>1045</td><td>535040</td><td>False</td></tr>
+<tr><td>1046</td><td>535552</td><td>False</td></tr>
+<tr><td>1047</td><td>536064</td><td>False</td></tr>
+<tr><td>1048</td><td>536576</td><td>False</td></tr>
+<tr><td>1049</td><td>537088</td><td>False</td></tr>
+<tr><td>1050</td><td>537600</td><td>False</td></tr>
+<tr><td>1051</td><td>538112</td><td>False</td></tr>
+<tr><td>1052</td><td>538624</td><td>False</td></tr>
+<tr><td>1053</td><td>539136</td><td>False</td></tr>
+<tr><td>1054</td><td>539648</td><td>False</td></tr>
+<tr><td>1055</td><td>540160</td><td>False</td></tr>
+<tr><td>1056</td><td>540672</td><td>True</td></tr>
+<tr><td>1057</td><td>541184</td><td>False</td></tr>
+<tr><td>1058</td><td>541696</td><td>False</td></tr>
+<tr><td>1059</td><td>542208</td><td>False</td></tr>
+<tr><td>1060</td><td>542720</td><td>False</td></tr>
+<tr><td>1061</td><td>543232</td><td>False</td></tr>
+<tr><td>1062</td><td>543744</td><td>False</td></tr>
+<tr><td>1063</td><td>544256</td><td>False</td></tr>
+<tr><td>1064</td><td>544768</td><td>False</td></tr>
+<tr><td>1065</td><td>545280</td><td>False</td></tr>
+<tr><td>1066</td><td>545792</td><td>False</td></tr>
+<tr><td>1067</td><td>546304</td><td>False</td></tr>
+<tr><td>1068</td><td>546816</td><td>True</td></tr>
+<tr><td>1069</td><td>547328</td><td>False</td></tr>
+<tr><td>1070</td><td>547840</td><td>False</td></tr>
+<tr><td>1071</td><td>548352</td><td>False</td></tr>
+<tr><td>1072</td><td>548864</td><td>False</td></tr>
+<tr><td>1073</td><td>549376</td><td>False</td></tr>
+<tr><td>1074</td><td>549888</td><td>False</td></tr>
+<tr><td>1075</td><td>550400</td><td>False</td></tr>
+<tr><td>1076</td><td>550912</td><td>False</td></tr>
+<tr><td>1077</td><td>551424</td><td>False</td></tr>
+<tr><td>1078</td><td>551936</td><td>False</td></tr>
+<tr><td>1079</td><td>552448</td><td>False</td></tr>
+<tr><td>1080</td><td>552960</td><td>True</td></tr>
+<tr><td>1081</td><td>553472</td><td>False</td></tr>
+<tr><td>1082</td><td>553984</td><td>False</td></tr>
+<tr><td>1083</td><td>554496</td><td>False</td></tr>
+<tr><td>1084</td><td>555008</td><td>False</td></tr>
+<tr><td>1085</td><td>555520</td><td>False</td></tr>
+<tr><td>1086</td><td>556032</td><td>False</td></tr>
+<tr><td>1087</td><td>556544</td><td>False</td></tr>
+<tr><td>1088</td><td>557056</td><td>False</td></tr>
+<tr><td>1089</td><td>557568</td><td>False</td></tr>
+<tr><td>1090</td><td>558080</td><td>False</td></tr>
+<tr><td>1091</td><td>558592</td><td>False</td></tr>
+<tr><td>1092</td><td>559104</td><td>True</td></tr>
+<tr><td>1093</td><td>559616</td><td>False</td></tr>
+<tr><td>1094</td><td>560128</td><td>False</td></tr>
+<tr><td>1095</td><td>560640</td><td>False</td></tr>
+<tr><td>1096</td><td>561152</td><td>False</td></tr>
+<tr><td>1097</td><td>561664</td><td>False</td></tr>
+<tr><td>1098</td><td>562176</td><td>False</td></tr>
+<tr><td>1099</td><td>562688</td><td>False</td></tr>
+<tr><td>1100</td><td>563200</td><td>False</td></tr>
+<tr><td>1101</td><td>563712</td><td>False</td></tr>
+<tr><td>1102</td><td>564224</td><td>False</td></tr>
+<tr><td>1103</td><td>564736</td><td>False</td></tr>
+<tr><td>1104</td><td>565248</td><td>True</td></tr>
+<tr><td>1105</td><td>565760</td><td>False</td></tr>
+<tr><td>1106</td><td>566272</td><td>False</td></tr>
+<tr><td>1107</td><td>566784</td><td>False</td></tr>
+<tr><td>1108</td><td>567296</td><td>False</td></tr>
+<tr><td>1109</td><td>567808</td><td>False</td></tr>
+<tr><td>1110</td><td>568320</td><td>False</td></tr>
+<tr><td>1111</td><td>568832</td><td>False</td></tr>
+<tr><td>1112</td><td>569344</td><td>False</td></tr>
+<tr><td>1113</td><td>569856</td><td>False</td></tr>
+<tr><td>1114</td><td>570368</td><td>False</td></tr>
+<tr><td>1115</td><td>570880</td><td>False</td></tr>
+<tr><td>1116</td><td>571392</td><td>True</td></tr>
+<tr><td>1117</td><td>571904</td><td>False</td></tr>
+<tr><td>1118</td><td>572416</td><td>False</td></tr>
+<tr><td>1119</td><td>572928</td><td>False</td></tr>
+<tr><td>1120</td><td>573440</td><td>False</td></tr>
+<tr><td>1121</td><td>573952</td><td>False</td></tr>
+<tr><td>1122</td><td>574464</td><td>False</td></tr>
+<tr><td>1123</td><td>574976</td><td>False</td></tr>
+<tr><td>1124</td><td>575488</td><td>False</td></tr>
+<tr><td>1125</td><td>576000</td><td>False</td></tr>
+<tr><td>1126</td><td>576512</td><td>False</td></tr>
+<tr><td>1127</td><td>577024</td><td>False</td></tr>
+<tr><td>1128</td><td>577536</td><td>True</td></tr>
+<tr><td>1129</td><td>578048</td><td>False</td></tr>
+<tr><td>1130</td><td>578560</td><td>False</td></tr>
+<tr><td>1131</td><td>579072</td><td>False</td></tr>
+<tr><td>1132</td><td>579584</td><td>False</td></tr>
+<tr><td>1133</td><td>580096</td><td>False</td></tr>
+<tr><td>1134</td><td>580608</td><td>False</td></tr>
+<tr><td>1135</td><td>581120</td><td>False</td></tr>
+<tr><td>1136</td><td>581632</td><td>False</td></tr>
+<tr><td>1137</td><td>582144</td><td>False</td></tr>
+<tr><td>1138</td><td>582656</td><td>False</td></tr>
+<tr><td>1139</td><td>583168</td><td>False</td></tr>
+<tr><td>1140</td><td>583680</td><td>True</td></tr>
+<tr><td>1141</td><td>584192</td><td>False</td></tr>
+<tr><td>1142</td><td>584704</td><td>False</td></tr>
+<tr><td>1143</td><td>585216</td><td>False</td></tr>
+<tr><td>1144</td><td>585728</td><td>False</td></tr>
+<tr><td>1145</td><td>586240</td><td>False</td></tr>
+<tr><td>1146</td><td>586752</td><td>False</td></tr>
+<tr><td>1147</td><td>587264</td><td>False</td></tr>
+<tr><td>1148</td><td>587776</td><td>False</td></tr>
+<tr><td>1149</td><td>588288</td><td>False</td></tr>
+<tr><td>1150</td><td>588800</td><td>False</td></tr>
+<tr><td>1151</td><td>589312</td><td>False</td></tr>
+<tr><td>1152</td><td>589824</td><td>True</td></tr>
+<tr><td>1153</td><td>590336</td><td>False</td></tr>
+<tr><td>1154</td><td>590848</td><td>False</td></tr>
+<tr><td>1155</td><td>591360</td><td>False</td></tr>
+<tr><td>1156</td><td>591872</td><td>False</td></tr>
+<tr><td>1157</td><td>592384</td><td>False</td></tr>
+<tr><td>1158</td><td>592896</td><td>False</td></tr>
+<tr><td>1159</td><td>593408</td><td>False</td></tr>
+<tr><td>1160</td><td>593920</td><td>False</td></tr>
+<tr><td>1161</td><td>594432</td><td>False</td></tr>
+<tr><td>1162</td><td>594944</td><td>False</td></tr>
+<tr><td>1163</td><td>595456</td><td>False</td></tr>
+<tr><td>1164</td><td>595968</td><td>True</td></tr>
+<tr><td>1165</td><td>596480</td><td>False</td></tr>
+<tr><td>1166</td><td>596992</td><td>False</td></tr>
+<tr><td>1167</td><td>597504</td><td>False</td></tr>
+<tr><td>1168</td><td>598016</td><td>False</td></tr>
+<tr><td>1169</td><td>598528</td><td>False</td></tr>
+<tr><td>1170</td><td>599040</td><td>False</td></tr>
+<tr><td>1171</td><td>599552</td><td>False</td></tr>
+<tr><td>1172</td><td>600064</td><td>False</td></tr>
+<tr><td>1173</td><td>600576</td><td>False</td></tr>
+<tr><td>1174</td><td>601088</td><td>False</td></tr>
+<tr><td>1175</td><td>601600</td><td>False</td></tr>
+<tr><td>1176</td><td>602112</td><td>True</td></tr>
+<tr><td>1177</td><td>602624</td><td>False</td></tr>
+<tr><td>1178</td><td>603136</td><td>False</td></tr>
+<tr><td>1179</td><td>603648</td><td>False</td></tr>
+<tr><td>1180</td><td>604160</td><td>False</td></tr>
+<tr><td>1181</td><td>604672</td><td>False</td></tr>
+<tr><td>1182</td><td>605184</td><td>False</td></tr>
+<tr><td>1183</td><td>605696</td><td>False</td></tr>
+<tr><td>1184</td><td>606208</td><td>False</td></tr>
+<tr><td>1185</td><td>606720</td><td>False</td></tr>
+<tr><td>1186</td><td>607232</td><td>False</td></tr>
+<tr><td>1187</td><td>607744</td><td>False</td></tr>
+<tr><td>1188</td><td>608256</td><td>True</td></tr>
+<tr><td>1189</td><td>608768</td><td>False</td></tr>
+<tr><td>1190</td><td>609280</td><td>False</td></tr>
+<tr><td>1191</td><td>609792</td><td>False</td></tr>
+<tr><td>1192</td><td>610304</td><td>False</td></tr>
+<tr><td>1193</td><td>610816</td><td>False</td></tr>
+<tr><td>1194</td><td>611328</td><td>False</td></tr>
+<tr><td>1195</td><td>611840</td><td>False</td></tr>
+<tr><td>1196</td><td>612352</td><td>False</td></tr>
+<tr><td>1197</td><td>612864</td><td>False</td></tr>
+<tr><td>1198</td><td>613376</td><td>False</td></tr>
+<tr><td>1199</td><td>613888</td><td>False</td></tr>
+</table></details><h2>Sampled evidence only</h2>
+<figure id="frame-0"><figcaption>Selected 0; original decoded index 900; original PTS 460800; analysis PTS 460800; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000000.png" alt="Original decoded frame 0"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-1"><figcaption>Selected 1; original decoded index 912; original PTS 466944; analysis PTS 466944; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000001.png" alt="Original decoded frame 1"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-2"><figcaption>Selected 2; original decoded index 924; original PTS 473088; analysis PTS 473088; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000002.png" alt="Original decoded frame 2"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-3"><figcaption>Selected 3; original decoded index 936; original PTS 479232; analysis PTS 479232; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000003.png" alt="Original decoded frame 3"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-4"><figcaption>Selected 4; original decoded index 948; original PTS 485376; analysis PTS 485376; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000004.png" alt="Original decoded frame 4"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-5"><figcaption>Selected 5; original decoded index 960; original PTS 491520; analysis PTS 491520; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000005.png" alt="Original decoded frame 5"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-6"><figcaption>Selected 6; original decoded index 972; original PTS 497664; analysis PTS 497664; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000006.png" alt="Original decoded frame 6"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-7"><figcaption>Selected 7; original decoded index 984; original PTS 503808; analysis PTS 503808; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000007.png" alt="Original decoded frame 7"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-8"><figcaption>Selected 8; original decoded index 996; original PTS 509952; analysis PTS 509952; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000008.png" alt="Original decoded frame 8"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-9"><figcaption>Selected 9; original decoded index 1008; original PTS 516096; analysis PTS 516096; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000009.png" alt="Original decoded frame 9"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-10"><figcaption>Selected 10; original decoded index 1020; original PTS 522240; analysis PTS 522240; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000010.png" alt="Original decoded frame 10"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-11"><figcaption>Selected 11; original decoded index 1032; original PTS 528384; analysis PTS 528384; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000011.png" alt="Original decoded frame 11"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-12"><figcaption>Selected 12; original decoded index 1044; original PTS 534528; analysis PTS 534528; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000012.png" alt="Original decoded frame 12"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-13"><figcaption>Selected 13; original decoded index 1056; original PTS 540672; analysis PTS 540672; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000013.png" alt="Original decoded frame 13"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-14"><figcaption>Selected 14; original decoded index 1068; original PTS 546816; analysis PTS 546816; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000014.png" alt="Original decoded frame 14"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-15"><figcaption>Selected 15; original decoded index 1080; original PTS 552960; analysis PTS 552960; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000015.png" alt="Original decoded frame 15"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-16"><figcaption>Selected 16; original decoded index 1092; original PTS 559104; analysis PTS 559104; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000016.png" alt="Original decoded frame 16"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-17"><figcaption>Selected 17; original decoded index 1104; original PTS 565248; analysis PTS 565248; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000017.png" alt="Original decoded frame 17"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-18"><figcaption>Selected 18; original decoded index 1116; original PTS 571392; analysis PTS 571392; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000018.png" alt="Original decoded frame 18"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-19"><figcaption>Selected 19; original decoded index 1128; original PTS 577536; analysis PTS 577536; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000019.png" alt="Original decoded frame 19"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-20"><figcaption>Selected 20; original decoded index 1140; original PTS 583680; analysis PTS 583680; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000020.png" alt="Original decoded frame 20"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-21"><figcaption>Selected 21; original decoded index 1152; original PTS 589824; analysis PTS 589824; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000021.png" alt="Original decoded frame 21"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-22"><figcaption>Selected 22; original decoded index 1164; original PTS 595968; analysis PTS 595968; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000022.png" alt="Original decoded frame 22"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-23"><figcaption>Selected 23; original decoded index 1176; original PTS 602112; analysis PTS 602112; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000023.png" alt="Original decoded frame 23"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>
+<figure id="frame-24"><figcaption>Selected 24; original decoded index 1188; original PTS 608256; analysis PTS 608256; time base {&#x27;numerator&#x27;: 1, &#x27;denominator&#x27;: 15360}</figcaption><div class="frame"><img src="media/frames/f000024.png" alt="Original decoded frame 24"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<rect x="250.0" y="200.0" width="500.0" height="750.0" fill="none" stroke="yellow" stroke-width="3"/><text x="250.0" y="220.0" fill="yellow">central-observation</text>
+<line x1="500.0" y1="0" x2="500.0" y2="1000" stroke="cyan" stroke-width="3"/>
+</svg></div></figure>

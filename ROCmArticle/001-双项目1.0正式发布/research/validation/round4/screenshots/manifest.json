@@ -1,0 +1,101 @@
+{
+  "captureScope": "Actual browser viewport; no desktop/window chrome or terminal screenshot; raw JPEG unedited.",
+  "date": "2026-11-21",
+  "sourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "licensing": "../THIRD_PARTY.md",
+  "files": [
+    {
+      "file": "screenshots/raw/01-surface-visa-hip.jpg",
+      "url": "http://127.0.0.1:5086/",
+      "scope": "SurfaceLab real VisA input, HIP rule; first official normal image, false positive retained",
+      "evidence": [
+        "surface-hip-batch.json",
+        "surface-public-evidence/report.html",
+        "surface-comparison.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T00:48:37.242030+08:00",
+      "sha256": "240dfa655420a8ad1d193b8e43b2c9c942292412057139c6b97f48e8a6ef5d1c",
+      "bytes": 83288,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/02-signal-uci-ps1.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round4/signal-hip/88752f66ceab41a6a24d299385b47f97/report.html",
+      "scope": "UCI PS1 first real pressure cycle, current HIP run",
+      "evidence": [
+        "signal-hip/88752f66ceab41a6a24d299385b47f97/report.html",
+        "signal-comparison.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T00:46:22.668383+08:00",
+      "sha256": "7d3c7604b61bdb74a9ee275c8476b052035f59fcb1de1e4b02c14fb792ee1fa1",
+      "bytes": 120946,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/03-document-hiertext-history.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round4/document-history/evidence.html",
+      "scope": "Historical 2026-11-18 actual GPU outputs; 2026-11-21 official-label audit and screenshot; current Compile failed",
+      "evidence": [
+        "document-history/evidence.html",
+        "document-history/evaluation.json",
+        "document-history/audit.json",
+        "document-gpu/cli.log"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T00:50:17.730055+08:00",
+      "sha256": "03501da6da5f7dbe33d635d168dd9c19842cdd8f676df31037cc34f0e5cf39fe",
+      "bytes": 133043,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/04-video-nasa-original-frame.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round4/video-gpu/analysis/report.html#frame-0",
+      "scope": "Original NASA 30s frame with boxes drawn by actual application from current predictions",
+      "evidence": [
+        "video-gpu/analysis/report.html",
+        "video-gpu/analysis/result.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T00:50:35.864071+08:00",
+      "sha256": "b0cbdb7fb17067dee155d40b6e52ad82ef83895a25fe3e16a794bc97fc23077d",
+      "bytes": 62902,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/05-video-nasa-timeline.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round4/video-gpu/analysis/report.html",
+      "scope": "Actual unreviewed candidate timeline from same current run",
+      "evidence": [
+        "video-gpu/workflow-run.json",
+        "video-gpu/analysis/result.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T00:50:17.783470+08:00",
+      "sha256": "3f2cf1159b7e84b94463dc1ce911ac9c2d1e9047c72d108c01d123175eccf4b0",
+      "bytes": 128315,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    }
+  ]
+}

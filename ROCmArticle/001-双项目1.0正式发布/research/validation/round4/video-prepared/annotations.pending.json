@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 2,
+  "sourceMediaSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 15360
+  },
+  "timestampConvention": "original-media-pts",
+  "annotationMethod": "pending-independent-human-review",
+  "provenance": "UNREVIEWED TEMPLATE. Empty events are NOT zero-event truth. A human must independently inspect the declared complete interval and record actual labeling method and limits.",
+  "events": [],
+  "humanReview": null
+}

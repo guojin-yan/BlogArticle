@@ -1,0 +1,26 @@
+{
+  "label": "video-prepare-r2",
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\video-run-workflow.py",
+    "prepare",
+    "--input",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\nasa-walkout-v1\\walkout-preview.mp4",
+    "--protocol",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round4\\video-protocol.json",
+    "--model",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\yolox-nano-coco-first3-v1\\detector.json",
+    "--ffmpeg",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\tools\\ffmpeg-9.0.2\\bin\\ffmpeg.exe",
+    "--ffprobe",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\video-event-search\\tools\\ffmpeg-9.0.2\\bin\\ffprobe.exe",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round4\\video-prepared"
+  ],
+  "started": "2026-11-21T00:47:31.108571+08:00",
+  "finished": "2026-11-21T00:47:34.208477+08:00",
+  "exitCode": 0,
+  "log": "logs/video-prepare-r2.log",
+  "logSha256": "0f95edd1560b8d7ed40edaec37323d18b5a3735adcdaa99c7cd9bbeb8109bdb2"
+}

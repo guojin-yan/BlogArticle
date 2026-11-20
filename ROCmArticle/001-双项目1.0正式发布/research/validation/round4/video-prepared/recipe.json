@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "minConfidence": 0.3,
+  "minIou": 0.1,
+  "maxGapSeconds": 0.5,
+  "zones": [
+    {
+      "id": "central-observation",
+      "bounds": {
+        "x1": 0.25,
+        "y1": 0.2,
+        "x2": 0.75,
+        "y2": 0.95
+      },
+      "dwellSeconds": 2
+    }
+  ],
+  "lines": [
+    {
+      "id": "center-divider",
+      "x1": 0.5,
+      "y1": 0,
+      "x2": 0.5,
+      "y2": 1
+    }
+  ]
+}

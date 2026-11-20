@@ -1,0 +1,6 @@
+# Redundant exact local raw exports retained and inventoried in local-only-files.json.
+surface-workspace/
+surface-cpu-report/
+surface-hip-report/
+surface-cpu.zip
+surface-hip.zip

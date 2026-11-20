@@ -1,0 +1,7 @@
+{
+  "started": "2026-11-21T00:44:22.230251+08:00",
+  "finished": "2026-11-21T00:44:42.487752+08:00",
+  "status": "failed",
+  "evaluatorSha256": "2e946bb8fe8802febd872447d39b81532af94a665f385f20aa6bb4096e226d51",
+  "adapter": "Only external path normalization preserves SUBST output alias; original validation, inference and scoring unchanged."
+}

@@ -1,0 +1,14 @@
+{
+  "label": "surface-dinov2-patchcore-verify",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Inspection.App\\Release\\net10.0\\Inspection.App.dll",
+    "verify-model",
+    "visa-pcb1-dinov2-patchcore-v1"
+  ],
+  "started": "2026-11-21T00:43:13.133645+08:00",
+  "finished": "2026-11-21T00:43:44.760342+08:00",
+  "exitCode": 3221225477,
+  "log": "logs/surface-dinov2-patchcore-verify.log",
+  "logSha256": "671ea4d3bfb9c525971a6ea22d20cfee1c8109cd52f9d9f9a199fb6bd9381600"
+}

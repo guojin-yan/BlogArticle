@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "state": "pending-independent-human-review",
+  "isGroundTruth": false,
+  "sourceMediaSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "protocolSha256": "4cd8860acab74e53b4030f5c774eed021e3d6400541957642758d6bb68b271b3",
+  "frameManifestSha256": "9784ab91aab74e289dca95c4739a3f83bad3c7c738d221fb858c148586775b45",
+  "recipeSha256": "7eaf2caf38a8a29133600f820328aaa84f75ad4e417becd44b1274f166394322",
+  "annotationScope": "All four event kinds, all detector classes, complete declared frame interval; blank pending independent human review, no model-derived ground truth",
+  "sourceOriginalFirstPts": 0,
+  "selectedOriginalStartPts": 460800,
+  "selectedOriginalEndPts": 608256,
+  "declaredOriginalStartPts": 460800,
+  "declaredLastIncludedOriginalPts": 613888,
+  "declaredEndExclusiveOriginalPts": 614400,
+  "sourceFrameStartInclusive": 900,
+  "sourceFrameStopExclusive": 1200,
+  "reviewIntervalSha256": "5d188f3fd23390b0b7ea15470de114c45e4c15fd768db359de9d27d2d95aa1f6",
+  "originalMediaFile": "original-media.mp4",
+  "predictionsIncluded": false,
+  "metrics": null,
+  "instructions": "Review originals independently, use original-media PTS and the frozen event definitions/tolerance. Do not derive labels from prediction events. Only an actual human review may declare independent-human-labels; record annotator/procedure and independence limits."
+}

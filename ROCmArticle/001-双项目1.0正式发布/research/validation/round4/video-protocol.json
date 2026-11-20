@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "frozenUtc": "2026-11-20T16:44:58.1276328Z",
+  "sourceSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "sourceReference": "NASA KSC-20200530-MH-AJW02-0003-SpaceX_Demo-2_Walkout_Hallway_and_C7_Exit_4K preview; official NASA photographer metadata",
+  "sourceLicense": "NASA media guidelines: factual educational/informational use, acknowledge NASA, no endorsement; logos/identifiable people not licensed for commercial promotion; external technical evidence only",
+  "modelManifestSha256": "7c86000ba31f04127a931a3050c81b04924b3e5e2e681aedce2e16a107fa22a6",
+  "modelSha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+  "sourceFrameStartInclusive": 900,
+  "sourceFrameStopExclusive": 1200,
+  "everyDecodedFrames": 12,
+  "normalizeStart": false,
+  "recipe": {
+    "schemaVersion": 1,
+    "minConfidence": 0.3,
+    "minIou": 0.1,
+    "maxGapSeconds": 0.5,
+    "zones": [
+      {
+        "id": "central-observation",
+        "bounds": {
+          "x1": 0.25,
+          "y1": 0.2,
+          "x2": 0.75,
+          "y2": 0.95
+        },
+        "dwellSeconds": 2
+      }
+    ],
+    "lines": [
+      {
+        "id": "center-divider",
+        "x1": 0.5,
+        "y1": 0,
+        "x2": 0.5,
+        "y2": 1
+      }
+    ]
+  },
+  "eventEvaluation": {
+    "matchingVersion": "event-boundaries-max-cardinality-v1",
+    "boundaryToleranceSeconds": 0.5
+  },
+  "annotationScope": "All four event kinds, all detector classes, complete declared frame interval; blank pending independent human review, no model-derived ground truth",
+  "qualityScope": "End-to-end actual media/PTS/model/track/event/evidence integration only. Camera handheld and no independent event labels; not event accuracy, industrial safety or static-camera quality evidence.",
+  "prohibited": "No tuning old COCO thresholds, selected frames or geometry after predictions; no synthetic video substitution; no reporting empty template as zero-event truth.",
+  "selectionRationale": "Contiguous original frames [900,1200), approximately 30-40 seconds. Chosen from original 30s frame before this round inference to include actual hallway activity after the title. Same model, sampling, confidence, zones and rules as prior protocol; no prediction-based frame selection."
+}

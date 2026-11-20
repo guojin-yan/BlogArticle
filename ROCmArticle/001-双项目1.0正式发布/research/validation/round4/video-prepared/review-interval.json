@@ -1,0 +1,1525 @@
+{
+  "schemaVersion": 1,
+  "sourceMediaSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "ffprobeSha256": "d01acc30326e117568f527be46c4efa19d548084a649bd428430b5c36e83a973",
+  "timeBase": {
+    "numerator": 1,
+    "denominator": 15360
+  },
+  "sourceFrameStartInclusive": 900,
+  "sourceFrameStopExclusive": 1200,
+  "declaredOriginalStartPts": 460800,
+  "declaredLastIncludedOriginalPts": 613888,
+  "declaredEndExclusiveOriginalPts": 614400,
+  "endExclusiveBasis": "next-original-frame-pts",
+  "declaredOriginalFrameCount": 300,
+  "selectedSampleCount": 25,
+  "selectedOriginalStartPts": 460800,
+  "selectedOriginalEndPts": 608256,
+  "frames": [
+    {
+      "sourceFrameIndex": 900,
+      "sourcePts": 460800,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 901,
+      "sourcePts": 461312,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 902,
+      "sourcePts": 461824,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 903,
+      "sourcePts": 462336,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 904,
+      "sourcePts": 462848,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 905,
+      "sourcePts": 463360,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 906,
+      "sourcePts": 463872,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 907,
+      "sourcePts": 464384,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 908,
+      "sourcePts": 464896,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 909,
+      "sourcePts": 465408,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 910,
+      "sourcePts": 465920,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 911,
+      "sourcePts": 466432,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 912,
+      "sourcePts": 466944,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 913,
+      "sourcePts": 467456,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 914,
+      "sourcePts": 467968,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 915,
+      "sourcePts": 468480,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 916,
+      "sourcePts": 468992,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 917,
+      "sourcePts": 469504,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 918,
+      "sourcePts": 470016,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 919,
+      "sourcePts": 470528,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 920,
+      "sourcePts": 471040,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 921,
+      "sourcePts": 471552,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 922,
+      "sourcePts": 472064,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 923,
+      "sourcePts": 472576,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 924,
+      "sourcePts": 473088,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 925,
+      "sourcePts": 473600,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 926,
+      "sourcePts": 474112,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 927,
+      "sourcePts": 474624,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 928,
+      "sourcePts": 475136,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 929,
+      "sourcePts": 475648,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 930,
+      "sourcePts": 476160,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 931,
+      "sourcePts": 476672,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 932,
+      "sourcePts": 477184,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 933,
+      "sourcePts": 477696,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 934,
+      "sourcePts": 478208,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 935,
+      "sourcePts": 478720,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 936,
+      "sourcePts": 479232,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 937,
+      "sourcePts": 479744,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 938,
+      "sourcePts": 480256,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 939,
+      "sourcePts": 480768,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 940,
+      "sourcePts": 481280,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 941,
+      "sourcePts": 481792,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 942,
+      "sourcePts": 482304,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 943,
+      "sourcePts": 482816,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 944,
+      "sourcePts": 483328,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 945,
+      "sourcePts": 483840,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 946,
+      "sourcePts": 484352,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 947,
+      "sourcePts": 484864,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 948,
+      "sourcePts": 485376,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 949,
+      "sourcePts": 485888,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 950,
+      "sourcePts": 486400,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 951,
+      "sourcePts": 486912,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 952,
+      "sourcePts": 487424,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 953,
+      "sourcePts": 487936,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 954,
+      "sourcePts": 488448,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 955,
+      "sourcePts": 488960,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 956,
+      "sourcePts": 489472,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 957,
+      "sourcePts": 489984,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 958,
+      "sourcePts": 490496,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 959,
+      "sourcePts": 491008,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 960,
+      "sourcePts": 491520,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 961,
+      "sourcePts": 492032,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 962,
+      "sourcePts": 492544,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 963,
+      "sourcePts": 493056,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 964,
+      "sourcePts": 493568,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 965,
+      "sourcePts": 494080,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 966,
+      "sourcePts": 494592,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 967,
+      "sourcePts": 495104,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 968,
+      "sourcePts": 495616,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 969,
+      "sourcePts": 496128,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 970,
+      "sourcePts": 496640,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 971,
+      "sourcePts": 497152,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 972,
+      "sourcePts": 497664,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 973,
+      "sourcePts": 498176,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 974,
+      "sourcePts": 498688,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 975,
+      "sourcePts": 499200,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 976,
+      "sourcePts": 499712,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 977,
+      "sourcePts": 500224,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 978,
+      "sourcePts": 500736,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 979,
+      "sourcePts": 501248,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 980,
+      "sourcePts": 501760,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 981,
+      "sourcePts": 502272,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 982,
+      "sourcePts": 502784,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 983,
+      "sourcePts": 503296,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 984,
+      "sourcePts": 503808,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 985,
+      "sourcePts": 504320,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 986,
+      "sourcePts": 504832,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 987,
+      "sourcePts": 505344,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 988,
+      "sourcePts": 505856,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 989,
+      "sourcePts": 506368,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 990,
+      "sourcePts": 506880,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 991,
+      "sourcePts": 507392,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 992,
+      "sourcePts": 507904,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 993,
+      "sourcePts": 508416,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 994,
+      "sourcePts": 508928,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 995,
+      "sourcePts": 509440,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 996,
+      "sourcePts": 509952,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 997,
+      "sourcePts": 510464,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 998,
+      "sourcePts": 510976,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 999,
+      "sourcePts": 511488,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1000,
+      "sourcePts": 512000,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1001,
+      "sourcePts": 512512,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1002,
+      "sourcePts": 513024,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1003,
+      "sourcePts": 513536,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1004,
+      "sourcePts": 514048,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1005,
+      "sourcePts": 514560,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1006,
+      "sourcePts": 515072,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1007,
+      "sourcePts": 515584,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1008,
+      "sourcePts": 516096,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1009,
+      "sourcePts": 516608,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1010,
+      "sourcePts": 517120,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1011,
+      "sourcePts": 517632,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1012,
+      "sourcePts": 518144,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1013,
+      "sourcePts": 518656,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1014,
+      "sourcePts": 519168,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1015,
+      "sourcePts": 519680,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1016,
+      "sourcePts": 520192,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1017,
+      "sourcePts": 520704,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1018,
+      "sourcePts": 521216,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1019,
+      "sourcePts": 521728,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1020,
+      "sourcePts": 522240,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1021,
+      "sourcePts": 522752,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1022,
+      "sourcePts": 523264,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1023,
+      "sourcePts": 523776,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1024,
+      "sourcePts": 524288,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1025,
+      "sourcePts": 524800,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1026,
+      "sourcePts": 525312,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1027,
+      "sourcePts": 525824,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1028,
+      "sourcePts": 526336,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1029,
+      "sourcePts": 526848,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1030,
+      "sourcePts": 527360,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1031,
+      "sourcePts": 527872,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1032,
+      "sourcePts": 528384,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1033,
+      "sourcePts": 528896,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1034,
+      "sourcePts": 529408,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1035,
+      "sourcePts": 529920,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1036,
+      "sourcePts": 530432,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1037,
+      "sourcePts": 530944,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1038,
+      "sourcePts": 531456,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1039,
+      "sourcePts": 531968,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1040,
+      "sourcePts": 532480,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1041,
+      "sourcePts": 532992,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1042,
+      "sourcePts": 533504,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1043,
+      "sourcePts": 534016,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1044,
+      "sourcePts": 534528,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1045,
+      "sourcePts": 535040,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1046,
+      "sourcePts": 535552,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1047,
+      "sourcePts": 536064,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1048,
+      "sourcePts": 536576,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1049,
+      "sourcePts": 537088,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1050,
+      "sourcePts": 537600,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1051,
+      "sourcePts": 538112,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1052,
+      "sourcePts": 538624,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1053,
+      "sourcePts": 539136,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1054,
+      "sourcePts": 539648,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1055,
+      "sourcePts": 540160,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1056,
+      "sourcePts": 540672,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1057,
+      "sourcePts": 541184,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1058,
+      "sourcePts": 541696,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1059,
+      "sourcePts": 542208,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1060,
+      "sourcePts": 542720,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1061,
+      "sourcePts": 543232,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1062,
+      "sourcePts": 543744,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1063,
+      "sourcePts": 544256,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1064,
+      "sourcePts": 544768,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1065,
+      "sourcePts": 545280,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1066,
+      "sourcePts": 545792,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1067,
+      "sourcePts": 546304,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1068,
+      "sourcePts": 546816,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1069,
+      "sourcePts": 547328,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1070,
+      "sourcePts": 547840,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1071,
+      "sourcePts": 548352,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1072,
+      "sourcePts": 548864,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1073,
+      "sourcePts": 549376,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1074,
+      "sourcePts": 549888,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1075,
+      "sourcePts": 550400,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1076,
+      "sourcePts": 550912,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1077,
+      "sourcePts": 551424,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1078,
+      "sourcePts": 551936,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1079,
+      "sourcePts": 552448,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1080,
+      "sourcePts": 552960,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1081,
+      "sourcePts": 553472,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1082,
+      "sourcePts": 553984,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1083,
+      "sourcePts": 554496,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1084,
+      "sourcePts": 555008,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1085,
+      "sourcePts": 555520,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1086,
+      "sourcePts": 556032,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1087,
+      "sourcePts": 556544,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1088,
+      "sourcePts": 557056,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1089,
+      "sourcePts": 557568,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1090,
+      "sourcePts": 558080,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1091,
+      "sourcePts": 558592,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1092,
+      "sourcePts": 559104,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1093,
+      "sourcePts": 559616,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1094,
+      "sourcePts": 560128,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1095,
+      "sourcePts": 560640,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1096,
+      "sourcePts": 561152,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1097,
+      "sourcePts": 561664,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1098,
+      "sourcePts": 562176,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1099,
+      "sourcePts": 562688,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1100,
+      "sourcePts": 563200,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1101,
+      "sourcePts": 563712,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1102,
+      "sourcePts": 564224,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1103,
+      "sourcePts": 564736,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1104,
+      "sourcePts": 565248,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1105,
+      "sourcePts": 565760,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1106,
+      "sourcePts": 566272,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1107,
+      "sourcePts": 566784,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1108,
+      "sourcePts": 567296,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1109,
+      "sourcePts": 567808,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1110,
+      "sourcePts": 568320,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1111,
+      "sourcePts": 568832,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1112,
+      "sourcePts": 569344,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1113,
+      "sourcePts": 569856,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1114,
+      "sourcePts": 570368,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1115,
+      "sourcePts": 570880,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1116,
+      "sourcePts": 571392,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1117,
+      "sourcePts": 571904,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1118,
+      "sourcePts": 572416,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1119,
+      "sourcePts": 572928,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1120,
+      "sourcePts": 573440,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1121,
+      "sourcePts": 573952,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1122,
+      "sourcePts": 574464,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1123,
+      "sourcePts": 574976,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1124,
+      "sourcePts": 575488,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1125,
+      "sourcePts": 576000,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1126,
+      "sourcePts": 576512,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1127,
+      "sourcePts": 577024,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1128,
+      "sourcePts": 577536,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1129,
+      "sourcePts": 578048,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1130,
+      "sourcePts": 578560,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1131,
+      "sourcePts": 579072,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1132,
+      "sourcePts": 579584,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1133,
+      "sourcePts": 580096,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1134,
+      "sourcePts": 580608,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1135,
+      "sourcePts": 581120,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1136,
+      "sourcePts": 581632,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1137,
+      "sourcePts": 582144,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1138,
+      "sourcePts": 582656,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1139,
+      "sourcePts": 583168,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1140,
+      "sourcePts": 583680,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1141,
+      "sourcePts": 584192,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1142,
+      "sourcePts": 584704,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1143,
+      "sourcePts": 585216,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1144,
+      "sourcePts": 585728,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1145,
+      "sourcePts": 586240,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1146,
+      "sourcePts": 586752,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1147,
+      "sourcePts": 587264,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1148,
+      "sourcePts": 587776,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1149,
+      "sourcePts": 588288,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1150,
+      "sourcePts": 588800,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1151,
+      "sourcePts": 589312,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1152,
+      "sourcePts": 589824,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1153,
+      "sourcePts": 590336,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1154,
+      "sourcePts": 590848,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1155,
+      "sourcePts": 591360,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1156,
+      "sourcePts": 591872,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1157,
+      "sourcePts": 592384,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1158,
+      "sourcePts": 592896,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1159,
+      "sourcePts": 593408,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1160,
+      "sourcePts": 593920,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1161,
+      "sourcePts": 594432,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1162,
+      "sourcePts": 594944,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1163,
+      "sourcePts": 595456,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1164,
+      "sourcePts": 595968,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1165,
+      "sourcePts": 596480,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1166,
+      "sourcePts": 596992,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1167,
+      "sourcePts": 597504,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1168,
+      "sourcePts": 598016,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1169,
+      "sourcePts": 598528,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1170,
+      "sourcePts": 599040,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1171,
+      "sourcePts": 599552,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1172,
+      "sourcePts": 600064,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1173,
+      "sourcePts": 600576,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1174,
+      "sourcePts": 601088,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1175,
+      "sourcePts": 601600,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1176,
+      "sourcePts": 602112,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1177,
+      "sourcePts": 602624,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1178,
+      "sourcePts": 603136,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1179,
+      "sourcePts": 603648,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1180,
+      "sourcePts": 604160,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1181,
+      "sourcePts": 604672,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1182,
+      "sourcePts": 605184,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1183,
+      "sourcePts": 605696,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1184,
+      "sourcePts": 606208,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1185,
+      "sourcePts": 606720,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1186,
+      "sourcePts": 607232,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1187,
+      "sourcePts": 607744,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1188,
+      "sourcePts": 608256,
+      "isSelectedSample": true
+    },
+    {
+      "sourceFrameIndex": 1189,
+      "sourcePts": 608768,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1190,
+      "sourcePts": 609280,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1191,
+      "sourcePts": 609792,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1192,
+      "sourcePts": 610304,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1193,
+      "sourcePts": 610816,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1194,
+      "sourcePts": 611328,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1195,
+      "sourcePts": 611840,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1196,
+      "sourcePts": 612352,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1197,
+      "sourcePts": 612864,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1198,
+      "sourcePts": 613376,
+      "isSelectedSample": false
+    },
+    {
+      "sourceFrameIndex": 1199,
+      "sourcePts": 613888,
+      "isSelectedSample": false
+    }
+  ],
+  "scope": "Complete declared decoded-frame interval metadata, not proof of human review. Last selected sample is not the interval endpoint. No FPS-derived timestamps or EOF duration inferred.",
+  "originalMediaFile": "original-media.mp4",
+  "originalMediaSha256": "66f807b947e6e7e4e9e1538f6d11018b6bba05691ef7c8a868a6a5e2c49b567d",
+  "browserPlaybackMapping": "Native browser currentTime is its own media timeline. It is not an original PTS readout, frame-accurate seek or proof of interval review; use the exact source-frame/PTS mapping. Browser audio/orientation may differ from noautorotate video-only extraction."
+}

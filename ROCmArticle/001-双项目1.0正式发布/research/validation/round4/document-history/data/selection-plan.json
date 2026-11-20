@@ -1,0 +1,24 @@
+{
+  "declaredAtUtc": "2026-11-18T05:53:08.041168+00:00",
+  "repository": "https://github.com/google-research-datasets/hiertext",
+  "revision": "70b6620b2b112597d8219e11eee9773a1403827c",
+  "archiveUrl": "https://open-images-dataset.s3.amazonaws.com/ocr/test.tgz",
+  "annotationUrl": "https://raw.githubusercontent.com/google-research-datasets/hiertext/70b6620b2b112597d8219e11eee9773a1403827c/gt/test.jsonl.gz",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution": "HierText: Long, Qin, Panteleev, Bissacco, Fujii, Raptis; Google Research; original images selected from Open Images; retain official dataset license and source attribution",
+  "rule": {
+    "split": "official test",
+    "images": "first two JPEG file members in official test.tgz archive order; no replacements",
+    "lineOrder": "image archive order, then official paragraph array and line array order",
+    "lineBudget": 24,
+    "filters": "legible=true, handwritten=false, vertical=false; nonempty 1..100 codepoints, each U+0020..U+007E; line top-edge absolute atan2 angle <=5 degrees; bounding rectangle within image, positive dimensions",
+    "crop": "floor minima / ceil maxima of official line vertices, axis-aligned RGB crop, no padding/rotation/rectification",
+    "metrics": "exact raw official line text vs raw CTC text; case/whitespace/punctuation retained; aggregate codepoint Levenshtein CER; no Unicode normalization or failure removal",
+    "candidateBudget": 1,
+    "compressedDownloadBudget": 67108864,
+    "scope": "Real HierText public scene text subset, oracle official line geometry; not document field quality, text detection or independent product acceptance"
+  },
+  "modelManifestSha256": "0785851f0087c0d3398834069fdc5c5c0ac7a1302f268a35023a6227fcc487e8",
+  "scriptSha256": "267eb5c42c720f0997f5fac71c9160501251884c4e1b538cd4a4db5e4a6c940d"
+}

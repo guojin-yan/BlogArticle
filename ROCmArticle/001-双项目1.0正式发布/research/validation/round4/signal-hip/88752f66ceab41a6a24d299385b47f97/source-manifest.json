@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "dataset": "Condition monitoring of hydraulic systems",
+  "uciId": 447,
+  "doi": "10.24432/C5CW21",
+  "sourceUrl": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+  "metadataUrl": "https://archive.ics.uci.edu/api/dataset?id=447",
+  "archiveUrl": "https://archive.ics.uci.edu/static/public/447/condition+monitoring+of+hydraulic+systems.zip",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "archiveSha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+  "hashVerification": "matched caller-supplied checksum; not publisher authentication",
+  "sourcePageSha256": "b9c5c108a3f3cdbeae94a2d9a0483625e87f78fffcfdac25e6ad7e36a69bc456",
+  "metadataSha256": "7c9ddaacebd5be9ad26cdecc49a4a1161408be213a1a25c0a61ca108f84f750e",
+  "selectedMember": "PS1.txt",
+  "cycleOneBased": 1,
+  "sourceRowSha256": "2557d6d36d1ae9dbbef730d4ce4637b1bfdedaf4c9373872e802e49be1d06c87",
+  "quantity": "Pressure",
+  "channel": "PS1",
+  "unit": "bar",
+  "sampleRateHz": 100,
+  "sampleCount": 6000,
+  "timeSupportSeconds": [
+    0,
+    60
+  ],
+  "timeOrigin": "relative to selected cycle; absolute acquisition time unavailable",
+  "scaling": "identity; preserve original numeric value strings; no resampling or concatenation",
+  "sourceProfile": {
+    "member": "profile.txt",
+    "cycleOneBased": 1,
+    "rowSha256": "c4bd1bdcc6b4a76644eb0b6d0abd46ca2e4feb04eebc13d67a8ea18ef18d6ef7",
+    "rawValues": [
+      3,
+      100,
+      0,
+      130,
+      1
+    ],
+    "columns": [
+      "cooler condition percent",
+      "valve condition percent",
+      "internal pump leakage code",
+      "accumulator pressure bar",
+      "stable flag"
+    ]
+  },
+  "signalFile": "signal.csv",
+  "signalSha256": "fbfbd5e672cce7056922a014385ac6ca4ce2a38b63efc43a336547d33a11bd85",
+  "configSha256": "45c34f1fbab981ec8e4ce12d188041b9c88ded1054af232ec5ccd63732195f17",
+  "scriptSha256": "6ac762559fd0e61013770dd7b9ffcb080e39aae0066ce5450faa47a2b46ce4f8",
+  "scope": "One real hydraulic test-rig pressure/power cycle. Profile is retained as source annotation, not predicted by frequency rules. Example 1..20 Hz/5-unit band is not calibrated or domain accepted; no diagnosis accuracy, bearing vibration claim, independent model acceptance or threshold tuning."
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "images": 12,
+  "byteIdenticalMasks": true,
+  "scope": "Real VisA images, fixed grayscale rule, no anomaly-model or defect-quality claim."
+}

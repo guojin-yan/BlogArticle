@@ -1,0 +1,9 @@
+{
+  "name": "均匀表面 · 灰度与局部对比",
+  "dark": 80,
+  "bright": 200,
+  "localRadius": 3,
+  "localContrast": 0,
+  "minArea": 8,
+  "region": null
+}

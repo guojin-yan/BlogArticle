@@ -1,0 +1,4 @@
+Condition monitoring of hydraulic systems. Helwig, Nikolai; Pignanelli, Eliseo; Schütze, Andreas. UCI Machine Learning Repository (2015). DOI: 10.24432/C5CW21.
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Source: https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems
+Change: select one sensor cycle; add relative sample timestamps and CSV header; no value scaling.

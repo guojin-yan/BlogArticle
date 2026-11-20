@@ -1,0 +1,110 @@
+[
+  {
+    "id": "pcb1-normal-0011",
+    "inputSha256": "09b58a87f2380592be9f72ae3b0f8060adefb3d2836ec974ffce4ef662d6c252",
+    "cpuMaskSha256": "e276e46914a349066ee9ef4307eba9b88425788f0ff2e03be315f9268c09e039",
+    "hipMaskSha256": "e276e46914a349066ee9ef4307eba9b88425788f0ff2e03be315f9268c09e039",
+    "officialAnomaly": false,
+    "machineDecision": "Defect",
+    "defectPixels": 219457
+  },
+  {
+    "id": "pcb1-normal-0013",
+    "inputSha256": "3a603c10dc9aa30d251def50c53379de97495534b6bb5ce180bcca2ddaea6cee",
+    "cpuMaskSha256": "c73892228c377cd992598fe623d20602310724e06b2803f77a96cdaa2e1444a7",
+    "hipMaskSha256": "c73892228c377cd992598fe623d20602310724e06b2803f77a96cdaa2e1444a7",
+    "officialAnomaly": false,
+    "machineDecision": "Defect",
+    "defectPixels": 185137
+  },
+  {
+    "id": "pcb1-normal-0016",
+    "inputSha256": "156eec1fd28d20f495f31a23375de771f35bd0ae90ddf079cdf32e437ad91a97",
+    "cpuMaskSha256": "ef687029a39a92b39f80e70cf843f02ee41bb59a945e4aeede3e2dfab33e9121",
+    "hipMaskSha256": "ef687029a39a92b39f80e70cf843f02ee41bb59a945e4aeede3e2dfab33e9121",
+    "officialAnomaly": false,
+    "machineDecision": "Defect",
+    "defectPixels": 193526
+  },
+  {
+    "id": "pcb1-normal-0024",
+    "inputSha256": "0bab2e052295e644699b0af348a8621a3d1596e1c81a0b5ae6d7d8011490ecb5",
+    "cpuMaskSha256": "77a1be07e6da94c0fb27dba6c93da6b5cde862123426b3ecb9475c93ffa89dd3",
+    "hipMaskSha256": "77a1be07e6da94c0fb27dba6c93da6b5cde862123426b3ecb9475c93ffa89dd3",
+    "officialAnomaly": false,
+    "machineDecision": "Defect",
+    "defectPixels": 199656
+  },
+  {
+    "id": "pcb1-normal-0026",
+    "inputSha256": "887725103a469a5ba52178c40f185a3103a6ebeb4bd81d6f25e133fd2d0ff3cc",
+    "cpuMaskSha256": "db3bdbd2697a2b4b10bb5d057a8e711197a02089a911ea98081e9129cb652a93",
+    "hipMaskSha256": "db3bdbd2697a2b4b10bb5d057a8e711197a02089a911ea98081e9129cb652a93",
+    "officialAnomaly": false,
+    "machineDecision": "Defect",
+    "defectPixels": 205696
+  },
+  {
+    "id": "pcb1-normal-0027",
+    "inputSha256": "a7f9cde1448e96e412c5091ce192a843b464b087d9bc3d2480a3c5c2fa7ddd24",
+    "cpuMaskSha256": "47edf7bd70342da23f56228e76b8624a2aa4f7593f2c6e06160ee7643c1c9c4b",
+    "hipMaskSha256": "47edf7bd70342da23f56228e76b8624a2aa4f7593f2c6e06160ee7643c1c9c4b",
+    "officialAnomaly": false,
+    "machineDecision": "Defect",
+    "defectPixels": 218022
+  },
+  {
+    "id": "pcb1-anomaly-000",
+    "inputSha256": "e67db34e1045d7b8f01173a2f3e0138a6d89700e8a83d1426b6de0464e1e5e9d",
+    "cpuMaskSha256": "66376c177ba7c91c34546a53c8ca72f5c02f21fe83d4490cf7441a0c6ad4a87d",
+    "hipMaskSha256": "66376c177ba7c91c34546a53c8ca72f5c02f21fe83d4490cf7441a0c6ad4a87d",
+    "officialAnomaly": true,
+    "machineDecision": "Defect",
+    "defectPixels": 200992
+  },
+  {
+    "id": "pcb1-anomaly-001",
+    "inputSha256": "4e255d79adde14e83171896fe571113aa632de1202a32b263bd8bd6ba04c105c",
+    "cpuMaskSha256": "0b0052acb1b7744008c49975be21a79af5366da97751a08451831048b2cd8c51",
+    "hipMaskSha256": "0b0052acb1b7744008c49975be21a79af5366da97751a08451831048b2cd8c51",
+    "officialAnomaly": true,
+    "machineDecision": "Defect",
+    "defectPixels": 202999
+  },
+  {
+    "id": "pcb1-anomaly-002",
+    "inputSha256": "9f297d7f791bcf17ec97f3275ff3bd2a1ab9988dc5d57fc3767eaf2741b92a98",
+    "cpuMaskSha256": "dd3b0e5bdc9433e4eca69e00759a1a6a0f454e322a05a4ced84cee894b4d63a8",
+    "hipMaskSha256": "dd3b0e5bdc9433e4eca69e00759a1a6a0f454e322a05a4ced84cee894b4d63a8",
+    "officialAnomaly": true,
+    "machineDecision": "Defect",
+    "defectPixels": 220071
+  },
+  {
+    "id": "pcb1-anomaly-003",
+    "inputSha256": "a5cab41d212f58f5e8265a60273c6b52667299d0c97bdba66b29e9298296cb84",
+    "cpuMaskSha256": "fb32a08a84ede598bb9446fb4f69a0c4a9e4498d8e2fc0b92d1ba1f1a495451e",
+    "hipMaskSha256": "fb32a08a84ede598bb9446fb4f69a0c4a9e4498d8e2fc0b92d1ba1f1a495451e",
+    "officialAnomaly": true,
+    "machineDecision": "Defect",
+    "defectPixels": 277469
+  },
+  {
+    "id": "pcb1-anomaly-004",
+    "inputSha256": "cf562b8b172b50417487d0640885c1d89b930492b4524b68c9fd4cc003dee643",
+    "cpuMaskSha256": "e28743d96db7a450842d6d192f0c3259c444055bf77281353e0e2fe3df619a67",
+    "hipMaskSha256": "e28743d96db7a450842d6d192f0c3259c444055bf77281353e0e2fe3df619a67",
+    "officialAnomaly": true,
+    "machineDecision": "Defect",
+    "defectPixels": 265189
+  },
+  {
+    "id": "pcb1-anomaly-005",
+    "inputSha256": "ec34541be729af29a287bde12d4e3955cf3f83c734baea8a9505a7b801ce54e2",
+    "cpuMaskSha256": "c4a3492b8d0eead9e36ef76e313001030c353832f3eae6dea018088848034cbe",
+    "hipMaskSha256": "c4a3492b8d0eead9e36ef76e313001030c353832f3eae6dea018088848034cbe",
+    "officialAnomaly": true,
+    "machineDecision": "Defect",
+    "defectPixels": 263018
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-21T00:59:09.1343935+08:00",
+  "sourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "os": {
+    "Caption": "Microsoft Windows 11 专业版",
+    "Version": "10.0.26300",
+    "BuildNumber": "26300"
+  },
+  "gpu": [
+    {
+      "Name": "OrayIddDriver Device",
+      "DriverVersion": "16.54.44.444"
+    },
+    {
+      "Name": "AMD Radeon PRO W7900",
+      "DriverVersion": "32.0.21030.2001"
+    }
+  ],
+  "dotnet": "11.0.100",
+  "execution": "Reused read-only round3 snapshot and Release binaries; no build/tests/benchmark rerun in round4"
+}

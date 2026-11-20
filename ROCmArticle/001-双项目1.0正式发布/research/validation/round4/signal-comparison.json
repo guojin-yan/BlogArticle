@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "windows": 45,
+  "psdValues": 5805,
+  "maxAbs": 2.0453294865774296e-05,
+  "scope": "Unmodified real UCI PS1 cycle 1, 100 Hz, bar; illustrative rule, not fault diagnosis acceptance."
+}

@@ -1,0 +1,32 @@
+
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+rocBLAS error from hip error code: 'hipErrorInvalidKernelFile':218
+MIOpen: Error [EvaluateInvokers] jyppx:C:/home/runner/_work/rockrel/rockrel/rocm-libraries/projects/miopen/src/gemm_v2.cpp:1360: rocBlas error encountered
+Fatal error.
+0xC0000005
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeMethods.ProgramCompile(IntPtr, IntPtr, IntPtr)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram+<>c__DisplayClass12_0.<Compile>b__0()
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]](JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLockTarget[], Int32, System.Func`1<Int32>)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]](JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLockTarget[], Int32, System.Func`1<Int32>)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]](JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLockTarget[], Int32, System.Func`1<Int32>)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.Enter[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]](JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLockTarget[], Int32, System.Func`1<Int32>)
+   at JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLock.With[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]](System.Collections.Generic.IReadOnlyList`1<JYPPX.ROCm.MIGraphXSharp.Interop.NativeResourceLockTarget>, System.Func`1<Int32>)
+   at JYPPX.ROCm.MIGraphXSharp.MIGraphXProgram.Compile(JYPPX.ROCm.MIGraphXSharp.MIGraphXTarget, JYPPX.ROCm.MIGraphXSharp.MIGraphXCompileOptions)
+   at Documents.Core.CtcSession..ctor(System.String)
+   at Documents.Core.LineBatchRecognition+<>c__DisplayClass0_0.<Run>b__0()
+   at Documents.Core.LineBatchRecognition.Process(System.String, System.String, System.Func`1<Documents.Core.ILineRecognizer>)
+   at Documents.Core.LineBatchRecognition.Run(System.String, System.String, System.String)
+   at Program.<Main>$(System.String[])
