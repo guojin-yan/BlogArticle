@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-11-21T12:44:39.802197+08:00",
+  "file": "screenshots/01-powershell-verify-frame.png",
+  "api": "Win32 PrintWindow (flags=2), read-only full window bitmap",
+  "windowTitle": "ROCm C# - verify - actual PowerShell execution",
+  "processId": 61428,
+  "windowHandle": 15469858,
+  "width": 1073,
+  "height": 711,
+  "format": "PNG",
+  "sha256": "7525ed0216ee29b766bc1093483446d2086abe39d7e57dc7b2532bdbad52fbd5",
+  "bytes": 22920,
+  "edited": false,
+  "terminalInputAutomated": false,
+  "source": "verify/command.json",
+  "scope": "Actual PowerShell/ConsoleHost window including native title bar; no log replay, HTML render, UI reconstruction, crop or annotation."
+}

@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-21T12:47:50.523881+08:00",
+  "realConsoleHostRuns": 2,
+  "rawFullWindowCaptures": 2,
+  "terminalKeyboardOrMouseInput": false,
+  "oldLogReplay": false,
+  "editedScreenshots": false,
+  "vectorAddElements": 65539,
+  "vectorAddRepetitions": 3,
+  "affineComparedElementsPerRun": 4096,
+  "numericFailedElements": 0,
+  "actualTraceKernel": "mul_add_relu_kernel",
+  "articleContainsLogViewerScreenshot": false,
+  "readerLinksAndPaths": "PASS",
+  "historicalHashesVerified": {
+    "round2": 146,
+    "round3": 373,
+    "round4": 261,
+    "round5": 209,
+    "round6": 30,
+    "round7": 101
+  },
+  "newEnvironmentPerformance264OrFourCaseRerun": false
+}

@@ -1,0 +1,27 @@
+{
+  "started": "2026-11-21T12:43:23.3421339+08:00",
+  "finished": "2026-11-21T12:43:27.2417204+08:00",
+  "mode": "trace",
+  "exitCode": 0,
+  "processId": 74280,
+  "hostName": "ConsoleHost",
+  "powershell": "7.6.9",
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "./examples/run-windows.ps1",
+    "-HipRoot",
+    "D:\\AMD\\ROCm\\10.1.0\\HIP",
+    "-Architecture",
+    "gfx1100",
+    "-Mode",
+    "trace",
+    "-OutputPath",
+    "./research/validation/round8/trace/result.json"
+  ],
+  "cwd": "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布",
+  "runnerSha256": "e0d25e7c5850c25eea83c639b2701dcc1b31dc7cce5d37f993f1bb217a79cb7b",
+  "logSha256": "0fb6f7d2c8b0616982bf63f06e319424dbcea7f5449a52e89f5a4116ded9dadd",
+  "transcriptSha256": "a638f0d8893a933a35d8fdaaa9818205ed926d9e0980697b37ac18670a2c9cbd"
+}

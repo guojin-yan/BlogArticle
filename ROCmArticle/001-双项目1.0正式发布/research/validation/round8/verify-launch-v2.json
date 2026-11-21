@@ -1,0 +1,7 @@
+{
+  "Id": 48028,
+  "Started": "2026-11-21T12:39:49.5852855+08:00",
+  "Executable": "C:/Windows/System32/conhost.exe",
+  "Arguments": "\"C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NoExit -File \"E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\run-round8-terminal.ps1\" -Mode verify -HipRoot \"D:\\AMD\\ROCm\\10.1.0\\HIP\"",
+  "ReasonForRetry": "Initial launch named a non-existent PowerShell install path; no model run occurred."
+}

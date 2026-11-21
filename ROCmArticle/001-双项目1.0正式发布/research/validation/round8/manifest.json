@@ -1,0 +1,208 @@
+{
+  "createdAt": "2026-11-21T12:47:50.526390+08:00",
+  "revision": "v11",
+  "baselineCommit": "3126902",
+  "scope": "Actual PowerShell verification and trace window captures replacing article log-view screenshots.",
+  "files": [
+    {
+      "path": "01-事实与来源.md",
+      "bytes": 26287,
+      "sha256": "5c4736488d96d9b2e0c7ecfdee696ee9b7c9969ddc29e92437703b3cf9527ba6"
+    },
+    {
+      "path": "02-配图方案.md",
+      "bytes": 5856,
+      "sha256": "dc14eae0a5b3b4d3fa5c627cb035316727b0b0e7f9e272d102ee16f194e9018e"
+    },
+    {
+      "path": "03-正文.md",
+      "bytes": 31154,
+      "sha256": "930bd49402cc4723ff85194a37bbb58b20794be969c5af9415bd67aed8e22f04"
+    },
+    {
+      "path": "03-正文预览.html",
+      "bytes": 41292,
+      "sha256": "65bfc69c5cbf00aa44e2b919191ef82ebac425f7037a44c51ce087375c435a76"
+    },
+    {
+      "path": "04-编辑记录.md",
+      "bytes": 22258,
+      "sha256": "813b5a1636021fc44efbb406995bdb1c17782901dc2244461c04e129bc071832"
+    },
+    {
+      "path": "05-上手与验证.md",
+      "bytes": 33928,
+      "sha256": "543972823c9354ebb24e75584b4beabe27ee8fd2a7cca211f2a56cb177e54908"
+    },
+    {
+      "path": "research/build-issue2-audit.py",
+      "bytes": 15142,
+      "sha256": "111ffd570bb67d79f699b26fc08493e53f539a6d627bce5f211284e2ec18c730"
+    },
+    {
+      "path": "research/build-preview.py",
+      "bytes": 5320,
+      "sha256": "ae44376591fa604c48286426289f620c9823192512a2a6972dccfaa1a49f6c70"
+    },
+    {
+      "path": "research/capture-round8-window.py",
+      "bytes": 4061,
+      "sha256": "c0f8584f2202bef69cf3a8eb20d86b11a6a5aaf0adb0c92875d2ce7c6d8d422f"
+    },
+    {
+      "path": "research/check-round8.py",
+      "bytes": 6909,
+      "sha256": "ad47d02d08e83011fbfcfe8828de787be615a28fc3043bdb7ad22e12912624b2"
+    },
+    {
+      "path": "research/issue-2-当前验收对照.md",
+      "bytes": 14227,
+      "sha256": "04a06626b87d4ff7ff1f988e78e1e6987d4a3e531df79e3bc85fa63f7b56daa5"
+    },
+    {
+      "path": "research/run-round8-terminal.ps1",
+      "bytes": 3530,
+      "sha256": "e0d25e7c5850c25eea83c639b2701dcc1b31dc7cce5d37f993f1bb217a79cb7b"
+    },
+    {
+      "path": "research/validation/round8/.gitattributes",
+      "bytes": 21,
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342"
+    },
+    {
+      "path": "research/validation/round8/final-checks.json",
+      "bytes": 668,
+      "sha256": "34235f64d9b47141cc6a4cc84b28483467e2bb758c44a56a411990530452b342"
+    },
+    {
+      "path": "research/validation/round8/issue-2-requirements.json",
+      "bytes": 22885,
+      "sha256": "58be2b041e042042f5ced243cb2776100dde4bf65b93769e0246272d08249498"
+    },
+    {
+      "path": "research/validation/round8/README.md",
+      "bytes": 3696,
+      "sha256": "6f381d506d5d59721261818fdd391791b9bfbc0386937c33811c8e14b8d99606"
+    },
+    {
+      "path": "research/validation/round8/screenshots/01-powershell-verify-frame.png",
+      "bytes": 22920,
+      "sha256": "7525ed0216ee29b766bc1093483446d2086abe39d7e57dc7b2532bdbad52fbd5"
+    },
+    {
+      "path": "research/validation/round8/screenshots/01-powershell-verify-window.png",
+      "bytes": 22920,
+      "sha256": "7525ed0216ee29b766bc1093483446d2086abe39d7e57dc7b2532bdbad52fbd5"
+    },
+    {
+      "path": "research/validation/round8/screenshots/01-powershell-verify.png",
+      "bytes": 19383,
+      "sha256": "76a1db1ea90320225c85469b74555162a7ce28c10695910629beba800e766ba1"
+    },
+    {
+      "path": "research/validation/round8/screenshots/02-powershell-trace-frame.png",
+      "bytes": 29083,
+      "sha256": "bb3a3513874b11a3b9bc4b6eecef44c25e5136213d9d84de1f37432554cd8e60"
+    },
+    {
+      "path": "research/validation/round8/screenshots/manifest.json",
+      "bytes": 1774,
+      "sha256": "b25d1ef9bae496b91d9ad05d2cddfbfd0281f8005a4ad18af4bb07170a955fc0"
+    },
+    {
+      "path": "research/validation/round8/screenshots/trace-capture.json",
+      "bytes": 698,
+      "sha256": "bd8e1bc923d150059e52db2bd5e0681712974685e8044412449b33ff1c41eaf4"
+    },
+    {
+      "path": "research/validation/round8/screenshots/verify-capture.json",
+      "bytes": 701,
+      "sha256": "3a846509caac0b169c106b41dd985950b3b90a75c18afe0912f72e3d3d45216d"
+    },
+    {
+      "path": "research/validation/round8/trace/command.json",
+      "bytes": 854,
+      "sha256": "9570aae59713eee45e499aff605aab04ac40f07e65e20e43baf2e73321042d91"
+    },
+    {
+      "path": "research/validation/round8/trace/hipInfo.txt",
+      "bytes": 2717,
+      "sha256": "7f5c440067df65765b86f103c60588dccd0ddefe984adcbb3a4f5db8bc95afba"
+    },
+    {
+      "path": "research/validation/round8/trace/result.json",
+      "bytes": 6991,
+      "sha256": "e3817d78623bfc9add87df9976595ca194e78af4580f231aa2d09d913a043390"
+    },
+    {
+      "path": "research/validation/round8/trace/stdout-stderr.txt",
+      "bytes": 1246,
+      "sha256": "0fb6f7d2c8b0616982bf63f06e319424dbcea7f5449a52e89f5a4116ded9dadd"
+    },
+    {
+      "path": "research/validation/round8/trace/transcript.txt",
+      "bytes": 2661,
+      "sha256": "a638f0d8893a933a35d8fdaaa9818205ed926d9e0980697b37ac18670a2c9cbd"
+    },
+    {
+      "path": "research/validation/round8/trace/window-identity.json",
+      "bytes": 294,
+      "sha256": "0a437fabcb4e8b27af93a5c27676fbdf856dc75cffc52956e7da75e55edf7b87"
+    },
+    {
+      "path": "research/validation/round8/trace-launch.json",
+      "bytes": 438,
+      "sha256": "8466334849161691c9ef322892cb045e482775b0a14ed8a1a77f53cdc07292eb"
+    },
+    {
+      "path": "research/validation/round8/verify/command.json",
+      "bytes": 857,
+      "sha256": "2cd8d1f0e92d3f5317853812491a2e84cfd5d55595671e03a76749a3920def61"
+    },
+    {
+      "path": "research/validation/round8/verify/hipInfo.txt",
+      "bytes": 2717,
+      "sha256": "7f5c440067df65765b86f103c60588dccd0ddefe984adcbb3a4f5db8bc95afba"
+    },
+    {
+      "path": "research/validation/round8/verify/result.json",
+      "bytes": 6706,
+      "sha256": "8ceba15e16cba323737880efb696125532557865455188e34a0a9e1d53a9826b"
+    },
+    {
+      "path": "research/validation/round8/verify/stdout-stderr.txt",
+      "bytes": 691,
+      "sha256": "c40555312e496c18bfcc52f3c703489523d531db825ecddacaaa8978b79af551"
+    },
+    {
+      "path": "research/validation/round8/verify/transcript.txt",
+      "bytes": 2109,
+      "sha256": "def7d499377e82fefa648a881d3e5129545c1c67b7781f1fc01aa23f8e6ed8a0"
+    },
+    {
+      "path": "research/validation/round8/verify/window-identity.json",
+      "bytes": 295,
+      "sha256": "a7736f6db3f2d40bf50eebc6470f91d7d53b242e9cbd21e4c19096b71d4f5300"
+    },
+    {
+      "path": "research/validation/round8/verify-launch-v2.json",
+      "bytes": 547,
+      "sha256": "78e5a2265ace269f084dbb541367cdf84541209093a9a6e04258d06fa4794d92"
+    },
+    {
+      "path": "research/validation/round8/verify-launch-v3.json",
+      "bytes": 439,
+      "sha256": "c9be90cdb7afffb7fa4b98e84ad4fb7b9d584764cd0abaf17eba1125963b113a"
+    },
+    {
+      "path": "research/validation/round8/verify-launch.json",
+      "bytes": 98,
+      "sha256": "41e8c839adf4dd76cfaa05b245269afd79ee8410e171c9e6d7987ddffcbb9ff5"
+    },
+    {
+      "path": "../README.md",
+      "bytes": 3169,
+      "sha256": "bc34f65cb3f14acaf2b1793cba942162b0aaaa74ad6d2ed14ca5d76ddb63afa2"
+    }
+  ]
+}

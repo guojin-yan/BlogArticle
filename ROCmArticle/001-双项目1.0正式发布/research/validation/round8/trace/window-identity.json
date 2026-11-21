@@ -1,0 +1,9 @@
+{
+  "Id": 74280,
+  "ProcessName": "pwsh",
+  "Path": "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "MainWindowTitle": "ROCm C# - trace - actual PowerShell execution",
+  "MainWindowHandle": {
+    "value": 15340148
+  }
+}

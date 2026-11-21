@@ -1,0 +1,44 @@
+**********************
+PowerShell transcript start
+Start time: 20261121123950
+Username: JYPPX\guoji
+RunAs User: JYPPX\guoji
+Configuration Name: 
+Machine: JYPPX (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoLogo -NoProfile -NoExit -File E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\run-round8-terminal.ps1 -Mode verify -HipRoot D:\AMD\ROCm\10.1.0\HIP
+Process ID: 61428
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Actual PowerShell 7.6.9 run | 2026-11-21T12:39:50.6765274+08:00
+Working directory: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布
+Name:                             AMD Radeon PRO W7900
+gcnArchName:                      gfx1100
+Running: pwsh -NoProfile -File ./examples/run-windows.ps1 -HipRoot D:\AMD\ROCm\10.1.0\HIP -Architecture gfx1100 -Mode verify -OutputPath ./research/validation/round8/verify/result.json
+
+HIP Runtime: 7.16.26385
+HIP Driver:  7.16.26385
+0: AMD Radeon PRO W7900
+Device: 0: AMD Radeon PRO W7900
+HIP Runtime: 7.16.26385
+Kernel: VectorAdd; arch=gfx1100; blocks=257; threads=256
+Code SHA-256: 7F07B97D28C65DDD23E5D0E4193D91130030F2343C8F182CA35E880E58A18B96
+PASS: length=65539; repetitions=3; max_abs_error=0; atol=1E-06
+Evidence: HIPRTC compile, HIP kernel launch, device synchronization, D2H, CPU comparison.
+No profiler trace or performance comparison was collected.
+1, 2, 3, 4
+PASS: affine-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\research\validation\round8\verify\result.json
+Process exit code: 0
+Execution finished; this console is kept open for an unedited window capture.
+**********************
+PowerShell transcript end
+End time: 20261121124013
+**********************

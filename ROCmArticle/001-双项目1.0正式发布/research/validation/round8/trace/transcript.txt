@@ -1,0 +1,50 @@
+**********************
+PowerShell transcript start
+Start time: 20261121124323
+Username: JYPPX\guoji
+RunAs User: JYPPX\guoji
+Configuration Name: 
+Machine: JYPPX (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\guoji\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoLogo -NoProfile -NoExit -File E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\run-round8-terminal.ps1 -Mode trace -HipRoot D:\AMD\ROCm\10.1.0\HIP
+Process ID: 74280
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Actual PowerShell 7.6.9 run | 2026-11-21T12:43:23.3421339+08:00
+Working directory: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布
+Name:                             AMD Radeon PRO W7900
+gcnArchName:                      gfx1100
+Running: pwsh -NoProfile -File ./examples/run-windows.ps1 -HipRoot D:\AMD\ROCm\10.1.0\HIP -Architecture gfx1100 -Mode trace -OutputPath ./research/validation/round8/trace/result.json
+
+BEGIN_COMPILED_GPU_PROGRAM
+module: "main"
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {32768}, {1},id=main:scratch] -> int8_type, {32768}, {1}
+@2 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::code_object[code_object=4720,symbol_name=mul_add_relu_kernel,global=2048,local=1024,](@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::copy_from_gpu(@6) -> float_type, {64, 64}, {64, 1}
+@8 = hip::sync_stream(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+
+BEGIN_MODEL_EXECUTION
+END_MODEL_EXECUTION
+Trace operations: hip::hip_allocate_memory[shape=int8_type, {32768}, {1},id=main:scratch], @param:input, hip::copy_to_gpu, gpu::code_object[code_object=4720,symbol_name=mul_add_relu_kernel,global=2048,local=1024,], hip::copy_from_gpu, hip::sync_stream
+PASS: affine-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\research\validation\round8\trace\result.json
+Process exit code: 0
+Execution finished; this console is kept open for an unedited window capture.
+**********************
+PowerShell transcript end
+End time: 20261121124327
+**********************

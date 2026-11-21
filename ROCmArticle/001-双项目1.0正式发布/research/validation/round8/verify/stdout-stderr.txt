@@ -1,0 +1,13 @@
+HIP Runtime: 7.16.26385
+HIP Driver:  7.16.26385
+0: AMD Radeon PRO W7900
+Device: 0: AMD Radeon PRO W7900
+HIP Runtime: 7.16.26385
+Kernel: VectorAdd; arch=gfx1100; blocks=257; threads=256
+Code SHA-256: 7F07B97D28C65DDD23E5D0E4193D91130030F2343C8F182CA35E880E58A18B96
+PASS: length=65539; repetitions=3; max_abs_error=0; atol=1E-06
+Evidence: HIPRTC compile, HIP kernel launch, device synchronization, D2H, CPU comparison.
+No profiler trace or performance comparison was collected.
+1, 2, 3, 4
+PASS: affine-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\research\validation\round8\verify\result.json

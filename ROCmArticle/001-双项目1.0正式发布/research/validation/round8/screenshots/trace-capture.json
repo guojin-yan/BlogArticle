@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-11-21T12:44:39.960373+08:00",
+  "file": "screenshots/02-powershell-trace-frame.png",
+  "api": "Win32 PrintWindow (flags=2), read-only full window bitmap",
+  "windowTitle": "ROCm C# - trace - actual PowerShell execution",
+  "processId": 74280,
+  "windowHandle": 15340148,
+  "width": 1073,
+  "height": 711,
+  "format": "PNG",
+  "sha256": "bb3a3513874b11a3b9bc4b6eecef44c25e5136213d9d84de1f37432554cd8e60",
+  "bytes": 29083,
+  "edited": false,
+  "terminalInputAutomated": false,
+  "source": "trace/command.json",
+  "scope": "Actual PowerShell/ConsoleHost window including native title bar; no log replay, HTML render, UI reconstruction, crop or annotation."
+}
