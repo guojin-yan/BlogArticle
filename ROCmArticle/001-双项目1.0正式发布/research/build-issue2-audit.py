@@ -5,7 +5,8 @@ import re
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
-out = root / 'research/validation/round8'
+out = root / 'research/validation/round9'
+out.mkdir(parents=True, exist_ok=True)
 source = json.loads((root / 'research/validation/round7/issue-2-source.json').read_text(encoding='utf-8-sig'))
 mapping = {
     'P0-A-1': ('DONE', '性能计时边界', '正文第六节写明已解码 HWC 到主机后处理，纳入传输/布局/同步/clamp，排除解码/NMS/编译/可复用分配；合成数据不评精度。', ['03-正文.md', 'research/validation/round2/round2-benchmark.json']),
@@ -27,10 +28,10 @@ mapping = {
     'P1-C-2': ('DONE_WITH_SCOPE', '从clone开始首次运行', '公开73569f7新克隆，无源码覆盖，空NuGet/HTTP/CLI目录；10包从官方源还原并实际计算、跟踪、检测和原生窗口截图。同物理机/驱动/SDK，没有新OS或独立读者，独立人类试用为条件性未执行项。', ['research/validation/round7/reader-source-identity.json', 'research/validation/round7/reader-isolation-before.json', 'research/validation/round7/reader-workbench/workbench.json']),
     'P1-C-3': ('DONE', '不改全局设置及排错路径', '脚本只配置当前子进程；不改全局PATH/驱动、不安装未知系统依赖。正文按命令、预期输出、故障表组织，深入诊断在配套说明。', ['examples/run-windows.ps1', '03-正文.md', '05-上手与验证.md']),
     'P1-D-1': ('DONE', '截图来自实际程序', '核心新增第八轮真实PowerShell终端截图，第七轮WinForms归为应用截图；四应用使用真实公开数据工作台/报告截图。全部结果由真实程序产生，未用AI制作UI、框、热图或终端。', ['research/validation/round8/screenshots/manifest.json', 'research/validation/round7/screenshots/manifest.json', 'research/真实开源数据案例与截图.md']),
-    'P1-D-2': ('DONE', '原图、哈希与来源映射', '各轮原始截图保留，清单记录日期/哈希/尺寸/环境/源码与输出映射；第七轮另留原生窗口身份与采集API。素材许可按对应输入说明。', ['research/validation/round3/screenshots/manifest.json', 'research/validation/round5/screenshots/manifest.json', 'research/validation/round6/screenshots/manifest.json', 'research/validation/round7/screenshots/manifest.json']),
+    'P1-D-2': ('DONE', '原图、哈希与来源映射', '各轮原始截图保留，清单记录日期/哈希/尺寸/环境/源码与输出映射；第七轮另留原生窗口身份与采集API。素材许可按对应输入说明。', ['research/validation/round3/screenshots/manifest.json', 'research/validation/round5/screenshots/manifest.json', 'research/validation/round6/screenshots/manifest.json', 'research/validation/round7/screenshots/manifest.json', 'research/validation/round8/screenshots/manifest.json']),
     'P1-D-3': ('NOT_APPLICABLE', '性能绘图条件项', '正文使用由原始JSON汇总的数值表，没有新增性能曲线图。汇总代码与五轮数据公开，未用AIGC绘制测量结果。', ['research/summarize-round2.py', 'research/validation/round2/round2-benchmark.json']),
     'P1-D-4': ('DONE', '概念图与真实证据分清', '依作者要求保留原六图，全部标AIGC概念/非实测，核心和业务另有实际输出。最新简单OCR仅作两行演示，不替代旧失败记录。', ['03-正文.md', 'research/validation/round6/README.md']),
-    'P1-D-5': ('DONE', '矛盾与异常回到实跑', 'URL不明旧工具停止；使用可核对的浏览器接口和本轮原生窗口。无效排版截图、模型/路径失败和错误预测保留，未修图改结果。', ['research/issue-2-截图与四应用复跑.md', 'research/validation/round5/README.md', 'research/validation/round7/README.md']),
+    'P1-D-5': ('DONE', '矛盾与异常回到实跑', 'URL不明旧工具停止；使用可核对的浏览器接口、第七轮原生窗口与第八轮终端；v12另复核截图来源。无效排版截图、模型/路径失败和错误预测保留，未修图改结果。', ['research/issue-2-截图与四应用复跑.md', 'research/validation/round5/README.md', 'research/validation/round7/README.md']),
     'P2-1': ('DONE', '前言具体化', '保留原标题，前言聚焦原生依赖、设备缓冲区、模型与业务接入，首节只说明实际能力与收益。', ['03-正文.md']),
     'P2-2': ('DONE', '避免把模型耗时当检测耗时', '表旁明确不含解码、NMS和编译；五轮数据替代旧单轮最低值，真实检测流程单列。', ['03-正文.md']),
     'P2-3': ('DONE', '三个Start Here入口', '第七节三个重要入口同时有命名点击链接和代码URL，其他正文URL按博客要求代码展示。', ['03-正文.md']),
@@ -42,7 +43,7 @@ mapping = {
     'DOD-5': ('DONE', 'MatMul失败归档', '最小失败、原生入口与有效路径修正均有证据，不要求凭文章宣称修好全部原生引擎。', ['research/validation/round5/README.md', 'research/issue-2-修订说明.md']),
     'DOD-6': ('DONE_WITH_SCOPE', '实际Quickstart与诊断', '新远端clone、独立包缓存、固定公开源码与原生窗口已完成；物理机/系统依赖复用和无人类独立试用明确。', ['research/validation/round7/README.md', 'research/validation/round7/reader-source-identity.json']),
     'DOD-7': ('DONE', '核心与业务真实截图', '新增核心真实PowerShell终端截图，原生C#归为应用截图；四案例公开真实输入及实际截图已齐，概念图有明确标识。', ['research/validation/round8/screenshots/manifest.json', 'research/validation/round7/screenshots/manifest.json', 'research/真实开源数据案例与截图.md']),
-    'DOD-8': ('DONE_WITH_SCOPE', '存疑实跑与日期边界', '本轮预检反例、空包缓存、小图、trace、照片实际运行；五轮性能、264测试、四案例按原日期引用，冷缓存/其他硬件/动态兼容性未验项明示。', ['research/validation/round7/README.md', '05-上手与验证.md']),
+    'DOD-8': ('DONE_WITH_SCOPE', '存疑实跑与日期边界', '第七/八轮预检反例、空包缓存、小图、trace、照片实际运行；五轮性能、264测试、四案例按原日期引用，冷缓存/其他硬件/动态兼容性未验项明示。', ['research/validation/round7/README.md', '05-上手与验证.md']),
     'DOD-9': ('DONE', '保留FAIL/SKIP与全部样本', '历史原始证据逐项核验；Surface漏检、24行OCR失败、视频诊断、初版预检和新反向失败全部保留。简单OCR是推理前冻结的演示，不合并评分。', ['research/validation/round7/final-checks.json', 'research/validation/round5/README.md', 'research/validation/round6/README.md'])
 }
 records = []
@@ -58,7 +59,7 @@ for line in source['body'].splitlines():
         status, summary, detail, evidence = mapping[key]
         records.append({'id': key, 'originalRequirement': line[6:].strip(), 'status': status, 'summary': summary, 'detail': detail, 'evidence': evidence})
 assert set(mapping) == {r['id'] for r in records} and len(records) == 36
-value = {'checkedAt': dt.datetime.now().astimezone().isoformat(), 'revision': 'v11', 'issueUrl': source['html_url'],
+value = {'checkedAt': dt.datetime.now().astimezone().isoformat(), 'revision': 'v12', 'issueUrl': source['html_url'],
          'issueUpdatedAt': source['updated_at'], 'status': 'READY_FOR_REVIEW_WITH_DECLARED_LIMITS',
          'modificationTasks': 27, 'minimumAcceptanceItems': 9, 'externalIssueClosed': False,
          'meaning': 'DONE means the requested evidence/editorial action was performed. DONE_WITH_SCOPE preserves declared limitations; neither status means all hardware/models or production acceptance.',
@@ -67,7 +68,7 @@ value = {'checkedAt': dt.datetime.now().astimezone().isoformat(), 'revision': 'v
 labels = {'DONE': '已落实', 'DONE_WITH_SCOPE': '已落实，保留范围', 'NOT_APPLICABLE': '条件不适用'}
 text = '''# Issue #2：当前逐项修改与验收对照
 
-对应正文 **v11，2026-11-21**。本表以保存的 Issue 原文逐条映射，共 **27 条修改任务 + 9 条最小门槛**；旧第二/三轮说明保留为历史记录。状态为 **可带明确边界进入审阅**，不是全部硬件、模型或生产验收通过，也未关闭 GitHub Issue。
+对应正文 **v12，2026-11-21**。本轮精简文字并复核第八轮截图来源，没有新增 GPU 运行；逐项状态沿用既有实测范围。本表以保存的 Issue 原文逐条映射，共 **27 条修改任务 + 9 条最小门槛**；旧第二/三轮说明保留为历史记录。状态为 **可带明确边界进入审阅**，不是全部硬件、模型或生产验收通过，也未关闭 GitHub Issue。
 
 - “已落实”表示要求的修改或取证动作已有证据。
 - “已落实，保留范围”表示按 Issue 要求明确披露实测边界与未执行条件，不将其写成 PASS。
@@ -92,7 +93,7 @@ text += '''
 
 第八轮新增实际PowerShell终端verify/trace截图，命令工具启动，按已知PID只读采集完整窗口，未回放旧日志。第七轮完成预检、原生C#应用窗口、独立包缓存首次运行、执行跟踪与真实照片检测。五轮性能仍是第二轮数据，264项测试仍是第三轮，四案例与简单OCR分别是第五/六轮；没有把历史PASS改写成本轮PASS。原六张概念图按作者要求保留并标识，最新OCR按作者要求保持简单两行，不代表字段核验或总体精度。
 
-原始数据和失败不覆盖；新旧可变文稿按对应提交核验。终端证据见[第八轮目录](validation/round8/README.md)，前轮证据见[第七轮目录](validation/round7/README.md)，逐项原始要求见[结构化对照](validation/round8/issue-2-requirements.json)，公开 Issue 的本轮只读快照见[来源](validation/round7/issue-2-source.json)。没有向 Issue #2 发送评论或关闭它。
+原始数据和失败不覆盖；新旧可变文稿按对应提交核验。v12 的截图来源复核与文字精简见[第九轮记录](validation/round9/README.md)。终端证据见[第八轮目录](validation/round8/README.md)，前轮证据见[第七轮目录](validation/round7/README.md)，逐项原始要求见[结构化对照](validation/round9/issue-2-requirements.json)，公开 Issue 的第七轮只读快照见[来源](validation/round7/issue-2-source.json)。没有向 Issue #2 发送评论或关闭它。
 '''
 (root / 'research/issue-2-当前验收对照.md').write_text(text, encoding='utf-8', newline='\n')
 print('Mapped 27 modification tasks and 9 acceptance items to evidence.')

@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-21T23:39:35.066635+08:00",
+  "revision": "v12",
+  "baselineCommit": "008d03afa4ef0bd351318196c27491a4d68cdef7",
+  "scope": "Editorial revision and verification of existing round8 evidence; no new GPU run or screenshot.",
+  "newGpuExecutions": 0,
+  "newScreenshots": 0,
+  "chineseCharactersOutsideFencedCode": {
+    "before": 4913,
+    "after": 3324,
+    "reductionPercent": 32.3
+  },
+  "preserved": {
+    "title": true,
+    "chapterHeadings": 7,
+    "nugetRows": 7,
+    "imageReferencesInOrder": 14,
+    "powershellBlocksUnchanged": true,
+    "tableRowsUnchanged": true,
+    "namedStartHereLinks": 3
+  },
+  "captureProvenanceVerified": [
+    {
+      "file": "screenshots/01-powershell-verify-frame.png",
+      "api": "Win32 PrintWindow (flags=2), read-only full window bitmap",
+      "processId": 61428,
+      "capturedAt": "2026-11-21T12:44:39.802197+08:00",
+      "sha256": "7525ed0216ee29b766bc1093483446d2086abe39d7e57dc7b2532bdbad52fbd5"
+    },
+    {
+      "file": "screenshots/02-powershell-trace-frame.png",
+      "api": "Win32 PrintWindow (flags=2), read-only full window bitmap",
+      "processId": 74280,
+      "capturedAt": "2026-11-21T12:44:39.960373+08:00",
+      "sha256": "bb3a3513874b11a3b9bc4b6eecef44c25e5136213d9d84de1f37432554cd8e60"
+    }
+  ],
+  "round8ManifestFilesVerified": 40,
+  "round2Through8TrackedEvidenceChanged": false,
+  "readerLinksAndPaths": "PASS",
+  "previewLinks": "PASS",
+  "issue2Requirements": 36
+}
