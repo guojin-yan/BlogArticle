@@ -65,10 +65,10 @@ static class Round2Tools
             .Where(m => new[] { "hip", "migraphx", "miopen", "rocblas", "comgr", "vcruntime" }.Any(s => m.ModuleName.Contains(s, StringComparison.OrdinalIgnoreCase)))
             .Select(m => new { m.ModuleName, m.FileName, version = m.FileVersionInfo.FileVersion, sha256 = Hash(m.FileName) }).ToArray();
         Add("Loaded native modules", "PASS", $"Recorded {modules.Length} modules with actual paths and SHA256; presence is not a full dependency proof.");
-        Add("GPU math dependency chain", "NOT CHECKED", "Object probe/HIPRTC do not exercise every MIGraphX kernel, MIOpen/BLAS solver or transitive dependency.", "Run the fixed model and your own ONNX; retain native errors.");
-        Add("Version conflicts", "NOT CHECKED", "Loaded paths are recorded; binary compatibility of every PATH candidate is not certified.", "Use one ROCm family; inspect loaded paths and manifests.");
-        Add("Actual GPU gfx", "NOT CHECKED", architecture + " is a requested compile target, not independently detected hardware gfx.", "Confirm architecture using the driver/AMD tools.");
-        Add("Driver/PowerShell", "NOT CHECKED", "Collected separately by the PowerShell launcher.");
+        NativePreflight.Hardware(root ?? "", architecture, output, Add);
+        Check("Native dependency audit execution", () => NativePreflight.Dependencies(nativeDir, root ?? "", output, Add), "Inspect native import tables and matching ROCm installation.");
+        NativePreflight.Inventory(Add);
+        Add("All model/solver ABI compatibility", "NOT CHECKED", "Static dependencies and loaded-file hashes do not exercise every dynamic solver or certify every ONNX model.", "Run the fixed model and your own ONNX; retain native errors.");
         Add("Linux/other GPU", "SKIP", "Windows host only");
         Write(output, new { date = DateTimeOffset.Now, status = failures == 0 ? "PASS_WITH_UNCHECKED_ITEMS" : "FAIL", checks, modules, globalSettingsChanged = false });
         return failures == 0 ? 0 : 1;

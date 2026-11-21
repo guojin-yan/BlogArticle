@@ -45,15 +45,17 @@ if ($ModelPath) { $computeArgs += @('--model', (Resolve-Path -LiteralPath $Model
 if ($Mode -eq 'ablation') { $computeArgs += @('--seed', "$Seed") }
 if ($CachePath) { $computeArgs += @('--cache', [System.IO.Path]::GetFullPath($CachePath), '--cache-kind', $CacheKind) }
 if ($ImagePath) { $computeArgs += @('--image', (Resolve-Path -LiteralPath $ImagePath).Path) }
-& dotnet run --project "$PSScriptRoot/MigraphxCompute" -c Release -- @computeArgs
-$computeExit = $LASTEXITCODE
 if ($Mode -eq 'doctor') {
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent ([System.IO.Path]::GetFullPath($OutputPath))) | Out-Null
     $inventory = [ordered]@{
         date = (Get-Date).ToString('o'); powershell = $PSVersionTable.PSVersion.ToString()
-        sdks = (& dotnet --list-sdks); gpuDriver = Get-CimInstance Win32_VideoController | Select-Object Name,DriverVersion,DriverDate
+        sdks = @(& dotnet --list-sdks); gpuDriver = @(Get-CimInstance Win32_VideoController | Select-Object Name,DriverVersion,DriverDate)
         os = Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber
         scope = 'Inventory only; GPU gfx is not inferred from the product name. No global PATH, driver or dependency installation changes.'
     }
     $inventory | ConvertTo-Json -Depth 6 | Set-Content -Encoding utf8 -LiteralPath "$OutputPath.inventory.json"
+    $env:ARTICLE_DOCTOR_INVENTORY = [System.IO.Path]::GetFullPath("$OutputPath.inventory.json")
 }
+& dotnet run --project "$PSScriptRoot/MigraphxCompute" -c Release -- @computeArgs
+$computeExit = $LASTEXITCODE
 if ($computeExit -ne 0) { throw "MIGraphX $Mode failed with exit code $computeExit; inspect $OutputPath and the log" }
