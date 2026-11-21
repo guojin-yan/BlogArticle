@@ -23,7 +23,7 @@ pwsh -File './ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1'
 
 `trace` 输出 MIGraphX 的执行记录和 HIP 同步信息；它用于确认固定模型走过 GPU 执行路径，不是独立硬件 Profiler 的逐 Kernel 时间线。`benchmark` 的计时边界包含程序运行、设备拷贝和同步，不能直接当成单个 Kernel 时间。
 
-`matmul-relu.onnx` 是保留的失败复现夹具：同一环境下原生编译会触发 `0xC0000005`，因此没有把它算作通过，也没有据此推断 MIGraphX 的根因。详见上级 [示例说明](../README.md) 和文章的[已知限制](../../05-上手与验证.md)。
+`matmul-relu.onnx` 的旧编译故障已于 2026-11-21 定位到本机 Windows hipBLASLt 设备库路径分隔符。请通过修正后的 `run-windows.ps1` 配置环境；`-HipRoot` 输入正、反斜杠均已实跑通过 4,096 元素 CPU/Host GPU/联合 GPU 对照。手动配置时，`HIPBLASLT_TENSILE_LIBPATH` 使用 Windows 反斜杠路径。旧失败与本轮成功证据见[第五轮记录](../../research/validation/round5/README.md)。
 
 ## 第二轮新增模式
 

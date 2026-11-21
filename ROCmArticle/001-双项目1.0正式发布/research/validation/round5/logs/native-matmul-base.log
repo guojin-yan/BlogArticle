@@ -1,0 +1,3272 @@
+{"nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab", "modelSha256": "9f001078ffbada6510b0c4e16300b7c448b8fd85e9bab5bb23696399daef9bf9", "fastMath": false, "offloadCopy": true, "exhaustiveTune": false, "entry": "ctypes direct C ABI; no managed wrapper"}
+CALL migraphx_onnx_options_create
+RETURN migraphx_onnx_options_create 0
+CALL migraphx_parse_onnx_buffer
+RETURN migraphx_parse_onnx_buffer 0
+CALL migraphx_target_create
+RETURN migraphx_target_create 0
+CALL migraphx_compile_options_create
+RETURN migraphx_compile_options_create 0
+CALL migraphx_compile_options_set_offload_copy
+RETURN migraphx_compile_options_set_offload_copy 0
+CALL migraphx_compile_options_set_fast_math
+RETURN migraphx_compile_options_set_fast_math 0
+CALL migraphx_compile_options_set_exhaustive_tune_flag
+RETURN migraphx_compile_options_set_exhaustive_tune_flag 0
+CALL migraphx_program_compile
+Pass: split_single_dyn_dim
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: split_single_dyn_dim
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: simplify_dyn_ops
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_dyn_ops
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: normalize_ops
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: normalize_ops
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: eliminate_identity
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_identity
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: id
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: id
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: id
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: id
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: simplify_qdq
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_qdq
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_quantization
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_quantization
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: gpu::eliminate_data_type_for_gpu
+Pass: eliminate_data_type
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_data_type
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_data_type
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_data_type
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_data_type
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: gpu::eliminate_data_type_for_gpu
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_resize
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_resize
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_reshapes
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: eliminate_identity
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_identity
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: eliminate_pad
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_pad
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: insert_pad
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: insert_pad
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: inline_module
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: inline_module
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_pooling
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_pooling
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_convolution
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_convolution
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_gelu
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_gelu
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: optimize_module
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_convert
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_algebra
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: propagate_constant
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: optimize_module
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: layout_convolution
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: eliminate_contiguous
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: eliminate_contiguous
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: eliminate_contiguous
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = layout[permutation={0, 1}](@3) -> float_type, {64, 64}, {64, 1}
+@5 = @return(@4)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: layout_convolution
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: fuse_horizontal
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_horizontal
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: gpu::prefuse_ops
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: gpu::prefuse_ops
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_reduce
+Pass: eliminate_convert
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reduce
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_topk
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_topk
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: rewrite_low_precision
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_low_precision
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: id
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: id
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: promote_storage_type
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: promote_storage_type
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: propagate_precision
+Pass: eliminate_convert
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: propagate_precision
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_reshapes
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: id
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: id
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: optimize_module
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_convert
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_algebra
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: propagate_constant
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: optimize_module
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: gpu::fuse_mlss
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: gpu::fuse_mlss
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+
+Pass: fuse_pointwise_reduce
+Pass: fuse_pointwise
+Pass: eliminate_identity
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = relu(@2) -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: optimize_module
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_convert
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: simplify_algebra
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: propagate_constant
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_reduce
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_pointwise
+Pass: eliminate_identity
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_reduce
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: split_reduce
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_pointwise
+Pass: eliminate_identity
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_reduce
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_pointwise
+Pass: eliminate_identity
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: rewrite_reshapes
+Pass: simplify_reshapes
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: eliminate_common_subexpression
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_pointwise_reduce
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: id
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: id
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: fuse_concat
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: fuse_concat
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: auto_contiguous
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: auto_contiguous
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@2 = dot(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = pointwise(@2), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@4 = @return(@3)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::lowering
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: gpu::lowering
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: eliminate_contiguous
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: eliminate_contiguous
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::lower_reshape
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: gpu::lower_reshape
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: adjust_allocation
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: adjust_allocation
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: eliminate_concat
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: eliminate_concat
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::compile_miopen
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: gpu::compile_miopen
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::fuse_ops
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: gpu::fuse_ops
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::hipblaslt_op[op=gpu::hip_gemm[alpha=1,beta=0,trans_batch=0,solution_idx=0]](@2,@3,@4) -> float_type, {64, 64}, {64, 1}
+@6 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@7 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@5,@6), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@8 = hip::copy_from_gpu(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::compile_hipblaslt
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = allocate[shape=uint8_type, {268435456}, {1},buf_type=nullopt] -> uint8_type, {268435456}, {1}
+@6 = allocate[shape=uint8_type, {268435456}, {1},buf_type=nullopt] -> uint8_type, {268435456}, {1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@6,@4) -> float_type, {64, 64}, {64, 1}
+@8 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@9 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@7,@8), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = @return(@10)
+
+Pass: gpu::compile_hipblaslt
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = allocate[shape=uint8_type, {268435456}, {1},buf_type=nullopt] -> uint8_type, {268435456}, {1}
+@6 = allocate[shape=uint8_type, {268435456}, {1},buf_type=nullopt] -> uint8_type, {268435456}, {1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@6,@4) -> float_type, {64, 64}, {64, 1}
+@8 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@9 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@7,@8), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = @return(@10)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = allocate[shape=uint8_type, {268435456}, {1},buf_type=nullopt] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@5 = allocate[shape=uint8_type, {268435456}, {1},buf_type=nullopt] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = allocate[shape=float_type, {64, 64}, {64, 1},buf_type=nullopt] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: replace_allocate
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: replace_allocate
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: adjust_allocation
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: adjust_allocation
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::lower_device_ops
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: gpu::lower_device_ops
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::precompile_op[op=pointwise,additional_args=1,ignore_modules=0,output_shape=nullopt](@6,@7), [main:pointwise0] -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: gpu::compile_ops
+Pass: rewrite_quantization
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: optimize_module
+Pass: simplify_reshapes
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: eliminate_convert
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: dead_code_elimination
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: simplify_algebra
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: eliminate_common_subexpression
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: dead_code_elimination
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: propagate_constant
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: dead_code_elimination
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+x0 = @param:x0 -> float_type, {1}, {0}
+@1 = relu(x0) -> float_type, {1}, {0}
+@2 = @return(@1)
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: gpu::lower_device_ops
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: gpu::compile_ops
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+module: "main:pointwise0"
+main:pointwise0:x0 = @param:x0 -> float_type, {1}, {0}
+main:pointwise0:@1 = relu(main:pointwise0:x0) -> float_type, {1}, {0}
+main:pointwise0:@2 = @return(main:pointwise0:@1)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: promote_literals
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: promote_literals
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = @literal{ ... } -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@5,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: gpu::write_literals
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@5 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: gpu::write_literals
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@5 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: id
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@5 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: id
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@5 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: dead_code_elimination
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@5 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: dead_code_elimination
+module: "main"
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@1 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@3 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@4 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@5 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@3,@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: schedule
+@0 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@0) -> float_type, {64, 64}, {64, 1}
+@3 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@5,@3,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+Pass: schedule
+module: "main"
+@0 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@2 = hip::copy_to_gpu(input,@0) -> float_type, {64, 64}, {64, 1}
+@3 = hip::allocate[shape=uint8_type, {268435456}, {1}] -> uint8_type, {268435456}, {1}
+@4 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@5 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@6 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@2,@5,@3,@4) -> float_type, {64, 64}, {64, 1}
+@7 = hip::allocate[shape=float_type, {64, 64}, {64, 1}] -> float_type, {64, 64}, {64, 1}
+@8 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@6,@7) -> float_type, {64, 64}, {64, 1}
+@9 = hip::copy_from_gpu(@8) -> float_type, {64, 64}, {64, 1}
+@10 = @return(@9)
+
+
+Pass: memory_coloring
+scratch = @param:scratch -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](scratch) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](scratch) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](scratch) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](scratch) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = @return(@10)
+
+Pass: memory_coloring
+module: "main"
+scratch = @param:scratch -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](scratch) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](scratch) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](scratch) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](scratch) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = @return(@10)
+
+
+Pass: sync_device
+scratch = @param:scratch -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](scratch) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](scratch) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](scratch) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](scratch) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+Pass: sync_device
+module: "main"
+scratch = @param:scratch -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](scratch) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](scratch) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](scratch) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](scratch) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+
+Pass: preallocate_param
+@0 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](@0) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](@0) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](@0) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](@0) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+Pass: preallocate_param
+module: "main"
+@0 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](@0) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](@0) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](@0) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](@0) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+
+Pass: dead_code_elimination
+@0 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](@0) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](@0) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](@0) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](@0) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+Pass: dead_code_elimination
+module: "main"
+@0 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](@0) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](@0) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](@0) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](@0) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+
+Pass: eliminate_allocation
+@0 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](@0) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](@0) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](@0) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](@0) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+Pass: eliminate_allocation
+module: "main"
+@0 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@1 = load[offset=268451840,end=268468224](@0) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@3 = hip::copy_to_gpu(input,@1) -> float_type, {64, 64}, {64, 1}
+@4 = load[offset=16384,end=268451840](@0) -> uint8_type, {268435456}, {1}
+@5 = load[offset=0,end=16384](@0) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@7 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@3,@6,@4,@5) -> float_type, {64, 64}, {64, 1}
+@8 = load[offset=16384,end=32768](@0) -> float_type, {64, 64}, {64, 1}
+@9 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@7,@8) -> float_type, {64, 64}, {64, 1}
+@10 = hip::copy_from_gpu(@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::sync_stream(@10) -> float_type, {64, 64}, {64, 1}
+@12 = @return(@11)
+
+
+Pass: check_context
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+Pass: check_context
+module: "main"
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+
+Pass: normalize_ops
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+Pass: normalize_ops
+module: "main"
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+
+Pass: dead_code_elimination
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+Pass: dead_code_elimination
+module: "main"
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+
+Pass: eliminate_identity
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+Pass: eliminate_identity
+module: "main"
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {268468224}, {1},id=main:scratch] -> int8_type, {268468224}, {1}
+@2 = load[offset=268451840,end=268468224](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=16384,end=268451840](@1) -> uint8_type, {268435456}, {1}
+@6 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@7 = gpu::literal:gpu -> float_type, {64, 64}, {64, 1}
+@8 = gpu::hip_gemm[alpha=1.00,beta=0.00,trans_batch=0,solution_idx=0](@4,@7,@5,@6) -> float_type, {64, 64}, {64, 1}
+@9 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+@10 = gpu::code_object[code_object=4704,symbol_name=relu_kernel,global=2048,local=1024,](@8,@9) -> float_type, {64, 64}, {64, 1}
+@11 = hip::copy_from_gpu(@10) -> float_type, {64, 64}, {64, 1}
+@12 = hip::sync_stream(@11) -> float_type, {64, 64}, {64, 1}
+@13 = @return(@12)
+
+
+RETURN migraphx_program_compile 0
+COMPILE PASS 2.241873500053771
+CALL migraphx_program_destroy
+RETURN migraphx_program_destroy 0
+CALL migraphx_compile_options_destroy
+RETURN migraphx_compile_options_destroy 0
+CALL migraphx_target_destroy
+RETURN migraphx_target_destroy 0
+CALL migraphx_onnx_options_destroy
+RETURN migraphx_onnx_options_destroy 0

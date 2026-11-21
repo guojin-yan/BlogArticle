@@ -1,0 +1,24 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\run-windows.ps1",
+    "-HipRoot",
+    "D:/AMD/ROCm/10.1.0/HIP",
+    "-Mode",
+    "verify",
+    "-ModelPath",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\MigraphxCompute\\matmul-relu.onnx",
+    "-OutputPath",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round5\\matmul-forward.json"
+  ],
+  "started": "2026-11-21T10:00:45.014360+08:00",
+  "finished": "2026-11-21T10:00:58.113620+08:00",
+  "exitCode": 0,
+  "deviceLibraryEnvironment": {
+    "ROCBLAS_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas\\library",
+    "HIPBLASLT_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\hipblaslt\\library\\gfx1100"
+  },
+  "logSha256": "995bc83cd3ffc5a5b422a9788c35ac4b9619a1d56312636233de22db5113858d"
+}

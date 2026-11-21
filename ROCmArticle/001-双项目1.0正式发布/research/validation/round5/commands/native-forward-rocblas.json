@@ -1,0 +1,24 @@
+{
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\native-compile-probe.py",
+    "--model",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\MigraphxCompute\\matmul-relu.onnx",
+    "--native",
+    "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_c.dll",
+    "--hip-root",
+    "D:\\AMD\\ROCm\\10.1.0\\HIP"
+  ],
+  "stage": "native-matmul",
+  "started": "2026-11-21T09:59:01.627989+08:00",
+  "finished": "2026-11-21T09:59:03.325357+08:00",
+  "exitCode": 0,
+  "environmentOverrides": {
+    "ROCBLAS_TENSILE_LIBPATH": "D:/AMD/ROCm/10.1.0/HIP/bin/rocblas/library"
+  },
+  "native": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_c.dll",
+  "nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab",
+  "log": "logs/native-forward-rocblas.log",
+  "logSha256": "fa9c261d43f862193c28d1be709a78410122a4a0bdd44936fc871996490de066"
+}

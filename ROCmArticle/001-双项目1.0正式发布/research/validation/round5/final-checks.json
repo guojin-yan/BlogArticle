@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-21T10:14:47.855640+08:00",
+  "nativePathContrasts": 6,
+  "matmulActualWrapperRuns": 2,
+  "surfaceImages": 12,
+  "surfaceConfusion": {
+    "normalPass": 6,
+    "normalDefect": 0,
+    "anomalyDefect": 3,
+    "anomalyPass": 3
+  },
+  "surfaceAllNeedReview": true,
+  "signalPsdValues": 5805,
+  "ocrCurrentGpuLines": 24,
+  "ocrProbabilityValues": 93120,
+  "officialOcrDataModelFilesRevalidated": 86,
+  "videoFrames": 25,
+  "videoDetections": 109,
+  "videoUnreviewedCandidates": 12,
+  "videoStderrRetained": true,
+  "rawCurrentScreenshots": 4,
+  "historicalHashesVerified": {
+    "round2": 146,
+    "round3": 373,
+    "round4": 261
+  },
+  "readerPathsPortable": true,
+  "new264TestsOrPerformanceRerun": false,
+  "productionAcceptance": false
+}

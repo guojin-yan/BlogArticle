@@ -1,0 +1,5 @@
+{
+  "error": "Set SIGNAL_GPU_ARCH to actual architecture (for example gfx1100).",
+  "type": "ArgumentException",
+  "backendFallback": false
+}

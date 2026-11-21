@@ -1,0 +1,3 @@
+# Exact redundant exports stay local and are inventoried in local-only-files.json.
+/surface-workspace/
+/surface-model.zip

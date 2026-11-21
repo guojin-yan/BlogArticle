@@ -1,0 +1,15 @@
+Warning: onnx model is not topologically sorted. Attempting to sort...
+{
+  "passed": true,
+  "id": "visa-pcb1-dinov2-patchcore-v1",
+  "sha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+  "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+  "pixels": 153664,
+  "maxAbsoluteError": 9.149313E-06,
+  "maxRelativeError": 9.149313E-06,
+  "compileMs": 53114.7637,
+  "device": "AMD Radeon PRO W7900",
+  "tolerance": "abs \u003C= 0.005 \u002B 0.001 * abs(reference)",
+  "scope": "one held-out calibration tensor; not arbitrary model accuracy",
+  "native": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_c.dll"
+}

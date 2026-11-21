@@ -1,0 +1,84 @@
+{
+  "captureScope": "Actual browser viewport, no desktop or terminal chrome; unedited original JPEG bytes.",
+  "date": "2026-11-21",
+  "sourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "licensing": "../THIRD_PARTY.md",
+  "files": [
+    {
+      "file": "screenshots/raw/01-surface-visa-model.jpg",
+      "url": "http://127.0.0.1:5086/",
+      "scope": "Current real VisA DINOv2/PatchCore GPU workspace, first original-order normal image; all 12 unreviewed.",
+      "evidence": [
+        "surface-model-batch.json",
+        "surface-model-summary.json",
+        "surface-model-report/report.html",
+        "logs/surface-native-path.log"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T10:03:55.302802+08:00",
+      "sha256": "46290782b2e09487c167e5fb3d1a44065c4312cb737b9d09d692ee583b4d9a43",
+      "bytes": 89416,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/02-signal-uci-ps1.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round5/signal-native-hip/c2e341f30b9049bf9aa67d78b380fb8d/report.html",
+      "scope": "Current UCI PS1 cycle 1 actual HIP report.",
+      "evidence": [
+        "signal-native-hip/c2e341f30b9049bf9aa67d78b380fb8d/report.html",
+        "signal-comparison.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T10:05:29.872225+08:00",
+      "sha256": "7d3c7604b61bdb74a9ee275c8476b052035f59fcb1de1e4b02c14fb792ee1fa1",
+      "bytes": 120946,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/03-document-hiertext-gpu.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round5/document-hiertext-native-path/evidence.html",
+      "scope": "Current GPU OCR with official labels; all predictions retained in report, not a business approval UI.",
+      "evidence": [
+        "document-hiertext-native-path/evidence.html",
+        "document-hiertext-native-path/evaluation.json",
+        "document-hiertext-native-path/recognized/batch-evidence.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T10:03:05.483647+08:00",
+      "sha256": "e7fba20d53f4be62ec30d2d3635f28bc89f075f8388edb3e372522e5d50ee915",
+      "bytes": 130535,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    },
+    {
+      "file": "screenshots/raw/04-video-nasa-original-frame.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round5/video-gpu/analysis/report.html#frame-0",
+      "scope": "Current NASA GPU report, first frozen frame at original PTS 460800 / 30 seconds; actual program-drawn boxes.",
+      "evidence": [
+        "video-gpu/analysis/report.html",
+        "video-gpu/analysis/result.json",
+        "video-gpu/workflow-run.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "capturedAtFromFileMtime": "2026-11-21T10:05:41.037560+08:00",
+      "sha256": "b0cbdb7fb17067dee155d40b6e52ad82ef83895a25fe3e16a794bc97fc23077d",
+      "bytes": 62902,
+      "format": "JPEG",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    }
+  ]
+}

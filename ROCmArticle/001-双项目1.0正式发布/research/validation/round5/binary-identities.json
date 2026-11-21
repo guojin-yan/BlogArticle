@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-21T10:13:31.965340+08:00",
+  "applicationSourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "allRound4IdentitiesUnchanged": true,
+  "files": [
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\smoke-inspection.py",
+      "bytes": 9822,
+      "sha256": "2c2849c7d4d9ec79212a0cbe9ee3111c0724620450e6fbf7cc5feace684a3919"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\document-evaluate-page.py",
+      "bytes": 8898,
+      "sha256": "a4fd5622247703540c9ff777df1965a4bf7f54fb351b6d42d8c217f331adec88"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\video-run-workflow.py",
+      "bytes": 30773,
+      "sha256": "56cda90962901fe6da6a71b06dd3cc8778910fdaa6dfc4a0368a5bb2780387c4"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Inspection.App\\Release\\net10.0\\Inspection.App.dll",
+      "bytes": 44544,
+      "sha256": "8d5a35d9f77ebf15b0c97550c10fe4ab639eb995f5cccacb6af2ba78a64bce73"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+      "bytes": 42496,
+      "sha256": "a28e93d6e251a057f4139b585426938b0c4c9a8c9c1ee13442b1f4a156b75e40"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+      "bytes": 17920,
+      "sha256": "f648ae040cfa75cc053ce9826e790288f5c4de36c50598d8cbf10a9acf858eac"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\VideoEvents.App\\Release\\net10.0\\VideoEvents.App.dll",
+      "bytes": 16896,
+      "sha256": "606b0df4a84351b0f5743ae56d0d94d83d3dabebab44522db04e925c4e33d803"
+    },
+    {
+      "path": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_c.dll",
+      "bytes": 366592,
+      "sha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source.zip",
+      "bytes": 1116355,
+      "sha256": "28e05a9d9b68a6dc0ed8577f0eba051e4474da6c17dfeaa63f0a74f8b697095e"
+    },
+    {
+      "path": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx.dll",
+      "bytes": 50515456,
+      "sha256": "423ed7b28d393617f99fe14c1f18e3fc9f03e663ca1223088a681f92fe4d2a19"
+    },
+    {
+      "path": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_gpu.dll",
+      "bytes": 5237248,
+      "sha256": "149907d84ce85b521049e7b9a32744be45967a40a781b503727d444314ded335"
+    },
+    {
+      "path": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas.dll",
+      "bytes": 21085184,
+      "sha256": "55a2c066c5b3ef73852b2e11120b6a158a61739801e01df7c09c61a71b1340c7"
+    },
+    {
+      "path": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\libhipblaslt.dll",
+      "bytes": 6386176,
+      "sha256": "c86d5c411726a4de4b19e83a85a521410b4a8b07e455153f6cce6cdb15c02ee2"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll",
+      "bytes": 366592,
+      "sha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab"
+    }
+  ]
+}

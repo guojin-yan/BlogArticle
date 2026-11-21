@@ -1,0 +1,846 @@
+{
+  "schemaVersion": 1,
+  "applicationVersion": "0.12.0",
+  "id": "e05ce96311724411bd02dfe4c4ce3219",
+  "name": "VisA pcb1 · 12 real images · DINOv2/PatchCore GPU",
+  "createdAt": "2026-11-21T02:01:48.8752397+00:00",
+  "finishedAt": "2026-11-21T02:02:53.69442+00:00",
+  "recipe": {
+    "name": "VisA pcb1 · dinov2-vits14 + patchcore（实验）",
+    "dark": 80,
+    "bright": 200,
+    "localRadius": 3,
+    "localContrast": 0,
+    "minArea": 8,
+    "region": null,
+    "modelId": "visa-pcb1-dinov2-patchcore-v1",
+    "modelFingerprint": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+    "tiling": null,
+    "version": "2b4862914a01fab3"
+  },
+  "backend": "MigraphX",
+  "status": "Completed",
+  "cancelRequested": false,
+  "error": null,
+  "synthetic": false,
+  "phase": null,
+  "initializationMs": 54371.5138,
+  "backendInitialization": {
+    "resourceKey": "b0872010d1f2fdb5b050761b8768cc21a5facaf2bf49f2d6dd34ce14b90f95af",
+    "reused": false,
+    "waitMs": 0.0151,
+    "buildMs": 54270.9075,
+    "originalCompileMs": 54118.7423,
+    "maxResidentResources": 1,
+    "scope": "Process-local serial GPU resource reuse. One resident instance, not a GPU byte quota or persistent compiled-file cache."
+  },
+  "items": [
+    {
+      "id": "71defa900cea464a8e51b2012d1961a3",
+      "fileName": "pcb1-normal-0011.JPG",
+      "sourceHash": "09b58a87f2380592be9f72ae3b0f8060adefb3d2836ec974ffce4ef662d6c252",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 542,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 117,
+          "y": 468,
+          "width": 35,
+          "height": 20,
+          "area": 542
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 76.7483,
+        "transferAndComputeMs": 100.1292,
+        "decodeMs": 114.6284,
+        "postprocessMs": 3.5897,
+        "totalMs": 1071.6,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.5172747373580933,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "866200d4cb8b49a4ba6767a3bab2978e",
+      "fileName": "pcb1-normal-0013.JPG",
+      "sourceHash": "3a603c10dc9aa30d251def50c53379de97495534b6bb5ce180bcca2ddaea6cee",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 121,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 816,
+          "y": 923,
+          "width": 11,
+          "height": 15,
+          "area": 121
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 32.0406,
+        "transferAndComputeMs": 48.1331,
+        "decodeMs": 91.4159,
+        "postprocessMs": 1.7795,
+        "totalMs": 892.2359,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.4996793270111084,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "8b5f37754d8c454a83e613b18e17a348",
+      "fileName": "pcb1-normal-0016.JPG",
+      "sourceHash": "156eec1fd28d20f495f31a23375de771f35bd0ae90ddf079cdf32e437ad91a97",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 6791,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 984,
+          "y": 817,
+          "width": 96,
+          "height": 100,
+          "area": 6791
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 32.5753,
+        "transferAndComputeMs": 49.9414,
+        "decodeMs": 28.1923,
+        "postprocessMs": 8.9642,
+        "totalMs": 821.1787,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.5832681059837341,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "b1348c5e6bc74d34bead2834f85130a2",
+      "fileName": "pcb1-normal-0024.JPG",
+      "sourceHash": "0bab2e052295e644699b0af348a8621a3d1596e1c81a0b5ae6d7d8011490ecb5",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 1314,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 353,
+          "y": 537,
+          "width": 47,
+          "height": 35,
+          "area": 1293
+        },
+        {
+          "x": 775,
+          "y": 287,
+          "width": 6,
+          "height": 5,
+          "area": 21
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 30.2752,
+        "transferAndComputeMs": 46.9948,
+        "decodeMs": 29.3413,
+        "postprocessMs": 10.4013,
+        "totalMs": 787.6147,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.5735839009284973,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "3e24014c65d242b69cf00e354cd0db98",
+      "fileName": "pcb1-normal-0026.JPG",
+      "sourceHash": "887725103a469a5ba52178c40f185a3103a6ebeb4bd81d6f25e133fd2d0ff3cc",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 0,
+      "machineDecision": "Pass",
+      "regions": [],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 34.2778,
+        "transferAndComputeMs": 52.3272,
+        "decodeMs": 29.0794,
+        "postprocessMs": 1.3298,
+        "totalMs": 800.3196,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.47031912207603455,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "0f6532e0200f4e3bb751dd439f790216",
+      "fileName": "pcb1-normal-0027.JPG",
+      "sourceHash": "a7f9cde1448e96e412c5091ce192a843b464b087d9bc3d2480a3c5c2fa7ddd24",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 382,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 810,
+          "y": 700,
+          "width": 27,
+          "height": 18,
+          "area": 382
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 31.4445,
+        "transferAndComputeMs": 48.8048,
+        "decodeMs": 28.1346,
+        "postprocessMs": 8.8318,
+        "totalMs": 800.4942,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.5148424506187439,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "032ec8db56e64312ba6db585ed8015dc",
+      "fileName": "pcb1-anomaly-000.JPG",
+      "sourceHash": "e67db34e1045d7b8f01173a2f3e0138a6d89700e8a83d1426b6de0464e1e5e9d",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 4431,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 505,
+          "y": 768,
+          "width": 93,
+          "height": 99,
+          "area": 4431
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 33.0504,
+        "transferAndComputeMs": 50.4716,
+        "decodeMs": 28.0457,
+        "postprocessMs": 1.2879,
+        "totalMs": 803.5568,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.5864299535751343,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "0a94eea331394bfabc6ac0f7bf8e5121",
+      "fileName": "pcb1-anomaly-001.JPG",
+      "sourceHash": "4e255d79adde14e83171896fe571113aa632de1202a32b263bd8bd6ba04c105c",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 11781,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 644,
+          "y": 765,
+          "width": 107,
+          "height": 126,
+          "area": 8675
+        },
+        {
+          "x": 0,
+          "y": 588,
+          "width": 41,
+          "height": 66,
+          "area": 2399
+        },
+        {
+          "x": 1017,
+          "y": 738,
+          "width": 25,
+          "height": 20,
+          "area": 403
+        },
+        {
+          "x": 914,
+          "y": 736,
+          "width": 23,
+          "height": 17,
+          "area": 304
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 30.847,
+        "transferAndComputeMs": 48.039,
+        "decodeMs": 27.7865,
+        "postprocessMs": 1.571,
+        "totalMs": 780.0512,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.6051029562950134,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "7db239312fe3466383db8b019a76f8d1",
+      "fileName": "pcb1-anomaly-002.JPG",
+      "sourceHash": "9f297d7f791bcf17ec97f3275ff3bd2a1ab9988dc5d57fc3767eaf2741b92a98",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 11775,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 595,
+          "y": 761,
+          "width": 193,
+          "height": 111,
+          "area": 11227
+        },
+        {
+          "x": 1381,
+          "y": 394,
+          "width": 23,
+          "height": 15,
+          "area": 294
+        },
+        {
+          "x": 518,
+          "y": 1014,
+          "width": 18,
+          "height": 20,
+          "area": 254
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 30.7886,
+        "transferAndComputeMs": 47.2343,
+        "decodeMs": 27.7843,
+        "postprocessMs": 1.2954,
+        "totalMs": 806.4183,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.6746057868003845,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "bb5c6b473d3a471299b7792698336637",
+      "fileName": "pcb1-anomaly-003.JPG",
+      "sourceHash": "a5cab41d212f58f5e8265a60273c6b52667299d0c97bdba66b29e9298296cb84",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 16722,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 790,
+          "y": 728,
+          "width": 148,
+          "height": 143,
+          "area": 14538
+        },
+        {
+          "x": 908,
+          "y": 686,
+          "width": 48,
+          "height": 37,
+          "area": 1357
+        },
+        {
+          "x": 820,
+          "y": 1040,
+          "width": 33,
+          "height": 30,
+          "area": 827
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 31.7723,
+        "transferAndComputeMs": 50.3601,
+        "decodeMs": 29.0313,
+        "postprocessMs": 1.5175,
+        "totalMs": 851.4957,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.6671040058135986,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "ea81bcb4030f4e5e9478ac87746d24bc",
+      "fileName": "pcb1-anomaly-004.JPG",
+      "sourceHash": "cf562b8b172b50417487d0640885c1d89b930492b4524b68c9fd4cc003dee643",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 2256,
+      "machineDecision": "Pass",
+      "regions": [
+        {
+          "x": 457,
+          "y": 654,
+          "width": 39,
+          "height": 33,
+          "area": 1024
+        },
+        {
+          "x": 837,
+          "y": 1044,
+          "width": 41,
+          "height": 26,
+          "area": 898
+        },
+        {
+          "x": 868,
+          "y": 736,
+          "width": 21,
+          "height": 18,
+          "area": 290
+        },
+        {
+          "x": 582,
+          "y": 54,
+          "width": 11,
+          "height": 6,
+          "area": 44
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 32.2705,
+        "transferAndComputeMs": 50.3892,
+        "decodeMs": 29.4124,
+        "postprocessMs": 1.5436,
+        "totalMs": 773.8621,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.5606377124786377,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    },
+    {
+      "id": "4d9627b203ec4ad28701a80a43dec092",
+      "fileName": "pcb1-anomaly-005.JPG",
+      "sourceHash": "ec34541be729af29a287bde12d4e3955cf3f83c734baea8a9505a7b801ce54e2",
+      "sourceFile": "original.jpg",
+      "status": "Completed",
+      "width": 1404,
+      "height": 1070,
+      "defectPixels": 24678,
+      "machineDecision": "Defect",
+      "regions": [
+        {
+          "x": 683,
+          "y": 738,
+          "width": 185,
+          "height": 183,
+          "area": 22627
+        },
+        {
+          "x": 209,
+          "y": 448,
+          "width": 33,
+          "height": 40,
+          "area": 1016
+        },
+        {
+          "x": 605,
+          "y": 844,
+          "width": 41,
+          "height": 27,
+          "area": 879
+        },
+        {
+          "x": 369,
+          "y": 702,
+          "width": 16,
+          "height": 13,
+          "area": 156
+        }
+      ],
+      "reviews": [],
+      "error": null,
+      "measurement": {
+        "backend": "MIGraphX GPU · host I/O",
+        "device": "AMD Radeon PRO W7900",
+        "computeMs": 34.262,
+        "transferAndComputeMs": 51.6343,
+        "decodeMs": 28.2358,
+        "postprocessMs": 1.2102,
+        "totalMs": 759.8834,
+        "kernelHash": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "computeTiming": null
+      },
+      "anomaly": {
+        "modelId": "visa-pcb1-dinov2-patchcore-v1",
+        "modelSha256": "885e22beaeecf14fdda2576bdd2ac0d5a03dd84290964c00e43367e5d51839c7",
+        "manifestSha256": "c084320331df667f77dcb1228e25bd0a56246fc3a7353003d8c42cf2d37cbdf5",
+        "score": 0.7118576169013977,
+        "imageThreshold": 0.6117777228355408,
+        "pixelThreshold": 0.4964463412761688,
+        "inputSize": 392,
+        "category": "pcb1",
+        "experimental": true,
+        "algorithm": "patchcore-dinov2-vits14-v1",
+        "scoreKind": "nearest-normal-patch-l2",
+        "targetNormalFpr": 0.05,
+        "backbone": {
+          "id": "dinov2-vits14",
+          "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+          "featureDimension": 384,
+          "patchStride": 14,
+          "normalization": "ImageNet RGB inside graph; full descriptor L2 then channel selection",
+          "features": "final normalized patch tokens, CLS/register tokens excluded",
+          "configSha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+          "featureProfile": "native",
+          "localPooling": 1
+        }
+      },
+      "finalDecision": "NeedsReview"
+    }
+  ],
+  "reviewProgress": {
+    "total": 12,
+    "ready": 12,
+    "unreviewed": 12,
+    "deferred": 0,
+    "confirmed": 0,
+    "unavailable": 0,
+    "overridden": 0
+  }
+}

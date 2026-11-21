@@ -1,0 +1,23 @@
+{
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Signal.App\\Release\\net10.0\\Signal.App.dll",
+    "analyze",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\signals\\uci447-ps1-cycle1-v2\\signal.csv",
+    "--config",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\signals\\uci447-ps1-cycle1-v2\\config.json",
+    "--source-manifest",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\signals\\uci447-ps1-cycle1-v2\\source-manifest.json",
+    "--hip",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round5\\signal-hip"
+  ],
+  "started": "2026-11-21T10:04:37.570080+08:00",
+  "finished": "2026-11-21T10:04:37.722728+08:00",
+  "exitCode": 1,
+  "deviceLibraryEnvironment": {
+    "ROCBLAS_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas\\library",
+    "HIPBLASLT_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\hipblaslt\\library\\gfx1100"
+  },
+  "logSha256": "9cbed51076774758c78dbfcc7efee69a0f4100a724960189bb5946c7496cd9e2"
+}

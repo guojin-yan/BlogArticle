@@ -1,0 +1,15 @@
+{
+  "builtAt": "2026-11-21T10:13:31.876368+08:00",
+  "inferenceStartedUtc": "2026-11-21T01:59:19.508362+00:00",
+  "lineCount": 24,
+  "exactLines": 5,
+  "characterEdits": 78,
+  "referenceCharacters": 137,
+  "characterErrorRate": 0.5693430656934306,
+  "maxAbsoluteReferenceError": 1.5556812e-05,
+  "modelInstances": 1,
+  "programCompilations": 1,
+  "evaluationSha256": "8e4f852d0a11c23efcf74e10d01545928b3424e37632baacd24a274cc9d39f14",
+  "batchSha256": "76a0c5293f4df049983b343ca5f152f53fdae8cbc44c5536e03a0025aaf296b6",
+  "scope": "Current real GPU OCR, independent official-label scoring, all failures retained; not production acceptance."
+}

@@ -1,0 +1,1 @@
+{"scope": "Real HierText public scene text subset, oracle official line geometry; not document field quality, text detection or independent product acceptance", "lineCount": 24, "exactLines": 5, "exactLineAccuracy": 0.20833333333333334, "referenceCharacters": 137, "characterEdits": 78, "characterErrorRate": 0.5693430656934306, "maxAbsoluteReferenceError": 1.5556812e-05}

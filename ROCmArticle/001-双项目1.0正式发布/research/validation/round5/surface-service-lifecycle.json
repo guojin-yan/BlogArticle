@@ -1,0 +1,9 @@
+{
+  "observedStoppedAt": "2026-11-21T10:16:18.2181528+08:00",
+  "launcher": "research/run-round5-cases.py surface-server",
+  "applicationSourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "knownServiceCommand": "dotnet .tools/apps-round3-build/bin/Inspection.App/Release/net10.0/Inspection.App.dll",
+  "stopMethod": "Interrupted the task-owned exec session after all model outputs and screenshots were saved",
+  "listener5086PresentAfterStop": false,
+  "scope": "Service lifecycle only; successful batch and model results are recorded separately. Exact service start timestamp was not captured by the interrupted launcher."
+}

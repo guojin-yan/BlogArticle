@@ -1,0 +1,32 @@
+{
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\run-round5-document.py",
+    "--evaluator",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\document-evaluate-hiertext.py",
+    "--model",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json",
+    "--manifest",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\hiertext-test-small-v1\\lines.json",
+    "--app",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+    "--output",
+    "R:/document-hiertext-native-path"
+  ],
+  "stage": "document",
+  "started": "2026-11-21T09:59:16.562397+08:00",
+  "finished": "2026-11-21T09:59:49.543914+08:00",
+  "exitCode": 0,
+  "environmentOverrides": {},
+  "deviceLibraryEnvironment": {
+    "HIP_PATH": "D:\\AMD\\ROCm\\10.1.0\\HIP",
+    "HIP_DEVICE_LIB_PATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\lib\\llvm\\amdgcn\\bitcode",
+    "ROCBLAS_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas\\library",
+    "HIPBLASLT_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\hipblaslt\\library\\gfx1100"
+  },
+  "native": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_c.dll",
+  "nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab",
+  "log": "logs/hiertext-native-path.log",
+  "logSha256": "4d24f7fbc10fe9ffb273143ef973eacaba60f603fd44fe0e498410b1c6fef43e"
+}

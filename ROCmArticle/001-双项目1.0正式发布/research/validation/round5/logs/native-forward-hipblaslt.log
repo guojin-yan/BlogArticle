@@ -1,0 +1,23 @@
+{"nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab", "modelSha256": "9f001078ffbada6510b0c4e16300b7c448b8fd85e9bab5bb23696399daef9bf9", "fastMath": false, "offloadCopy": true, "exhaustiveTune": false, "entry": "ctypes direct C ABI; no managed wrapper"}
+CALL migraphx_onnx_options_create
+RETURN migraphx_onnx_options_create 0
+CALL migraphx_parse_onnx_buffer
+RETURN migraphx_parse_onnx_buffer 0
+CALL migraphx_target_create
+RETURN migraphx_target_create 0
+CALL migraphx_compile_options_create
+RETURN migraphx_compile_options_create 0
+CALL migraphx_compile_options_set_offload_copy
+RETURN migraphx_compile_options_set_offload_copy 0
+CALL migraphx_compile_options_set_fast_math
+RETURN migraphx_compile_options_set_fast_math 0
+CALL migraphx_compile_options_set_exhaustive_tune_flag
+RETURN migraphx_compile_options_set_exhaustive_tune_flag 0
+CALL migraphx_program_compile
+Traceback (most recent call last):
+  File "E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\native-compile-probe.py", line 45, in <module>
+    call('migraphx_program_compile', [P, P, P], program, target, compile)
+  File "E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\examples\native-compile-probe.py", line 27, in call
+    result = f(*values)
+             ^^^^^^^^^^
+OSError: exception: access violation reading 0x0000000000000080

@@ -1,0 +1,2 @@
+PASS: matmul-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\validation\round5\matmul-backslash.json

@@ -1,0 +1,103 @@
+{
+  "images": 12,
+  "initializationMs": 54371.5138,
+  "checks": [
+    {
+      "id": "pcb1-normal-0011",
+      "officialAnomaly": false,
+      "score": 0.5172747373580933,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "09b58a87f2380592be9f72ae3b0f8060adefb3d2836ec974ffce4ef662d6c252"
+    },
+    {
+      "id": "pcb1-normal-0013",
+      "officialAnomaly": false,
+      "score": 0.4996793270111084,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "3a603c10dc9aa30d251def50c53379de97495534b6bb5ce180bcca2ddaea6cee"
+    },
+    {
+      "id": "pcb1-normal-0016",
+      "officialAnomaly": false,
+      "score": 0.5832681059837341,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "156eec1fd28d20f495f31a23375de771f35bd0ae90ddf079cdf32e437ad91a97"
+    },
+    {
+      "id": "pcb1-normal-0024",
+      "officialAnomaly": false,
+      "score": 0.5735839009284973,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "0bab2e052295e644699b0af348a8621a3d1596e1c81a0b5ae6d7d8011490ecb5"
+    },
+    {
+      "id": "pcb1-normal-0026",
+      "officialAnomaly": false,
+      "score": 0.47031912207603455,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "887725103a469a5ba52178c40f185a3103a6ebeb4bd81d6f25e133fd2d0ff3cc"
+    },
+    {
+      "id": "pcb1-normal-0027",
+      "officialAnomaly": false,
+      "score": 0.5148424506187439,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "a7f9cde1448e96e412c5091ce192a843b464b087d9bc3d2480a3c5c2fa7ddd24"
+    },
+    {
+      "id": "pcb1-anomaly-000",
+      "officialAnomaly": true,
+      "score": 0.5864299535751343,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "e67db34e1045d7b8f01173a2f3e0138a6d89700e8a83d1426b6de0464e1e5e9d"
+    },
+    {
+      "id": "pcb1-anomaly-001",
+      "officialAnomaly": true,
+      "score": 0.6051029562950134,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "4e255d79adde14e83171896fe571113aa632de1202a32b263bd8bd6ba04c105c"
+    },
+    {
+      "id": "pcb1-anomaly-002",
+      "officialAnomaly": true,
+      "score": 0.6746057868003845,
+      "machineDecision": "Defect",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "9f297d7f791bcf17ec97f3275ff3bd2a1ab9988dc5d57fc3767eaf2741b92a98"
+    },
+    {
+      "id": "pcb1-anomaly-003",
+      "officialAnomaly": true,
+      "score": 0.6671040058135986,
+      "machineDecision": "Defect",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "a5cab41d212f58f5e8265a60273c6b52667299d0c97bdba66b29e9298296cb84"
+    },
+    {
+      "id": "pcb1-anomaly-004",
+      "officialAnomaly": true,
+      "score": 0.5606377124786377,
+      "machineDecision": "Pass",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "cf562b8b172b50417487d0640885c1d89b930492b4524b68c9fd4cc003dee643"
+    },
+    {
+      "id": "pcb1-anomaly-005",
+      "officialAnomaly": true,
+      "score": 0.7118576169013977,
+      "machineDecision": "Defect",
+      "finalDecision": "NeedsReview",
+      "sourceSha256": "ec34541be729af29a287bde12d4e3955cf3f83c734baea8a9505a7b801ce54e2"
+    }
+  ],
+  "scope": "Same frozen 12-image subset and preset model thresholds; no production quality or independent benchmark claim."
+}

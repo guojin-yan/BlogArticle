@@ -1,0 +1,17 @@
+{
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Inspection.App\\Release\\net10.0\\Inspection.App.dll",
+    "verify-model",
+    "visa-pcb1-dinov2-patchcore-v1"
+  ],
+  "stage": "surface",
+  "started": "2026-11-21T09:54:54.633680+08:00",
+  "finished": "2026-11-21T09:55:50.817925+08:00",
+  "exitCode": 0,
+  "environmentOverrides": {},
+  "native": "D:\\AMD\\ROCm\\10.1.0\\MIGraphX\\bin\\migraphx_c.dll",
+  "nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab",
+  "log": "logs/surface-native-path.log",
+  "logSha256": "8ff9ebd145e26815b91e31a0c0c338530c8181de104643a82b0f93507d757644"
+}

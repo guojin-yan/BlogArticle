@@ -1,0 +1,21 @@
+{
+  "text": "RFOLYHN T",
+  "confidence": 0.6357228679389231,
+  "backend": "MIGraphX GPU; explicit host I/O; CPU resize and CTC decode",
+  "device": "AMD Radeon PRO W7900",
+  "inputSha256": "c8dbff5cdd48022002c174f8cb26bf3d018dc59e421de07366d71b82f3d91873",
+  "modelManifestSha256": "0785851f0087c0d3398834069fdc5c5c0ac7a1302f268a35023a6227fcc487e8",
+  "graphSha256": "f700f92dd1754c7e2e7f6aa8d1624ae056ef88889cca61724f5352238b8e1bb3",
+  "dictionarySha256": "f62e0b7a43463665c8de3d9a2d376522417f97c7900f4411b1959464265e6dca",
+  "compileMs": 0,
+  "inferenceMs": 15.3648,
+  "scope": "One supplied line crop; preprocessing=paddle-bgr-resize-pad-minus1; dictionaryPolicy=paddle-en-v3-plus-space; compilation recorded once by session; confidence is not calibrated correctness. No text detector or orientation inference.",
+  "reference": {
+    "passed": true,
+    "values": 3880,
+    "maxAbsoluteError": 2.2947788E-06,
+    "referenceSha256": "4e96208b579c1a6747e8723c37979c6b4377babc11d1570841f21cb8ada3dd5b",
+    "scope": "One supplied tensor/crop; abs \u003C= 0.0001 \u002B 0.0001 * abs(reference); not OCR domain accuracy."
+  },
+  "provenanceSha256": "0c044693e2b363c1b19c58649697991d3f172655c6c27cf1daaa7a2ea0b7ca62"
+}

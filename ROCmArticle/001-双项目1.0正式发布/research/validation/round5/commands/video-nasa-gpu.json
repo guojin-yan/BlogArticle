@@ -1,0 +1,24 @@
+{
+  "command": [
+    "C:\\Users\\guoji\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-source\\eng\\video-run-workflow.py",
+    "run",
+    "--prepared",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round4\\video-prepared",
+    "--app",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\VideoEvents.App\\Release\\net10.0\\VideoEvents.App.dll",
+    "--dotnet",
+    "C:\\Program Files\\dotnet\\dotnet.EXE",
+    "--output",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round5\\video-gpu"
+  ],
+  "started": "2026-11-21T10:03:24.222668+08:00",
+  "finished": "2026-11-21T10:03:57.848244+08:00",
+  "exitCode": 0,
+  "deviceLibraryEnvironment": {
+    "ROCBLAS_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas\\library",
+    "HIPBLASLT_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\hipblaslt\\library\\gfx1100"
+  },
+  "logSha256": "67e1fd926c77f1f910464d7bb13407fe0c6469a5b68024fe07c702c0382c2a3d"
+}

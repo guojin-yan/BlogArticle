@@ -18,15 +18,16 @@ if ([string]::IsNullOrWhiteSpace($HipRoot)) {
     $HipRoot = Read-Host 'Enter the ROCm 10.1 HIP installation directory (containing bin and lib)'
 }
 if ([string]::IsNullOrWhiteSpace($HipRoot)) { throw 'Specify -HipRoot or configure HIP_PATH.' }
-$rocmHipRoot = if (Test-Path -LiteralPath $HipRoot) { (Resolve-Path -LiteralPath $HipRoot).Path } else { $HipRoot }
+$rocmHipRoot = [System.IO.Path]::GetFullPath($(if (Test-Path -LiteralPath $HipRoot) { (Resolve-Path -LiteralPath $HipRoot).Path } else { $HipRoot }))
 if ($Mode -ne 'doctor' -and !(Test-Path -LiteralPath "$rocmHipRoot/bin")) { throw 'HIP SDK bin directory is missing. Run -CheckOnly for diagnostics.' }
 if ($Architecture -notmatch '^gfx[0-9a-f]+$') { throw 'Specify the actual GPU architecture, for example gfx1100.' }
 $env:HIP_PATH = $rocmHipRoot
 $env:ROCM_PATH = $rocmHipRoot
-$env:PATH = "$rocmHipRoot/bin;$rocmHipRoot/lib/llvm/bin;$env:PATH"
-$env:HIP_DEVICE_LIB_PATH = "$rocmHipRoot/lib/llvm/amdgcn/bitcode"
-$env:ROCBLAS_TENSILE_LIBPATH = "$rocmHipRoot/bin/rocblas/library"
-$env:HIPBLASLT_TENSILE_LIBPATH = "$rocmHipRoot/bin/hipblaslt/library/$Architecture"
+$env:PATH = "$(Join-Path $rocmHipRoot 'bin');$(Join-Path $rocmHipRoot 'lib\llvm\bin');$env:PATH"
+$env:HIP_DEVICE_LIB_PATH = Join-Path $rocmHipRoot 'lib\llvm\amdgcn\bitcode'
+# Keep native separators: the tested Windows hipBLASLt loader crashes on forward-slash paths.
+$env:ROCBLAS_TENSILE_LIBPATH = Join-Path $rocmHipRoot 'bin\rocblas\library'
+$env:HIPBLASLT_TENSILE_LIBPATH = Join-Path $rocmHipRoot "bin\hipblaslt\library\$Architecture"
 if (!$OutputPath) { $OutputPath = "$articleRoot/.validation/compute-$Mode.json" }
 if ($Mode -eq 'verify' -and !$ModelPath) {
     & dotnet run --project "$PSScriptRoot/HipHello" -c Release

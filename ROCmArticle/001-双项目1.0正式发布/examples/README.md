@@ -61,9 +61,9 @@ pwsh -File "$articleDir/examples/run-round2.ps1" -Rounds 5
 
 `hipMemGetInfo` 记录全设备显存快照，包含其他进程，不是单进程峰值。桌面环境未锁定 GPU 时钟/功耗，数值只用于当前单机 PoC。任一路径出错或输出超出 `0.001 + 0.001*abs(CPU)` 容差即返回非零，不生成成功结果。除后处理输出外，程序还比较未做 clamp 的原始模型张量与计时完成后的末次输出，避免后处理隐藏原始数值错误；全部比较通过才写成功 JSON。
 
-## 模型生成与已知失败复现
+## 模型生成与路径修正
 
-两个小型 ONNX 模型可以由 `MigraphxCompute/generate-model.py` 使用 Python 标准库重新生成。默认使用已经验证的 `affine-relu.onnx`。单独指定 `matmul-relu.onnx` 可以复现本轮 Windows 原生编译失败；该文件是故障夹具，不作为快速开始的成功案例。原始失败日志与版本记录保留在 `../research/validation/`。
+两个小型 ONNX 模型可以由 `MigraphxCompute/generate-model.py` 使用 Python 标准库重新生成。默认使用 `affine-relu.onnx`。2026-11-21 已定位旧 MatMul 编译故障：本机 Windows hipBLASLt 设备库路径含正斜杠会触发原生访问冲突。`run-windows.ps1` 现使用 `Join-Path` 生成反斜杠路径；`-HipRoot` 输入正、反斜杠均已实际运行通过 MatMul 的 4,096 元素 CPU/Host GPU/联合 GPU 对照。旧失败日志原样保留，新证据见[第五轮排查](../research/validation/round5/README.md)。
 
 ## 只检查环境，不改系统设置
 
