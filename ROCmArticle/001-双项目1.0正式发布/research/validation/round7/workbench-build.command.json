@@ -1,0 +1,19 @@
+{
+  "started": "2026-11-21T10:57:13.139695+08:00",
+  "finished": "2026-11-21T10:57:13.953344+08:00",
+  "command": [
+    "dotnet",
+    "build",
+    "E:/BlogArticle/ROCmArticle/001-双项目1.0正式发布/examples/ValidationWorkbench",
+    "-c",
+    "Release",
+    "--nologo"
+  ],
+  "exitCode": 0,
+  "cwd": "E:\\BlogArticle",
+  "environment": {
+    "NUGET_PACKAGES": "E:\\BlogArticle\\ROCmArticle\\.tools\\nuget"
+  },
+  "log": "workbench-build.log",
+  "logSha256": "c3113eea81bc465eb4b3941a0b91536ec3d943dccd4a0170d4d71e3260130640"
+}

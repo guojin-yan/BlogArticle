@@ -1,0 +1,22 @@
+{
+  "started": "2026-11-21T10:56:08.939931+08:00",
+  "finished": "2026-11-21T10:56:16.376040+08:00",
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:/BlogArticle/ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1",
+    "-HipRoot",
+    "D:/AMD/ROCm/10.1.0/HIP",
+    "-CheckOnly",
+    "-OutputPath",
+    "E:/BlogArticle/ROCmArticle/001-双项目1.0正式发布/research/validation/round7/doctor-positive.json"
+  ],
+  "exitCode": 1,
+  "cwd": "E:\\BlogArticle",
+  "environment": {
+    "NUGET_PACKAGES": "E:\\BlogArticle\\ROCmArticle\\.tools\\nuget"
+  },
+  "log": "doctor-positive.log",
+  "logSha256": "e7a7661a3d2519a4002a1c863af3ba86720a4dfa5329c4ab6fa6a3fd3b7ed912"
+}

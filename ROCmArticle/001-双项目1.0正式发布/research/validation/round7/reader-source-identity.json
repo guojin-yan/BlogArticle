@@ -1,0 +1,119 @@
+{
+  "sourceCommit": "73569f724920982aee6767cf7800635edb280c77",
+  "sourceOverlay": false,
+  "gitTrackedChanges": [],
+  "sourceFiles": [
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/HipHello/HipHello.csproj",
+      "sha256": "8005d72125ff13a60ed4031fa417827685df574ecdb7c4b31e878f94a72c2861",
+      "authorWorkingTreeSha256": "8005d72125ff13a60ed4031fa417827685df574ecdb7c4b31e878f94a72c2861",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/HipHello/Program.cs",
+      "sha256": "fc2cc765f064d08939d95085c0ef3dec96495461d1e258f705e86b9a75d2c82f",
+      "authorWorkingTreeSha256": "162cd9b5106d4562bc97ef2b65588fe2e08364d77f753ec7515eb678200c5c01",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/HipVectorAdd/HipVectorAdd.csproj",
+      "sha256": "8005d72125ff13a60ed4031fa417827685df574ecdb7c4b31e878f94a72c2861",
+      "authorWorkingTreeSha256": "8005d72125ff13a60ed4031fa417827685df574ecdb7c4b31e878f94a72c2861",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/HipVectorAdd/Program.cs",
+      "sha256": "7473e4aa283f22e4cd4cdfa33071529dc0204510f7ac24a7be1d33d655ecb06e",
+      "authorWorkingTreeSha256": "7473e4aa283f22e4cd4cdfa33071529dc0204510f7ac24a7be1d33d655ecb06e",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/MigraphxCompute.csproj",
+      "sha256": "b70e302ec6003e905abd85599c6ee8d8f2a41c6602b53af53bffa91487447784",
+      "authorWorkingTreeSha256": "b70e302ec6003e905abd85599c6ee8d8f2a41c6602b53af53bffa91487447784",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/NativePreflight.cs",
+      "sha256": "02fd1ad3882d31779f11ba531e015ba5b5ea89bc33f79dd08de085356ad92d09",
+      "authorWorkingTreeSha256": "02fd1ad3882d31779f11ba531e015ba5b5ea89bc33f79dd08de085356ad92d09",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/PhotoDetection.cs",
+      "sha256": "ec5192d4f4552e83564cce8e2106f3997833235fa61c73e8e82595d93104a2ee",
+      "authorWorkingTreeSha256": "ec5192d4f4552e83564cce8e2106f3997833235fa61c73e8e82595d93104a2ee",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/Program.cs",
+      "sha256": "7b376e57bfb7e40e246b1a9638296fec2975a231e4f9a0aef640c3d4ea57ba24",
+      "authorWorkingTreeSha256": "7b376e57bfb7e40e246b1a9638296fec2975a231e4f9a0aef640c3d4ea57ba24",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/Round2Tools.cs",
+      "sha256": "184acb09a0cdef7e890c4dfc41074d9aa525559e221353e2e838f0932ed081a9",
+      "authorWorkingTreeSha256": "184acb09a0cdef7e890c4dfc41074d9aa525559e221353e2e838f0932ed081a9",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxHello/MigraphxHello.csproj",
+      "sha256": "ff7700452e2ee4f2ee0cdac5ba17ab2e8c4bc0bfc8603c7c4484fdf04f8a7d8a",
+      "authorWorkingTreeSha256": "ff7700452e2ee4f2ee0cdac5ba17ab2e8c4bc0bfc8603c7c4484fdf04f8a7d8a",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/MigraphxHello/Program.cs",
+      "sha256": "9c8b06bdce88df70b0388786509ab63c84624ee82d998f430d09624e5fad96fc",
+      "authorWorkingTreeSha256": "d969bc6df2b0f6ad2975977bec6ac27385bb6eacdd94ad227074bc0baa335632",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/run-round2.ps1",
+      "sha256": "a15ecef12610a98dee780992f9e0c3c0e50786035b123fff6acc96f42ad6b904",
+      "authorWorkingTreeSha256": "a15ecef12610a98dee780992f9e0c3c0e50786035b123fff6acc96f42ad6b904",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1",
+      "sha256": "0b5d36ea3b2574e77bde8355572f15d362e8f2a7cce1f62c0d65795105255389",
+      "authorWorkingTreeSha256": "0b5d36ea3b2574e77bde8355572f15d362e8f2a7cce1f62c0d65795105255389",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/ValidationWorkbench/Program.cs",
+      "sha256": "0c0bf7adb679250fc515bc6edd13bffc0b19c3b3dfbd1829f942ac6f40d1a5d6",
+      "authorWorkingTreeSha256": "0c0bf7adb679250fc515bc6edd13bffc0b19c3b3dfbd1829f942ac6f40d1a5d6",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    },
+    {
+      "path": "ROCmArticle/001-双项目1.0正式发布/examples/ValidationWorkbench/ValidationWorkbench.csproj",
+      "sha256": "b8ff6f209c955e57950c1fee5a84d23803d1d88e28b7aad37c9524b3608c6bcb",
+      "authorWorkingTreeSha256": "b8ff6f209c955e57950c1fee5a84d23803d1d88e28b7aad37c9524b3608c6bcb",
+      "comparison": "Clone bytes equal public Git blob; author checkout compared with CRLF/LF normalization only."
+    }
+  ],
+  "projectAssetsSha256": {
+    "examples/HipHello/obj/project.assets.json": "1a045343e91f2a63f46116d8bbf5c8546895ef6b59be837ea31bd7115015001f",
+    "examples/HipVectorAdd/obj/project.assets.json": "98f7955fa83302829494eabc674226c23af850681f0b1c5de63e4956a6e464d4",
+    "examples/MigraphxCompute/obj/project.assets.json": "d66f3b313d1b58425ebf5d19978bdf3deb16d54dfcfce1874998850b99d455a9",
+    "examples/MigraphxHello/obj/project.assets.json": "898a54fc9a0489a87e045888596fcbc2bca7cfe545843457b527b579df69c907",
+    "examples/ValidationWorkbench/obj/project.assets.json": "d28e122433047bcacb2fdac064e16a925fc683c2a5e6f8b88660629e24c01e57"
+  },
+  "binaryFiles": [
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-双项目1.0正式发布\\examples\\ValidationWorkbench\\bin\\Release\\net10.0-windows\\ValidationWorkbench.exe",
+      "sha256": "6dc70cff39f862123c1387d290bf32fd7ea9707b174cf261261ea742c1d28503"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-双项目1.0正式发布\\examples\\ValidationWorkbench\\bin\\Release\\net10.0-windows\\ValidationWorkbench.dll",
+      "sha256": "fa323d63a65f93101f68bad2616f360174f1828fa3323512d5e8c4d2856068a2"
+    },
+    {
+      "path": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-双项目1.0正式发布\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\MigraphxCompute.dll",
+      "sha256": "90706362fe352e9134f7c577194bcd99dd5420dd6c608c7bac8581d1bb37313a"
+    }
+  ],
+  "scope": "Fresh remote clone; no source edits. New package, HTTP and CLI folders; system driver, SDK and framework packs reused."
+}

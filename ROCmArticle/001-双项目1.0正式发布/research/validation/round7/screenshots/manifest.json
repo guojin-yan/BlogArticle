@@ -1,0 +1,30 @@
+{
+  "captureScope": "Actual native C# application window including title bar; original unedited JPEG.",
+  "gpu": "AMD Radeon PRO W7900",
+  "gfx": "gfx1100",
+  "os": "Windows 11 build 26300",
+  "runtime": ".NET 10.0.15",
+  "sourceCommit": "73569f724920982aee6767cf7800635edb280c77",
+  "environment": "../reader-workbench/doctor.json.inventory.json",
+  "files": [
+    {
+      "file": "screenshots/01-native-validation.jpg",
+      "api": "@oai/sky get_window_state",
+      "date": "2026-11-21T03:02:11.585Z",
+      "width": 1142,
+      "height": 682,
+      "format": "JPEG",
+      "sha256": "2ce4c503d04d11f1116fa0330001ca79ba815344dc32789e6edb7b34d285ffa9",
+      "bytes": 130381,
+      "edited": false,
+      "evidence": [
+        "reader-source-identity.json",
+        "reader-workbench/workbench.json",
+        "reader-workbench/doctor.json",
+        "reader-workbench/verify.json",
+        "reader-workbench/matmul.json",
+        "reader-workbench.command.json"
+      ]
+    }
+  ]
+}

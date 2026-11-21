@@ -1,0 +1,21 @@
+{
+  "started": "2026-11-21T11:01:05.6379161+08:00",
+  "finished": "2026-11-21T11:01:10.3603919+08:00",
+  "processId": 73036,
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples/run-windows.ps1",
+    "-HipRoot",
+    "D:\\AMD\\ROCm\\10.1.0\\HIP",
+    "-Architecture",
+    "gfx1100",
+    "-OutputPath",
+    "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\research\\validation\\round7\\reader-workbench\\doctor.json",
+    "-CheckOnly"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "02be002aaea9f7169c7fc8ae90e04d5392b68395f16a345d82e6bd025df399e7",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

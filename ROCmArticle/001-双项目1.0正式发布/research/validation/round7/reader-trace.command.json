@@ -1,0 +1,43 @@
+{
+  "started": "2026-11-21T11:02:46.329231+08:00",
+  "finished": "2026-11-21T11:02:49.772310+08:00",
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:/BlogArticle/ROCmArticle/.tools/round7-reader/ROCmArticle/001-双项目1.0正式发布/examples/run-windows.ps1",
+    "-HipRoot",
+    "D:/AMD/ROCm/10.1.0/HIP",
+    "-Mode",
+    "trace",
+    "-OutputPath",
+    "E:/BlogArticle/ROCmArticle/001-双项目1.0正式发布/research/validation/round7/reader-trace.json"
+  ],
+  "exitCode": 0,
+  "cwd": "E:\\BlogArticle",
+  "environment": {
+    "NUGET_PACKAGES": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-fresh-nuget",
+    "DOTNET_CLI_HOME": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-cli-home",
+    "NUGET_HTTP_CACHE_PATH": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-http-cache"
+  },
+  "log": "reader-trace.log",
+  "logSha256": "226993dfea37f65c980026366c041cebd70806a79684fab6592a16040abaaa82",
+  "sourceFilesAtStart": {
+    "examples/run-round2.ps1": "a15ecef12610a98dee780992f9e0c3c0e50786035b123fff6acc96f42ad6b904",
+    "examples/run-windows.ps1": "0b5d36ea3b2574e77bde8355572f15d362e8f2a7cce1f62c0d65795105255389",
+    "examples/HipHello/HipHello.csproj": "8005d72125ff13a60ed4031fa417827685df574ecdb7c4b31e878f94a72c2861",
+    "examples/HipHello/Program.cs": "162cd9b5106d4562bc97ef2b65588fe2e08364d77f753ec7515eb678200c5c01",
+    "examples/HipVectorAdd/HipVectorAdd.csproj": "8005d72125ff13a60ed4031fa417827685df574ecdb7c4b31e878f94a72c2861",
+    "examples/HipVectorAdd/Program.cs": "7473e4aa283f22e4cd4cdfa33071529dc0204510f7ac24a7be1d33d655ecb06e",
+    "examples/MigraphxCompute/MigraphxCompute.csproj": "b70e302ec6003e905abd85599c6ee8d8f2a41c6602b53af53bffa91487447784",
+    "examples/MigraphxCompute/NativePreflight.cs": "02fd1ad3882d31779f11ba531e015ba5b5ea89bc33f79dd08de085356ad92d09",
+    "examples/MigraphxCompute/PhotoDetection.cs": "ec5192d4f4552e83564cce8e2106f3997833235fa61c73e8e82595d93104a2ee",
+    "examples/MigraphxCompute/Program.cs": "7b376e57bfb7e40e246b1a9638296fec2975a231e4f9a0aef640c3d4ea57ba24",
+    "examples/MigraphxCompute/Round2Tools.cs": "184acb09a0cdef7e890c4dfc41074d9aa525559e221353e2e838f0932ed081a9",
+    "examples/MigraphxHello/MigraphxHello.csproj": "ff7700452e2ee4f2ee0cdac5ba17ab2e8c4bc0bfc8603c7c4484fdf04f8a7d8a",
+    "examples/MigraphxHello/Program.cs": "d969bc6df2b0f6ad2975977bec6ac27385bb6eacdd94ad227074bc0baa335632",
+    "examples/ValidationWorkbench/Program.cs": "0c0bf7adb679250fc515bc6edd13bffc0b19c3b3dfbd1829f942ac6f40d1a5d6",
+    "examples/ValidationWorkbench/ValidationWorkbench.csproj": "b8ff6f209c955e57950c1fee5a84d23803d1d88e28b7aad37c9524b3608c6bcb"
+  },
+  "sourceFilesUnchangedDuringRun": true
+}

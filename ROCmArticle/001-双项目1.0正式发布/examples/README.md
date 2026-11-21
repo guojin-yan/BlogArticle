@@ -71,7 +71,11 @@ pwsh -File "$articleDir/examples/run-round2.ps1" -Rounds 5
 pwsh -File "$articleDir/examples/run-windows.ps1" -CheckOnly -OutputPath "$articleDir/.validation/doctor.json"
 ```
 
-输出 `PASS / FAIL / SKIP / NOT CHECKED` 和排错建议；JSON 记录实际加载模块的路径、版本和 SHA256，旁边的 `*.inventory.json` 记录 PowerShell、SDK、Windows、GPU 和驱动。HIPRTC 会做一次小型编译，MIGraphX 会探测对象。目录/DLL 存在只代表文件检查，不代表全部数学库和模型可用；完整依赖链、版本冲突认证、硬件 gfx 自动识别标为 `NOT CHECKED`。不修改全局 PATH，不安装依赖；后续仍需运行四个示例及自己的模型。
+输出 `PASS / FAIL / SKIP / NOT CHECKED` 和排错建议。JSON 记录实际加载模块的路径、版本和 SHA256，`*.inventory.json` 记录 PowerShell、SDK、Windows、GPU 和驱动；`*.hardware.json` 保存 SDK `hipInfo.exe` 的原始硬件报告，核对实际 gfx 与 `-Architecture`。SDK 缺少该工具时明确标记未检查；多架构设备需要先处理显式设备选择。
+
+`*.dependencies.json` 递归检查非系统 DLL 的普通/延迟导入、API set 与实际加载路径，并列出搜索目录里同名 DLL 的版本和哈希。缺失依赖或明确不同版本返回 `FAIL`；相同版本或缺少版本信息的字节差异保留为兼容性 `NOT CHECKED`，不能只凭哈希断定 ABI 不兼容。本机发现四组不同哈希副本，未隐藏；静态检查也不认证所有动态求解器。正常环境及缺 SDK、错误 gfx、不同版本副本三个反向场景均已实际运行，见[第七轮记录](../research/validation/round7/README.md)。
+
+HIPRTC 会做一次小型编译，MIGraphX 会探测对象；后续仍需运行四个示例及自己的模型。脚本只配置当前进程，不改全局 PATH、不安装驱动或 SDK。想直接观察固定示例的运行，可用[原生 C# 验证窗口](ValidationWorkbench/README.md)，每一步都实际启动程序并保留原始输出。
 
 ## 真实照片：从输入到检测结果
 

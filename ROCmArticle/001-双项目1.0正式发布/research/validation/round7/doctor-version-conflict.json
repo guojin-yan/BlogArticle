@@ -1,0 +1,291 @@
+{
+  "date": "2026-11-21T10:58:12.3067549+08:00",
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "Process/RID",
+      "status": "PASS",
+      "detail": "win-x64",
+      "next": ""
+    },
+    {
+      "name": ".NET",
+      "status": "PASS",
+      "detail": ".NET 10.0.15",
+      "next": ""
+    },
+    {
+      "name": "HIP_PATH",
+      "status": "PASS",
+      "detail": "D:\\AMD\\ROCm\\10.1.0\\HIP",
+      "next": "Use the ROCm 10.1 HIP root, containing bin and lib."
+    },
+    {
+      "name": "File amdhip64*.dll",
+      "status": "PASS",
+      "detail": "File presence only: D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\amdhip64_7.dll",
+      "next": "Verify the complete matching ROCm installation; do not copy individual DLLs."
+    },
+    {
+      "name": "File hiprtc[0-9]*.dll",
+      "status": "PASS",
+      "detail": "File presence only: D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\hiprtc0716.dll",
+      "next": "Verify the complete matching ROCm installation; do not copy individual DLLs."
+    },
+    {
+      "name": "File amd_comgr.dll",
+      "status": "PASS",
+      "detail": "File presence only: D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\amd_comgr.dll",
+      "next": "Verify the complete matching ROCm installation; do not copy individual DLLs."
+    },
+    {
+      "name": "File MIOpen.dll",
+      "status": "PASS",
+      "detail": "File presence only: D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\MIOpen.dll",
+      "next": "Verify the complete matching ROCm installation; do not copy individual DLLs."
+    },
+    {
+      "name": "File rocblas.dll",
+      "status": "PASS",
+      "detail": "File presence only: D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas.dll",
+      "next": "Verify the complete matching ROCm installation; do not copy individual DLLs."
+    },
+    {
+      "name": "File libhipblaslt.dll",
+      "status": "PASS",
+      "detail": "File presence only: D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\libhipblaslt.dll",
+      "next": "Verify the complete matching ROCm installation; do not copy individual DLLs."
+    },
+    {
+      "name": "Device data",
+      "status": "PASS",
+      "detail": "lib/llvm/amdgcn/bitcode",
+      "next": "Check GPU architecture and matching device data."
+    },
+    {
+      "name": "Device data",
+      "status": "PASS",
+      "detail": "bin/rocblas/library",
+      "next": "Check GPU architecture and matching device data."
+    },
+    {
+      "name": "Device data",
+      "status": "PASS",
+      "detail": "bin/hipblaslt/library/gfx1100",
+      "next": "Check GPU architecture and matching device data."
+    },
+    {
+      "name": "HIP device/runtime",
+      "status": "PASS",
+      "detail": "check completed",
+      "next": ""
+    },
+    {
+      "name": "HIPRTC compile",
+      "status": "PASS",
+      "detail": "check completed",
+      "next": ""
+    },
+    {
+      "name": "MIGraphX object probe",
+      "status": "PASS",
+      "detail": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll",
+      "next": "Inspect ProbeSystem diagnostics and plugin dependencies."
+    },
+    {
+      "name": "Plugin migraphx_c.dll",
+      "status": "PASS",
+      "detail": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll",
+      "next": ""
+    },
+    {
+      "name": "Plugin migraphx.dll",
+      "status": "PASS",
+      "detail": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx.dll",
+      "next": ""
+    },
+    {
+      "name": "Plugin migraphx_gpu.dll",
+      "status": "PASS",
+      "detail": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_gpu.dll",
+      "next": ""
+    },
+    {
+      "name": "Model affine-relu.onnx",
+      "status": "PASS",
+      "detail": "Fixed fixture in application output directory",
+      "next": ""
+    },
+    {
+      "name": "Model matmul-relu.onnx",
+      "status": "PASS",
+      "detail": "Fixed fixture in application output directory",
+      "next": ""
+    },
+    {
+      "name": "Loaded native modules",
+      "status": "PASS",
+      "detail": "Recorded 18 modules with actual paths and SHA256; presence is not a full dependency proof.",
+      "next": ""
+    },
+    {
+      "name": "Actual GPU gfx",
+      "status": "PASS",
+      "detail": "hipInfo hardware report: gfx1100; requested=gfx1100",
+      "next": "Match --arch to hipInfo. Multiple architectures require explicit device selection before using this example."
+    },
+    {
+      "name": "Native static dependency closure",
+      "status": "PASS",
+      "detail": "34 files; 174 import edges; 0 missing; 0 unreadable",
+      "next": "Inspect .dependencies.json; use one complete ROCm installation and matching VC\u002B\u002B runtime."
+    },
+    {
+      "name": "Native candidate identity scan",
+      "status": "PASS",
+      "detail": "4 non-system DLL names have different reachable SHA256 values; 1 also have different versions",
+      "next": "Inspect candidate copies and actual loaded paths in .dependencies.json."
+    },
+    {
+      "name": "Native candidate compatibility",
+      "status": "FAIL",
+      "detail": "Different versions require resolution; same-version byte differences do not by themselves prove ABI incompatibility.",
+      "next": "Use one ROCm family and validate the selected models. Byte-different copies remain recorded even after numerical checks pass."
+    },
+    {
+      "name": "Native dependency audit execution",
+      "status": "PASS",
+      "detail": "check completed",
+      "next": ""
+    },
+    {
+      "name": "Driver/PowerShell/SDK inventory",
+      "status": "PASS",
+      "detail": "Collected by launcher: doctor-version-conflict.json.inventory.json",
+      "next": "Inspect inventory.json; collection does not certify driver compatibility."
+    },
+    {
+      "name": "All model/solver ABI compatibility",
+      "status": "NOT CHECKED",
+      "detail": "Static dependencies and loaded-file hashes do not exercise every dynamic solver or certify every ONNX model.",
+      "next": "Run the fixed model and your own ONNX; retain native errors."
+    },
+    {
+      "name": "Linux/other GPU",
+      "status": "SKIP",
+      "detail": "Windows host only",
+      "next": ""
+    }
+  ],
+  "modules": [
+    {
+      "ModuleName": "MigraphxCompute.exe",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\MigraphxCompute.exe",
+      "version": "1.0.0.0",
+      "sha256": "47ad6b1c022386a1ad24ed3701f3a628f94357c137a5456c870d796b07a3cc60"
+    },
+    {
+      "ModuleName": "MigraphxCompute.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\MigraphxCompute.dll",
+      "version": "1.0.0.0",
+      "sha256": "d57026f0ebe8471e77ae6f7af41ea7e7703f954ff87be3d40577d2c2655a1dd9"
+    },
+    {
+      "ModuleName": "JYPPX.ROCm.MIGraphX.CSharp.API.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\JYPPX.ROCm.MIGraphX.CSharp.API.dll",
+      "version": "1.0.0.0",
+      "sha256": "22336d0518f84c560c23a0a4f25cadc2c8968748186cf1473e56766df0608bcb"
+    },
+    {
+      "ModuleName": "JYPPX.ROCm.HIP.CSharp.API.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\JYPPX.ROCm.HIP.CSharp.API.dll",
+      "version": "1.0.0.0",
+      "sha256": "a18f426cb317b15a12094e4f2cedc3e566bf127503d98c5571d22f56df622826"
+    },
+    {
+      "ModuleName": "JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\JYPPX.ROCm.MIGraphX.CSharp.API.HIP.Interop.dll",
+      "version": "1.0.0.0",
+      "sha256": "9974c376ee1b6bbc9ee96ab6ba6ba4af9137763f3fe4cf41de2469203423f854"
+    },
+    {
+      "ModuleName": "amdhip64_7.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\amdhip64_7.dll",
+      "version": "10.0.3684.0",
+      "sha256": "4eb7eb90294cb4c3c9046efae93e51d5d16e9fd81c4161433ed56d5d092ed6f9"
+    },
+    {
+      "ModuleName": "VCRUNTIME140.dll",
+      "FileName": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll",
+      "version": "14.52.37029.0",
+      "sha256": "eb1ee979bf02324712346e5bdbfc59c785388bc50d18cc2688aae4b0734915a0"
+    },
+    {
+      "ModuleName": "VCRUNTIME140_1.dll",
+      "FileName": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll",
+      "version": "14.52.37029.0",
+      "sha256": "a14b4a42a2c6df04d6d53a8340816023d953406f7f3d94996c7cab30c414ff63"
+    },
+    {
+      "ModuleName": "amd_comgr.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\amd_comgr.dll",
+      "version": "3.5.0.0",
+      "sha256": "19727784b8e0146dd61b11d4619ac29cace70a242feaafbc3e3d441661dadbe0"
+    },
+    {
+      "ModuleName": "hiprtc0716.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\hiprtc0716.dll",
+      "version": "10.0.3684.0",
+      "sha256": "64dd3bd06ef93dd957d83c15a9051bd09f1053f15e582965ab6a87d7de0eb472"
+    },
+    {
+      "ModuleName": "migraphx_c.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_c.dll",
+      "version": "2.18.0.0",
+      "sha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab"
+    },
+    {
+      "ModuleName": "migraphx_onnx.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_onnx.dll",
+      "version": "2.18.0.0",
+      "sha256": "83db66189938fc28bfb7f64974bffcdc3156497f29b291c14d94ffb6be0e737a"
+    },
+    {
+      "ModuleName": "migraphx.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx.dll",
+      "version": "2.18.0.0",
+      "sha256": "423ed7b28d393617f99fe14c1f18e3fc9f03e663ca1223088a681f92fe4d2a19"
+    },
+    {
+      "ModuleName": "migraphx_gpu.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_gpu.dll",
+      "version": "2.18.0.0",
+      "sha256": "149907d84ce85b521049e7b9a32744be45967a40a781b503727d444314ded335"
+    },
+    {
+      "ModuleName": "migraphx_device.dll",
+      "FileName": "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples\\MigraphxCompute\\bin\\Release\\net10.0\\runtimes\\win-x64\\native\\migraphx_device.dll",
+      "version": "2.18.0.0",
+      "sha256": "2db4a5b52b1099867f42194d55f06fe27319757125f5b48d397c8e2b8cc543fb"
+    },
+    {
+      "ModuleName": "libhipblaslt.dll",
+      "FileName": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\libhipblaslt.dll",
+      "version": "1.4.1.0",
+      "sha256": "c86d5c411726a4de4b19e83a85a521410b4a8b07e455153f6cce6cdb15c02ee2"
+    },
+    {
+      "ModuleName": "rocblas.dll",
+      "FileName": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas.dll",
+      "version": "5.7.0.0",
+      "sha256": "55a2c066c5b3ef73852b2e11120b6a158a61739801e01df7c09c61a71b1340c7"
+    },
+    {
+      "ModuleName": "MIOpen.dll",
+      "FileName": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\MIOpen.dll",
+      "version": null,
+      "sha256": "266d716bab4aaf4ec3bb7492d35f6b65473982bc38f22b14235863a15c1429b4"
+    }
+  ],
+  "globalSettingsChanged": false
+}

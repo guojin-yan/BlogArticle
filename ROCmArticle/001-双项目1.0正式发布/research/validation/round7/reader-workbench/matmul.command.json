@@ -1,0 +1,22 @@
+{
+  "started": "2026-11-21T11:01:23.322327+08:00",
+  "finished": "2026-11-21T11:01:27.4031426+08:00",
+  "processId": 73464,
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples/run-windows.ps1",
+    "-HipRoot",
+    "D:\\AMD\\ROCm\\10.1.0\\HIP",
+    "-Architecture",
+    "gfx1100",
+    "-OutputPath",
+    "E:\\BlogArticle\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\research\\validation\\round7\\reader-workbench\\matmul.json",
+    "-ModelPath",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03\\examples/MigraphxCompute/matmul-relu.onnx"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "5d7d0b4d5b30634e826cc413cce4e3178ee411f54b7370d8e7beba06c1e814a9",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

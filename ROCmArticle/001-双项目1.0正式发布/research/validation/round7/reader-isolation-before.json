@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-21T10:59:16.250190+08:00",
+  "sourceCommit": "73569f7",
+  "paths": {
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-fresh-nuget": 0,
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-cli-home": 0,
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-http-cache": 0
+  },
+  "newOs": false,
+  "samePhysicalHost": true,
+  "independentHumanReader": false,
+  "systemDriverAndSdkReused": true,
+  "oldNugetPackageAndHttpCacheReused": false,
+  "sourceOverlay": false
+}

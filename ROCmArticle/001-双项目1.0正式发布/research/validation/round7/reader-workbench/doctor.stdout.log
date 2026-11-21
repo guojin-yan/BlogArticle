@@ -1,0 +1,31 @@
+PASS         Process/RID: win-x64
+PASS         .NET: .NET 10.0.15
+PASS         HIP_PATH: D:\AMD\ROCm\10.1.0\HIP
+PASS         File amdhip64*.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\amdhip64_7.dll
+PASS         File hiprtc[0-9]*.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\hiprtc0716.dll
+PASS         File amd_comgr.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\amd_comgr.dll
+PASS         File MIOpen.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\MIOpen.dll
+PASS         File rocblas.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\rocblas.dll
+PASS         File libhipblaslt.dll: File presence only: D:\AMD\ROCm\10.1.0\HIP\bin\libhipblaslt.dll
+PASS         Device data: lib/llvm/amdgcn/bitcode
+PASS         Device data: bin/rocblas/library
+PASS         Device data: bin/hipblaslt/library/gfx1100
+0: AMD Radeon PRO W7900
+7.16.26385
+PASS         HIP device/runtime: check completed
+PASS         HIPRTC compile: check completed
+PASS         MIGraphX object probe: E:\BlogArticle\ROCmArticle\.tools\round7-reader\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_c.dll
+PASS         Plugin migraphx_c.dll: E:\BlogArticle\ROCmArticle\.tools\round7-reader\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_c.dll
+PASS         Plugin migraphx.dll: E:\BlogArticle\ROCmArticle\.tools\round7-reader\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx.dll
+PASS         Plugin migraphx_gpu.dll: E:\BlogArticle\ROCmArticle\.tools\round7-reader\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\examples\MigraphxCompute\bin\Release\net10.0\runtimes\win-x64\native\migraphx_gpu.dll
+PASS         Model affine-relu.onnx: Fixed fixture in application output directory
+PASS         Model matmul-relu.onnx: Fixed fixture in application output directory
+PASS         Loaded native modules: Recorded 18 modules with actual paths and SHA256; presence is not a full dependency proof.
+PASS         Actual GPU gfx: hipInfo hardware report: gfx1100; requested=gfx1100
+PASS         Native static dependency closure: 34 files; 174 import edges; 0 missing; 0 unreadable
+PASS         Native candidate identity scan: 4 non-system DLL names have different reachable SHA256 values; 0 also have different versions
+NOT CHECKED  Native candidate compatibility: Different versions require resolution; same-version byte differences do not by themselves prove ABI incompatibility.
+PASS         Native dependency audit execution: check completed
+PASS         Driver/PowerShell/SDK inventory: Collected by launcher: doctor.json.inventory.json
+NOT CHECKED  All model/solver ABI compatibility: Static dependencies and loaded-file hashes do not exercise every dynamic solver or certify every ONNX model.
+SKIP         Linux/other GPU: Windows host only

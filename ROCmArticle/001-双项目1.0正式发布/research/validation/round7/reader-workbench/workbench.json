@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-21T11:01:27.4131191+08:00",
+  "completed": true,
+  "sourceArticle": "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-reader\\ROCmArticle\\001-\u53CC\u9879\u76EE1.0\u6B63\u5F0F\u53D1\u5E03",
+  "requestedArchitecture": "gfx1100",
+  "rows": [
+    {
+      "check": "Actual GPU gfx",
+      "status": "PASS",
+      "detail": "hipInfo hardware report: gfx1100; requested=gfx1100"
+    },
+    {
+      "check": "Native static dependency closure",
+      "status": "PASS",
+      "detail": "34 files; 174 import edges; 0 missing; 0 unreadable"
+    },
+    {
+      "check": "Native candidate identity scan",
+      "status": "PASS",
+      "detail": "4 non-system DLL names have different reachable SHA256 values; 0 also have different versions"
+    },
+    {
+      "check": "Native candidate compatibility",
+      "status": "NOT CHECKED",
+      "detail": "Different versions require resolution; same-version byte differences do not by themselves prove ABI incompatibility."
+    },
+    {
+      "check": "Preflight execution",
+      "status": "PASS",
+      "detail": "Original checks and unresolved scope retained in doctor.json"
+    },
+    {
+      "check": "HIP VectorAdd",
+      "status": "PASS",
+      "detail": "65,539 elements \u00B7 3 repetitions \u00B7 original stdout retained"
+    },
+    {
+      "check": "ONNX Identity",
+      "status": "PASS",
+      "detail": "Model output: 1, 2, 3, 4 (API smoke test)"
+    },
+    {
+      "check": "Affine/ReLU CPU vs GPU",
+      "status": "PASS",
+      "detail": "4,096 outputs \u00B7 CPU / host GPU / joint GPU numerical comparison"
+    },
+    {
+      "check": "MatMul \u002B ReLU CPU vs GPU",
+      "status": "PASS",
+      "detail": "4,096 outputs \u00B7 fixed Windows library paths"
+    }
+  ],
+  "allDisplayedChecksPassed": false,
+  "scope": "Actual command execution in this session; static checks do not certify all models or drivers. No benchmark, cold-cache or production claim."
+}

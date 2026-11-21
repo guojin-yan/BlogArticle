@@ -1,0 +1,19 @@
+BEGIN_COMPILED_GPU_PROGRAM
+module: "main"
+@0 = check_context::migraphx::gpu::context -> float_type, {}, {}
+@1 = hip::hip_allocate_memory[shape=int8_type, {32768}, {1},id=main:scratch] -> int8_type, {32768}, {1}
+@2 = load[offset=16384,end=32768](@1) -> float_type, {64, 64}, {64, 1}
+input = @param:input -> float_type, {64, 64}, {64, 1}
+@4 = hip::copy_to_gpu(input,@2) -> float_type, {64, 64}, {64, 1}
+@5 = load[offset=0,end=16384](@1) -> float_type, {64, 64}, {64, 1}
+@6 = gpu::code_object[code_object=4720,symbol_name=mul_add_relu_kernel,global=2048,local=1024,](@4,@5) -> float_type, {64, 64}, {64, 1}
+@7 = hip::copy_from_gpu(@6) -> float_type, {64, 64}, {64, 1}
+@8 = hip::sync_stream(@7) -> float_type, {64, 64}, {64, 1}
+@9 = @return(@8)
+
+
+BEGIN_MODEL_EXECUTION
+END_MODEL_EXECUTION
+Trace operations: hip::hip_allocate_memory[shape=int8_type, {32768}, {1},id=main:scratch], @param:input, hip::copy_to_gpu, gpu::code_object[code_object=4720,symbol_name=mul_add_relu_kernel,global=2048,local=1024,], hip::copy_from_gpu, hip::sync_stream
+PASS: affine-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-双项目1.0正式发布\research\validation\round7\reader-trace.json

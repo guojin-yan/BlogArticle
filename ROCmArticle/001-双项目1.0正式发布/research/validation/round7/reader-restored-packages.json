@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-21T11:01:39.885067+08:00",
+  "cloneCommit": "73569f724920982aee6767cf7800635edb280c77",
+  "packageFolders": [
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\round7-fresh-nuget"
+  ],
+  "restoredPackages": [
+    {
+      "package": "jyppx.rocm.hip.csharp.api",
+      "version": "1.0.0",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "F01UrGj/ooaMV30TtQQ86R8564aGTfP+mTJJXQuB84ZWrK7nQDhk9F9It3RKTheuorS1PcJNy+NfAvdxqQkjwQ=="
+    },
+    {
+      "package": "jyppx.rocm.hip.csharp.api.runtime.win-x64",
+      "version": "10.1.0",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "KS/uNF+Z/2Zy7i27wrqCWTWTXLAOaJdXZp1KOgleCc9ABp83cfvSmn9NgHVGaP8fL2N7RP16R2E6xZN3YCzG5w=="
+    },
+    {
+      "package": "jyppx.rocm.migraphx.csharp.api",
+      "version": "1.0.0",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "GoEKhanc18sSi8hDMxj7jZbWFM2w+SSXd1KxGV3zhh94r/c9442w8C6hsQGi88ZJ2dmHaXlGeXj5sITwl8sMyA=="
+    },
+    {
+      "package": "jyppx.rocm.migraphx.csharp.api.hip.interop",
+      "version": "1.0.0",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "7b11CjdWIEecYuWY9QgvuyH3C9iALSy7zWqITc8pF+LqqtYleukiEaEqNbIi6WJv4ct3OpOWTcO5r/187khRnA=="
+    },
+    {
+      "package": "jyppx.rocm.migraphx.csharp.api.runtime.win-x64",
+      "version": "1.0.0",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "mdBVh/74AYifoido6cXlZYIiAgbpS/f037Qt66d4KGbhWGB6pDKUUjFuXHw+m6rSNApsKoBXWcwv0WLBAv9oBA=="
+    },
+    {
+      "package": "microsoft.ml.onnxruntime",
+      "version": "1.23.2",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "849xImRO0vxDH7DNlg/FAVGExKfjN1r2CIZevZGI5JQCoOj+0T23ShqPEgu5mLTwElot5X7V0qkO0jUz/yJZbA=="
+    },
+    {
+      "package": "microsoft.ml.onnxruntime.managed",
+      "version": "1.23.2",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "HtlQuzmVrqhnkmwfmkQ+2re8xPxtVmeLRQaYSJ3pXfzKs4b36+yBfa/LnDuzfX1bGcyWn/McKxmbY87TCAmo1Q=="
+    },
+    {
+      "package": "stbimagesharp",
+      "version": "2.30.15",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ=="
+    },
+    {
+      "package": "stbimagewritesharp",
+      "version": "1.16.7",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "NF9kOxi0iS9VunklnRKgOpAWC2knCGKRjdy7RT6XAqYNyb7LQfyPHPdl4l1fJw7TFYKrGQzQOmK1XpBONC2MoA=="
+    },
+    {
+      "package": "system.numerics.tensors",
+      "version": "9.0.0",
+      "source": "https://api.nuget.org/v3/index.json",
+      "contentHash": "hyJB4UlpAi19Xr9AXzu2NuagKC4lPfHObNMEAA0HmqFz2rX7wKgzeYzO/jM/eBHDhnUGFFEjk5cOoJaxqg5J4A=="
+    }
+  ],
+  "scope": "Fresh package directory and HTTP cache; same installed Windows driver, SDK and framework packs. Does not imply cold GPU/disk caches."
+}

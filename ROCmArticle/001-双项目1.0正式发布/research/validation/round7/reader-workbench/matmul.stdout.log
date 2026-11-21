@@ -1,0 +1,2 @@
+PASS: matmul-relu.onnx; outputElements=4096; host and joint match CPU
+Evidence: E:\BlogArticle\ROCmArticle\001-鍙岄」鐩?.0姝ｅ紡鍙戝竷\research\validation\round7\reader-workbench\matmul.json
