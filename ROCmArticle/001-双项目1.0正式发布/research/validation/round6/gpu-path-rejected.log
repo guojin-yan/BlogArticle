@@ -1,0 +1,4 @@
+{
+  "error": "Generated resources must stay outside the source checkout.",
+  "type": "InvalidDataException"
+}

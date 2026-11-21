@@ -1,0 +1,27 @@
+{
+  "started": "2026-11-21T10:31:30.815415+08:00",
+  "finished": "2026-11-21T10:31:58.368346+08:00",
+  "command": [
+    "dotnet",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll",
+    "recognize-lines",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json",
+    "R:/lines.json",
+    "R:/recognized"
+  ],
+  "exitCode": 0,
+  "nativeSha256": "8e4ac30ebd51808ba0210d1a9292221d74041b1edb7fa576fa9d22909bb18aab",
+  "logSha256": "3d7b842cb8c3adac82559387c70f6aabec6f001a86dd80d857f220f7780ca13e",
+  "frozenFiles": {
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round6\\protocol.json": "a7f8257897118aae1498b5b1808e37506835b6a9b5306c7762e802d72af5ff81",
+    "E:\\BlogArticle\\ROCmArticle\\001-双项目1.0正式发布\\research\\validation\\round6\\lines.json": "ea052db01c8119e3dfa945da8932c6366219f05cd81f6636f2d9dbba700426d5",
+    "E:\\GitSpace\\ROCm-CSharp-Projects\\assets\\document-evidence\\en-ppocrv3-ctc-v2\\model.json": "0785851f0087c0d3398834069fdc5c5c0ac7a1302f268a35023a6227fcc487e8",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll": "f648ae040cfa75cc053ce9826e790288f5c4de36c50598d8cbf10a9acf858eac",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.Core.dll": "366b28a9f0e936a9c29aba521cd0fd0ef8aa04a08199b5df0ae12e8063ad7ffb"
+  },
+  "environment": {
+    "HIP_PATH": "D:\\AMD\\ROCm\\10.1.0\\HIP",
+    "ROCBLAS_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\rocblas\\library",
+    "HIPBLASLT_TENSILE_LIBPATH": "D:\\AMD\\ROCm\\10.1.0\\HIP\\bin\\hipblaslt\\library\\gfx1100"
+  }
+}

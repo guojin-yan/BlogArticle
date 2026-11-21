@@ -1,0 +1,93 @@
+{
+  "declaredAt": "2026-11-21T10:31:03.499218+08:00",
+  "selection": "User requested a simpler illustration. Preselected APPLE and SODA from the second real HierText photo by visual legibility, before this round inference; demonstration, not random evaluation.",
+  "dataset": "HierText official test image b533107ff30932da",
+  "license": "CC BY-SA 4.0",
+  "revision": "70b6620b2b112597d8219e11eee9773a1403827c",
+  "sourceUrl": "https://github.com/google-research-datasets/hiertext",
+  "originalImageSha256": "abf91176e175122c44f913e7109d017b819877df53194d37183527410f877d2c",
+  "officialAnnotationSha256": "8a8f6cb6dd706b457b822634e9f19b7f51cc9813729d57401a3bb6ea45abd438",
+  "originalImage": "../round4/document-history/data/originals/b533107ff30932da.jpg",
+  "displayBounds": [
+    1210,
+    382,
+    1375,
+    510
+  ],
+  "displaySha256": "5b2825c2fbbe864339e8cd83633013bdd92585537e0ec3267795f3a889c21051",
+  "cropRule": "Axis-aligned floor/ceil bounds of official line vertices; RGB BMP; no replacement text, rotation, whitening, generative editing or contrast changes.",
+  "modelManifestSha256": "0785851f0087c0d3398834069fdc5c5c0ac7a1302f268a35023a6227fcc487e8",
+  "graphSha256": "f700f92dd1754c7e2e7f6aa8d1624ae056ef88889cca61724f5352238b8e1bb3",
+  "dictionarySha256": "f62e0b7a43463665c8de3d9a2d376522417f97c7900f4411b1959464265e6dca",
+  "applicationFiles": {
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.App.dll": "f648ae040cfa75cc053ce9826e790288f5c4de36c50598d8cbf10a9acf858eac",
+    "E:\\BlogArticle\\ROCmArticle\\.tools\\apps-round3-build\\bin\\Documents.App\\Release\\net10.0\\Documents.Core.dll": "366b28a9f0e936a9c29aba521cd0fd0ef8aa04a08199b5df0ae12e8063ad7ffb"
+  },
+  "samples": [
+    {
+      "id": "b533107ff30932da-p002-l000",
+      "paragraphIndex": 2,
+      "lineIndex": 0,
+      "text": "APPLE",
+      "vertices": [
+        [
+          1232,
+          404
+        ],
+        [
+          1352,
+          392
+        ],
+        [
+          1355,
+          426
+        ],
+        [
+          1235,
+          437
+        ]
+      ],
+      "bounds": [
+        1232,
+        392,
+        1355,
+        437
+      ],
+      "image": "inputs/b533107ff30932da-p002-l000.bmp",
+      "imageSha256": "03c3d47a3f7146a3a15ffba4077f5ad7ab7bf10ae877d59599e70be6b7e915c7"
+    },
+    {
+      "id": "b533107ff30932da-p002-l001",
+      "paragraphIndex": 2,
+      "lineIndex": 1,
+      "text": "SODA",
+      "vertices": [
+        [
+          1243,
+          461
+        ],
+        [
+          1343,
+          459
+        ],
+        [
+          1344,
+          491
+        ],
+        [
+          1243,
+          493
+        ]
+      ],
+      "bounds": [
+        1243,
+        459,
+        1344,
+        493
+      ],
+      "image": "inputs/b533107ff30932da-p002-l001.bmp",
+      "imageSha256": "2bc3443dcb41e35289309b8a9ea3a30f3d3f6a00185a54dd0bd6595ecc7c0567"
+    }
+  ],
+  "scope": "Two easy selected real sign lines for illustration only. Official line geometry supplied; no detector, document field evaluation or accuracy benchmark. No new CPU tensor comparison."
+}

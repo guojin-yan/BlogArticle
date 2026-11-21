@@ -1,0 +1,24 @@
+{
+  "captureScope": "Actual browser viewport; unedited original JPEG bytes.",
+  "files": [
+    {
+      "file": "screenshots/03-document-simple-sign.jpg",
+      "url": "http://127.0.0.1:8766/research/validation/round6/evidence.html",
+      "evidence": [
+        "evidence.html",
+        "recognized/batch-evidence.json",
+        "summary.json",
+        "protocol.json"
+      ],
+      "width": 1265,
+      "height": 712,
+      "format": "JPEG",
+      "bytes": 71687,
+      "sha256": "7709caab437e74e3793849be83de8b1157fe166ed7b5f77968e726eaa271b495",
+      "capturedAtFromFileMtime": "2026-11-21T10:33:08.663780+08:00",
+      "captureApi": "cua_repl Tab.getScreenshot()",
+      "edited": false,
+      "status": "VALID"
+    }
+  ]
+}

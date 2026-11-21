@@ -1,0 +1,161 @@
+{
+  "createdAt": "2026-11-21T10:38:04.831526+08:00",
+  "revision": "v9",
+  "baselineCommit": "1b33655",
+  "applicationSourceCommit": "2f70b96267484b441fa726a3d496b8cc55d47219",
+  "scope": "Simple real sign illustration; two supplied official line crops, current C# MIGraphX GPU output and raw screenshot.",
+  "screenshots": "screenshots/manifest.json",
+  "historicalManifests": "round2/3/4/5 raw unchanged; old mutable files checked at a5aeb7d/a4f73e4/9727a7d/1b33655.",
+  "files": [
+    {
+      "path": "01-事实与来源.md",
+      "bytes": 24526,
+      "sha256": "a299a77421649965682b1514a41563419435463f20e3580a7cef55dba577299f"
+    },
+    {
+      "path": "02-配图方案.md",
+      "bytes": 4939,
+      "sha256": "9aed0d1b81e322d2ec239d34bac6f2aa6789198664e5ce67e9e2764ec1547ac4"
+    },
+    {
+      "path": "03-正文.md",
+      "bytes": 30234,
+      "sha256": "4d600faa3e060d3562d2af00339709ba09e99655c7c1558e756a242a9ed76413"
+    },
+    {
+      "path": "03-正文预览.html",
+      "bytes": 40296,
+      "sha256": "a71d4558ed15027467531ce9928e134120add9b17489d0e4823b7343d0ff246b"
+    },
+    {
+      "path": "04-编辑记录.md",
+      "bytes": 20822,
+      "sha256": "37598653a0af607f3a0a91b8e30da9a842d2e767242e291e3439bf2fa610ab26"
+    },
+    {
+      "path": "05-上手与验证.md",
+      "bytes": 31054,
+      "sha256": "dd9e1cd4e8a2e9915c39f89ad059c68f36c7e4a9edb9a081ac1abc7c9d744e00"
+    },
+    {
+      "path": "research/build-preview.py",
+      "bytes": 5312,
+      "sha256": "efac73f44d65a32574e5083d699bca0e16a30afa66c4960ec119c419e98795a3"
+    },
+    {
+      "path": "research/check-round6.py",
+      "bytes": 9874,
+      "sha256": "c03af7748c9841c1f6aeccbb8eddc0bbb87b1500b6005959c3668b15c011d44a"
+    },
+    {
+      "path": "research/run-round6-simple-ocr.py",
+      "bytes": 9467,
+      "sha256": "3c4cc8d2099efe3a4ca32b09280bb34ea0f161cbb571110bc984da76360210fb"
+    },
+    {
+      "path": "research/validation/round6/.gitattributes",
+      "bytes": 81,
+      "sha256": "594e25464e16a08c671dedd38c4830a2c896bf48397e47180f2fe763e35ec669"
+    },
+    {
+      "path": "research/validation/round6/command.json",
+      "bytes": 1779,
+      "sha256": "8856f895668c949de777327bc204858761e853aa0e349b2304fcf8bf58ab9033"
+    },
+    {
+      "path": "research/validation/round6/evidence.html",
+      "bytes": 2480,
+      "sha256": "25ef47e773ae72f9d9661279ed4e2970de988884bf8bb73214cc67538f334b49"
+    },
+    {
+      "path": "research/validation/round6/final-checks.json",
+      "bytes": 689,
+      "sha256": "e13e1c419d37d7b09ae2e88f1acd51037e6d75abb51e4aa8a040e9fd7a1f684b"
+    },
+    {
+      "path": "research/validation/round6/gpu-path-rejected-command.json",
+      "bytes": 1866,
+      "sha256": "4cf4be857f8ed755e44cd33910630a3e78b109f68fbc4470358dec185a3a2074"
+    },
+    {
+      "path": "research/validation/round6/gpu-path-rejected.log",
+      "bytes": 114,
+      "sha256": "6199898e0bb71b00a9bff54928558c8462d9aa4e63533cf873883811077dd995"
+    },
+    {
+      "path": "research/validation/round6/gpu.log",
+      "bytes": 3002,
+      "sha256": "3d7b842cb8c3adac82559387c70f6aabec6f001a86dd80d857f220f7780ca13e"
+    },
+    {
+      "path": "research/validation/round6/inputs/apple-soda-sign.png",
+      "bytes": 30909,
+      "sha256": "5b2825c2fbbe864339e8cd83633013bdd92585537e0ec3267795f3a889c21051"
+    },
+    {
+      "path": "research/validation/round6/inputs/b533107ff30932da-p002-l000.bmp",
+      "bytes": 16794,
+      "sha256": "03c3d47a3f7146a3a15ffba4077f5ad7ab7bf10ae877d59599e70be6b7e915c7"
+    },
+    {
+      "path": "research/validation/round6/inputs/b533107ff30932da-p002-l001.bmp",
+      "bytes": 10390,
+      "sha256": "2bc3443dcb41e35289309b8a9ea3a30f3d3f6a00185a54dd0bd6595ecc7c0567"
+    },
+    {
+      "path": "research/validation/round6/lines.json",
+      "bytes": 718,
+      "sha256": "ea052db01c8119e3dfa945da8932c6366219f05cd81f6636f2d9dbba700426d5"
+    },
+    {
+      "path": "research/validation/round6/protocol.json",
+      "bytes": 3129,
+      "sha256": "a7f8257897118aae1498b5b1808e37506835b6a9b5306c7762e802d72af5ff81"
+    },
+    {
+      "path": "research/validation/round6/README.md",
+      "bytes": 3314,
+      "sha256": "3ff2924898f4155641971671c8205e8659abb7457204713dc9dbc15584ef71d4"
+    },
+    {
+      "path": "research/validation/round6/recognized/batch-evidence.json",
+      "bytes": 3465,
+      "sha256": "34a54de7a690ff3c39f167fe92f7841c4e836a1c2fe55d7211dda41f5c2142c8"
+    },
+    {
+      "path": "research/validation/round6/recognized/line-001.json",
+      "bytes": 936,
+      "sha256": "b6605cac41cbeb0f76a93edc9ddbd31fca70677f3e30ad423192fba5bbccef76"
+    },
+    {
+      "path": "research/validation/round6/recognized/line-002.json",
+      "bytes": 935,
+      "sha256": "f9a832311b25be55da2cca1087d51288bdb510a2d4ecaa69286b31162027e2db"
+    },
+    {
+      "path": "research/validation/round6/screenshots/03-document-simple-sign.jpg",
+      "bytes": 71687,
+      "sha256": "7709caab437e74e3793849be83de8b1157fe166ed7b5f77968e726eaa271b495"
+    },
+    {
+      "path": "research/validation/round6/screenshots/manifest.json",
+      "bytes": 729,
+      "sha256": "a88f83e6575636e28897010f8d813a5642e757cb007defbbc363d84ce7e1c210"
+    },
+    {
+      "path": "research/validation/round6/summary.json",
+      "bytes": 1516,
+      "sha256": "160f95dfbf761f4300a3188b9df8807c520ac000aefa7cf5b7f9b4c1fee5cc61"
+    },
+    {
+      "path": "research/真实开源数据案例与截图.md",
+      "bytes": 6484,
+      "sha256": "5b10ff791064baba7dd7072fca6682754ecf0772ed5a9f149fcb2bff12419611"
+    },
+    {
+      "path": "../README.md",
+      "bytes": 2912,
+      "sha256": "982b5444279f258f4b5567739056d70c3ca77bbf1d55a0bac55cda9df94f5552"
+    }
+  ]
+}

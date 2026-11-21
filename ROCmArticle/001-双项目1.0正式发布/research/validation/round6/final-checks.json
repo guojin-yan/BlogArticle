@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-21T10:38:04.829528+08:00",
+  "officialLinesAndPixelCropsVerified": 2,
+  "actualCurrentGpuLines": 2,
+  "exactLines": 2,
+  "modelInstances": 1,
+  "programCompilations": 1,
+  "selectionFrozenBeforeInference": true,
+  "allPredictionsRetained": true,
+  "newCpuTensorComparison": false,
+  "nativeCandidateStderrRetained": true,
+  "initialPathRejectionRetained": true,
+  "rawBrowserScreenshots": 1,
+  "historicalHashesVerified": {
+    "round2": 146,
+    "round3": 373,
+    "round4": 261,
+    "round5": 209
+  },
+  "readerPathsPortable": true,
+  "articleLinksAndStructure": "PASS",
+  "otherThreeCasesOr264TestsOrPerformanceRerun": false,
+  "productionAcceptance": false
+}

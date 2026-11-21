@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "source": "HierText / Open Images; Long et al., Google Research; CC BY-SA 4.0",
+  "scope": "Two easy selected real sign lines for illustration only. Official line geometry supplied; no detector, document field evaluation or accuracy benchmark. No new CPU tensor comparison.",
+  "lines": [
+    {
+      "id": "b533107ff30932da-p002-l000",
+      "image": "inputs/b533107ff30932da-p002-l000.bmp",
+      "imageSha256": "03c3d47a3f7146a3a15ffba4077f5ad7ab7bf10ae877d59599e70be6b7e915c7"
+    },
+    {
+      "id": "b533107ff30932da-p002-l001",
+      "image": "inputs/b533107ff30932da-p002-l001.bmp",
+      "imageSha256": "2bc3443dcb41e35289309b8a9ea3a30f3d3f6a00185a54dd0bd6595ecc7c0567"
+    }
+  ]
+}
