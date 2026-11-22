@@ -1,19 +1,20 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</title><style>
 :root{--ink:#18243b;--muted:#65738b;--line:#e2e8f2;--violet:#6754d8}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:#f2f5fa;color:var(--ink);font-family:Segoe UI,Microsoft YaHei,sans-serif;line-height:1.95}.masthead{background:#090e24;color:#aebbdc;padding:16px max(28px,calc((100vw - 1200px)/2));font-size:13px;letter-spacing:1px}.masthead b{color:white}.hero{max-width:1200px;margin:46px auto 32px;padding:0 30px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--violet);font-weight:700}.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.35;letter-spacing:-1px;margin:14px 0}.meta{font-size:13px;color:var(--muted)}.layout{max-width:1200px;padding:0 30px 70px;margin:auto;display:grid;grid-template-columns:minmax(0,900px) 210px;gap:34px;align-items:start}article{min-width:0;background:white;border:1px solid var(--line);border-radius:18px;padding:38px 44px;box-shadow:0 8px 30px #29376006}article>p:first-child{font-size:19px;line-height:1.8;margin-top:0}p{margin:17px 0}h2{margin:58px 0 20px;font-size:26px;line-height:1.5;border-top:1px solid var(--line);padding-top:34px}h3{font-size:21px;line-height:1.5;margin:34px 0 14px}strong{font-weight:650;color:#202b48}img{display:block;width:100%;height:auto;border-radius:12px;margin:24px auto}p:has(>em:only-child){font-size:13px;line-height:1.7;color:var(--muted);text-align:center;margin-top:-10px}blockquote{margin:24px 0;border-left:4px solid #8977ed;padding:14px 20px;background:#f5f3ff;border-radius:0 9px 9px 0;color:#4d4d71}blockquote p{margin:0}code{font-family:Cascadia Code,Consolas,monospace;font-size:.87em;background:#f0f3f9;color:#545094;border-radius:5px;padding:2px 5px;overflow-wrap:anywhere}pre{overflow:auto;background:#10182c;border-radius:12px;color:#dce9ff;padding:23px 22px;line-height:1.75;font-size:13px}pre code{background:transparent;padding:0;color:inherit;white-space:pre;overflow-wrap:normal}.table-scroll{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:11px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.7}th{background:#edf1f8;color:#40506d;text-align:left;font-weight:650;white-space:nowrap}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:none}td{min-width:130px}td:last-child{overflow-wrap:anywhere}td code{font-size:12px}aside{position:sticky;top:24px;font-size:12px;color:var(--muted);padding-top:12px}aside h4{margin:0 0 12px;color:#3b4661}.toc ul{list-style:none;padding:0;margin:0}.toc li{line-height:1.6;margin:12px 0}.toc a{color:var(--muted);text-decoration:none;display:block;border-left:2px solid transparent;padding-left:12px}.toc a:hover{color:var(--violet);border-color:var(--violet)}.review-tip{border-top:1px solid var(--line);margin-top:24px;padding-top:18px;font-size:12px;line-height:1.75}footer{text-align:center;padding:0 20px 40px;font-size:12px;color:var(--muted)}@media(max-width:1000px){.layout{grid-template-columns:minmax(0,1fr)}aside{display:none}}@media(max-width:600px){.hero{padding:0 18px;margin-top:28px}.hero h1{font-size:29px}.layout{padding:0 10px 30px}article{padding:22px 18px;border-radius:12px}h2{font-size:23px;margin-top:44px}h3{font-size:19px}pre{font-size:11px;padding:20px 13px}td,th{padding:10px}img{border-radius:9px}.masthead{padding:12px 18px}}@media print{.masthead,aside{display:none}.hero,.layout{padding:0;max-width:none;margin:0;display:block}article{border:none;box-shadow:none;padding:0}h2{break-after:avoid}img,pre,table{break-inside:avoid}}
-article a{color:#5145af;text-underline-offset:3px;overflow-wrap:anywhere}article a:hover{color:#352878}a code{color:inherit}</style></head><body><div class="masthead"><b>椒颜皮皮虾</b> / ROCm × C# / ARTICLE 001</div><header class="hero"><div class="eyebrow">OPEN SOURCE · RELEASE 1.0.0</div><h1>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</h1><div class="meta">Guojin Yan · 2026-11-21 · v12，精简正文 · 真实终端原图</div></header><main class="layout"><article>
+article a{color:#5145af;text-underline-offset:3px;overflow-wrap:anywhere}article a:hover{color:#352878}a code{color:inherit}</style></head><body><div class="masthead"><b>椒颜皮皮虾</b> / ROCm × C# / ARTICLE 001</div><header class="hero"><div class="eyebrow">OPEN SOURCE · RELEASE 1.0.0</div><h1>C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来</h1><div class="meta">Guojin Yan · 2026-11-22 · v13，产品特色与关键解释</div></header><main class="layout"><article>
 <p><strong>用熟悉的 C#/.NET，调用 AMD GPU 做自定义计算、ONNX 推理和模型前后处理。</strong></p>
 <p><img alt="C# 连接 HIP 自定义计算与 MIGraphX ONNX 推理，共同使用 AMD GPU" src="assets/01-cover-v2.png" /></p>
 <p><em>AIGC 概念封面，非实测截图。</em></p>
 <p>之前和大家分享过 OpenVINO、TensorRT 的 C# 接口，这次把 AMD GPU 也接进来。<strong>HIP CSharp API 和 MIGraphX CSharp API 1.0.0 正式发布</strong>，配套 Runtime 和 HIP 适配包已上架 NuGet。</p>
+<p>做这些封装时，我主要考虑的是怎样接进现有 .NET 工程：除了运行模型，还要加载原生库、管理显存和异步任务，再把结果交给业务代码。两个项目围绕这些环节提供 C# 接口，让计算、推理和资源管理有一条连贯的使用路径。</p>
 <p>面向使用 AMD 显卡的 C#/.NET 开发者，本文带你选包、跑通计算与模型推理，再看看怎样接进工业视觉、桌面 AI 和数据处理应用。</p>
 <h2 id="c-amd-gpu">一、让你的 C# 项目用上 AMD GPU</h2>
 <ul>
-<li><strong>批量计算交给 GPU</strong>：处理图像像素、信号和数组，用自己的并行算法完成计算。</li>
-<li><strong>ONNX 模型接进应用</strong>：在 C# 中加载、编译和运行模型，将检测、OCR 等结果交给界面与业务代码。</li>
-<li><strong>前后处理连成流水线</strong>：HIP 与 MIGraphX 配合，让中间数据留在设备上处理，由 C# 统一组织调用。</li>
+<li><strong>批量计算交给 GPU</strong>：将图像像素、信号采样和数组运算组织成并行任务，用自己的算法完成处理，再把结果接回现有业务流程。</li>
+<li><strong>ONNX 模型接进应用</strong>：在 C# 中完成模型加载、编译和推理，将目标检测、OCR 等能力接进桌面界面或服务，推理运行时无需另起 Python 服务。</li>
+<li><strong>前后处理连成流水线</strong>：HIP 处理数据布局和数值变换，MIGraphX 运行模型，中间数据可以继续留在设备上处理，由 C# 统一组织调用与资源。</li>
 </ul>
 <h2 id="hip-migraphx">二、为什么选择 HIP + MIGraphX？</h2>
-<p>按任务选择入口：</p>
+<p><strong>HIP 面向自己编写的并行计算，MIGraphX 面向已有的模型计算图。</strong> 比如给图像做像素变换，可以从 HIP 开始；已有训练好的 ONNX 检测模型，则先用 MIGraphX 跑通推理，再按需要接入 HIP 前后处理。</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
@@ -40,31 +41,35 @@ article a{color:#5145af;text-underline-offset:3px;overflow-wrap:anywhere}article
 </tr>
 </tbody>
 </table></div>
-<p>两个 Core 可独立使用，联合处理时再加入 HIP.Interop。模型示例覆盖检测、OCR、图文匹配和版面处理：</p>
+<p>两个 Core 可独立使用，联合处理时再加入 HIP.Interop：先完成一个计算步骤或一个模型，再逐步扩展整条流程。仓库内的模型示例覆盖检测、OCR、图文匹配和版面处理，也包含输入处理和结果解析，便于对照自己的任务修改：</p>
 <pre><code class="language-text">YOLO26、PaddleOCR v4/v5/v6、CLIP、PP-Structure 示例
 https://github.com/guojin-yan/MIGraphX-CSharp-API/tree/v1.0.0/samples
 </code></pre>
 <h2 id="hip-migraphx100">三、HIP 与 MIGraphX：1.0.0 正式发布</h2>
-<p>两个开源项目均可通过 NuGet 接入现有 C# 工程。</p>
+<p>这次发布的是两个各有分工、也能组合使用的开源库。下面重点说说它们能为 C# 开发带来哪些能力。</p>
 <h3 id="hip-csharp-api-c-gpu">HIP CSharp API：从 C# 调用自己的 GPU 算法</h3>
-<p>AMD HIP Runtime 与 HIPRTC 的 C#/.NET 接口库，同时提供托管对象和低层 API。</p>
+<p>AMD HIP Runtime 与 HIPRTC 的 C#/.NET 接口库。<strong>Kernel 使用 HIP C/C++ 编写，C# 负责数据传输、任务提交和资源管理</strong>；常见流程使用托管对象，需要直接调用原生能力时，也有低层 API 入口。</p>
 <ul>
-<li><strong>自定义计算</strong>：HIP C/C++ 编写 Kernel，C# 调用，适用于图像、信号和数值处理。</li>
-<li><strong>编译与加载</strong>：HIPRTC 运行时编译，也可加载预编译模块。</li>
-<li><strong>设备与显存</strong>：选择 GPU、分配显存、上传和下载数据。</li>
-<li><strong>异步与计时</strong>：通过 Stream/Event 调度、同步和测量。</li>
-<li><strong>资源管理与示例</strong>：<code>using</code> / <code>Dispose</code>、异步资源保活，配有中英文注释和可运行教程。</li>
+<li><strong>自己的算法自己组织</strong>：编写像素变换、信号处理或数组运算 Kernel，设置线程与网格，再从 C# 调用，适合已有业务中的批量计算步骤。</li>
+<li><strong>运行时编译与模块加载</strong>：支持通过 HIPRTC 将 Kernel 源码编译成设备代码，也支持加载预编译模块，方便实验算法与部署已有计算程序。</li>
+<li><strong>显存与数据传输</strong>：提供设备选择、显存分配和上传下载接口，让应用明确管理数据位置，按流程复用缓冲区。</li>
+<li><strong>异步执行与计时</strong>：Stream 组织任务顺序，Event 用于同步与计时，便于把拷贝、计算和后续处理串起来。</li>
+<li><strong>符合 .NET 习惯的资源管理</strong>：设备内存、Stream、Event、Module 等对象通过 <code>using</code> / <code>Dispose</code> 释放，异步在途资源有保活机制。</li>
+<li><strong>从示例逐步上手</strong>：中英文 API 注释配合设备枚举、内存拷贝、VectorAdd、Stream/Event 等教程，先跑通再改成自己的算法。</li>
 </ul>
 <h3 id="migraphx-csharp-api-onnx-net">MIGraphX CSharp API：把 ONNX 模型接进 .NET 应用</h3>
-<p>AMD MIGraphX 的 C#/.NET 接口库，覆盖模型加载、张量管理、GPU 编译与推理。</p>
+<p>AMD MIGraphX 的 C#/.NET 接口库。MIGraphX 将模型计算图编译为面向 AMD GPU 的程序，封装库把<strong>模型加载、张量管理、编译与执行</strong>接进 .NET，让推理与现有界面、数据处理和业务逻辑放在同一个应用中。</p>
 <ul>
-<li><strong>模型接入</strong>：从文件或内存加载 ONNX，编译到 GPU 执行。</li>
-<li><strong>张量输入输出</strong>：多输入输出、类型化张量、动态形状，结果可读取为 C# 数组。</li>
-<li><strong>程序复用</strong>：进程内复用已编译程序，提供保存、加载和缓存接口；跨进程实测见第六节。</li>
-<li><strong>联合处理</strong>：通过 HIP.Interop，在同一 HIP Stream 上连接设备缓冲区和前后处理。</li>
-<li><strong>四类工程示例</strong>：YOLO26 检测与分割、PaddleOCR 文字识别、CLIP 图文匹配、PP-Structure 文档结构分析。</li>
+<li><strong>ONNX 模型接入</strong>：从文件或内存解析模型，读取输入名称和形状，完成 GPU 编译后提交推理，适合把已有模型接进 C# 工程。</li>
+<li><strong>灵活的张量输入输出</strong>：支持多输入输出、类型化张量和动态形状，结果可读取为 C# 数组，便于继续做解析与业务判断。</li>
+<li><strong>编译程序复用</strong>：同一进程内复用已编译程序，避免每次请求都重建；另有保存、加载与缓存接口，跨进程行为和成本见第六节。</li>
+<li><strong>前后处理一起连接</strong>：通过 HIP.Interop 接入 HIP Stream 与设备缓冲区，让前处理、模型执行和后处理按同一条流的顺序提交。</li>
+<li><strong>加载与兼容性诊断</strong>：提供原生库加载路径、功能探测和诊断信息，配置环境时可以核对实际加载的引擎与可用接口。</li>
+<li><strong>四类工程示例</strong>：YOLO26 检测与分割、PaddleOCR 文字识别、CLIP 图文匹配、PP-Structure 文档结构分析，提供可继续修改的工程起点。</li>
 </ul>
+<p>两个库的托管目标覆盖 .NET Framework 4.6 至 .NET 10，配有中英文 API 注释；目标框架覆盖与 GPU 实测范围需分开看，本文运行示例和验证环境见后文。</p>
 <p><strong>七个 NuGet 包已发布</strong>，按用途选择：</p>
+<p>Core 提供 C# 接口，平台 Runtime 提供对应原生运行库，HIP.Interop 负责连接两个 Core。这样既能选择随项目分发的 Runtime，也能按部署指南使用兼容的系统安装。</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
@@ -191,7 +196,8 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 HIP Driver:  7.16.26385
 0: AMD Radeon PRO W7900
 </code></pre>
-<p>这里是原生库报告的版本号，与 NuGet 包版本不同。接着用 VectorAdd 计算 <code>c[i] = a[i] + b[i]</code>，完成上传、编译、执行、同步与下载，再逐元素对照 CPU；同时检查尾部和漏写结果。</p>
+<p>这里是原生库报告的版本号，与 NuGet 包版本不同。接着用 VectorAdd 计算 <code>c[i] = a[i] + b[i]</code>，完成上传、编译、执行、同步与下载，再逐元素对照 CPU。</p>
+<p>它的作用是先验证一条完整的 HIP 调用链：能找到设备、编译 Kernel，并在 GPU 上得到正确结果。输出每轮预填 NaN，元素数量特意不取线程块大小的整数倍，用来发现漏写和尾部处理问题。</p>
 <pre><code class="language-text">VectorAdd
 https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/HipVectorAdd/Program.cs
 </code></pre>
@@ -213,8 +219,9 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 </code></pre>
 <pre><code class="language-text">1, 2, 3, 4
 </code></pre>
-<p>Identity 用于检查加载与 API 链路；图可能被优化，输出正确尚不足以证明 GPU 执行了实际算术。</p>
+<p>Identity 将输入原样输出，适合先检查原生库加载、模型解析、张量绑定与结果读取。但这类图可能被优化，输出正确尚不足以证明 GPU 执行了实际算术，因此还要继续验证下面的计算模型。</p>
 <p>再用 MigraphxCompute 验证实际计算：固定 <code>float32[64,64]</code> 模型执行 <code>max(0, x × 0.5 + 0.25)</code>，模型与输入由固定公式生成。独立 C#、ONNX Runtime CPU、MIGraphX 主机 I/O 与 HIP 联合路径对照 <strong>4,096 个输出，最大绝对误差均为 0</strong>；预设容差为 <code>0.001 + 0.001 × abs(CPU参考)</code>。</p>
+<p>这一步同时检查数值结果与两种数据入口：先用主机张量跑通模型，再用 HIP 设备缓冲区接入联合路径。换成自己的模型后，也建议保留 CPU 参考，先确认形状、布局和数值，再测耗时。</p>
 <pre><code class="language-text">MigraphxCompute
 https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/MigraphxCompute/Program.cs
 
@@ -292,10 +299,11 @@ https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0
 https://github.com/guojin-yan/BlogArticle/blob/main/ROCmArticle/001-双项目1.0正式发布/examples/README.md
 </code></pre>
 <h2 id="_5">五、从模型走向业务流水线</h2>
-<p>模型跑通后，用 HIP 衔接前后处理，最后取回业务需要的结果。</p>
+<p>模型跑通后，接下来要处理的是模型之外的工作。例如图片通常需要调整数据布局、归一化，输出还要做数值变换或筛选。HIP 负责这些自定义步骤，MIGraphX 负责模型执行，C# 将它们组织成一条业务流程。</p>
 <p><img alt="C#、两个独立 Core、可选 HIP 适配器与 AMD GPU 的关系" src="assets/02-api-architecture-v3.png" /></p>
 <p><em>AIGC 架构示意图，非实测截图。</em></p>
-<p>联合示例执行 <strong>主机 HWC float → H2D → HIP 转 CHW → MIGraphX → D2D → HIP clamp → D2H → 同步</strong>。其中 <code>RunDeviceIntoAsync</code> 会复制输出，仍有传输和同步成本，不能称为零拷贝。</p>
+<p>联合示例执行 <strong>主机 HWC float → H2D → HIP 转 CHW → MIGraphX → D2D → HIP clamp → D2H → 同步</strong>。HWC、CHW 表示图像按像素或按通道排列；H2D 是主机到设备上传，D2H 是设备到主机下载，D2D 是设备内复制。</p>
+<p><strong>这条路径的价值在于让中间步骤衔接在设备上</strong>：布局变换后直接交给模型，模型结果继续交给 HIP 处理，最后再取回。HIP.Interop 在同一 Stream 上组织顺序，资源保留到任务完成。其中 <code>RunDeviceIntoAsync</code> 仍会复制输出到调用者缓冲区，有传输和同步成本，不能称为零拷贝。</p>
 <p>下面四个应用展示业务用法，每例附源码与真实数据来源。卡通配图均为 <strong>AIGC 流程示意图，非实测截图</strong>；其后的工作台或报告图来自实际程序。</p>
 <h3 id="surfacelab">SurfaceLab：工业图像检测与复核</h3>
 <p><img alt="SurfaceLab：图像批次、GPU 检测、人工复核与证据导出" src="assets/03-surfacelab-v3.png" /></p>
@@ -411,6 +419,7 @@ https://www.nasa.gov/nasa-brand-center/images-and-media/
 </tr>
 </tbody>
 </table></div>
+<p>这组数据说明，<strong>接口的数据路径和前后处理方式值得一起优化</strong>：本例中逐次创建 Host 参数的 GPU 路径耗时高于 CPU，改用 Device I/O、再衔接 HIP 前后处理后，整条路径的热态耗时降低。读者应结合下面的范围判断收益，再用自己的模型与输入复测。</p>
 <p><strong>计时范围：已解码主机 HWC float → 主机后处理输出</strong>，含传输、布局、同步和 clamp，<strong>不含解码、NMS、模型编译与可复用缓冲区分配，不是完整检测耗时</strong>。</p>
 <ul>
 <li><strong>测法</strong>：2026-11-20，5 个独立进程，每路径预热 10 次、测量 30 次，逐次随机顺序；全部样本、P95 与旧两轮记录保留。</li>

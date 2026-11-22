@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-22T10:55:29.930315+08:00",
+  "revision": "v13",
+  "baselineCommit": "483b5fd",
+  "scope": "Editorial explanation restored; no new GPU execution, benchmark or capture.",
+  "chineseCharactersOutsideFencedCode": {
+    "v12": 3324,
+    "v13": 4463
+  },
+  "preserved": {
+    "title": true,
+    "chapterHeadings": 7,
+    "imageReferencesInOrder": 14,
+    "tableRows": true,
+    "powershellCommands": true,
+    "fourApplicationDescriptions": true,
+    "limitsAndReaderNextSteps": true,
+    "namedStartHereLinks": 3
+  },
+  "readerPathsAndPreviewLinks": "PASS",
+  "round2Through9TrackedEvidenceChanged": false,
+  "round8ScreenshotHashes": "PASS"
+}

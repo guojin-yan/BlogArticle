@@ -1,6 +1,6 @@
 # Issue #2：当前逐项修改与验收对照
 
-对应正文 **v12，2026-11-21**。本轮精简文字并复核第八轮截图来源，没有新增 GPU 运行；逐项状态沿用既有实测范围。本表以保存的 Issue 原文逐条映射，共 **27 条修改任务 + 9 条最小门槛**；旧第二/三轮说明保留为历史记录。状态为 **可带明确边界进入审阅**，不是全部硬件、模型或生产验收通过，也未关闭 GitHub Issue。
+对应正文 **v13，2026-11-22**。本轮补回产品特色与关键解释，没有新增 GPU 运行、测量或截图；逐项状态沿用既有实测范围。本表以保存的 Issue 原文逐条映射，共 **27 条修改任务 + 9 条最小门槛**；旧第二/三轮说明保留为历史记录。状态为 **可带明确边界进入审阅**，不是全部硬件、模型或生产验收通过，也未关闭 GitHub Issue。
 
 - “已落实”表示要求的修改或取证动作已有证据。
 - “已落实，保留范围”表示按 Issue 要求明确披露实测边界与未执行条件，不将其写成 PASS。
@@ -60,4 +60,4 @@
 
 第八轮新增实际PowerShell终端verify/trace截图，命令工具启动，按已知PID只读采集完整窗口，未回放旧日志。第七轮完成预检、原生C#应用窗口、独立包缓存首次运行、执行跟踪与真实照片检测。五轮性能仍是第二轮数据，264项测试仍是第三轮，四案例与简单OCR分别是第五/六轮；没有把历史PASS改写成本轮PASS。原六张概念图按作者要求保留并标识，最新OCR按作者要求保持简单两行，不代表字段核验或总体精度。
 
-原始数据和失败不覆盖；新旧可变文稿按对应提交核验。v12 的截图来源复核与文字精简见[第九轮记录](validation/round9/README.md)。终端证据见[第八轮目录](validation/round8/README.md)，前轮证据见[第七轮目录](validation/round7/README.md)，逐项原始要求见[结构化对照](validation/round9/issue-2-requirements.json)，公开 Issue 的第七轮只读快照见[来源](validation/round7/issue-2-source.json)。没有向 Issue #2 发送评论或关闭它。
+原始数据和失败不覆盖；新旧可变文稿按对应提交核验。v13 的产品特色与解释补充见[第十轮记录](validation/round10/README.md)，v12 的截图来源复核见[第九轮记录](validation/round9/README.md)。终端证据见[第八轮目录](validation/round8/README.md)，前轮证据见[第七轮目录](validation/round7/README.md)，逐项原始要求见[结构化对照](validation/round10/issue-2-requirements.json)，公开 Issue 的第七轮只读快照见[来源](validation/round7/issue-2-source.json)。没有向 Issue #2 发送评论或关闭它。
