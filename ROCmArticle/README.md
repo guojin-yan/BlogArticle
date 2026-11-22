@@ -6,7 +6,7 @@
 
 | 顺序 | 文章 | 状态 | 资料 |
 | --- | --- | --- | --- |
-| 001 | C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来 | 草稿 v13：补回项目特色、关键步骤与联合流程解释，保留简短案例和真实截图 | [正文](001-双项目1.0正式发布/03-正文.md) · [排版预览](001-双项目1.0正式发布/03-正文预览.html) · [本轮编辑记录](001-双项目1.0正式发布/research/validation/round10/README.md) · [上手与验证](001-双项目1.0正式发布/05-上手与验证.md) · [真实数据与截图](001-双项目1.0正式发布/research/真实开源数据案例与截图.md) · [当前验收对照](001-双项目1.0正式发布/research/issue-2-当前验收对照.md) · [真实终端截图](001-双项目1.0正式发布/research/validation/round8/README.md) · [第七轮记录](001-双项目1.0正式发布/research/validation/round7/README.md) · [简单 OCR 演示](001-双项目1.0正式发布/research/validation/round6/README.md) · [第五轮记录](001-双项目1.0正式发布/research/validation/round5/README.md) · [事实与来源](001-双项目1.0正式发布/01-事实与来源.md) · [配图方案](001-双项目1.0正式发布/02-配图方案.md) |
+| 001 | C# 也能玩转 AMD GPU：从自定义计算到 AI 推理，让你的项目也加速起来 | 草稿 v14：网站地址代码展示，Issue #2 逐项核对；保留产品解释与真实截图 | [正文](001-双项目1.0正式发布/03-正文.md) · [排版预览](001-双项目1.0正式发布/03-正文预览.html) · [本轮核对记录](001-双项目1.0正式发布/research/validation/round11/README.md) · [上手与验证](001-双项目1.0正式发布/05-上手与验证.md) · [真实数据与截图](001-双项目1.0正式发布/research/真实开源数据案例与截图.md) · [当前验收对照](001-双项目1.0正式发布/research/issue-2-当前验收对照.md) · [真实终端截图](001-双项目1.0正式发布/research/validation/round8/README.md) · [第七轮记录](001-双项目1.0正式发布/research/validation/round7/README.md) · [简单 OCR 演示](001-双项目1.0正式发布/research/validation/round6/README.md) · [第五轮记录](001-双项目1.0正式发布/research/validation/round5/README.md) · [事实与来源](001-双项目1.0正式发布/01-事实与来源.md) · [配图方案](001-双项目1.0正式发布/02-配图方案.md) |
 
 ## 排序与文件约定
 

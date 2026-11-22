@@ -1,0 +1,750 @@
+{
+  "checkedAt": "2026-11-22T23:29:48.161709+08:00",
+  "revision": "v14",
+  "baselineCommit": "b96f454",
+  "status": "EXISTING_EVIDENCE_CHECKS_PASS_WITH_DECLARED_LIMITS",
+  "newGpuExecutions": 0,
+  "newScreenshots": 0,
+  "currentWebsiteFormat": {
+    "documentsChecked": {
+      "00-文章规划.md": 0,
+      "01-事实与来源.md": 17,
+      "02-配图方案.md": 0,
+      "03-正文.md": 44,
+      "04-编辑记录.md": 3,
+      "05-上手与验证.md": 13,
+      "assets/evidence/README.md": 2,
+      "examples/README.md": 4,
+      "examples/MigraphxCompute/README.md": 0,
+      "examples/ValidationWorkbench/README.md": 0,
+      "research/真实开源数据案例与截图.md": 0,
+      "research/issue-2-当前验收对照.md": 0
+    },
+    "externalAnchors": 0,
+    "websiteTextOutsideCode": 0,
+    "previewExternalAnchors": 0
+  },
+  "preserved": {
+    "v13ProductExplanations": true,
+    "chapters": 7,
+    "nugetPackages": 7,
+    "images": 14,
+    "commandsTablesUnchanged": true
+  },
+  "issue2": {
+    "modificationTasks": 27,
+    "minimumAcceptanceItems": 9,
+    "states": {
+      "AUTHOR_OVERRIDE": 1,
+      "DONE": 25,
+      "DONE_WITH_SCOPE": 7,
+      "NOT_APPLICABLE": 3
+    },
+    "evidence": [
+      {
+        "id": "P0-A-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          },
+          {
+            "path": "research/validation/round2/round2-benchmark.json",
+            "bytes": 4580,
+            "sha256": "cf902f24c6e6dc799346d267dc0ebdcc5bc82a875405f4899368e3cf20af68f3"
+          }
+        ]
+      },
+      {
+        "id": "P0-A-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "examples/MigraphxCompute/Round2Tools.cs",
+            "bytes": 10537,
+            "sha256": "184acb09a0cdef7e890c4dfc41074d9aa525559e221353e2e838f0932ed081a9"
+          },
+          {
+            "path": "research/issue-2-修订说明.md",
+            "bytes": 12088,
+            "sha256": "c34c2b7d97968982516ee4f2bff9a697b8baddcf161f1a6dac021cdebd8b95c4"
+          }
+        ]
+      },
+      {
+        "id": "P0-A-3",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round2/round2-benchmark.json",
+            "bytes": 4580,
+            "sha256": "cf902f24c6e6dc799346d267dc0ebdcc5bc82a875405f4899368e3cf20af68f3"
+          },
+          {
+            "path": "examples/run-round2.ps1",
+            "bytes": 3745,
+            "sha256": "a15ecef12610a98dee780992f9e0c3c0e50786035b123fff6acc96f42ad6b904"
+          }
+        ]
+      },
+      {
+        "id": "P0-A-4",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round2/environment.json",
+            "bytes": 1240,
+            "sha256": "7310cbb252e170cdece580aac46aa7b514a71646abdd65ce7ddeb883f6bfa631"
+          },
+          {
+            "path": "research/validation/round7/reader-doctor.json.hardware.json",
+            "bytes": 3126,
+            "sha256": "3ef5f1b81be0cbf6814266694ecd5d73c29603d10c811a5f6c876221795b607c"
+          }
+        ]
+      },
+      {
+        "id": "P0-A-5",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/issue-2-修订说明.md",
+            "bytes": 12088,
+            "sha256": "c34c2b7d97968982516ee4f2bff9a697b8baddcf161f1a6dac021cdebd8b95c4"
+          },
+          {
+            "path": "research/validation/round2/results/benchmark-1.json",
+            "bytes": 15150,
+            "sha256": "0b92989f811c8517c5dc46e8a85c2207512d398cd257c606b17287ebb3d64427"
+          }
+        ]
+      },
+      {
+        "id": "P0-B-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          }
+        ]
+      },
+      {
+        "id": "P0-B-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "research/issue-2-修订说明.md",
+            "bytes": 12088,
+            "sha256": "c34c2b7d97968982516ee4f2bff9a697b8baddcf161f1a6dac021cdebd8b95c4"
+          },
+          {
+            "path": "examples/README.md",
+            "bytes": 10444,
+            "sha256": "e7c22e20705ad9ad71fe36d9bcb0a784413bad22e0272c70cbf302972e0aab60"
+          }
+        ]
+      },
+      {
+        "id": "P0-B-3",
+        "originalCompared": true,
+        "declaredStatus": "NOT_APPLICABLE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          }
+        ]
+      },
+      {
+        "id": "P1-A-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round7/reader-photo/photo.json",
+            "bytes": 1454,
+            "sha256": "b05d5e409b8c98ad2f25e169c641816b48176b60d0749c0e98641c7a618afcd6"
+          },
+          {
+            "path": "research/validation/round2/inputs/README.md",
+            "bytes": 2025,
+            "sha256": "905d38a5235c9f65f028b7e8e0febf0f9c5f583d2d555bedc892a21553f91f8c"
+          }
+        ]
+      },
+      {
+        "id": "P1-A-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round7/reader-photo.command.json",
+            "bytes": 3015,
+            "sha256": "73eb942fc8685d2d18ffe32cef557f40115afb2223ec12eaa2ec2a348bcd99f4"
+          },
+          {
+            "path": "research/validation/round7/reader-photo/yolox-detections.png",
+            "bytes": 598759,
+            "sha256": "09dbca28d5dd9d47ffe23645be51a87121d20bfa79613d6d8b19c434a45598ea"
+          },
+          {
+            "path": "research/validation/round2/inputs/README.md",
+            "bytes": 2025,
+            "sha256": "905d38a5235c9f65f028b7e8e0febf0f9c5f583d2d555bedc892a21553f91f8c"
+          }
+        ]
+      },
+      {
+        "id": "P1-A-3",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round7/README.md",
+            "bytes": 6391,
+            "sha256": "b84b7388d7f823475e6963a58977f53beb3164d7050e6782dc32f14215b8bd0c"
+          },
+          {
+            "path": "research/validation/round7/reader-photo/photo.json",
+            "bytes": 1454,
+            "sha256": "b05d5e409b8c98ad2f25e169c641816b48176b60d0749c0e98641c7a618afcd6"
+          }
+        ]
+      },
+      {
+        "id": "P1-A-4",
+        "originalCompared": true,
+        "declaredStatus": "NOT_APPLICABLE",
+        "files": [
+          {
+            "path": "examples/MigraphxCompute/PhotoDetection.cs",
+            "bytes": 11005,
+            "sha256": "ec5192d4f4552e83564cce8e2106f3997833235fa61c73e8e82595d93104a2ee"
+          },
+          {
+            "path": "research/validation/round7/reader-photo/photo.json",
+            "bytes": 1454,
+            "sha256": "b05d5e409b8c98ad2f25e169c641816b48176b60d0749c0e98641c7a618afcd6"
+          }
+        ]
+      },
+      {
+        "id": "P1-B-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/issue-2-修订说明.md",
+            "bytes": 12088,
+            "sha256": "c34c2b7d97968982516ee4f2bff9a697b8baddcf161f1a6dac021cdebd8b95c4"
+          },
+          {
+            "path": "research/validation/round2/logs/matmul-native.log",
+            "bytes": 1395,
+            "sha256": "9e611db3bb0508d9dd0a028716e4451c44031b8ef176bb7b6a9c48d2cfd252a0"
+          }
+        ]
+      },
+      {
+        "id": "P1-B-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round5/README.md",
+            "bytes": 6046,
+            "sha256": "79824094c239d44d97eb7ae6f10a9451e1fcb06328a41ad556cfdef5e7181070"
+          },
+          {
+            "path": "research/validation/round7/reader-workbench/matmul.json",
+            "bytes": 6792,
+            "sha256": "09adf0b132b8198b4141de3e51b7a1e2f2079d53384b9beb15f33a64470c1a03"
+          }
+        ]
+      },
+      {
+        "id": "P1-B-3",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "research/validation/round5/README.md",
+            "bytes": 6046,
+            "sha256": "79824094c239d44d97eb7ae6f10a9451e1fcb06328a41ad556cfdef5e7181070"
+          },
+          {
+            "path": "research/validation/round7/README.md",
+            "bytes": 6391,
+            "sha256": "b84b7388d7f823475e6963a58977f53beb3164d7050e6782dc32f14215b8bd0c"
+          }
+        ]
+      },
+      {
+        "id": "P1-C-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "examples/MigraphxCompute/NativePreflight.cs",
+            "bytes": 11042,
+            "sha256": "02fd1ad3882d31779f11ba531e015ba5b5ea89bc33f79dd08de085356ad92d09"
+          },
+          {
+            "path": "research/validation/round7/reader-doctor.json",
+            "bytes": 13288,
+            "sha256": "566cfd29276456b0b0dfa48e8c763498fb5159e413ceb2f1781bc3d6d3b256cb"
+          },
+          {
+            "path": "research/validation/round7/doctor-version-conflict.json",
+            "bytes": 12658,
+            "sha256": "39181a16c9517b21b119ccfcbb4991632dc83c83d39e18800f51a8738df4846b"
+          }
+        ]
+      },
+      {
+        "id": "P1-C-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "research/validation/round7/reader-source-identity.json",
+            "bytes": 7946,
+            "sha256": "91b8e21178037faac07693b6a8407bf674b2a0b34603d72b9287c5505f393616"
+          },
+          {
+            "path": "research/validation/round7/reader-isolation-before.json",
+            "bytes": 496,
+            "sha256": "eb0cd4cae231ba2d53edf749d52e379d069e8d84b3b7841928ea32bb493234b9"
+          },
+          {
+            "path": "research/validation/round7/reader-workbench/workbench.json",
+            "bytes": 1987,
+            "sha256": "b83fbd4b64043ad36422762a6fe1dc169aef9fc9190dfbd0e7dc736410f78b34"
+          }
+        ]
+      },
+      {
+        "id": "P1-C-3",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "examples/run-windows.ps1",
+            "bytes": 3871,
+            "sha256": "0b5d36ea3b2574e77bde8355572f15d362e8f2a7cce1f62c0d65795105255389"
+          },
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          },
+          {
+            "path": "05-上手与验证.md",
+            "bytes": 34237,
+            "sha256": "89012e6ef4e0550319703f4906021a39b04bea455b49a09a86bf5912f9085c85"
+          }
+        ]
+      },
+      {
+        "id": "P1-D-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round8/screenshots/manifest.json",
+            "bytes": 1774,
+            "sha256": "b25d1ef9bae496b91d9ad05d2cddfbfd0281f8005a4ad18af4bb07170a955fc0"
+          },
+          {
+            "path": "research/validation/round7/screenshots/manifest.json",
+            "bytes": 984,
+            "sha256": "2fde6a4b28a8f6dda716225f00f2ec396211916f7a9dddb2667b7f79527e5d11"
+          },
+          {
+            "path": "research/真实开源数据案例与截图.md",
+            "bytes": 6484,
+            "sha256": "5b10ff791064baba7dd7072fca6682754ecf0772ed5a9f149fcb2bff12419611"
+          }
+        ]
+      },
+      {
+        "id": "P1-D-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round3/screenshots/manifest.json",
+            "bytes": 8583,
+            "sha256": "0d3ab94ec66b13c753b6e15865b2794879766d5fcc7d0b8d936c1dada19e5add"
+          },
+          {
+            "path": "research/validation/round5/screenshots/manifest.json",
+            "bytes": 3400,
+            "sha256": "584a43738622e79865456b625a299f0ab40852dd716d274ac99462489e84179c"
+          },
+          {
+            "path": "research/validation/round6/screenshots/manifest.json",
+            "bytes": 729,
+            "sha256": "a88f83e6575636e28897010f8d813a5642e757cb007defbbc363d84ce7e1c210"
+          },
+          {
+            "path": "research/validation/round7/screenshots/manifest.json",
+            "bytes": 984,
+            "sha256": "2fde6a4b28a8f6dda716225f00f2ec396211916f7a9dddb2667b7f79527e5d11"
+          },
+          {
+            "path": "research/validation/round8/screenshots/manifest.json",
+            "bytes": 1774,
+            "sha256": "b25d1ef9bae496b91d9ad05d2cddfbfd0281f8005a4ad18af4bb07170a955fc0"
+          }
+        ]
+      },
+      {
+        "id": "P1-D-3",
+        "originalCompared": true,
+        "declaredStatus": "NOT_APPLICABLE",
+        "files": [
+          {
+            "path": "research/summarize-round2.py",
+            "bytes": 3190,
+            "sha256": "97dea6ead22d21a637ef9562076d1aa2536e7d5d0645b4d6c2cf950a477360f1"
+          },
+          {
+            "path": "research/validation/round2/round2-benchmark.json",
+            "bytes": 4580,
+            "sha256": "cf902f24c6e6dc799346d267dc0ebdcc5bc82a875405f4899368e3cf20af68f3"
+          }
+        ]
+      },
+      {
+        "id": "P1-D-4",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          },
+          {
+            "path": "research/validation/round6/README.md",
+            "bytes": 3314,
+            "sha256": "3ff2924898f4155641971671c8205e8659abb7457204713dc9dbc15584ef71d4"
+          }
+        ]
+      },
+      {
+        "id": "P1-D-5",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/issue-2-截图与四应用复跑.md",
+            "bytes": 6791,
+            "sha256": "5e8996ef8a4418d0fe3ac74685864b9d2dcf097e66001116866a2a4af1197a73"
+          },
+          {
+            "path": "research/validation/round5/README.md",
+            "bytes": 6046,
+            "sha256": "79824094c239d44d97eb7ae6f10a9451e1fcb06328a41ad556cfdef5e7181070"
+          },
+          {
+            "path": "research/validation/round7/README.md",
+            "bytes": 6391,
+            "sha256": "b84b7388d7f823475e6963a58977f53beb3164d7050e6782dc32f14215b8bd0c"
+          }
+        ]
+      },
+      {
+        "id": "P2-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          }
+        ]
+      },
+      {
+        "id": "P2-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          }
+        ]
+      },
+      {
+        "id": "P2-3",
+        "originalCompared": true,
+        "declaredStatus": "AUTHOR_OVERRIDE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          },
+          {
+            "path": "research/validation/round11/README.md",
+            "bytes": 2927,
+            "sha256": "a892d13d820b90aa005097f144df274b7440dbaa179e6f4b3c2674659db1d1f3"
+          }
+        ]
+      },
+      {
+        "id": "P2-4",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          },
+          {
+            "path": "examples/README.md",
+            "bytes": 10444,
+            "sha256": "e7c22e20705ad9ad71fe36d9bcb0a784413bad22e0272c70cbf302972e0aab60"
+          }
+        ]
+      },
+      {
+        "id": "DOD-1",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          }
+        ]
+      },
+      {
+        "id": "DOD-2",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "03-正文.md",
+            "bytes": 29283,
+            "sha256": "dca05e2557c52102036293b7e7e836a950ef966f0da3c30d5b2449693edd4137"
+          }
+        ]
+      },
+      {
+        "id": "DOD-3",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round2/round2-benchmark.json",
+            "bytes": 4580,
+            "sha256": "cf902f24c6e6dc799346d267dc0ebdcc5bc82a875405f4899368e3cf20af68f3"
+          },
+          {
+            "path": "research/issue-2-修订说明.md",
+            "bytes": 12088,
+            "sha256": "c34c2b7d97968982516ee4f2bff9a697b8baddcf161f1a6dac021cdebd8b95c4"
+          }
+        ]
+      },
+      {
+        "id": "DOD-4",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round7/reader-photo/photo.json",
+            "bytes": 1454,
+            "sha256": "b05d5e409b8c98ad2f25e169c641816b48176b60d0749c0e98641c7a618afcd6"
+          },
+          {
+            "path": "research/validation/round2/inputs/README.md",
+            "bytes": 2025,
+            "sha256": "905d38a5235c9f65f028b7e8e0febf0f9c5f583d2d555bedc892a21553f91f8c"
+          }
+        ]
+      },
+      {
+        "id": "DOD-5",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round5/README.md",
+            "bytes": 6046,
+            "sha256": "79824094c239d44d97eb7ae6f10a9451e1fcb06328a41ad556cfdef5e7181070"
+          },
+          {
+            "path": "research/issue-2-修订说明.md",
+            "bytes": 12088,
+            "sha256": "c34c2b7d97968982516ee4f2bff9a697b8baddcf161f1a6dac021cdebd8b95c4"
+          }
+        ]
+      },
+      {
+        "id": "DOD-6",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "research/validation/round7/README.md",
+            "bytes": 6391,
+            "sha256": "b84b7388d7f823475e6963a58977f53beb3164d7050e6782dc32f14215b8bd0c"
+          },
+          {
+            "path": "research/validation/round7/reader-source-identity.json",
+            "bytes": 7946,
+            "sha256": "91b8e21178037faac07693b6a8407bf674b2a0b34603d72b9287c5505f393616"
+          }
+        ]
+      },
+      {
+        "id": "DOD-7",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round8/screenshots/manifest.json",
+            "bytes": 1774,
+            "sha256": "b25d1ef9bae496b91d9ad05d2cddfbfd0281f8005a4ad18af4bb07170a955fc0"
+          },
+          {
+            "path": "research/validation/round7/screenshots/manifest.json",
+            "bytes": 984,
+            "sha256": "2fde6a4b28a8f6dda716225f00f2ec396211916f7a9dddb2667b7f79527e5d11"
+          },
+          {
+            "path": "research/真实开源数据案例与截图.md",
+            "bytes": 6484,
+            "sha256": "5b10ff791064baba7dd7072fca6682754ecf0772ed5a9f149fcb2bff12419611"
+          }
+        ]
+      },
+      {
+        "id": "DOD-8",
+        "originalCompared": true,
+        "declaredStatus": "DONE_WITH_SCOPE",
+        "files": [
+          {
+            "path": "research/validation/round7/README.md",
+            "bytes": 6391,
+            "sha256": "b84b7388d7f823475e6963a58977f53beb3164d7050e6782dc32f14215b8bd0c"
+          },
+          {
+            "path": "05-上手与验证.md",
+            "bytes": 34237,
+            "sha256": "89012e6ef4e0550319703f4906021a39b04bea455b49a09a86bf5912f9085c85"
+          }
+        ]
+      },
+      {
+        "id": "DOD-9",
+        "originalCompared": true,
+        "declaredStatus": "DONE",
+        "files": [
+          {
+            "path": "research/validation/round7/final-checks.json",
+            "bytes": 1147,
+            "sha256": "9212a682c20b3d3ea58bf4b0d9aa59df1d31f4702ba9985ffab68f7eee794946"
+          },
+          {
+            "path": "research/validation/round5/README.md",
+            "bytes": 6046,
+            "sha256": "79824094c239d44d97eb7ae6f10a9451e1fcb06328a41ad556cfdef5e7181070"
+          },
+          {
+            "path": "research/validation/round6/README.md",
+            "bytes": 3314,
+            "sha256": "3ff2924898f4155641971671c8205e8659abb7457204713dc9dbc15584ef71d4"
+          }
+        ]
+      }
+    ]
+  },
+  "benchmark": {
+    "rounds": 5,
+    "paths": 5,
+    "samplesVerified": 750,
+    "allQuantilesAndStartupRecomputed": true,
+    "allNumericalChecksPassed": true,
+    "cacheCold": "NOT TESTED"
+  },
+  "captureProvenance": [
+    {
+      "file": "screenshots/01-powershell-verify-frame.png",
+      "api": "Win32 PrintWindow (flags=2), read-only full window bitmap",
+      "processId": 61428,
+      "capturedAt": "2026-11-21T12:44:39.802197+08:00",
+      "sha256": "7525ed0216ee29b766bc1093483446d2086abe39d7e57dc7b2532bdbad52fbd5"
+    },
+    {
+      "file": "screenshots/02-powershell-trace-frame.png",
+      "api": "Win32 PrintWindow (flags=2), read-only full window bitmap",
+      "processId": 74280,
+      "capturedAt": "2026-11-21T12:44:39.960373+08:00",
+      "sha256": "bb3a3513874b11a3b9bc4b6eecef44c25e5136213d9d84de1f37432554cd8e60"
+    }
+  ],
+  "readerValidation": {
+    "dependencyFiles": 34,
+    "importEdges": 174,
+    "uncheckedCandidateGroups": 4,
+    "negativeChecksRetained": 3,
+    "emptyInitialCaches": true,
+    "publicCloneSourceHashes": 15,
+    "samePhysicalHost": true,
+    "independentHumanReader": false
+  },
+  "realDataCases": {
+    "surfaceTN": 6,
+    "surfaceTP": 3,
+    "surfaceFN": 3,
+    "signalWindows": 45,
+    "psdValues": 5805,
+    "complexOcrExact": 5,
+    "complexOcrFailed": 19,
+    "easyOcr": [
+      "APPLE",
+      "SODA"
+    ],
+    "videoFrames": 25,
+    "detections": 109,
+    "unreviewedCandidates": 12
+  },
+  "historicalManifestFilesVerified": {
+    "round2": 146,
+    "round3": 373,
+    "round4": 261,
+    "round5": 209,
+    "round6": 30,
+    "round7": 101,
+    "round8": 40
+  },
+  "round2Through10Changed": false,
+  "limits": [
+    "No new OS or independent human trial",
+    "Dynamic solver/all-model and byte-different DLL compatibility NOT CHECKED",
+    "No new cold-cache/profiler/process-peak/other-GPU/native-Linux/INT8 validation",
+    "Native internal root cause unknown; local path trigger and workaround evidenced",
+    "P2-3 clickable entry superseded by author code-only website requirement"
+  ]
+}

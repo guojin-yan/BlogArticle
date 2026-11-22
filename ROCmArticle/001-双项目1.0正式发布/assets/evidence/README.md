@@ -4,7 +4,7 @@
 
 | 文件 | 来源与处理 | 适用范围 |
 | --- | --- | --- |
-| surfacelab-real-result.png | Amazon Science [VisA / spot-diff](https://github.com/amazon-science/spot-diff)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；保留输入与应用热图，缩放并列、添加标签 | 已复用的 12 图历史流程检查，选图为漏检 FN；不是独立质量验收 |
+| surfacelab-real-result.png | Amazon Science VisA / spot-diff（`https://github.com/amazon-science/spot-diff`），CC BY 4.0（`https://creativecommons.org/licenses/by/4.0/`）；保留输入与应用热图，缩放并列、添加标签 | 已复用的 12 图历史流程检查，选图为漏检 FN；不是独立质量验收 |
 | signal-cpu-hip.png | 作者编写的确定性信号；2026-11-19 实际 CPU/HIP 输出的 PSD 与窗口决策，使用 matplotlib 绘制 | 数值和软件流程检查，不是设备故障准确率 |
 | video-pts-evidence.png | 作者编写的演示帧及历史应用产物；放大显示原帧并添加原始 PTS 标签 | 候选事件回看，不是真实视频事件准确率 |
 
