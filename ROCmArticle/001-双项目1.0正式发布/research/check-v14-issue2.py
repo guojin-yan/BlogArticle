@@ -242,6 +242,12 @@ report = {
     'historicalManifestFilesVerified': history, 'round2Through10Changed': False,
     'limits': ['No new OS or independent human trial', 'Dynamic solver/all-model and byte-different DLL compatibility NOT CHECKED', 'No new cold-cache/profiler/process-peak/other-GPU/native-Linux/INT8 validation', 'Native internal root cause unknown; local path trigger and workaround evidenced', 'P2-3 clickable entry superseded by author code-only website requirement']
 }
+receipt_path = out / 'issue-2-reply-published.json'
+if receipt_path.exists():
+    receipt = read(receipt_path)
+    assert sha((out / receipt['localBodyFile']).read_bytes()) == receipt['localBodyFileSha256']
+    assert receipt['publishedBodyMatchesLocalAfterNewlineNormalization'] and receipt['issueStateAfterReply'] == 'open'
+    report['publishedReply'] = {k: receipt[k] for k in ('commentId', 'commentUrl', 'createdAt', 'issueStateAfterReply', 'localBodyFileSha256')}
 (out / 'final-checks.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print('PASS: code-only websites, 36 requirement mappings, 750 samples, capture provenance, first-run/case evidence and historical hashes.')
 print(json.dumps({'states': report['issue2']['states'], 'historicalFiles': history}, ensure_ascii=False))

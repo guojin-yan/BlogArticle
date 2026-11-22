@@ -22,4 +22,8 @@ Issue P2-3 原本建议同时提供可点击入口，作者最新要求“网站
 
 仍使用同一物理 Windows/W7900，系统驱动、SDK 复用；无新 OS 或独立人类读者。冷缓存、逐 Kernel Profiler、进程峰值显存、其他 GPU/原生 Linux、小 INT8 本轮未验；四组同名 DLL 字节差异及动态求解器/全模型兼容性仍 `NOT CHECKED`。MatMul 的本机路径触发条件和有效修正已有证据，原生内部源码级根因仍未知。
 
-作者已授权核对后回复 Issue #2。发布正文见[回复文稿](issue-2-reply.md)，发布结果在 `issue-2-reply-published.json` 记录评论 URL、ID、时间和正文哈希；不关闭 Issue。评论发布前先提交并推送修改，使证据入口可访问。
+作者已授权核对后回复 Issue #2。发布正文见[回复文稿](issue-2-reply.md)，已发布并回读验证正文一致；[发布记录](issue-2-reply-published.json)保存评论 URL、ID、时间和正文哈希。内容提交为 `bea9ba5`，回复前已推送并确认 37 个证据入口存在。Issue 保持开放。
+
+```text
+https://github.com/guojin-yan/BlogArticle/issues/2#issuecomment-7081395459
+```

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-22T23:29:48.161709+08:00",
+  "checkedAt": "2026-11-22T23:35:05.322082+08:00",
   "revision": "v14",
   "baselineCommit": "b96f454",
   "status": "EXISTING_EVIDENCE_CHECKS_PASS_WITH_DECLARED_LIMITS",
@@ -503,8 +503,8 @@
           },
           {
             "path": "research/validation/round11/README.md",
-            "bytes": 2927,
-            "sha256": "a892d13d820b90aa005097f144df274b7440dbaa179e6f4b3c2674659db1d1f3"
+            "bytes": 3068,
+            "sha256": "3aaacc58c26f6affb4afe5f1c415841d4081b8ae846b2a3b3b154000c52277b5"
           }
         ]
       },
@@ -746,5 +746,12 @@
     "No new cold-cache/profiler/process-peak/other-GPU/native-Linux/INT8 validation",
     "Native internal root cause unknown; local path trigger and workaround evidenced",
     "P2-3 clickable entry superseded by author code-only website requirement"
-  ]
+  ],
+  "publishedReply": {
+    "commentId": 7081395459,
+    "commentUrl": "https://github.com/guojin-yan/BlogArticle/issues/2#issuecomment-7081395459",
+    "createdAt": "2026-11-22T15:33:30Z",
+    "issueStateAfterReply": "open",
+    "localBodyFileSha256": "23652bd71fafd58e5cded05141e473dc457709a6ac2ab716470e6b5fbd63371a"
+  }
 }

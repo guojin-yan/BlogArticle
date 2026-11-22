@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-11-22T23:34:37.551044+08:00",
+  "issueUrl": "https://github.com/guojin-yan/BlogArticle/issues/2",
+  "commentId": 7081395459,
+  "commentUrl": "https://github.com/guojin-yan/BlogArticle/issues/2#issuecomment-7081395459",
+  "author": "guojin-yan",
+  "createdAt": "2026-11-22T15:33:30Z",
+  "updatedAt": "2026-11-22T15:33:30Z",
+  "issueStateAfterReply": "open",
+  "contentCommit": "bea9ba5",
+  "remoteEvidencePathsVerified": 37,
+  "localBodyFile": "issue-2-reply.md",
+  "localBodyFileSha256": "23652bd71fafd58e5cded05141e473dc457709a6ac2ab716470e6b5fbd63371a",
+  "publishedBodyUtf8Sha256": "23652bd71fafd58e5cded05141e473dc457709a6ac2ab716470e6b5fbd63371a",
+  "publishedBodyMatchesLocalAfterNewlineNormalization": true,
+  "authorization": "Author explicitly requested all website addresses displayed as code, each Issue requirement checked, then reply to Issue #2."
+}
